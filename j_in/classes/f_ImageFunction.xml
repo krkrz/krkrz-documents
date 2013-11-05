@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="Shift_JIS" ?>
+<doc>
+<title>ImageFunction</title>
+<desc>
+　ImageFunction クラスは、画像を操作するクラスです。<r/>
+　このクラスからオブジェクトを作成することはできません。
+</desc>
+
+<member>
+	<name>operateAffine</name>
+	<type>method</type>
+	<shortdesc>アフィン変換演算合成</shortdesc>
+	<arg>
+		<argitem>
+			<name>dst</name>
+			<default></default>
+			<desc>
+				　重ね合わせ先の Bitmap オブジェクトを指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>src</name>
+			<default></default>
+			<desc>
+				　重ね合わせ元の Bitmap オブジェクトを指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>A</name>
+			<default></default>
+			<desc>
+				　A パラメータです。affine 引数によって解釈が変わります。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>B</name>
+			<default></default>
+			<desc>
+				　B パラメータです。affine 引数によって解釈が変わります。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>C</name>
+			<default></default>
+			<desc>
+				　C パラメータです。affine 引数によって解釈が変わります。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>D</name>
+			<default></default>
+			<desc>
+				　D パラメータです。affine 引数によって解釈が変わります。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>E</name>
+			<default></default>
+			<desc>
+				　E パラメータです。affine 引数によって解釈が変わります。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>F</name>
+			<default></default>
+			<desc>
+				　F パラメータです。affine 引数によって解釈が変わります。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>srcrect</name>
+			<default>null</default>
+			<desc>
+				　重ね合わせる矩形を ( 重ね合わせ元 Bitmap の画像位置における ) ピクセル単位で Rect オブジェクトで指定します。<r/>
+				　未指定時全体が対象となります。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>cliprect</name>
+			<default>null</default>
+			<desc>
+				　クリッピング矩形を ( 重ね合わせ先 Bitmap の画像位置における )  Rect オブジェクトで指定します。<r/>
+				　未指定時クリッピングは行われません。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>affine</name>
+			<default></default>
+			<desc>
+				　続く６つの引数 (A ～ F パラメータ)をどのように扱うかを指定します。<r/>
+				　真を指定すると、６つのパラメータはそれぞれ以下のように解釈されます。<r/>
+				<tt>A   : 2Dアフィン変換行列の a</tt><r/>
+				<tt>B   : 2Dアフィン変換行列の b</tt><r/>
+				<tt>C   : 2Dアフィン変換行列の c</tt><r/>
+				<tt>D   : 2Dアフィン変換行列の d</tt><r/>
+				<tt>E   : 2Dアフィン変換行列の tx</tt><r/>
+				<tt>F   : 2Dアフィン変換行列の ty</tt><r/>
+				<r/>
+				　アフィン変換により、重ね合わせ元の画像位置 (x, y) ( ただし、重ね合わせ元矩形の左上隅を (0, 0) とする ) は以下の式により、重ね合わせ先の画像位置 (x', y')に変換されます。<r/>
+				x' =  a*x + c*y + tx<r/>
+				y' =  b*x + d*y + ty<r/>
+				<r/>
+				　偽を指定すると、６つのパラメータはそれぞれ以下のように解釈されます。<r/>
+				<tt>A   : コピー元矩形の左上隅の点の、コピー先での画像位置における X 座標位置(x0)</tt><r/>
+				<tt>B   : コピー元矩形の左上隅の点の、コピー先での画像位置における Y 座標位置(y0)</tt><r/>
+				<tt>C   : コピー元矩形の右上隅の点の、コピー先での画像位置における X 座標位置(x1)</tt><r/>
+				<tt>D   : コピー元矩形の右上隅の点の、コピー先での画像位置における Y 座標位置(y1)</tt><r/>
+				<tt>E   : コピー元矩形の左下隅の点の、コピー先での画像位置における X 座標位置(x2)</tt><r/>
+				<tt>F   : コピー元矩形の左下隅の点の、コピー先での画像位置における Y 座標位置(y2)</tt><r/>
+				<r/>
+				　偽を指定した場合、重ね合わせ元の右下隅に対応する、重ね合わせ先位置(x3, y3)は自動的に以下の式によって計算されます。<r/>
+				x3 = x1 - x0 + x2<r/>
+				y3 = y1 - y0 + y2<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>mode</name>
+			<default>omAlpha</default>
+			<desc>
+				　演算のモードを指定します。<r/>
+				<tt><kw>omPsNormal</kw></tt> が指定された場合はPhotoshop互換のアルファ合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsAdditive</kw></tt> が指定された場合はPhotoshop互換の覆い焼き(リニア)合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsSubtractive</kw></tt> が指定された場合はPhotoshop互換の焼き込み(リニア)合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsMultiplicative</kw></tt> が指定された場合はPhotoshop互換の乗算合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsScreen</kw></tt> が指定された場合はPhotoshop互換のスクリーン合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsOverlay</kw></tt> が指定された場合はPhotoshop互換のオーバーレイ合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsHardLight</kw></tt> が指定された場合はPhotoshop互換のハードライト合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsSoftLight</kw></tt> が指定された場合はPhotoshop互換のソフトライト合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsColorDodge</kw></tt> が指定された場合はPhotoshop互換の覆い焼きカラー合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsColorDodge5</kw></tt> が指定された場合はPhotoshopのバージョン5.x 以下と互換の覆い焼きカラー合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsColorBurn</kw></tt> が指定された場合はPhotoshop互換の焼き込みカラー合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsLighten</kw></tt> が指定された場合はPhotoshop互換の比較(明)合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsDarken</kw></tt> が指定された場合はPhotoshop互換の比較(暗)合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsDifference</kw></tt> が指定された場合はPhotoshop互換の差の絶対値合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsDifference5</kw></tt> が指定された場合はPhotoshopのバージョン 5.x 以下と互換の差の絶対値合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsExclusion</kw></tt> が指定された場合はPhotoshop互換の除外合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omAdditive</kw></tt> が指定された場合は加算合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omSubtractive</kw></tt> が指定された場合は減算合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omMultiplicative</kw></tt> が指定された場合は乗算合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omDodge</kw></tt> が指定された場合は覆い焼き合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omDarken</kw></tt> が指定された場合は比較(暗)合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omLighten</kw></tt> が指定された場合は比較(明)合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omScreen</kw></tt> が指定された場合はスクリーン乗算合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omAlpha</kw></tt> が指定された場合はアルファ合成が行われます。<r/>
+				<tt><kw>omAddAlpha</kw></tt> が指定された場合は加算アルファ合成が行われます。この場合は、face が dfOpaque かつ hda が偽のとき、type 引数に stFastLinear を指定することにより線形補間が可能です。<r/>
+				<tt><kw>omOpaque</kw></tt> が指定された場合は src のアルファ情報は無視され、src は常に完全不透明であると見なされます。この場合は、face が dfOpaque かつ hda が偽のとき、type 引数に stFastLinear を指定することにより線形補間が可能です。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>face</name>
+			<default>dfAlpha</default>
+			<desc>
+				　描画方式を指定します。<r/>
+				<tt><kw>dfAlpha</kw></tt> が指定された場合は画像はアルファチャンネルつき画像と見なされ、描画されます。<r/>
+				<tt><kw>dfAddAlpha</kw></tt> が指定された場合は画像は加算アルファチャンネルつき画像として見なされ、描画されます。<r/>
+				<tt><kw>dfOpaque</kw></tt> が指定された場合は画像はすべて完全不透明であると見なされ、描画されます。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>opa</name>
+			<default>255</default>
+			<desc>
+				　重ね合わせの不透明度 ( 0 ～ 255 ) を指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>type</name>
+			<default>stNearest</default>
+			<desc>
+				　アフィン変換のタイプを指定します。<r/>
+				<tt><kw>stNearest</kw>    </tt> : 最近傍点法が用いられます<r/>
+				<tt><kw>stFastLinear</kw> </tt> : 低精度の線形補間が用いられます(一部実装)<r/>
+				<tt><kw>stLinear</kw>     </tt> : 線形補間が用いられます(未実装)<r/>
+				<tt><kw>stCubic</kw>      </tt> : ３次元補間が用いられます(未実装)<r/>
+				　速度は stNearest > stFastLinear > stLinear > stCubic の順に高速ですが、画質は速度が
+				速ければ速いモードほど低画質になります。<r/>
+				　stFastLinear や stLinear, stCubic に対しては、stRefNoClip をビット論理和で追加指定
+				することができ、この場合は、コピーするビットマップの領域外を参照して色を合成することを
+				許可します。これを指定しない場合は、転送元ビットマップの周囲に余裕があったとしても、
+				転送元ビットマップの範囲外を参照することはありません(範囲外の色はもっとも近い位置にある
+				範囲内のピクセルの色と見なされます)。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>hda</name>
+			<default>false</default>
+			<desc>
+				　アルファチャンネルを保護するかどうかを指定します。<r/>
+			</desc>
+		</argitem>
+	</arg>
+	<result></result>
+	<desc>
+		　指定された重ね合わせ元 Bitmap の矩形を、重ね合わせ先にアフィン変換を行いながら演算合成します。<r/>
+	</desc>
+</member>
+
+<member>
+	<name>operateRect</name>
+	<type>method</type>
+	<shortdesc>矩形演算合成</shortdesc>
+	<arg>
+		<argitem>
+			<name>dst</name>
+			<default></default>
+			<desc>
+				　重ね合わせ先の Bitmap オブジェクトを指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>dleft</name>
+			<default></default>
+			<desc>
+				　演算先の矩形の左端位置を ( 演算先 Bitmap の画像位置における ) ピクセル単位で指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>dtop</name>
+			<default></default>
+			<desc>
+				　演算先の矩形の上端位置を ( 演算先 Bitmap の画像位置における ) ピクセル単位で指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>src</name>
+			<default></default>
+			<desc>
+				　演算元の Bitmap オブジェクトを指定します。<r/>
+				　未指定時全体が対象になります。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>srcrect</name>
+			<default>null</default>
+			<desc>
+				　演算する矩形を ( 演算元 Bitmap の画像位置における ) ピクセル単位で Rect オブジェクトで指定します。<r/>
+				　未指定時全体が対象になります。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>cliprect</name>
+			<default>null</default>
+			<desc>
+				　クリッピング矩形を ( 重ね合わせ先 Bitmap の画像位置における )  Rect オブジェクトで指定します。<r/>
+				　未指定時クリッピングは行われません。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>mode</name>
+			<default>omAuto</default>
+			<desc>
+				　演算のモードを指定します。<r/>
+				<tt><kw>omPsNormal</kw></tt> が指定された場合はPhotoshop互換のアルファ合成が行われます。<r/>
+				<tt><kw>omPsAdditive</kw></tt> が指定された場合はPhotoshop互換の覆い焼き(リニア)合成が行われます。<r/>
+				<tt><kw>omPsSubtractive</kw></tt> が指定された場合はPhotoshop互換の焼き込み(リニア)合成が行われます。<r/>
+				<tt><kw>omPsMultiplicative</kw></tt> が指定された場合はPhotoshop互換の乗算合成が行われます。<r/>
+				<tt><kw>omPsScreen</kw></tt> が指定された場合はPhotoshop互換のスクリーン合成が行われます。<r/>
+				<tt><kw>omPsOverlay</kw></tt> が指定された場合はPhotoshop互換のオーバーレイ合成が行われます。<r/>
+				<tt><kw>omPsHardLight</kw></tt> が指定された場合はPhotoshop互換のハードライト合成が行われます。<r/>
+				<tt><kw>omPsSoftLight</kw></tt> が指定された場合はPhotoshop互換のソフトライト合成が行われます。<r/>
+				<tt><kw>omPsColorDodge</kw></tt> が指定された場合はPhotoshop互換の覆い焼きカラー合成が行われます。<r/>
+				<tt><kw>omPsColorDodge5</kw></tt> が指定された場合はPhotoshopのバージョン5.x 以下と互換の覆い焼きカラー合成が行われます。<r/>
+				<tt><kw>omPsColorBurn</kw></tt> が指定された場合はPhotoshop互換の焼き込みカラー合成が行われます。<r/>
+				<tt><kw>omPsLighten</kw></tt> が指定された場合はPhotoshop互換の比較(明)合成が行われます。<r/>
+				<tt><kw>omPsDarken</kw></tt> が指定された場合はPhotoshop互換の比較(暗)合成が行われます。<r/>
+				<tt><kw>omPsDifference</kw></tt> が指定された場合はPhotoshop互換の差の絶対値合成が行われます。<r/>
+				<tt><kw>omPsDifference5</kw></tt> が指定された場合はPhotoshopのバージョン 5.x 以下と互換の差の絶対値合成が行われます。<r/>
+				<tt><kw>omPsExclusion</kw></tt> が指定された場合はPhotoshop互換の除外合成が行われます。<r/>
+				<tt><kw>omAdditive</kw></tt> が指定された場合は加算合成が行われます。<r/>
+				<tt><kw>omSubtractive</kw></tt> が指定された場合は減算合成が行われます。<r/>
+				<tt><kw>omMultiplicative</kw></tt> が指定された場合は乗算合成が行われます。<r/>
+				<tt><kw>omDodge</kw></tt> が指定された場合は覆い焼き合成が行われます。<r/>
+				<tt><kw>omDarken</kw></tt> が指定された場合は比較(暗)合成が行われます。<r/>
+				<tt><kw>omLighten</kw></tt> が指定された場合は比較(明)合成が行われます。<r/>
+				<tt><kw>omScreen</kw></tt> が指定された場合はスクリーン乗算合成が行われます。<r/>
+				<tt><kw>omAlpha</kw></tt> が指定された場合はアルファ合成が行われます。<r/>
+				<tt><kw>omAddAlpha</kw></tt> が指定された場合は加算アルファ合成が行われます。<r/>
+				<tt><kw>omOpaque</kw></tt> が指定された場合は src のアルファ情報は無視され、src は常に完全不透明であると見なされます。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>face</name>
+			<default>dfAlpha</default>
+			<desc>
+				　描画方式を指定します。<r/>
+				<tt><kw>dfAlpha</kw></tt> が指定された場合は画像はアルファチャンネルつき画像と見なされ、描画されます。<r/>
+				<tt><kw>dfAddAlpha</kw></tt> が指定された場合は画像は加算アルファチャンネルつき画像として見なされ、描画されます。<r/>
+				<tt><kw>dfOpaque</kw></tt> が指定された場合は画像はすべて完全不透明であると見なされ、描画されます。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>opa</name>
+			<default>255</default>
+			<desc>
+				　演算の強度 ( 0 ～ 255 ) を指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>hda</name>
+			<default>false</default>
+			<desc>
+				　アルファチャンネルを保護するかどうかを指定します。<r/>
+			</desc>
+		</argitem>
+	</arg>
+	<result></result>
+	<desc>
+		　指定された演算元 Bitmap の矩形部分を演算先の Bitmap の指定位置に指定のモードで演算合成します。<r/>
+	</desc>
+</member>
+
+<member>
+	<name>operateStretch</name>
+	<type>method</type>
+	<shortdesc>拡大縮小演算合成</shortdesc>
+	<arg>
+		<argitem>
+			<name>dst</name>
+			<default></default>
+			<desc>
+				　重ね合わせ先の Bitmap オブジェクトを指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>src</name>
+			<default></default>
+			<desc>
+				　重ね合わせ元の Bitmap オブジェクトを指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>dstrect</name>
+			<default>null</default>
+			<desc>
+				　重ね合わせ先の矩形を ( 重ね合わせ先 Bitmap の画像位置における ) ピクセル単位で Rect オブジェクトで指定します。<r/>
+				　未指定時全体が対象となります。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>srcrect</name>
+			<default>null</default>
+			<desc>
+				　重ね合わせる矩形を ( 重ね合わる Bitmap の画像位置における ) ピクセル単位で Rect オブジェクトで指定します。<r/>
+				　未指定時全体が対象となります。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>cliprect</name>
+			<default>null</default>
+			<desc>
+				　クリッピング矩形を ( 重ね合わせ先 Bitmap の画像位置における )  Rect オブジェクトで指定します。<r/>
+				　未指定時クリッピングは行われません。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>mode</name>
+			<default>omAuto</default>
+			<desc>
+				　演算のモードを指定します。<r/>
+				<tt><kw>omPsNormal</kw></tt> が指定された場合はPhotoshop互換のアルファ合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsAdditive</kw></tt> が指定された場合はPhotoshop互換の覆い焼き(リニア)合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsSubtractive</kw></tt> が指定された場合はPhotoshop互換の焼き込み(リニア)合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsMultiplicative</kw></tt> が指定された場合はPhotoshop互換の乗算合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsScreen</kw></tt> が指定された場合はPhotoshop互換のスクリーン合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsOverlay</kw></tt> が指定された場合はPhotoshop互換のオーバーレイ合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsHardLight</kw></tt> が指定された場合はPhotoshop互換のハードライト合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsSoftLight</kw></tt> が指定された場合はPhotoshop互換のソフトライト合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsColorDodge</kw></tt> が指定された場合はPhotoshop互換の覆い焼きカラー合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsColorDodge5</kw></tt> が指定された場合はPhotoshopのバージョン5.x 以下と互換の覆い焼きカラー合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsColorBurn</kw></tt> が指定された場合はPhotoshop互換の焼き込みカラー合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsLighten</kw></tt> が指定された場合はPhotoshop互換の比較(明)合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsDarken</kw></tt> が指定された場合はPhotoshop互換の比較(暗)合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsDifference</kw></tt> が指定された場合はPhotoshop互換の差の絶対値合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsDifference5</kw></tt> が指定された場合はPhotoshopのバージョン 5.x 以下と互換の差の絶対値合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsExclusion</kw></tt> が指定された場合はPhotoshop互換の除外合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omAdditive</kw></tt> が指定された場合は加算合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omSubtractive</kw></tt> が指定された場合は減算合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omMultiplicative</kw></tt> が指定された場合は乗算合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omDodge</kw></tt> が指定された場合は覆い焼き合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omDarken</kw></tt> が指定された場合は比較(暗)合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omLighten</kw></tt> が指定された場合は比較(明)合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omScreen</kw></tt> が指定された場合はスクリーン乗算合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omAlpha</kw></tt> が指定された場合はアルファ合成が行われます。<r/>
+				<tt><kw>omAddAlpha</kw></tt> が指定された場合は加算アルファ合成が行われます。この場合は、face が dfOpaque かつ hda が偽のとき、type 引数に stFastLinear を指定することにより線形補間が可能です。<r/>
+				<tt><kw>omOpaque</kw></tt> が指定された場合は src のアルファ情報は無視され、src は常に完全不透明であると見なされます。この場合は、face が dfOpaque かつ hda が偽のとき、type 引数に stFastLinear を指定することにより線形補間が可能です。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>face</name>
+			<default>dfAlpha</default>
+			<desc>
+				　描画方式を指定します。<r/>
+				<tt><kw>dfAlpha</kw></tt> が指定された場合は画像はアルファチャンネルつき画像と見なされ、描画されます。<r/>
+				<tt><kw>dfAddAlpha</kw></tt> が指定された場合は画像は加算アルファチャンネルつき画像として見なされ、描画されます。<r/>
+				<tt><kw>dfOpaque</kw></tt> が指定された場合は画像はすべて完全不透明であると見なされ、描画されます。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>opa</name>
+			<default>255</default>
+			<desc>
+				　演算の強度 ( 0 ～ 255 ) を指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>type</name>
+			<default>stNearest</default>
+			<desc>
+				　拡大縮小のタイプを指定します。<r/>
+				<tt><kw>stNearest</kw>    </tt> : 最近傍点法が用いられます<r/>
+				<tt><kw>stFastLinear</kw> </tt> : 低精度の線形補間が用いられます(一部実装)<r/>
+				<tt><kw>stLinear</kw>     </tt> : 線形補間が用いられます(未実装)<r/>
+				<tt><kw>stCubic</kw>      </tt> : ３次元補間が用いられます(未実装)<r/>
+				　速度は stNearest > stFastLinear > stLinear > stCubic の順に高速ですが、画質は速度が
+				速ければ速いタイプほど低画質になります。<r/>
+				　stFastLinear や stLinear, stCubic に対しては、stRefNoClip をビット論理和で追加指定
+				することができ、この場合は、コピーするビットマップの領域外を参照して色を合成することを
+				許可します。これを指定しない場合は、転送元ビットマップの周囲に余裕があったとしても、
+				転送元ビットマップの範囲外を参照することはありません(範囲外の色はもっとも近い位置にある
+				範囲内のピクセルの色と見なされます)。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>hda</name>
+			<default>false</default>
+			<desc>
+				　アルファチャンネルを保護するかどうかを指定します。<r/>
+			</desc>
+		</argitem>
+	</arg>
+	<result></result>
+	<desc>
+		　指定された重ね合わせ元 Bitmap の矩形を、重ね合わせ先 Bitmap の矩形に演算合成します。<r/>
+		　重ね合わせ元矩形と重ね合わせ先矩形のサイズが異なる場合は拡大または縮小が行われます。<r/>
+	</desc>
+</member>
+
+<member>
+	<name>flipLR</name>
+	<type>method</type>
+	<shortdesc>左右反転</shortdesc>
+	<arg>
+		<argitem>
+			<name>bmp</name>
+			<default></default>
+			<desc>
+				　反転する Bitmap オブジェクトを指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>rect</name>
+			<default>null</default>
+			<desc>
+				　反転する領域を ( Bitmap の画像位置における )  Rect オブジェクトで指定します。<r/>
+				　未指定時全体が対象となります。<r/>
+			</desc>
+		</argitem>
+	</arg>
+	<result></result>
+	<desc>
+		　画像の左右反転を行います。<r/>
+	</desc>
+</member>
+
+<member>
+	<name>flipUD</name>
+	<type>method</type>
+	<shortdesc>上下反転</shortdesc>
+	<arg>
+		<argitem>
+			<name>bmp</name>
+			<default></default>
+			<desc>
+				　反転する Bitmap オブジェクトを指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>rect</name>
+			<default>null</default>
+			<desc>
+				　反転する領域を ( Bitmap の画像位置における )  Rect オブジェクトで指定します。<r/>
+				　未指定時全体が対象となります。<r/>
+			</desc>
+		</argitem>
+	</arg>
+	<result></result>
+	<desc>
+		　画像の上下反転を行います。<r/>
+	</desc>
+</member>
+
+<member>
+	<name>adjustGamma</name>
+	<type>method</type>
+	<shortdesc>ガンマ補正</shortdesc>
+	<arg>
+		<argitem>
+			<name>bmp</name>
+			<default></default>
+			<desc>
+				　ガンマ補正する Bitmap オブジェクトを指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>rgamma</name>
+			<default>1.0</default>
+			<desc>
+				　赤成分のガンマ値 ( 0.0 ～ 1.0 ～ 9.0 ) を指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>rfloor</name>
+			<default>0</default>
+			<desc>
+				　赤成分の出力最低値 ( 0 ～ 255 ) を指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>rceil</name>
+			<default>255</default>
+			<desc>
+				　赤成分の出力最大値 ( 0 ～ 255 ) を指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>ggamma</name>
+			<default>1.0</default>
+			<desc>
+				　緑成分のガンマ値 ( 0.0 ～ 1.0 ～ 9.0 ) を指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>gfloor</name>
+			<default>0</default>
+			<desc>
+				　緑成分の出力最低値 ( 0 ～ 255 ) を指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>gceil</name>
+			<default>255</default>
+			<desc>
+				　緑成分の出力最大値 ( 0 ～ 255 ) を指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>bgamma</name>
+			<default>1.0</default>
+			<desc>
+				　青成分のガンマ値 ( 0.0 ～ 1.0 ～ 9.0 ) を指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>bfloor</name>
+			<default>0</default>
+			<desc>
+				　青成分の出力最低値 ( 0 ～ 255 ) を指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>bceil</name>
+			<default>255</default>
+			<desc>
+				　青成分の出力最大値 ( 0 ～ 255 ) を指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>cliprect</name>
+			<default>null</default>
+			<desc>
+				　クリッピング領域を ( Bitmap の画像位置における )  Rect オブジェクトで指定します。<r/>
+				　未指定時全体が対象となります。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>isaddalpha</name>
+			<default>false</default>
+			<desc>
+				　加算合成アルファ形式かどうかを指定します。<r/>
+			</desc>
+		</argitem>
+	</arg>
+	<result></result>
+	<desc>
+		　画像に対してガンマ補正を実行します。<r/>
+		　ガンマ値には 1.0 を指定するとガンマ曲線が直線になります。<r/>
+		　出力最低値と出力最高値は各成分の輝度の最低値と最高値を指定するものです。<r/>
+		　最高値に最低値よりも低い値を設定すると画像を反転させることができます。<r/>
+		　isaddalpha が true の場合、このメソッドは加算アルファ合成用の特別なガンマ補正ルーチンを用います。<r/>
+		　このルーチンは加算アルファ合成のうち、アルファ合成に相当する成分に対してはガンマ補正を行いますが、加算合成に相当する成分に対してはガンマ補正を行いません。<r/>
+	</desc>
+</member>
+
+<member>
+	<name>doBoxBlur</name>
+	<type>method</type>
+	<shortdesc>矩形ブラーをかける</shortdesc>
+	<arg>
+		<argitem>
+			<name>bmp</name>
+			<default></default>
+			<desc>
+				　矩形ブラーをかける Bitmap オブジェクトを指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>xblur</name>
+			<default>1</default>
+			<desc>
+				横方向のブラーの範囲を指定します。
+			</desc>
+		</argitem>
+		<argitem>
+			<name>yblur</name>
+			<default>1</default>
+			<desc>
+				縦方向のブラーの範囲を指定します。
+			</desc>
+		</argitem>
+		<argitem>
+			<name>cliprect</name>
+			<default>null</default>
+			<desc>
+				　クリッピング領域を ( Bitmap の画像位置における )  Rect オブジェクトで指定します。<r/>
+				　未指定時全体が対象となります。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>isalpha</name>
+			<default>true</default>
+			<desc>
+				　アルファチャンネルを持つかどうかを指定します。<r/>
+			</desc>
+		</argitem>
+	</arg>
+	<result></result>
+	<desc>
+		　ブラー(ぼかし)をかけます。アルゴリズムは「矩形ブラー」(box blur)です。<r/>
+		　矩形ブラーは、xblurとyblurの２つのパラメータによって表現される「範囲」中のピクセルの輝度の平均値をとる物です。たとえば xblur=10 yblur=2 の場合は、対象のピクセルを中心に、横方向は -10～10、縦方向は -2～2 の矩形範囲のピクセルの輝度の平均をとり、それが最終的なそのピクセルの輝度となります。<r/>
+		　範囲の面積は (xblur×2+1) × (yblur×2+1) で計算することができます。現バージョンではこの面積が 256 未満 の場合は、面積が256以上の場合よりも高速なアルゴリズムが採用されます。<r/>
+		　isalpha が true の場合は、アルファ合成用の特別なアルゴリズムを使用しますので、少々遅くなります。<r/>
+		　false の場合は、より高速なアルゴリズムとなります。<r/>
+	</desc>
+</member>
+
+<member>
+	<name>doGrayScale</name>
+	<type>method</type>
+	<shortdesc>グレースケール変換</shortdesc>
+	<arg>
+		<argitem>
+			<name>bmp</name>
+			<default></default>
+			<desc>
+				　グレースケール変換する Bitmap オブジェクトを指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>cliprect</name>
+			<default>null</default>
+			<desc>
+				　クリッピング領域を ( Bitmap の画像位置における )  Rect オブジェクトで指定します。<r/>
+				　未指定時全体が対象となります。<r/>
+			</desc>
+		</argitem>
+	</arg>
+	<result></result>
+	<desc>
+		　画像をグレースケールに変換します。<r/>
+	</desc>
+</member>
+
+<member>
+	<name>colorRect</name>
+	<type>method</type>
+	<shortdesc>矩形半透明塗りつぶし</shortdesc>
+	<arg>
+		<argitem>
+			<name>bmp</name>
+			<default></default>
+			<desc>
+				　塗り潰す Bitmap オブジェクトを指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>value</name>
+			<default></default>
+			<desc>
+				　塗りつぶす色や値を指定します。<r/>
+				　この値は、face 引数の値によって意味が変わります。<r/>
+				<tt><kw>dfAlpha</kw>    </tt> : 0xRRGGBB 形式で色を指定してください<r/>
+				<tt><kw>dfAddAlpha</kw> </tt> : 0xRRGGBB 形式で色を指定してください<r/>
+				<tt><kw>dfOpaque</kw>   </tt> : 0xRRGGBB 形式で色を指定してください<r/>
+				<tt><kw>dfMask</kw>     </tt> : マスク(不透明度)の値 ( 0 ～ 255 ) を指定してください<r/>
+				　dfOpaque を指定した場合は、マスク情報は無視されます。また、dfMask を指定した場合は、色の情報はそのままになります。<r/>
+				　dfAlpha の場合でかつ opa が負の場合はこの引数は無視されます。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>opa</name>
+			<default>255</default>
+			<desc>
+				　塗りつぶす不透明度 ( -255 ～ 0 ～ 255 ) を指定します。<r/>
+				　この引数は、face の値が dfMask や dfProvince の場合は無視されます ( 常に完全不透明 )。<r/>
+				　負の数の指定は face が dfAlpha の場合のみに有効で、
+				この場合は value 引数は無視され、画像から不透明度が取り除かれます (
+				-255 を指定すると矩形は完全に透明になります )。
+			</desc>
+		</argitem>
+		<argitem>
+			<name>rect</name>
+			<default>null</default>
+			<desc>
+				　塗りつぶす矩形を ( 画像位置における ) ピクセル単位で Rect オブジェクトで指定します。<r/>
+				　未指定の場合全体が対象となります。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>face</name>
+			<default>dfAlpha</default>
+			<desc>
+				　描画方式を指定します。<r/>
+				<tt><kw>dfAlpha</kw></tt> が指定された場合は画像はアルファチャンネルつき画像と見なされ、描画されます。<r/>
+				<tt><kw>dfAddAlpha</kw></tt> が指定された場合は画像は加算アルファチャンネルつき画像として見なされ、描画されます。<r/>
+				<tt><kw>dfOpaque</kw></tt> が指定された場合は画像はすべて完全不透明であると見なされ、描画されます。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>cliprect</name>
+			<default>null</default>
+			<desc>
+				　クリッピング領域を ( Bitmap の画像位置における )  Rect オブジェクトで指定します。<r/>
+				　未指定時全体が対象となります。<r/>
+			</desc>
+		</argitem>
+	</arg>
+	<result></result>
+	<desc>
+		　指定された Bitmap 画像の矩形を指定された方法で塗りつぶします。<r/>
+		　<ref>ImageFunction.fillRect</ref> と異なり、透明度を指定して半透明で塗りつぶすことができます。<r/>
+	</desc>
+</member>
+
+<member>
+	<name>drawText</name>
+	<type>method</type>
+	<shortdesc>文字描画</shortdesc>
+	<arg>
+		<argitem>
+			<name>bmp</name>
+			<default></default>
+			<desc>
+				　文字描画する Bitmap オブジェクトを指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>x</name>
+			<default></default>
+			<desc>
+				　文字描画を開始する原点の ( 画像位置における ) x 座標をピクセル単位で指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>y</name>
+			<default></default>
+			<desc>
+				　文字描画を開始する原点の ( 画像位置における ) y 座標をピクセル単位で指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>text</name>
+			<default></default>
+			<desc>
+				　描画する文字を指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>color</name>
+			<default></default>
+			<desc>
+				　描画する文字の色を 0xRRGGBB 形式で指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>opa</name>
+			<default>255</default>
+			<desc>
+				　描画する文字の不透明度 ( -255 ～ 0 ～ 255 ) を指定します。<r/>
+				　負の数の指定は face が dfAlpha の場合のみに有効で、
+				この場合は文字の形に不透明度が取り除かれる事になります ( 値が小さいほど
+				効果が大きくなります )。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>aa</name>
+			<default>true</default>
+			<desc>
+				　アンチエイリアスを行うかどうかを指定します。<r/>
+				　真を指定するとアンチエイリアスが行われます。偽を指定すると行われません。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>face</name>
+			<default>dfAlpha</default>
+			<desc>
+				　描画方式を指定します。<r/>
+				<tt><kw>dfAlpha</kw></tt> が指定された場合は画像はアルファチャンネルつき画像と見なされ、描画されます。<r/>
+				<tt><kw>dfAddAlpha</kw></tt> が指定された場合は画像は加算アルファチャンネルつき画像として見なされ、描画されます。<r/>
+				<tt><kw>dfOpaque</kw></tt> が指定された場合は画像はすべて完全不透明であると見なされ、描画されます。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>shadowlevel</name>
+			<default>0</default>
+			<desc>
+				　影の不透明度を指定します。shadowwidth 引数の値によって適切な値は変動します。<r/>
+				0 を指定すると影は描画されません。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>shadowcolor</name>
+			<default>0x000000</default>
+			<desc>
+				　影の色を 0xRRGGBB 形式で指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>shadowwidth</name>
+			<default>0</default>
+			<desc>
+				　影の幅 ( ぼけ ) を指定します。 0 がもっともシャープ ( ぼけない ) で、値を大きく
+				すると影をぼかすことができます。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>shadowofsx</name>
+			<default>0</default>
+			<desc>
+				　影の位置の x 座標の値をピクセル単位で指定します。 0 を指定すると影は真下に描画されます。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>shadowofsy</name>
+			<default>0</default>
+			<desc>
+				　影の位置の y 座標の値をピクセル単位で指定します。 0 を指定すると影は真下に描画されます。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>hda</name>
+			<default>false</default>
+			<desc>
+				　アルファチャンネルを保護するかどうかを指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>cliprect</name>
+			<default>null</default>
+			<desc>
+				　クリッピング領域を ( Bitmap の画像位置における )  Rect オブジェクトで指定します。<r/>
+				　未指定時全体が対象となります。<r/>
+			</desc>
+		</argitem>
+	</arg>
+	<result>描画領域 ( Rect オブジェクト ) </result>
+	<desc>
+		　Bitmap に文字を描画します。<r/>
+		　face に dfOpaque を指定した場合、描画先のマスクが破壊されるか保護されるかは hda によります。<r/>
+		　フォントは TODO 指定がない、忘れている で指定したものが用いられます。<r/>
+	</desc>
+</member>
+
+<member>
+	<name>fillRect</name>
+	<type>method</type>
+	<shortdesc>矩形塗りつぶし</shortdesc>
+	<arg>
+		<argitem>
+			<name>bmp</name>
+			<default></default>
+			<desc>
+				　塗り潰す Bitmap オブジェクトを指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>value</name>
+			<default></default>
+			<desc>
+				　塗りつぶす色や値を指定します。<r/>
+				　この値は、isalpha の値によって意味が変わります。<r/>
+				<tt><kw>true</kw>  </tt> : 0xAARRGGBB 形式で不透明度と色を指定してください。メインとマスクの両方が塗りつぶされます。<r/>
+				<tt><kw>false</kw> </tt> : 0xRRGGBB 形式で色を指定してください。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>rect</name>
+			<default>null</default>
+			<desc>
+				　塗りつぶす矩形を ( 画像位置における ) ピクセル単位で Rect オブジェクトで指定します。<r/>
+				　未指定の場合全体が対象となります。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>isalpha</name>
+			<default>true</default>
+			<desc>
+				　アルファチャンネルを持つかどうかを指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>cliprect</name>
+			<default>null</default>
+			<desc>
+				　クリッピング領域を ( Bitmap の画像位置における )  Rect オブジェクトで指定します。<r/>
+				　未指定時全体が対象となります。<r/>
+			</desc>
+		</argitem>
+	</arg>
+	<result></result>
+	<desc>
+		　指定された Bitmap 画像の矩形を指定された方法で塗りつぶします。<r/>
+	</desc>
+</member>
+
+</doc>
