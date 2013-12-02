@@ -704,10 +704,9 @@
 	</arg>
 	<result></result>
 	<desc>
-		　ポップアップウィンドウが閉じるべき時に発生するイベントです。このイベントは、<ref>Window.stayOnTop</ref> プロパティが真で、かつ、<ref>Window.focusable</ref> プロパティが偽の場合、「他のウィンドウがクリックされた」あるいは「他のアプリケーションがアクティブになった」時に発生します。<r/>
+		　ポップアップウィンドウが閉じるべき時に発生するイベントです。このイベントは、<ref>Window.stayOnTop</ref> プロパティが真の場合、「他のウィンドウがクリックされた」あるいは「他のアプリケーションがアクティブになった」時に発生します。<r/>
 		　通常は、ここでウィンドウを閉じたり、非表示にする処理を行ってください。<r/>
 	</desc>
-	<ref>Window.focusable</ref>
 	<ref>Window.stayOnTop</ref>
 </member>
 
@@ -758,22 +757,6 @@
 	</desc>
 	<ref>Window.showModal</ref>
 	<ref>Window.onCloseQuery</ref>
-</member>
-
-<member>
-	<name>beginMove</name>
-	<type>method</type>
-	<shortdesc>ウィンドウ移動の開始</shortdesc>
-	<arg>
-	</arg>
-	<result></result>
-	<desc>
-		　ウィンドウのマウスでの移動を開始します。通常、ウィンドウのタイトルバーをドラッグすると
-		ウィンドウを移動することができますが、このメソッドはその動作をシミュレートします。<r/>
-		　<ref>Window.onMouseDown</ref> イベントハンドラ内でこのメソッドを呼ぶと、任意の箇所で
-		ウィンドウをドラッグして移動可能にすることができます。<r/>
-	</desc>
-	<ref>Window.onMouseDown</ref>
 </member>
 
 <member>
@@ -850,8 +833,6 @@
 		以下のことを行う必要があります。<r/>
 		<ul>
 		<li><ref>Window.borderStyle</ref> は bsNone に設定します。</li>
-		<li><ref>Window.innerSunken</ref> は false に設定します。</li>
-		<li><ref>Window.layerLeft</ref> および <ref>Window.layerTop</ref> は 0 に設定します。</li>
 		<li><ref>Layer.imageLeft</ref> および <ref>Layer.imageTop</ref> は 0 に設定します。</li>
 		</ul>
 	</desc>
@@ -1037,36 +1018,6 @@
 	<ref>Window.left</ref>
 	<ref>Window.top</ref>
 	<ref>Window.setSize</ref>
-</member>
-
-<member>
-	<name>setLayerPos</name>
-	<type>method</type>
-	<shortdesc>レイヤの表示オフセットの設定</shortdesc>
-	<arg>
-		<argitem>
-			<name>left</name>
-			<default></default>
-			<desc>
-				　クライアント領域内でのレイヤの左端位置を指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>top</name>
-			<default></default>
-			<desc>
-				　クライアント領域内でのレイヤの上端位置を指定します。<r/>
-			</desc>
-		</argitem>
-	</arg>
-	<result></result>
-	<desc>
-		　レイヤの表示オフセットを指定します。<r/>
-		　レイヤの表示オフセットはデフォルトで 0, 0 です。<r/>
-		　これ以外の値を指定するとそれだけずれた位置にレイヤが表示されます。<r/>
-	</desc>
-	<ref>Window.layerLeft</ref>
-	<ref>Window.layerTop</ref>
 </member>
 
 <member>
@@ -1413,22 +1364,6 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 </member>
 
 <member>
-	<name>focusable</name>
-	<type>property</type>
-	<shortdesc>フォーカスを取得可能か</shortdesc>
-	<access>r/w</access>
-	<desc>
-		　フォーカスを取得可能かどうかを表します。値を設定することもできます。<r/>
-		　偽に設定すると、フォーカスを取得できなくなる、つまり、ウィンドウがアクティブにならなくなります。副作用として、タイトルバーをつかんでのウィンドウの移動やウィンドウのリサイズ、「×」ボタンを押してウィンドウを閉じる操作もできなくなります。<r/>
-		　キーボード入力を得たいときは <ref>Window.trapKey</ref> プロパティを使用することができます。<r/>
-		　通常、これは、ポップアップメニューのように、もっとも手前に表示されるが、それ自身はフォーカスを得ないウィンドウの実装に用います。<r/>
-		　現バージョンでは、ウィンドウがフルスクリーン化するとき、あるいはフルスクリーンから復帰するときに、このプロパティの設定内容が失われる可能性があります。<r/>
-	</desc>
-	<ref>Window.trapKey</ref>
-	<ref>Window.onPopupHide</ref>
-</member>
-
-<member>
 	<name>trapKey</name>
 	<type>property</type>
 	<shortdesc>キー入力をトラップするか</shortdesc>
@@ -1438,48 +1373,6 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 		　真に設定すると、他のウィンドウで発生したキー入力イベントを横取りし、このウィンドウ上で発生させることができます。<r/>
 		　複数のウィンドウのこのプロパティが真に設定されている場合は、もっとも最後に作成したウィンドウに対してキー入力イベントが発生します。<r/>
 	</desc>
-	<ref>Window.focusable</ref>
-</member>
-
-<member>
-	<name>layerLeft</name>
-	<type>property</type>
-	<shortdesc>レイヤの表示オフセットの左端位置</shortdesc>
-	<access>r/w</access>
-	<desc>
-		　レイヤの表示オフセットの左端位置を表します。値を設定することもできます。<r/>
-	</desc>
-	<ref>Window.layerTop</ref>
-	<ref>Window.setLayerPos</ref>
-</member>
-
-<member>
-	<name>layerTop</name>
-	<type>property</type>
-	<shortdesc>レイヤの表示オフセットの上端位置</shortdesc>
-	<access>r/w</access>
-	<desc>
-		　レイヤの表示オフセットの上端位置を表します。値を設定することもできます。<r/>
-	</desc>
-	<ref>Window.layerLeft</ref>
-	<ref>Window.setLayerPos</ref>
-</member>
-
-<member>
-	<name>innerSunken</name>
-	<type>property</type>
-	<shortdesc>クライアント領域が凹んだような外見を持つかどうか</shortdesc>
-	<access>r/w</access>
-	<desc>
-		　ウィンドウのクライアント領域が凹んだような外見を持つかどうかを表します。
-		値を設定することもできます。<r/>
-		　真を指定すると凹んだような外見をもち、偽を指定するとフラットな外見を持つようになります。<r/>
-		　この凹んだような外見のための枠 ( 凹んだような視覚効果を持つ部分 ) はクライアント領域
-		には含まれません。<r/>
-	</desc>
-	<ref>Window.innerWidth</ref>
-	<ref>Window.innerHeight</ref>
-	<ref>Window.setInnerSize</ref>
 </member>
 
 <member>
@@ -1584,24 +1477,12 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 </member>
 
 <member>
-	<name>showScrollBars</name>
-	<type>property</type>
-	<shortdesc>スクロールバーを表示するかどうか</shortdesc>
-	<access>r/w</access>
-	<desc>
-		　スクロールバーを表示するかどうかを表します。値を設定することもできます。<r/>
-		　真ならばスクロールバーは表示され、偽ならば表示されません。<r/>
-	</desc>
-</member>
-
-
-<member>
 	<name>imeMode</name>
 	<type>property</type>
 	<shortdesc>デフォルトのIMEモード</shortdesc>
-	<access>r/w</access>
+	<access>r</access>
 	<desc>
-		　デフォルトのIMEモードを表します。値を設定することもできます。<r/>
+		　デフォルトのIMEモードを表します。<r/>
 		　ここで指定したモードは、どのレイヤにもフォーカスが無い状態に設定されるモードです。<r/>
 		　未指定の場合は <kw>imDisable</kw>で、これはどのレイヤにもフォーカスが無い状態では IME は無効状態であるということになります。<r/>
 		　指定可能な値については <ref>Layer.imeMode</ref> を参照してください。<r/>
@@ -1632,17 +1513,6 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 		　真ならばマウスキーを使用することができます。<r/>
 		　マウスキーが有効になると、カーソルキーを使ってマウスカーソルを移動させることが
 		できますが、キー入力系のイベントはいっさい発生しなくなります。<r/>
-	</desc>
-</member>
-
-<member>
-	<name>menu</name>
-	<type>property</type>
-	<shortdesc>ルートメニューオブジェクト</shortdesc>
-	<access>r</access>
-	<desc>
-		　ルート<kw>メニュー</kw>オブジェクト ( Menu クラスのオブジェクト ) を表します。<r/>
-		　このルートメニューオブジェクトの子として登録されたメニューはメニューバーに並ぶことになります。<r/>
 	</desc>
 </member>
 

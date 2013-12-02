@@ -924,7 +924,6 @@ onPopupHide	top	f_Window_onPopupHide.html	Windowクラス
 onActivate	top	f_Window_onActivate.html	Windowクラス
 onDeactivate	top	f_Window_onDeactivate.html	Windowクラス
 close	top	f_Window_close.html	Windowクラス
-beginMove	top	f_Window_beginMove.html	Windowクラス
 bringToFront	top	f_Window_bringToFront.html	Windowクラス
 update	top	f_Window_update.html	Windowクラス
 tutNormal	id499	f_Window_update.html	Window.update
@@ -940,7 +939,6 @@ setSize	top	f_Window_setSize.html	Windowクラス
 setMinSize	top	f_Window_setMinSize.html	Windowクラス
 setMaxSize	top	f_Window_setMaxSize.html	Windowクラス
 setPos	top	f_Window_setPos.html	Windowクラス
-setLayerPos	top	f_Window_setLayerPos.html	Windowクラス
 setInnerSize	top	f_Window_setInnerSize.html	Windowクラス
 setZoom	top	f_Window_setZoom.html	Windowクラス
 postInputEvent	top	f_Window_postInputEvent.html	Windowクラス
@@ -969,11 +967,7 @@ maxWidth	top	f_Window_maxWidth.html	Windowクラス
 maxHeight	top	f_Window_maxHeight.html	Windowクラス
 left	top	f_Window_left.html	Windowクラス
 top	top	f_Window_top.html	Windowクラス
-focusable	top	f_Window_focusable.html	Windowクラス
 trapKey	top	f_Window_trapKey.html	Windowクラス
-layerLeft	top	f_Window_layerLeft.html	Windowクラス
-layerTop	top	f_Window_layerTop.html	Windowクラス
-innerSunken	top	f_Window_innerSunken.html	Windowクラス
 innerWidth	top	f_Window_innerWidth.html	Windowクラス
 innerHeight	top	f_Window_innerHeight.html	Windowクラス
 zoomNumer	top	f_Window_zoomNumer.html	Windowクラス
@@ -987,7 +981,6 @@ bsSizeable	id518	f_Window_borderStyle.html	Window.borderStyle
 bsToolWindow	id519	f_Window_borderStyle.html	Window.borderStyle
 bsSizeToolWin	id520	f_Window_borderStyle.html	Window.borderStyle
 stayOnTop	top	f_Window_stayOnTop.html	Windowクラス
-showScrollBars	top	f_Window_showScrollBars.html	Windowクラス
 imeMode	top	f_Window_imeMode.html	Windowクラス
 imDisable	id521	f_Window_imeMode.html	Window.imeMode
 mouseCursorState	top	f_Window_mouseCursorState.html	Windowクラス
@@ -995,15 +988,13 @@ mcsVisible	id522	f_Window_mouseCursorState.html	Window.mouseCursorState
 mcsTempHidden	id523	f_Window_mouseCursorState.html	Window.mouseCursorState
 mcsHidden	id524	f_Window_mouseCursorState.html	Window.mouseCursorState
 useMouseKey	top	f_Window_useMouseKey.html	Windowクラス
-menu	top	f_Window_menu.html	Windowクラス
-メニュー	id525	f_Window_menu.html	Window.menu
 fullScreen	top	f_Window_fullScreen.html	Windowクラス
-フルスクリーン	id526	f_Window_fullScreen.html	Window.fullScreen
+フルスクリーン	id525	f_Window_fullScreen.html	Window.fullScreen
 mainWindow	top	f_Window_mainWindow.html	Windowクラス
 focusedLayer	top	f_Window_focusedLayer.html	Windowクラス
-フォーカス	id527	f_Window_focusedLayer.html	Window.focusedLayer
+フォーカス	id526	f_Window_focusedLayer.html	Window.focusedLayer
 primaryLayer	top	f_Window_primaryLayer.html	Windowクラス
-プライマリレイヤ	id528	f_Window_primaryLayer.html	Window.primaryLayer
+プライマリレイヤ	id527	f_Window_primaryLayer.html	Window.primaryLayer
 HWND	top	f_Window_HWND.html	Windowクラス
 touchScaleThreshold	top	f_Window_touchScaleThreshold.html	Windowクラス
 touchRotateThreshold	top	f_Window_touchRotateThreshold.html	Windowクラス
