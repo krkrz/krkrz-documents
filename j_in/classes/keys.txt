@@ -66,8 +66,6 @@ getLastLog	top	f_Debug_getLastLog.html	Debugクラス
 logLocation	top	f_Debug_logLocation.html	Debugクラス
 logToFileOnError	top	f_Debug_logToFileOnError.html	Debugクラス
 clearLogFileOnError	top	f_Debug_clearLogFileOnError.html	Debugクラス
-controller	top	f_Debug_controller.html	Debugクラス
-console	top	f_Debug_console.html	Debugクラス
 Fontクラス概要	top	f_Font.html	Fontクラス
 フォント	id26	f_Font.html	Fontクラス
 getTextWidth	top	f_Font_getTextWidth.html	Fontクラス

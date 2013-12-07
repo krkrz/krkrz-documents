@@ -109,7 +109,7 @@
 	<desc>
 		　エラーログが出力されるごとに呼び出されるハンドラを登録します。<r/>
 		　ハンドラはログメッセージを引数に与えられて呼び出されます。<r/>
-		　登録メソッド内でログを出力しても、最適な呼び出しは行われず無視されます。<r/>
+		　登録メソッド内でログを出力しても、再帰的な呼び出しは行われず無視されます。<r/>
 	</desc>
 </member>
 
@@ -181,28 +181,6 @@
 	</desc>
 	<ref>Debug.startLogToFile</ref>
 	<ref>Debug.logToFileOnError</ref>
-</member>
-
-<member>
-	<name>controller</name>
-	<type>property</type>
-	<shortdesc>コントローラオブジェクト</shortdesc>
-	<access>r</access>
-	<desc>
-		　コントローラオブジェクトを表す読み出し専用のプロパティです。
-	</desc>
-	<ref>Controller</ref>
-</member>
-
-<member>
-	<name>console</name>
-	<type>property</type>
-	<shortdesc>コンソールオブジェクト</shortdesc>
-	<access>r</access>
-	<desc>
-		　コンソールオブジェクトを表す読み出し専用のプロパティです。
-	</desc>
-	<ref>Console</ref>
 </member>
 
 
