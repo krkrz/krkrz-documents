@@ -617,6 +617,9 @@ Rectクラス概要	top	f_Rect.html	Rectクラス
 Rect	top	f_Rect_Rect.html	Rectクラス
 setSize	top	f_Rect_setSize.html	Rectクラス
 setOffset	top	f_Rect_setOffset.html	Rectクラス
+addOffset	top	f_Rect_addOffset.html	Rectクラス
+clear	top	f_Rect_clear.html	Rectクラス
+set	top	f_Rect_set.html	Rectクラス
 isEmpty	top	f_Rect_isEmpty.html	Rectクラス
 clip	top	f_Rect_clip.html	Rectクラス
 union	top	f_Rect_union.html	Rectクラス

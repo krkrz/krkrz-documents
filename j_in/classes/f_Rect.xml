@@ -131,6 +131,83 @@
 	</desc>
 </member>
 
+<member>
+	<name>addOffset</name>
+	<type>method</type>
+	<shortdesc>矩形位置の設定</shortdesc>
+	<arg>
+		<argitem>
+			<name>x</name>
+			<default></default>
+			<desc>
+				　矩形の横移動量を指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>y</name>
+			<default></default>
+			<desc>
+				　矩形の縦移動量を指定します。<r/>
+			</desc>
+		</argitem>
+	</arg>
+	<result></result>
+	<desc>
+		　矩形位置を移動します。<r/>
+		　指定された x, y 値分矩形が移動します。<r/>
+	</desc>
+</member>
+
+<member>
+	<name>clear</name>
+	<type>method</type>
+	<shortdesc>矩形情報をクリアします</shortdesc>
+	<arg></arg>
+	<result></result>
+	<desc>
+		　矩形の各位置情報をゼロクリアします。<r/>
+	</desc>
+</member>
+
+<member>
+	<name>set</name>
+	<type>method</type>
+	<shortdesc>矩形座標の設定</shortdesc>
+	<arg>
+		<argitem>
+			<name>left</name>
+			<default></default>
+			<desc>
+				　左端を指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>top</name>
+			<default></default>
+			<desc>
+				　上端を指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>right</name>
+			<default></default>
+			<desc>
+				　右端を指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>bottom</name>
+			<default></default>
+			<desc>
+				　下端を指定します。<r/>
+			</desc>
+		</argitem>
+	</arg>
+	<result></result>
+	<desc>
+		　指定の大きさに矩形を設定します。<r/>
+	</desc>
+</member>
 
 <member>
 	<name>isEmpty</name>
