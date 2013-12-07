@@ -60,6 +60,9 @@ notice	top	f_Debug_notice.html	Debugクラス
 コンソール	id25	f_Debug_notice.html	Debug.notice
 startLogToFile	top	f_Debug_startLogToFile.html	Debugクラス
 logAsError	top	f_Debug_logAsError.html	Debugクラス
+addLoggingHandler	top	f_Debug_addLoggingHandler.html	Debugクラス
+removeLoggingHandler	top	f_Debug_removeLoggingHandler.html	Debugクラス
+getLastLog	top	f_Debug_getLastLog.html	Debugクラス
 logLocation	top	f_Debug_logLocation.html	Debugクラス
 logToFileOnError	top	f_Debug_logToFileOnError.html	Debugクラス
 clearLogFileOnError	top	f_Debug_clearLogFileOnError.html	Debugクラス
@@ -644,6 +647,9 @@ exec	top	f_Scripts_exec.html	Scriptsクラス
 eval	top	f_Scripts_eval.html	Scriptsクラス
 dump	top	f_Scripts_dump.html	Scriptsクラス
 getTraceString	top	f_Scripts_getTraceString.html	Scriptsクラス
+setCallMissing	top	f_Scripts_setCallMissing.html	Scriptsクラス
+getClassNames	top	f_Scripts_getClassNames.html	Scriptsクラス
+textEncoding	top	f_Scripts_textEncoding.html	Scriptsクラス
 Storagesクラス概要	top	f_Storages.html	Storagesクラス
 ストレージシステム	id407	f_Storages.html	Storagesクラス
 addAutoPath	top	f_Storages_addAutoPath.html	Storagesクラス

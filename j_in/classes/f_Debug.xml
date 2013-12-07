@@ -92,6 +92,57 @@
 	<ref>Debug.clearLogFileOnError</ref>
 </member>
 
+<member>
+	<name>addLoggingHandler</name>
+	<type>method</type>
+	<shortdesc>ログハンドラを追加します</shortdesc>
+	<arg>
+		<argitem>
+			<name>handler</name>
+			<default></default>
+			<desc>
+				　ログハンドラを指定します。<r/>
+			</desc>
+		</argitem>
+	</arg>
+	<result></result>
+	<desc>
+		　エラーログが出力されるごとに呼び出されるハンドラを登録します。<r/>
+		　ハンドラはログメッセージを引数に与えられて呼び出されます。<r/>
+		　登録メソッド内でログを出力しても、最適な呼び出しは行われず無視されます。<r/>
+	</desc>
+</member>
+
+<member>
+	<name>removeLoggingHandler</name>
+	<type>method</type>
+	<shortdesc>ログハンドラを削除します</shortdesc>
+	<arg>
+		<argitem>
+			<name>handler</name>
+			<default></default>
+			<desc>
+				　ログハンドラを指定します。<r/>
+			</desc>
+		</argitem>
+	</arg>
+	<result></result>
+	<desc>
+		　登録したログハンドラを削除します。<r/>
+	</desc>
+</member>
+
+<member>
+	<name>getLastLog</name>
+	<type>method</type>
+	<shortdesc>未出力のログを取得します</shortdesc>
+	<arg>
+	</arg>
+	<result></result>
+	<desc>
+		　出力していないログを取得します。<r/>
+	</desc>
+</member>
 
 <member>
 	<name>logLocation</name>

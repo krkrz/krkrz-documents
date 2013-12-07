@@ -250,5 +250,53 @@
 	</desc>
 </member>
 
+<member>
+	<name>setCallMissing</name>
+	<type>method</type>
+	<shortdesc>メンバが見つからない時に呼び出されるハンドラの登録</shortdesc>
+	<arg>
+		<argitem>
+			<name>missing</name>
+			<default></default>
+			<desc>
+				　メンバが見つからない時に呼び出されるハンドラ。<r/>
+			</desc>
+		</argitem>
+	</arg>
+	<result></result>
+	<desc>
+		　メンバが見つからない時に呼び出されるハンドラを登録します。<r/>
+	</desc>
+</member>
+
+<member>
+	<name>getClassNames</name>
+	<type>method</type>
+	<shortdesc>クラス名を取得</shortdesc>
+	<arg>
+		<argitem>
+			<name>obect</name>
+			<default></default>
+			<desc>
+				　クラス名を取得するオブジェクト。<r/>
+			</desc>
+		</argitem>
+	</arg>
+	<result>クラス名の配列</result>
+	<desc>
+		　オブジェクトりクラス名を取得します。<r/>
+	</desc>
+</member>
+
+<member>
+	<name>textEncoding</name>
+	<type>property</type>
+	<shortdesc>スクリプトを読み込む時に使用するテキストエンコーディングを指定</shortdesc>
+	<access>r/w</access>
+	<desc>
+		　スクリプトを読み込む時に使用するテキストエンコーディングを指定します。<r/>
+		　現在指定できるのは"UTF-8"か"Shift_JIS"のどちらかです。<r/>
+	</desc>
+</member>
 
 </doc>
