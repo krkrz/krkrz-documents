@@ -3,9 +3,6 @@
 <title>Font</title>
 <desc>
 　Font クラスは、<kw>フォント</kw>を管理するためのクラスです。<r/>
-　<ref>Layer</ref> クラスの <ref>Layer.font</ref> プロパティで得られるのがこのクラスのオブジェクトですが、
-ユーザがこのクラスからオブジェクトを作成することはできません ( <tt>Font</tt> というメンバ自体、ユーザが
-アクセスすることができません )。<r/>
 </desc>
 
 
@@ -151,56 +148,26 @@
 	<ref>Font.getEscHeightX</ref>
 </member>
 
-
 <member>
-	<name>doUserSelect</name>
+	<name>getGlyphDrawRect</name>
 	<type>method</type>
-	<shortdesc>フォント選択ダイアログボックスの表示</shortdesc>
+	<shortdesc>文字列の実描画範囲</shortdesc>
 	<arg>
 		<argitem>
-			<name>flags</name>
+			<name>text</name>
 			<default></default>
 			<desc>
-				　フォント選択ダイアログボックスのオプションを指定します。<r/>
-				　次の値のビット論理和による組み合わせ指定します。<r/>
-				<tt><kw>fsfFixedPitch</kw>    </tt> : 固定ピッチフォントのみ表示します<r/>
-				<tt><kw>fsfSameCharSet</kw>   </tt> : 同じキャラクタセットのフォントのみ表示します<r/>
-				<tt><kw>fsfNoVertical</kw>    </tt> : 縦書き用フォントを表示しません<r/>
-				<tt><kw>fsfTrueTypeOnly</kw>  </tt> : TrueType フォントのみ表示します<r/>
-				<tt><kw>fsfUseFontFace</kw>   </tt> : 選択リストボックスをそれぞれのフォントで表示します<r/>
-				　fsfSameCharSet を指定した場合は、現在選択されているフォントと同じキャラクタセットの
-				フォントが表示されます。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>caption</name>
-			<default></default>
-			<desc>
-				　ダイアログボックスのキャプション ( タイトルバー ) に表示する
-				文字列を指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>prompt</name>
-			<default></default>
-			<desc>
-				　ダイアログボックス内に表示する文字列を指定します。<r/>
-				　通常はユーザに入力を促すためのメッセージを指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>sample</name>
-			<default></default>
-			<desc>
-				　ダイアログボックス内の「サンプル」の部分に表示する文字列を指定します。<r/>
-				　ユーザは、ここに表示されるサンプルで実際のフォントを確かめることができます。<r/>
+				　範囲を得たい文字列を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
-	<result>ユーザが OK ボタンを選択した場合は true、それ以外の場合は false が戻ります</result>
+	<result>文字列の実描画範囲</result>
 	<desc>
-		　ユーザにフォントを選択させるためのダイアログボックスを開きます。<r/>
+		　現在のフォントの設定で指定された文字を描画したときに、グリフ画像が描かれる範囲を得ることができます。<r/>
+		　得られる範囲は 0,0 座標を基準にした Rect クラスのオブジェクトです。<r/>
+		　横向きのみ対応しています。<r/>
 	</desc>
+	<ref>Rect</ref>
 </member>
 
 <member>
@@ -212,9 +179,15 @@
 			<name>flags</name>
 			<default></default>
 			<desc>
-				　フォントをどのように列挙するかを指定します。<ref>Font.doUserSelect</ref>で
-				指定するものと同一です (ただしこのメソッドには
-				<tt>fsfUseFontFace</tt>は指定しても無視されます)<r/>
+				　フォントをどのように列挙するかを指定します。<r/>
+				　次の値のビット論理和による組み合わせ指定します。<r/>
+				<tt><kw>fsfFixedPitch</kw>    </tt> : 固定ピッチフォントのみ列挙します<r/>
+				<tt><kw>fsfSameCharSet</kw>   </tt> : 同じキャラクタセットのフォントのみ列挙します<r/>
+				<tt><kw>fsfNoVertical</kw>    </tt> : 縦書き用フォントを列挙しません<r/>
+				<tt><kw>fsfTrueTypeOnly</kw>  </tt> : TrueType フォントのみ列挙します<r/>
+				<tt><kw>fsfIgnoreSymbol</kw>  </tt> : シンボルキャラセットを除外します<r/>
+				　fsfSameCharSet を指定した場合は、現在選択されているフォントと同じキャラクタセットの
+				フォントが列挙されます。<r/>
 			</desc>
 		</argitem>
 	</arg>
@@ -312,7 +285,6 @@
 	<desc>
 		　取消線を描画するかどうか表します。値を設定することもできます。<r/>
 		　真を指定すると文字の上に取消線を描画します。<r/>
-		　現バージョンの吉里吉里ではこのプロパティは意味を持ちません。<r/>
 	</desc>
 </member>
 
@@ -324,7 +296,6 @@
 	<desc>
 		　アンダーライン ( 下線または傍線 ) を描画するかどうか表します。値を設定することもできます。<r/>
 		　真を指定するとアンダーラインを描画します。<r/>
-		　現バージョンの吉里吉里ではこのプロパティは意味を持ちません。<r/>
 	</desc>
 </member>
 
@@ -338,6 +309,21 @@
 		　単位は角度 ( degree ) の 10 倍の値です。0 ～ 3600 の値をとります。<r/>
 		　縦書きを行う場合はフォント名に縦書き用のフォント名を指定した上で、このプロパティ
 		に 2700 を指定します。<r/>
+	</desc>
+</member>
+
+<member>
+	<name>rasterizer</name>
+	<type>property</type>
+	<shortdesc>文字列描画方式</shortdesc>
+	<access>r/w</access>
+	<desc>
+		　文字列描画方式を表します。値を設定することもできます。<r/>
+		　値は以下のどちらかを指定します。<r/>
+		<tt><kw>frGDI</kw>      </tt> : GDI を使って文字を描画します<r/>
+		<tt><kw>frFreeType</kw> </tt> : FreeType を使って文字を描画します<r/>
+		FreeType を指定した場合、横書きにのみ対応しています。その他は未対応です。<r/>
+		このプロパティはスタティックです。Font.rasterizer を用いて値を設定してください。<r/>
 	</desc>
 </member>
 
