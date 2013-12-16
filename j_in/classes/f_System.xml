@@ -48,41 +48,6 @@
 </member>
 
 <member>
-	<name>inputString</name>
-	<type>method</type>
-	<shortdesc>文字列の入力</shortdesc>
-	<arg>
-		<argitem>
-			<name>caption</name>
-			<default></default>
-			<desc>
-				　ウィンドウのキャプションとして表示する文字列を指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>prompt</name>
-			<default></default>
-			<desc>
-				　ウィンドウのプロンプト ( 入力を催促するためにユーザに表示する文字列 )
-				を指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>initialString</name>
-			<default></default>
-			<desc>
-				　入力ウィンドウにあらかじめ表示しておく文字列を指定します。<r/>
-			</desc>
-		</argitem>
-	</arg>
-	<result>入力された文字列が戻ります。キャンセルされた場合は void が戻ります。</result>
-	<desc>
-		　文字列を入力するためのウィンドウを開き、ユーザに<kw>文字列の入力</kw>を求めます。<r/>
-		　ウィンドウはモーダルで表示されます ( つまり、表示中は他のウィンドウは操作できない )。<r/>
-	</desc>
-</member>
-
-<member>
 	<name>addContinuousHandler</name>
 	<type>method</type>
 	<shortdesc>Continuous ハンドラの追加</shortdesc>
@@ -641,8 +606,7 @@
 	<shortdesc>タイトル</shortdesc>
 	<access>r/w</access>
 	<desc>
-		　タイトルを文字列で表します。値を設定することもできます。<r/>
-		　タイトルは Windows の場合、タスクバーに表示されます。<r/>
+		　メインウィンドウのタイトルを文字列で表します。値を設定することもできます。<r/>
 	</desc>
 	<ref>Window.caption</ref>
 </member>
@@ -654,6 +618,8 @@
 	<access>r</access>
 	<desc>
 		　画面サイズ ( 画面解像度 ) の横サイズをピクセル単位で表します。<r/>
+		　値はメインウィンドウのあるディスプレイを対象としたものです。<r/>
+		　メインウィンドウがない場合はプライマリーディスプレイが対象となります。<r/>
 	</desc>
 	<ref>System.screenHeight</ref>
 	<ref>System.desktopLeft</ref>
@@ -669,6 +635,8 @@
 	<access>r</access>
 	<desc>
 		　画面サイズ ( 画面解像度 ) の縦サイズをピクセル単位で表します。<r/>
+		　値はメインウィンドウのあるディスプレイを対象としたものです。<r/>
+		　メインウィンドウがない場合はプライマリーディスプレイが対象となります。<r/>
 	</desc>
 	<ref>System.screenWidth</ref>
 	<ref>System.desktopLeft</ref>
@@ -684,6 +652,8 @@
 	<access>r</access>
 	<desc>
 		　デスクトップ ( ウィンドウを表示可能な領域 ) の左端位置をピクセル単位で表します。<r/>
+		　値はメインウィンドウのあるディスプレイを対象としたものです。<r/>
+		　メインウィンドウがない場合はプライマリーディスプレイが対象となります。<r/>
 	</desc>
 	<ref>System.screenWidth</ref>
 	<ref>System.screenHeight</ref>
@@ -699,6 +669,8 @@
 	<access>r</access>
 	<desc>
 		　デスクトップ ( ウィンドウを表示可能な領域 ) の上端位置をピクセル単位で表します。<r/>
+		　値はメインウィンドウのあるディスプレイを対象としたものです。<r/>
+		　メインウィンドウがない場合はプライマリーディスプレイが対象となります。<r/>
 	</desc>
 	<ref>System.screenWidth</ref>
 	<ref>System.screenHeight</ref>
@@ -714,6 +686,8 @@
 	<access>r</access>
 	<desc>
 		　デスクトップ ( ウィンドウを表示可能な領域 ) の幅をピクセル単位で表します。<r/>
+		　値はメインウィンドウのあるディスプレイを対象としたものです。<r/>
+		　メインウィンドウがない場合はプライマリーディスプレイが対象となります。<r/>
 	</desc>
 	<ref>System.screenWidth</ref>
 	<ref>System.screenHeight</ref>
@@ -729,6 +703,8 @@
 	<access>r</access>
 	<desc>
 		　デスクトップ ( ウィンドウを表示可能な領域 ) の高さをピクセル単位で表します。<r/>
+		　値はメインウィンドウのあるディスプレイを対象としたものです。<r/>
+		　メインウィンドウがない場合はプライマリーディスプレイが対象となります。<r/>
 	</desc>
 	<ref>System.screenWidth</ref>
 	<ref>System.screenHeight</ref>
