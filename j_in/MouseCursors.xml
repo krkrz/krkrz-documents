@@ -18,8 +18,8 @@
 <hr/>
 <tt>crIBeam        : <img src="crIBeam.png"/></tt><r/>
 <hr/>
-<tt>crHBeam        : <img src="crHBeam.png"/></tt><r/>
-<hr/>
+<!-- <tt>crHBeam        : <img src="crHBeam.png"/></tt><r/>
+<hr/> -->
 <tt>crSizeNESW     : <img src="crSizeNESW.png"/></tt><r/>
 <hr/>
 <tt>crSizeNS       : <img src="crSizeNS.png"/></tt><r/>
@@ -32,22 +32,22 @@
 <hr/>
 <tt>crHourGlass    : <img src="crHourGlass.png"/></tt><r/>
 <hr/>
-<tt>crDrag         : <img src="crDrag.png"/></tt><r/>
-<hr/>
-<tt>crNoDrop       : <img src="crNoDrop.png"/></tt><r/>
-<hr/>
-<tt>crHSplit       : <img src="crHSplit.png"/></tt><r/>
-<hr/>
-<tt>crVSplit       : <img src="crVSplit.png"/></tt><r/>
-<hr/>
-<tt>crMultiDrag    : <img src="crMultiDrag.png"/></tt><r/>
-<hr/>
-<tt>crSQLWait      : <img src="crSQLWait.png"/></tt><r/>
-<hr/>
+<!-- <tt>crDrag         : <img src="crDrag.png"/></tt><r/>
+<hr/> -->
+<!-- <tt>crNoDrop       : <img src="crNoDrop.png"/></tt><r/>
+<hr/> -->
+<!-- <tt>crHSplit       : <img src="crHSplit.png"/></tt><r/>
+<hr/> -->
+<!-- <tt>crVSplit       : <img src="crVSplit.png"/></tt><r/>
+<hr/> -->
+<!-- <tt>crMultiDrag    : <img src="crMultiDrag.png"/></tt><r/>
+<hr/> -->
+<!-- <tt>crSQLWait      : <img src="crSQLWait.png"/></tt><r/>
+<hr/> -->
 <tt>crNo           : <img src="crNo.png"/></tt><r/>
 <hr/>
-<tt>crAppStart     : <img src="crAppStart.png"/></tt><r/>
-<hr/>
+<!-- <tt>crAppStart     : <img src="crAppStart.png"/></tt><r/>
+<hr/> -->
 <tt>crHelp         : <img src="crHelp.png"/></tt><r/>
 <hr/>
 <tt>crHandPoint    : <img src="crHandPoint.png"/></tt><r/>
