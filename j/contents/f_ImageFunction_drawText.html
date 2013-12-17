@@ -26,13 +26,16 @@
 </dd>
 <dt>構文</dt>
 <dd>
-<span class="funcdecl">drawText(<span class="arg">bmp</span>, <span class="arg">x</span>, <span class="arg">y</span>, <span class="arg">text</span>, <span class="arg">color</span>, <span class="arg">opa</span><span class="defarg">=<span class="defargval">255</span></span>, <span class="arg">aa</span><span class="defarg">=<span class="defargval">true</span></span>, <span class="arg">face</span><span class="defarg">=<span class="defargval">dfAlpha</span></span>, <span class="arg">shadowlevel</span><span class="defarg">=<span class="defargval">0</span></span>, <span class="arg">shadowcolor</span><span class="defarg">=<span class="defargval">0x000000</span></span>, <span class="arg">shadowwidth</span><span class="defarg">=<span class="defargval">0</span></span>, <span class="arg">shadowofsx</span><span class="defarg">=<span class="defargval">0</span></span>, <span class="arg">shadowofsy</span><span class="defarg">=<span class="defargval">0</span></span>, <span class="arg">hda</span><span class="defarg">=<span class="defargval">false</span></span>, <span class="arg">cliprect</span><span class="defarg">=<span class="defargval">null</span></span>)</span><br />
+<span class="funcdecl">drawText(<span class="arg">bmp</span>, <span class="arg">font</span>, <span class="arg">x</span>, <span class="arg">y</span>, <span class="arg">text</span>, <span class="arg">color</span>, <span class="arg">opa</span><span class="defarg">=<span class="defargval">255</span></span>, <span class="arg">aa</span><span class="defarg">=<span class="defargval">true</span></span>, <span class="arg">face</span><span class="defarg">=<span class="defargval">dfAlpha</span></span>, <span class="arg">shadowlevel</span><span class="defarg">=<span class="defargval">0</span></span>, <span class="arg">shadowcolor</span><span class="defarg">=<span class="defargval">0x000000</span></span>, <span class="arg">shadowwidth</span><span class="defarg">=<span class="defargval">0</span></span>, <span class="arg">shadowofsx</span><span class="defarg">=<span class="defargval">0</span></span>, <span class="arg">shadowofsy</span><span class="defarg">=<span class="defargval">0</span></span>, <span class="arg">hda</span><span class="defarg">=<span class="defargval">false</span></span>, <span class="arg">cliprect</span><span class="defarg">=<span class="defargval">null</span></span>)</span><br />
 </dd>
 <dt>引数</dt>
 <dd>
 <table rules="all" frame="box" cellpadding="3" summary="drawText の引数">
 <tr><td valign="top"><span class="argname">bmp</span></td>
 <td>				　文字描画する Bitmap オブジェクトを指定します。<br />
+			</td></tr>
+<tr><td valign="top"><span class="argname">font</span></td>
+<td>				　描画するフォントを Font オブジェクトで指定します。<br />
 			</td></tr>
 <tr><td valign="top"><span class="argname">x</span></td>
 <td>				　文字描画を開始する原点の ( 画像位置における ) x 座標をピクセル単位で指定します。<br />
@@ -58,9 +61,9 @@
 			</td></tr>
 <tr><td valign="top"><span class="argname">face</span></td>
 <td>				　描画方式を指定します。<br />
-				<span class="script"><a class="targanchor" name="id138" id="id138">dfAlpha</a></span> が指定された場合は画像はアルファチャンネルつき画像と見なされ、描画されます。<br />
-				<span class="script"><a class="targanchor" name="id139" id="id139">dfAddAlpha</a></span> が指定された場合は画像は加算アルファチャンネルつき画像として見なされ、描画されます。<br />
-				<span class="script"><a class="targanchor" name="id140" id="id140">dfOpaque</a></span> が指定された場合は画像はすべて完全不透明であると見なされ、描画されます。<br />
+				<span class="script"><a class="targanchor" name="id139" id="id139">dfAlpha</a></span> が指定された場合は画像はアルファチャンネルつき画像と見なされ、描画されます。<br />
+				<span class="script"><a class="targanchor" name="id140" id="id140">dfAddAlpha</a></span> が指定された場合は画像は加算アルファチャンネルつき画像として見なされ、描画されます。<br />
+				<span class="script"><a class="targanchor" name="id141" id="id141">dfOpaque</a></span> が指定された場合は画像はすべて完全不透明であると見なされ、描画されます。<br />
 			</td></tr>
 <tr><td valign="top"><span class="argname">shadowlevel</span></td>
 <td>				　影の不透明度を指定します。shadowwidth 引数の値によって適切な値は変動します。<br />
@@ -95,7 +98,6 @@
 <dd>
 		　Bitmap に文字を描画します。<br />
 		　face に dfOpaque を指定した場合、描画先のマスクが破壊されるか保護されるかは hda によります。<br />
-		　フォントは TODO 指定がない、忘れている で指定したものが用いられます。<br />
 	</dd>
 </dl>
 </div></div>

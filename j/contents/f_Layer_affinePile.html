@@ -95,10 +95,10 @@
 			</td></tr>
 <tr><td valign="top"><span class="argname">type</span></td>
 <td>				　アフィン変換のタイプを指定します。<br />
-				<span class="script"><a class="targanchor" name="id300" id="id300">stNearest</a>    </span> : 最近傍点法が用いられます<br />
-				<span class="script"><a class="targanchor" name="id301" id="id301">stFastLinear</a> </span> : 低精度の線形補間が用いられます(未実装)<br />
-				<span class="script"><a class="targanchor" name="id302" id="id302">stLinear</a>     </span> : 線形補間が用いられます(未実装)<br />
-				<span class="script"><a class="targanchor" name="id303" id="id303">stCubic</a>      </span> : ３次元補間が用いられます(未実装)<br />
+				<span class="script"><a class="targanchor" name="id306" id="id306">stNearest</a>    </span> : 最近傍点法が用いられます<br />
+				<span class="script"><a class="targanchor" name="id307" id="id307">stFastLinear</a> </span> : 低精度の線形補間が用いられます(未実装)<br />
+				<span class="script"><a class="targanchor" name="id308" id="id308">stLinear</a>     </span> : 線形補間が用いられます(未実装)<br />
+				<span class="script"><a class="targanchor" name="id309" id="id309">stCubic</a>      </span> : ３次元補間が用いられます(未実装)<br />
 				　stFastLinear や stLinear, stCubic に対しては、stRefNoClip をビット論理和で追加指定
 				することができ、この場合は、コピーするビットマップの領域外を参照して色を合成することを
 				許可します。これを指定しない場合は、転送元ビットマップの周囲に余裕があったとしても、
@@ -120,9 +120,9 @@
 		　現バージョンでは mode には stNearest のみ指定できます。<br />
 		　重ね合わされる画像は、重ね合わせ先の ( メソッドを実行する ) レイ
 		ヤの <a class="jump" href="f_Layer_face.html">Layer.face</a> プロパティの値によって変わります。<br />
-		<span class="script"><a class="targanchor" name="id304" id="id304">dfAlpha</a> (または<a class="targanchor" name="id305" id="id305">dfBoth</a>)    </span> : 重ね合わせ先の不透明度を考慮した重ね合わせが行われます<br />
-		<span class="script"><a class="targanchor" name="id306" id="id306">dfOpaque</a> (または<a class="targanchor" name="id307" id="id307">dfMain</a>)   </span> : 重ね合わせ先の不透明度を無視した重ね合わせが行われます(重ね合わせ先は全面完全不透明として扱われます)<br />
-		<span class="script"><a class="targanchor" name="id308" id="id308">それ以外</a>  </span>                 : できません ( 例外が発生します )<br />
+		<span class="script"><a class="targanchor" name="id310" id="id310">dfAlpha</a> (または<a class="targanchor" name="id311" id="id311">dfBoth</a>)    </span> : 重ね合わせ先の不透明度を考慮した重ね合わせが行われます<br />
+		<span class="script"><a class="targanchor" name="id312" id="id312">dfOpaque</a> (または<a class="targanchor" name="id313" id="id313">dfMain</a>)   </span> : 重ね合わせ先の不透明度を無視した重ね合わせが行われます(重ね合わせ先は全面完全不透明として扱われます)<br />
+		<span class="script"><a class="targanchor" name="id314" id="id314">それ以外</a>  </span>                 : できません ( 例外が発生します )<br />
 		<br />
 		　このメソッドは旧式になりました。代わりに <a class="jump" href="f_Layer_operateAffine.html">Layer.operateAffine</a> を使用してください。演算のモードに omAlpha か omAddAlpha を指定すると同じ効果になります(omAlphaを指定するのかomAddAlphaを指定するのかはsrcのアルファタイプによって異なります。omAutoを指定すればsrcのレイヤタイプに従って自動的に決定されます)。<br />
 	</dd>

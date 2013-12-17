@@ -456,7 +456,7 @@
 	<desc>
 		　吉里吉里本体のバージョン文字列を得ることができます。<r/>
 		　バージョン文字列は以下のような形式です。<r/>
-		<tt>2.25.3.889</tt><r/>
+		<tt>1.0.0.1</tt><r/>
 	</desc>
 </member>
 
@@ -469,7 +469,7 @@
 		　吉里吉里本体のバージョン情報文字列を得ることができます。<r/>
 		　バージョン情報文字列は <ref>System.versionString</ref> よりも長い形式で、<r/>
 		以下のようになります。<r/>
-		<tt>吉里吉里[きりきり] 2 実行コア/2.25.3.889 (SVN revision:764; Compiled on Mar 26 2005 23:54:10) TJS2/2.4.15 Copyright (C) 1997-2006 W.Dee and contributors All rights reserved.</tt><r/>
+		<tt>吉里吉里[きりきり] Z 実行コア/1.0.0.0 (Compiled on Dec 16 2013 23:15:27) TJS2/2.4.28 Copyright (C) 1997-2013 W.Dee and contributors All rights reserved.</tt><r/>
 	</desc>
 </member>
 
@@ -540,8 +540,8 @@
 	<desc>
 		　ユーザのマイドキュメントのパスを表します。Windows の場合、レジストリの
 		HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders の
-		Personal で表されるフォルダが返されます。通常これは「マイドキュメント」フォルダを指します。これは、Windows 95/NT4.0 では Windows をインストールしたフォルダ下の "Personal" フォルダの場合があります。<r/>
-		このフォルダがない場合(Windows 95 の初期のバージョンなど)は <ref>System.exePath</ref> と同じフォルダを返します。<r/>
+		Personal で表されるフォルダが返されます。通常これは「マイドキュメント」フォルダを指します。<r/>
+		このフォルダがない場合は <ref>System.exePath</ref> と同じフォルダを返します。<r/>
 	</desc>
 	<ref>System.appDataPath</ref>
 	<ref>System.exePath</ref>
@@ -561,15 +561,11 @@
 		これは、通常、以下の通りになります。
 		<r/>
 			<dl>
-			<dt>Windows 95, 98, 98SE, ME でマルチユーザ環境でない場合</dt>
-			<dd><tt>C:\Windows\Application Data\</tt> ( C:\Windows の部分は Windows をインストールした場所です )</dd>
-			<dt>Windows 95 (初期型でない場合), 98, 98SE, ME でマルチユーザ環境の場合</dt>
-			<dd><tt>C:\Windows\Profiles\&lt;ユーザ名&gt;\Application Data\</tt> ( C:\Windows の部分は Windows をインストールした場所です )</dd>
-			<dt>Windows NT 4.0 の場合</dt>
-			<dd><tt>C:\WINNT\Profiles\&lt;ユーザ名&gt;\Application Data\</tt> ( C:\WINNT の部分は Windows をインストールした場所です )</dd>
-			<dt>Windows 2000, XP 以降 の場合</dt>
+			<dt>XP の場合</dt>
 			<dd><tt>C:\Documents and Settings\&lt;ユーザ名&gt;\Application Data\</tt> ( C: の部分は環境によって異なります )</dd>
-			<dt>何らかの理由で レジストリキー ( 上記参照 ) を読み出せなかった場合か、初期の Windows 95</dt>
+			<dt>Vista, 7, 8 の場合</dt>
+			<dd><tt>C:\Users\&lt;ユーザ名&gt;\AppData\Roaming</tt> ( C: の部分は環境によって異なります )</dd>
+			<dt>何らかの理由で レジストリキー ( 上記参照 ) を読み出せなかった場合</dt>
 			<dd>吉里吉里の実行可能ファイルのあるフォルダ (<ref>System.exePath</ref>)になります</dd>
 			</dl>
 	</desc>
@@ -782,8 +778,8 @@ System.exceptionHandler = function (e)<r/>
 		　アプリケーションがアクティブになったときに呼び出されるイベント関数を表します。<r/>
 		　null を指定すると関数は呼び出されません。<r/>
 		　通常のイベントハンドラと異なり、このイベントを受け取りたい場合は、呼び出したい関数をこのプロパティに設定してください。<r/>
-		　<ref>Window.onActivate</ref> は、同じアプリケーション内のそれぞれのウィンドウがアクティブになったときに発生しますが、このイベントは、アプリケーション自体がアクティブになった場合に発生します。<r/>
-		　このイベントは、アプリケーションが既にアクティブの場合にも発生する可能性があるので注意してください (完全に onActivate → onDeactivate → onActivate → …… の順に発生する保証がない )。<r/>
+		　<ref>Window.onActivate</ref> は、同じアプリケーション内のそれぞれのウィンドウがアクティブになったときに発生しますが、このイベントは、メインウィンドウがアクティブになった場合に発生します。<r/>
+		　このイベントは、メインウィンドウが既にアクティブの場合にも発生する可能性があるので注意してください (完全に onActivate → onDeactivate → onActivate → …… の順に発生する保証がない )。<r/>
 	</desc>
 	<ref>System.onDeactivate</ref>
 	<ref>Window.onActivate</ref>
@@ -800,8 +796,8 @@ System.exceptionHandler = function (e)<r/>
 		　アプリケーションが非アクティブになったときに呼び出されるイベント関数を表します。<r/>
 		　null を指定すると関数は呼び出されません。<r/>
 		　通常のイベントハンドラと異なり、このイベントを受け取りたい場合は、呼び出したい関数をこのプロパティに設定してください。<r/>
-		　<ref>Window.onDeactivate</ref> は、同じアプリケーション内のそれぞれのウィンドウが非アクティブになったときに発生しますが、このイベントは、アプリケーション自体が非アクティブになった場合に発生します。<r/>
-		　このイベントは、アプリケーションが既に非アクティブの場合にも発生する可能性があるので注意してください (完全に onActivate → onDeactivate → onActivate → …… の順に発生する保証がない )。<r/>
+		　<ref>Window.onDeactivate</ref> は、同じアプリケーション内のそれぞれのウィンドウが非アクティブになったときに発生しますが、このイベントは、メインウィンドウが非アクティブになった場合に発生します。<r/>
+		　このイベントは、メインウィンドウが既に非アクティブの場合にも発生する可能性があるので注意してください (完全に onActivate → onDeactivate → onActivate → …… の順に発生する保証がない )。<r/>
 	</desc>
 	<ref>System.onActivate</ref>
 	<ref>Window.onActivate</ref>

@@ -470,7 +470,7 @@
 			<name>flag</name>
 			<default></default>
 			<desc>
-				　マルチタッチ状態IDです。<r/>
+				　マルチタッチ状態フラグです。<r/>
 				<tt><kw>0x01</kw>     : </tt>マルチタッチが開始された最初のイベントに設定されています。<r/>
 			</desc>
 		</argitem>
@@ -525,7 +525,7 @@
 			<name>flag</name>
 			<default></default>
 			<desc>
-				　マルチタッチ状態IDです。<r/>
+				　マルチタッチ状態フラグです。<r/>
 				<tt><kw>0x01</kw>     : </tt>マルチタッチが開始された最初のイベントに設定されています。<r/>
 			</desc>
 		</argitem>
@@ -1440,8 +1440,8 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 		　描画デバイスオブジェクトを表します。<r/>
 		　値を設定することもできます。値を設定すると、以前このウィンドウに指定されていた描画デバイスは自動的に
 		無効になります (invalidateされます)。<r/>
-		　デフォルトでは、Window.PassThroughDrawDevice というクラスのインスタンスが指定されています。<r/>
-		　Window.PassThroughDrawDevice の詳細については、吉里吉里ソースの core/visual/win32/PassThroughDrawDevice.cpp 内の説明も参照してください。<r/>
+		　デフォルトでは、Window.BasicDrawDevice というクラスのインスタンスが指定されています。<r/>
+		　Window.BasicDrawDevice の詳細については、吉里吉里ソースの core/visual/win32/BasicDrawDevice.cpp 内の説明も参照してください。<r/>
 		　独自の描画デバイス (プラグインで提供される物) を指定する場合は、そのプラグインのドキュメントに
 		従ってください。<r/>
 	</desc>
@@ -1571,8 +1571,6 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 		　ウィンドウハンドルを表します。<r/>
 		　ここで得られるのは整数ですが、プラグインなどでこの数値を使う場合は HWND 型に
 		キャストして使ってください。<r/>
-		　<ref>Window.borderStyle</ref> など、一部のプロパティは値が変更されるときに
-		ウィンドウをいったん破棄し、作り替えますので注意してください。<r/>
 	</desc>
 	<ref>Window.registerMessageReceiver</ref>
 </member>
