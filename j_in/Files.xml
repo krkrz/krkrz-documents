@@ -36,9 +36,6 @@
   <dt><kw>krdevui.dll</kw></dt>
   <dd>吉里吉里の開発用ツールが共通で使用するDLLです。このファイルをエンドユーザ向けの配布物に同梱する必要はありません。</dd>
 
-  <dt><kw>krflash.dll</kw></dt>
-  <dd>吉里吉里で Flash の再生を行う場合に必要になります。Flash 再生を行わない場合はエンドユーザ向けの配布物にこれを同梱する必要はありません。→ <at href="f_VideoOverlay.html">VideoOverlayクラス</at></dd>
-
   <dt><kw>krmovie.dll</kw></dt>
   <dd>吉里吉里で WMV/MPG の再生を行う場合に必要になります。ビデオ再生を行わない場合はエンドユーザ向けの配布物にこれを同梱する必要はありません。→ <at href="f_VideoOverlay.html">VideoOverlayクラス</at></dd>
 

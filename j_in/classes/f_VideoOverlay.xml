@@ -2,12 +2,10 @@
 <doc>
 <title>VideoOverlay</title>
 <desc>
-　VideoOverlay クラスは、MPEG I や WMV、 SWF (Macromedia Flash) などを表示するため表示領域を作成するクラスです。また、WMV/MPEG I 再生時は、吉里吉里のレイヤに表示を行うことができます。<r/>
+　VideoOverlay クラスは、MPEG I や WMV などを表示するため表示領域を作成するクラスです。吉里吉里のレイヤに表示を行うこともできます。<r/>
 　WMV/MPEG I を再生するときは、吉里吉里実行可能ファイルと同じ場所に、krmovie.dll が必要になります。<r/>
-　SWF を再生する場合は、吉里吉里実行可能ファイルと同じ場所に krflash.dll が必要になります。<r/>
-　SWF では、いくつかのメソッドやプロパティが使用できない可能性があります。<r/>
 <r/>
-　レイヤでの再生を除き、WMV/MPEG I のオーバーレイによる再生や Flash の再生では、VideoOverlay クラスの表示領域は、すべてのレイヤよりも手前に表示され、透過することはできません。<r/>
+　レイヤでの再生を除き、WMV/MPEG I のオーバーレイによる再生では、VideoOverlay クラスの表示領域は、すべてのレイヤよりも手前に表示され、透過することはできません。<r/>
 　レイヤでの再生は、オーバーレイでの再生に比べ、再生時のプロセッサの負荷は高くなる傾向にあります。<r/>
 </desc>
 
@@ -53,7 +51,6 @@
 	<result></result>
 	<desc>
 		このオブジェクトのステータスが変更されたときに発生します。<r/>
-		SWF再生時には再生の停止や一時停止に関する機能は利用できません。
 	</desc>
 </member>
 
@@ -79,39 +76,10 @@
 	<desc>
 		ループの終端や、 setPeriodEventによって指定されたフレームに達した場合、または prepare メソッドにより再生準備が完了した場合に呼び出されるメソッドです。<r/>
 		ループの終端や、 setPeriodEvent によって指定されたフレームに達した場合にこのイベントが呼ばれる時点では、再生状況によっては、すでに再生位置が指定された位置を超えている場合があります。現在の実際の再生位置を取得するには frame プロパティを参照してください。<r/>
-		この機能は、SWF再生時には利用できません。
 	</desc>
 	<ref>VideoOverlay.setPeriodEvent</ref>
 	<ref>VideoOverlay.prepare</ref>
 	<ref>VideoOverlay.frame</ref>
-</member>
-
-<member>
-	<name>onCallbackCommand</name>
-	<type>event</type>
-	<shortdesc>コールバックコマンドが発生した</shortdesc>
-	<arg>
-		<argitem>
-			<name>command</name>
-			<default></default>
-			<desc>
-				　コマンド名を表す文字列です。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>arg</name>
-			<default></default>
-			<desc>
-				　コマンドに対する引数を表す文字列です。<r/>
-			</desc>
-		</argitem>
-	</arg>
-	<result></result>
-	<desc>
-		SWF 再生中に、Get URL アクション (指定 URL を開くアクション) が実行されたときに発生します。<r/>
-		SWF コンテンツ上で、このアクションの URL として 「<tt>FSCommand:</tt>(コマンド名)」 を指定し、
-		ターゲットウィンドウに引数を指定するとこのイベントを発生させることができます。<r/>
-	</desc>
 </member>
 
 <member>
@@ -132,7 +100,6 @@
 		ビデオフレームが更新された後に呼び出されるメソッドです。<r/>
 		引数であるframeは現在表示されているビデオフレームと完全に一致しているとは限りません。<r/>
 		レイヤ描画モード、ミキサーモード時のみ利用可能です。<r/>
-		この機能は、SWF再生時には利用できません。
 	</desc>
 </member>
 
@@ -153,7 +120,7 @@
 	<result></result>
 	<desc>
 		指定されたメディアを開きます。<r/>
-		現バージョンで再生可能なのは MPEG I (拡張子 .mpeg または .mpg または .mpv)、WMV、Macromedia Flash (拡張子 .swf) です。<r/>
+		現バージョンで再生可能なのは MPEG I (拡張子 .mpeg または .mpg または .mpv)、WMVです。<r/>
 		ビデオのみの (オーディオとマルチプレクシングされていない) MPEG I ストリームの拡張子は .mpv にしてください。<r/>
 	</desc>
 </member>
@@ -216,7 +183,6 @@
 	<desc>
 		メディアの1フレーム目を指定されているレイヤーに描画し、描画終了時にonPeriodイベントを発生させます。
 		prepareメソッド コール後の再生は、onPeriodイベントを待機してから行ってください。<r/>
-		この機能は、SWF再生時には利用できません。
 	</desc>
 	<ref>VideoOverlay.onPeriod</ref>
 </member>
@@ -248,7 +214,6 @@
 		comeFrameのフレームにはムービーファイルにキーフレームを設定しておく必要があります。<r/>
 		設定されていない場合は、
 		ループ終点から始点へ移動時に指定されたフレームに最も近いキーフレームへ再生位置が移動することになります。<r/>
-		この機能は、SWF再生時には利用できません。
 	</desc>
 	<ref>VideoOverlay.cancelSegmentLoop</ref>
 	<ref>VideoOverlay.onPeriod</ref>
@@ -265,7 +230,6 @@
 	<result></result>
 	<desc>
 		setSegmentLoopメソッドで指定したセグメント間ループを解除します。<r/>
-		この機能は、SWF再生時には利用できません。
 	</desc>
 	<ref>VideoOverlay.setSegmentLoop</ref>
 </member>
@@ -301,7 +265,6 @@
 	<desc>
 		指定したフレームでonPeriodイベントを発生させます。<r/>
 		onPeriodイベントは、一度発生すると解除されます。再び発生させたい場合は再度このメソッドで設定してください。<r/>
-		この機能は、SWF再生時には利用できません。
 	</desc>
 	<ref>VideoOverlay.cancelPeriodEvent</ref>
 	<ref>VideoOverlay.onPeriod</ref>
@@ -316,7 +279,6 @@
 	<result></result>
 	<desc>
 		setPeriodEventメソッドで設定したイベント発生を解除します。<r/>
-		この機能は、SWF再生時には利用できません。
 	</desc>
 	<ref>VideoOverlay.setPeriodEvent</ref>
 </member>
@@ -489,7 +451,6 @@
 	<access>r/w</access>
 	<desc>
 		メディアの再生位置を ms 単位で表します。値を設定することもできます。<r/>
-		SWF 再生中では無効です。<r/>
 	</desc>
 	<ref>VideoOverlay.frame</ref>
 	<ref>VideoOverlay.totalTime</ref>
@@ -502,7 +463,6 @@
 	<access>r/w</access>
 	<desc>
 		メディアの再生位置をフレーム単位で表します。値を設定することもできます。<r/>
-		SWF 再生中では無効です。<r/>
 	</desc>
 	<ref>VideoOverlay.position</ref>
 	<ref>VideoOverlay.numberOfFrame</ref>
@@ -516,7 +476,6 @@
 	<desc>
 		ループ再生の有効無効を表します。値を設定することもできます。<r/>
 		真ならばループ、偽ならば非ループです。<r/>
-		この機能は、SWF再生時には利用できません。
 	</desc>
 </member>
 
@@ -589,7 +548,6 @@
 	<access>r</access>
 	<desc>
 		フレームレート(フレーム/秒)を表します。<r/>
-		SWF 再生中では無効です。<r/>
 	</desc>
 </member>
 
@@ -600,7 +558,6 @@
 	<access>r</access>
 	<desc>
 		全フレーム数を表します。<r/>
-		SWF 再生中では無効です。<r/>
 	</desc>
 </member>
 
@@ -611,7 +568,6 @@
 	<access>r</access>
 	<desc>
 		合計時間をms単位で表します。<r/>
-		SWF 再生中では無効です。<r/>
 	</desc>
 </member>
 
@@ -646,7 +602,6 @@
 	<desc>
 		オーバーレイモードであるか、レイヤ描画モードであるか、ミキサーモードであるかを表します。値を設定することもできます。<r/>
 		オーバーレイモードの場合は <kw>vomOverlay</kw>、レイヤ描画モードの場合は <kw>vomLayer</kw> 、ミキサーモードの場合は <kw>vomMixer</kw> となります。<r/>
-		SWF 再生中では無効です。<r/>
 	</desc>
 </member>
 
@@ -660,7 +615,6 @@
 		1.0 を指定すると通常の再生速度、0.5 では半分の再生速度、2では2倍の再生速度となります。<r/>
 		設定可能値はDirectShowのフィルタによって決まります。<r/>
 		参考 : 音声付のMPEGファイルの場合、0.0より大きい値から2.0までの値が設定可能です。音声なしのMPEGファイルの場合、0.0より大きい値からdoubleの範囲内(たぶん)で設定可能ですが、実際の再生速度は処理速度によって上限が決まります。<r/>
-		SWF 再生中では無効です。<r/>
 	</desc>
 </member>
 
@@ -708,7 +662,6 @@
 		音の聞こえる左右の位置を指定することができます。<r/>
 		-100000 ～ 0 ～ 100000 の数値で指定し、 -100000 が 完全に左、0 が中央、100000 が完全に右になります。<r/>
 		ステレオのソースを再生する場合は、パンは、左右どちらかのチャンネルを減衰させることで実現されます(0を指定すると両チャンネルが出力され、-100000を指定すると左チャンネルのみが出力される)。<r/>
-		この機能は、SWF再生時には利用できません。
 	</desc>
 </member>
 
@@ -720,7 +673,6 @@
 	<desc>
 		再生する音量を表します。値を設定することもできます。<r/>
 		0 ～ 100000 の数値で指定し、 0 が完全ミュート、100000 が 100% の音量となります。<r/>
-		この機能は、SWF再生時には利用できません。
 	</desc>
 </member>
 

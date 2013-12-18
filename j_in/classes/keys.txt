@@ -779,7 +779,6 @@ perLoop	id459	f_VideoOverlay_onPeriod.html	VideoOverlay.onPeriod
 perSegLoop	id460	f_VideoOverlay_onPeriod.html	VideoOverlay.onPeriod
 perPeriod	id461	f_VideoOverlay_onPeriod.html	VideoOverlay.onPeriod
 perPrepare	id462	f_VideoOverlay_onPeriod.html	VideoOverlay.onPeriod
-onCallbackCommand	top	f_VideoOverlay_onCallbackCommand.html	VideoOverlayクラス
 onFrameUpdate	top	f_VideoOverlay_onFrameUpdate.html	VideoOverlayクラス
 open	top	f_VideoOverlay_open.html	VideoOverlayクラス
 play	top	f_VideoOverlay_play.html	VideoOverlayクラス
