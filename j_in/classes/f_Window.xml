@@ -10,6 +10,14 @@
 	<type>constructor</type>
 	<shortdesc>Window オブジェクトの構築</shortdesc>
 	<arg>
+		<argitem>
+			<name>parent</name>
+			<default>null</default>
+			<desc>
+				　親ウィンドウを指定します。<r/>
+				　親ウィンドウを指定すると、その子ウィンドウとして生成されます。<r/>
+			</desc>
+		</argitem>
 	</arg>
 	<result></result>
 	<desc>

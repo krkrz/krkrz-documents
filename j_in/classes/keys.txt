@@ -653,6 +653,7 @@ clip	top	f_Rect_clip.html	Rectクラス
 union	top	f_Rect_union.html	Rectクラス
 intersects	top	f_Rect_intersects.html	Rectクラス
 included	top	f_Rect_included.html	Rectクラス
+includedPos	top	f_Rect_includedPos.html	Rectクラス
 equal	top	f_Rect_equal.html	Rectクラス
 width	top	f_Rect_width.html	Rectクラス
 height	top	f_Rect_height.html	Rectクラス
