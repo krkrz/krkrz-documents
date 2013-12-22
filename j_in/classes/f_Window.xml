@@ -12,10 +12,11 @@
 	<arg>
 		<argitem>
 			<name>parent</name>
-			<default>null</default>
+			<default></default>
 			<desc>
 				　親ウィンドウを指定します。<r/>
 				　親ウィンドウを指定すると、その子ウィンドウとして生成されます。<r/>
+				　省略した場合は、親ウィンドウを指定しません。<r/>
 			</desc>
 		</argitem>
 	</arg>
@@ -645,6 +646,39 @@
 		　文字が入力されたときに発生します。<ref>Window.onKeyDown</ref> と異なるのは、onKeyDown が
 		仮想キーコードを扱うのに対し、このイベントは文字そのものを扱います。押されたキーが
 		文字とは関係のないキー (ファンクションキーなど) の場合はこのイベントは発生しません。<r/>
+		Ctrlキーと同時に押された場合は、以下に示すようなコントロールコードが送られてきます。<r/>
+		<tt>0x00 : </tt>Ctrl+@<r/>
+		<tt>0x01 : </tt>Ctrl+A<r/>
+		<tt>0x02 : </tt>Ctrl+B<r/>
+		<tt>0x03 : </tt>Ctrl+C<r/>
+		<tt>0x04 : </tt>Ctrl+D<r/>
+		<tt>0x05 : </tt>Ctrl+E<r/>
+		<tt>0x06 : </tt>Ctrl+F<r/>
+		<tt>0x07 : </tt>Ctrl+G<r/>
+		<tt>0x08 : </tt>Ctrl+H<r/>
+		<tt>0x09 : </tt>Ctrl+I<r/>
+		<tt>0x0A : </tt>Ctrl+J<r/>
+		<tt>0x0B : </tt>Ctrl+K<r/>
+		<tt>0x0C : </tt>Ctrl+L<r/>
+		<tt>0x0D : </tt>Ctrl+M<r/>
+		<tt>0x0E : </tt>Ctrl+N<r/>
+		<tt>0x0F : </tt>Ctrl+O<r/>
+		<tt>0x10 : </tt>Ctrl+P<r/>
+		<tt>0x11 : </tt>Ctrl+Q<r/>
+		<tt>0x12 : </tt>Ctrl+R<r/>
+		<tt>0x13 : </tt>Ctrl+S<r/>
+		<tt>0x14 : </tt>Ctrl+T<r/>
+		<tt>0x15 : </tt>Ctrl+U<r/>
+		<tt>0x16 : </tt>Ctrl+V<r/>
+		<tt>0x17 : </tt>Ctrl+W<r/>
+		<tt>0x18 : </tt>Ctrl+X<r/>
+		<tt>0x19 : </tt>Ctrl+Y<r/>
+		<tt>0x1A : </tt>Ctrl+Z<r/>
+		<tt>0x1B : </tt>Ctrl+[<r/>
+		<tt>0x1C : </tt>Ctrl+\<r/>
+		<tt>0x1D : </tt>Ctrl+]<r/>
+		<tt>0x1E : </tt>Ctrl+^<r/>
+		<tt>0x1F : </tt>Ctrl+_<r/>
 	</desc>
 </member>
 
@@ -797,7 +831,8 @@
 	</arg>
 	<result></result>
 	<desc>
-		　現バージョンでは実装されていません。
+		　引数は現バージョンでは無視されます。<r/>
+		　tutNormal や tutEntire は実装されていません。<r/>
 	</desc>
 </member>
 
