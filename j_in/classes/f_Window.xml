@@ -1655,5 +1655,15 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 	<ref>Window.getTouchPoint</ref>
 </member>
 
+<member>
+	<name>waitVSync</name>
+	<type>property</type>
+	<shortdesc>垂直同期待ち</shortdesc>
+	<access>r/w</access>
+	<desc>
+		　トランジション(画面切り替え)などでディスプレイの垂直同期を待ってから描画するかどうかの設定です。<r/>
+		　設定を変えると、画面のちらつきを抑えられる場合がありますが、描画のパフォーマンスが低下する場合もあります。<r/>
+	</desc>
+</member>
 
 </doc>

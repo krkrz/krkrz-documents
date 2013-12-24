@@ -1031,3 +1031,4 @@ HWND	top	f_Window_HWND.html	Windowクラス
 touchScaleThreshold	top	f_Window_touchScaleThreshold.html	Windowクラス
 touchRotateThreshold	top	f_Window_touchRotateThreshold.html	Windowクラス
 touchPointCount	top	f_Window_touchPointCount.html	Windowクラス
+waitVSync	top	f_Window_waitVSync.html	Windowクラス

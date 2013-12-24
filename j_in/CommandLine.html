@@ -265,16 +265,7 @@ Releaser や -userconf では、吉里吉里の実行可能ファイルや外部の設定ファイルを書き
 　設定可能な値は <em>'yes' (行う)</em>, <em>'int' (インターレース分割)</em>, <em>'bidi' (双方向分割)</em>, <em>'no' (行わない)</em> のいずれかで、このオプションを指定しないと 'yes' が指定されたものと見なされます。<br />
 　吉里吉里は CPU のメモリキャッシュを有効的に使用するために、画像を描画するときに細かい領域に分割しながら演算を行います。環境によってはこれが画面のちらつきにつながるようです。そのような環境では 'no' を指定することによりちらつきを抑えることができる可能性がありますが、描画のパフォーマンスが低下する可能性もあります。ダブルバッファリングを有効にした場合は、分割処理を行わないことの意味が薄いため、分割処理を行う設定にすることをお勧めします。<br />
 　'int' を指定すると画像の演算の単位を一つおきに処理しますが、画面更新時に縞模様が見える事があります。'bidi' を選択すると画像の演算の順番において、上→下、下→上 を繰り返すようになります ( 'yes' の場合はつねに上→下 )。</dd>
-<dt>-<a id="id46" name="id46" class="targanchor"><dfn>usedb</dfn></a> (ダブルバッファリングを用いるかどうか)</dt>
-<dd>　画像を表示するときにダブルバッファリングを用いるかどうかの設定です。<br />
-　設定可能な値は <em>'yes' (用いる)</em>, <em>'no' (必要な時以外用いない)</em> のいずれかで、このオプションを指定しないと 'no' が指定されたものと見なされます。<br />
-　ダブルバッファリングを行う設定にすると、画像をいったん別の場所 (オフスクリーンビットマップ) に描画し、一画面の更新分すべてを描画し終わった後、一気に表示領域に転送するようになります。これにより、画面のちらつきを抑えられる可能性がありますが、描画のパフォーマンスは低下します。<br />
-　ダブルバッファリングを行わない場合は、各 分割領域の画像演算が終了した時点で、順次 表示領域に転送します。<br />
-　また、ダブルバッファリングは、Window.setZoom などで表示内容の拡大表示を行う場合や、-fsres オプションで吉里吉里が拡大縮小処理を行う場合にも行われます。<br />
-　ダブルバッファリングを行う場合は、 waitvsync オプションも 'yes' (行う) に設定することにより、ちらつきの抑制をさらに期待できます。<br />
-　このオプションは動的に変更することが可能ですが、すぐに値が反映される保証はありません。<br />
-</dd>
-<dt>-<a id="id47" name="id47" class="targanchor"><dfn>smoothzoom</dfn></a> (拡大表示時のスムージング)</dt>
+<dt>-<a id="id46" name="id46" class="targanchor"><dfn>smoothzoom</dfn></a> (拡大表示時のスムージング)</dt>
 <dd>　Window.setZoom などで表示内容の拡大表示を行う場合や、-fsres オプションで吉里吉里が画面の拡大(縮小)表示を行う場合に、スムージング(拡大時の補間)を行うかどうかの設定です (Layer.affineCopy 等での拡大縮小とは関係ありません )。<br />
 　設定可能な値は <em>'no' (行わない)</em>, <em>'yes' (行う)</em> のいずれかで、このオプションを指定しないと 'yes' が指定されたものと見なされます。<br />
 　スムージングを行うと、画像がなめらかになりますが、若干ぼけた感じになります。スムージングを行わないと、画像はシャープになりますが、ギザギザが目立つようになります。<br />
@@ -283,25 +274,17 @@ Releaser や -userconf では、吉里吉里の実行可能ファイルや外部の設定ファイルを書き
 　このオプションは動的に変更することが可能ですが、すぐに値が反映される保証はありません。<br />
 </dd>
 
-
-<dt>-<a id="id48" name="id48" class="targanchor"><dfn>waitvsync</dfn></a> (垂直同期待ち)</dt>
-<dd>　トランジション(画面切り替え)などでディスプレイの垂直同期を待ってから描画するかどうかの設定です。<br />
-　設定可能な値は <em>'yes' (行う)</em>, <em>'no' (行わない)</em> のいずれかで、このオプションを指定しないと 'no' が指定されたものと見なされます。<br />
-　'yes' を指定すると画面のちらつきを抑えられる可能性がありますが、描画のパフォーマンスが低下する可能性もあります。<br />
-　このオプションで垂直同期待ちを行うと、Continuous ハンドラが垂直同期のタイミングに合わせて駆動されるようになり、contfreq オプションの設定内容は無視されます。<br />
-　このオプションは動的に変更することが可能です。<br />
-</dd>
-<dt>-<a id="id49" name="id49" class="targanchor"><dfn>aamethod</dfn></a> (アンチエイリアス文字描画方式)</dt>
+<dt>-<a id="id47" name="id47" class="targanchor"><dfn>aamethod</dfn></a> (アンチエイリアス文字描画方式)</dt>
 <dd>　アンチエイリアス文字描画方法の設定です。<br />
 　設定可能な値は <em>'auto' (自動)</em>, <em>'res4' (リサンプリング4×4)</em>,  <em>'res8' (リサンプリング8×8)</em>, <em>'api' (Windows API)</em> のいずれかで、このオプションを指定しないと 'auto' が指定されたものと見なされます。<br />
 　'auto' の場合は現バージョンでは 'api' を自動的に選択します。<br />
 　'res4' または 'res8' では、数倍の大きさ (4×4 または 8×8) で文字を描画し、それを縮小することでアンチエイリアスを実現します。res4 の方が res8 よりも高速ですが、精度は低くなります。<br />
 　'api' では GetGlyphOutline API を用いてアンチエイリアス文字を描画しますが、いろいろと不都合の多い API のようで環境によっては正常に描画できない可能性があります。</dd>
-<dt>-<a id="id50" name="id50" class="targanchor"><dfn>jpegdec</dfn></a> (JPEG画像デコード精度)</dt>
+<dt>-<a id="id48" name="id48" class="targanchor"><dfn>jpegdec</dfn></a> (JPEG画像デコード精度)</dt>
 <dd>　JPEG画像のデコード(展開)の精度の設定です。<br />
 　設定可能な値は <em>'high' (高い)</em>, <em>'normal' (標準)</em>, <em>'low' (低い)</em> のいずれかで、このオプションを指定しないと 'normal' が指定されたものと見なされます。<br />
 　'high' を指定するとデコードは低速になりますが、画質は高くなります。'low' を指定するとデコードは高速になりますが画質は低くなります。しかし、見た目ではほとんど違いはありません。</dd>
-<dt>-<a id="id51" name="id51" class="targanchor"><dfn>drawthread</dfn></a> (描画スレッド数)</dt>
+<dt>-<a id="id49" name="id49" class="targanchor"><dfn>drawthread</dfn></a> (描画スレッド数)</dt>
 <dd>　描画処理時に、使用するスレッドの数の設定です。<br />
 　設定可能な値は<em>任意の数値</em>もしくは<em>'auto' (自動)</em>のいずれかで、このオプションを指定しないと '1'が指定されたものと見なされます。<br />
 　'auto'を指定すると、OSの認識するプロセッサ数と同数のスレッドが自動的に割り当てられます。<br />
@@ -310,29 +293,29 @@ Releaser や -userconf では、吉里吉里の実行可能ファイルや外部の設定ファイルを書き
 　マルチスレッドを使用するように設定しても、描画処理の負荷が軽くマルチスレッド化の効果が得られないとシステムが判断した場合は、マルチスレッドで実行されない場合があります。<br />
 </dd></dl></div></div>
 
-<h1><a id="id52" name="id52">CPU 機能関連のオプション</a>
+<h1><a id="id50" name="id50">CPU 機能関連のオプション</a>
 </h1><div class="para"><div>
 　以下のオプションはすべて設定可能な値は <em>'yes' (使用可能であれば使用する)</em>, <em>'no' (使用可能であっても使用しない)</em>, <em>'force' (強制的に使用する)</em> のいずれかで、オプションを指定しないと 'yes' が指定されたものと見なされます。<br />
 　CPU の認識トラブルが起こった場合に 'no' に設定するとその機能を用いません。<br />
 　'force' は、その CPU 機能を検出しなくても強制的に使用するようになりますが、CPU にその機能がついていない場合はもちろん正常に動作しません。<br />
 　吉里吉里本体には -cpummx -cpucmov -cpusse -cpuemmx のオプションのみが影響を与えます。OggVorbis デコーダ (wuvorbis.dll) には -cpusse と -cpummx と -cpu3dn のオプションが影響を与えます。そのほかの(サードパーティーの)プラグインの中にも CPU 機能の設定の影響を受けるものがあるかも知れません。<br />
 <br />
-<ul><li>-<a id="id53" name="id53" class="targanchor"><dfn>cpummx</dfn></a> (MMX)</li><li>-<a id="id54" name="id54" class="targanchor"><dfn>cpu3dn</dfn></a> (3DNow!)</li><li>-<a id="id55" name="id55" class="targanchor"><dfn>cpusse</dfn></a> (SSE)</li><li>-<a id="id56" name="id56" class="targanchor"><dfn>cpucmov</dfn></a> (CMOVcc)</li><li>-<a id="id57" name="id57" class="targanchor"><dfn>cpue3dn</dfn></a> (Enhanced 3DNow!)</li><li>-<a id="id58" name="id58" class="targanchor"><dfn>cpuemmx</dfn></a> (EMMX (MMX2))</li><li>-<a id="id59" name="id59" class="targanchor"><dfn>cpusse2</dfn></a> (SSE2)</li></ul></div></div>
+<ul><li>-<a id="id51" name="id51" class="targanchor"><dfn>cpummx</dfn></a> (MMX)</li><li>-<a id="id52" name="id52" class="targanchor"><dfn>cpu3dn</dfn></a> (3DNow!)</li><li>-<a id="id53" name="id53" class="targanchor"><dfn>cpusse</dfn></a> (SSE)</li><li>-<a id="id54" name="id54" class="targanchor"><dfn>cpucmov</dfn></a> (CMOVcc)</li><li>-<a id="id55" name="id55" class="targanchor"><dfn>cpue3dn</dfn></a> (Enhanced 3DNow!)</li><li>-<a id="id56" name="id56" class="targanchor"><dfn>cpuemmx</dfn></a> (EMMX (MMX2))</li><li>-<a id="id57" name="id57" class="targanchor"><dfn>cpusse2</dfn></a> (SSE2)</li></ul></div></div>
 
 
-<h1><a id="id60" name="id60">デバッグ関連のオプション</a>
+<h1><a id="id58" name="id58">デバッグ関連のオプション</a>
 </h1><div class="para"><div>
 <dl>
-<dt>-<a id="id61" name="id61" class="targanchor"><dfn>debug</dfn></a> (デバッグモード)</dt>
+<dt>-<a id="id59" name="id59" class="targanchor"><dfn>debug</dfn></a> (デバッグモード)</dt>
 <dd>　吉里吉里をデバッグモード <span class="comlink"> ( → <a target="main" class="jump" href="Debug.html">デバッグ</a> ) </span> で動作させるかどうかの設定です。<br />
 　設定可能な値は <em>'no' (無効)</em>, <em>'yes' (有効)</em>のいずれかで、このオプションを指定しないと 'no' が指定されたものと見なされます。<br />
 　有効にすると、吉里吉里はデバッグモードで動作し、いくつかのデバッグ支援機能が有効になりますが、通常のモードよりも実行速度は低下します。</dd>
 
-<dt>-<a id="id62" name="id62" class="targanchor"><dfn>forcelog</dfn></a> (ファイルへのログ)</dt>
+<dt>-<a id="id60" name="id60" class="targanchor"><dfn>forcelog</dfn></a> (ファイルへのログ)</dt>
 <dd>　コンソールのログをファイルに出力するかどうかの設定です。<br />
 　設定可能な値は <em>'no' (出力しない)</em>, <em>'yes' (既存のファイルに追加して出力する)</em>, <em>'clear' (既存のファイルをクリアしてから出力する)</em> のいずれかで、このオプションを指定しないと 'no' が指定されたものと見なされます。
 </dd>
-<dt>-<a id="id63" name="id63" class="targanchor"><dfn>logerror</dfn></a> (エラー時のファイルへのログ)</dt>
+<dt>-<a id="id61" name="id61" class="targanchor"><dfn>logerror</dfn></a> (エラー時のファイルへのログ)</dt>
 <dd>　エラー時にコンソールのログをファイルに出力するかどうかの設定です。<br />
 　設定可能な値は <em>'no' (出力しない)</em>, <em>'yes' (既存のファイルに追加して出力する)</em>, <em>'clear' (既存のファイルをクリアしてから出力する)</em> のいずれかで、このオプションを指定しないと 'yes' が指定されたものと見なされます。
 </dd></dl></div></div>
@@ -340,39 +323,39 @@ Releaser や -userconf では、吉里吉里の実行可能ファイルや外部の設定ファイルを書き
 
 
 
-<h1><a id="id64" name="id64">システム互換性関連のオプション</a>
+<h1><a id="id62" name="id62">システム互換性関連のオプション</a>
 </h1><div class="para"><div>
 <dl>
-<dt>-<a id="id65" name="id65" class="targanchor"><dfn>arcdelim</dfn></a> (アーカイブデリミタ)</dt>
+<dt>-<a id="id63" name="id63" class="targanchor"><dfn>arcdelim</dfn></a> (アーカイブデリミタ)</dt>
 <dd>　アーカイブデリミタ (アーカイブストレージ名と、アーカイブ内ストレージ名の間を区切る文字) を指定します。<br />
 　設定可能な値は <em>'&gt;' ('&gt;'を使う)</em>, <em>'#' ('#'を使う)</em> のいずれかで、このオプションを指定しないと '&gt;' が指定されたものと見なされます。<br />
 　アーカイブデリミタは、吉里吉里２ 2.19 beta 14 で、従来の '#' から '&gt;' に変更されました。<br />
 　2.19 beta 14 未満で動作していたアプリケーションはこの変更のため動作しなくなる可能性がありますが、このオプションでデリミタを '#' に変更することで動作させることができます。<br />
 </dd>
 
-<dt>-<a id="id66" name="id66" class="targanchor"><dfn>evalcontext</dfn></a> (後置'!'演算子の動作)</dt>
+<dt>-<a id="id64" name="id64" class="targanchor"><dfn>evalcontext</dfn></a> (後置'!'演算子の動作)</dt>
 <dd>　TJS2の後置'!'演算子の動作を指定します。<br />
 　設定可能な値は <em>'this' (this上で式を評価)</em>, <em>'global' (global上で式を評価)</em> のいずれかで、このオプションを指定しないと 'this' が指定されたものと見なされます。<br />
 　TJS2の後置'!'演算子は式をglobalコンテキスト上で実行していましたが、2.21 beta 9 より、this コンテキスト上で実行するようになりました。<br />
 2.21 beta 9 未満を想定しているアプリケーションでは、この設定を「global上で式を評価」にしないと動作しない可能性があります。</dd>
 
-<dt>-<a id="id67" name="id67" class="targanchor"><dfn>holdalpha</dfn></a> (Layer.holdAlpha プロパティのデフォルトの値)</dt>
+<dt>-<a id="id65" name="id65" class="targanchor"><dfn>holdalpha</dfn></a> (Layer.holdAlpha プロパティのデフォルトの値)</dt>
 <dd>　<a target="main" class="jump" href="f_Layer_holdAlpha.html">Layer.holdAlpha</a> プロパティのデフォルト値を指定します。<br />
 　設定可能な値は <em>'false' (偽)</em>, <em>'true' (真)</em> のいずれかで、このオプションを指定しないと 'false' が指定されたものと見なされます。<br />
 　吉里吉里２ 2.23 beta 4 で、各種演算関数に指定していた hda (アルファチャンネルを保護するか) オプションがなくなり、代わりに Layer.holdAlpha プロパティが作られました。この時点では Layer.holdAlpha のデフォルト値は真でした。Layer.holdAlpha が真の場合は過去のアプリケーションの動作に影響を与えません。<br />
 　吉里吉里２ 2.23 beta 5 で、このデフォルト値が偽になりました。吉里吉里２ 2.23 beta 5 未満を想定しているアプリケーションを動作させたい場合は、このオプションに「真」を指定しないと正常に動作しない可能性があります。</dd>
 
-<dt>-<a id="id68" name="id68" class="targanchor"><dfn>unaryaster</dfn></a> (前置'*'演算子の動作)</dt>
+<dt>-<a id="id66" name="id66" class="targanchor"><dfn>unaryaster</dfn></a> (前置'*'演算子の動作)</dt>
 <dd>　TJS2の前置'*'演算子の動作を指定します。<br />
 　設定可能な値は <em>'default' (2.25以降の動作)</em>, <em>'compat' (2.25未満の動作)</em> のいずれかで、このオプションを指定しないと 'default' が指定されたものと見なされます。<br />
 　TJS2の前置'*'演算子は、プロパティオブジェクトそのものを、プロパティハンドラを介さずに取り出す演算子でしたが、2.25 beta 1 より、この機能を持つ演算子は前置の'&amp;'となり、前置'*'演算子はプロパティオブジェクトのプロパティハンドラを動作させるための演算子となりました。2.25 beta 1 未満を想定しているアプリケーションでは、この設定を「2.25未満と互換」にしないと正常に動作しない可能性があります。</dd>
 
-<dt>-<a id="id69" name="id69" class="targanchor"><dfn>dsvolfactor</dfn></a> (DirectSoundのボリュームカーブ)</dt>
+<dt>-<a id="id67" name="id67" class="targanchor"><dfn>dsvolfactor</dfn></a> (DirectSoundのボリュームカーブ)</dt>
 <dd>　設定可能な値は <em>'3322' (2.31 2011/6/14以降の動作)</em>, <em>'5000' (2.31 2011/6/14未満の動作)</em> のいずれかで、このオプションを指定しないと '3322' が指定されたものと見なされます。<br />
 　DirectSoundのボリュームカーブは、2.31 2011/6/14 より、より直感的なカーブになりました。<br />
 </dd>
 
-<dt>-<a id="id70" name="id70" class="targanchor"><dfn>readencoding</dfn></a> (スクリプト読込み文字コード)</dt>
+<dt>-<a id="id68" name="id68" class="targanchor"><dfn>readencoding</dfn></a> (スクリプト読込み文字コード)</dt>
 <dd>　設定可能な値は <em>'Shift_JIS' (吉里吉里2互換の動作)</em>, <em>'UTF-8' (吉里吉里Zの動作)</em> のいずれかで、このオプションを指定しないと 'UTF-8' が指定されたものと見なされます。<br />
 　スクリプトを読み込むのに使用する文字コードです。<br />
 </dd>
