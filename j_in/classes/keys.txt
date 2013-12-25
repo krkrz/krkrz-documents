@@ -999,6 +999,7 @@ maxWidth	top	f_Window_maxWidth.html	Windowクラス
 maxHeight	top	f_Window_maxHeight.html	Windowクラス
 left	top	f_Window_left.html	Windowクラス
 top	top	f_Window_top.html	Windowクラス
+focusable	top	f_Window_focusable.html	Windowクラス
 trapKey	top	f_Window_trapKey.html	Windowクラス
 innerWidth	top	f_Window_innerWidth.html	Windowクラス
 innerHeight	top	f_Window_innerHeight.html	Windowクラス
@@ -1031,4 +1032,6 @@ HWND	top	f_Window_HWND.html	Windowクラス
 touchScaleThreshold	top	f_Window_touchScaleThreshold.html	Windowクラス
 touchRotateThreshold	top	f_Window_touchRotateThreshold.html	Windowクラス
 touchPointCount	top	f_Window_touchPointCount.html	Windowクラス
+enableTouch	top	f_Window_enableTouch.html	Windowクラス
+タッチイベント	id543	f_Window_enableTouch.html	Window.enableTouch
 waitVSync	top	f_Window_waitVSync.html	Windowクラス

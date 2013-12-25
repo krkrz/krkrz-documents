@@ -1674,6 +1674,18 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 </member>
 
 <member>
+	<name>enableTouch</name>
+	<type>property</type>
+	<shortdesc>タッチイベント有効/無効</shortdesc>
+	<access>r/w</access>
+	<desc>
+		　<kw>タッチイベント</kw>が有効かどうかを表します。値を設定することもできます。<r/>
+		　真を指定すると<ref>Window.onTouchDown</ref>等のイベントが有効になり、タッチ操作では<ref>Window.onMouseDown</ref>などが発生しなくなります。<r/>
+		　タッチデバイスがありマルチタッチが有効な環境では、デフォルトが true になります。<r/>
+	</desc>
+</member>
+
+<member>
 	<name>waitVSync</name>
 	<type>property</type>
 	<shortdesc>垂直同期待ち</shortdesc>
