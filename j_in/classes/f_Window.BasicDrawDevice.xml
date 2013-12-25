@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="Shift_JIS" ?>
+<doc>
+<title>Window.BasicDrawDevice</title>
+<desc>
+　Window.BasicDrawDevice クラスは、このインスタンスを <ref>Window.drawDevice</ref> に登録して使用するための DrawDevice で、標準的な描画機能を提供します。<r/>
+</desc>
+
+<member>
+	<name>BasicDrawDevice</name>
+	<type>constructor</type>
+	<shortdesc>BasicDrawDevice オブジェクトの構築</shortdesc>
+	<arg>
+	</arg>
+	<result></result>
+	<desc>
+		　Window.BasicDrawDevice クラスのオブジェクトを構築します。<r/>
+		　初期状態で Window.drawDevice にはこのクラスのインスタンスが登録されているので、新たに登録する必要はありません。<r/>
+	</desc>
+</member>
+
+<member>
+	<name>recreate</name>
+	<type>method</type>
+	<shortdesc>内部デバイス再生成</shortdesc>
+	<arg></arg>
+	<result></result>
+	<desc>
+		　内部デバイスの再生成を行います。<r/>
+		　通常使用することはありません。<r/>
+	</desc>
+</member>
+
+
+<member>
+	<name>interface</name>
+	<type>property</type>
+	<shortdesc>インターフェースオブジェクトを取得</shortdesc>
+	<access>r</access>
+	<desc>
+		　プラグインなどで DrawDevice オブジェクトを利用するためにあります。<r/>
+	</desc>
+</member>
+
+</doc>

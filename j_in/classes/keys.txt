@@ -888,6 +888,10 @@ sgfmNeverMute	id469	f_WaveSoundBuffer_globalFocusMode.html	WaveSoundBuffer.globa
 sgfmMuteOnMinimize	id470	f_WaveSoundBuffer_globalFocusMode.html	WaveSoundBuffer.globalFocusMode
 sgfmMuteOnDeactivate	id471	f_WaveSoundBuffer_globalFocusMode.html	WaveSoundBuffer.globalFocusMode
 filters	top	f_WaveSoundBuffer_filters.html	WaveSoundBufferクラス
+Window.BasicDrawDeviceクラス概要	top	f_Window.BasicDrawDevice.html	Window.BasicDrawDeviceクラス
+BasicDrawDevice	top	f_Window.BasicDrawDevice_BasicDrawDevice.html	Window.BasicDrawDeviceクラス
+recreate	top	f_Window.BasicDrawDevice_recreate.html	Window.BasicDrawDeviceクラス
+interface	top	f_Window.BasicDrawDevice_interface.html	Window.BasicDrawDeviceクラス
 Windowクラス概要	top	f_Window.html	Windowクラス
 ウィンドウ	id472	f_Window.html	Windowクラス
 Window	top	f_Window_Window.html	Windowクラス
