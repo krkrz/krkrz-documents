@@ -1752,7 +1752,8 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 	<shortdesc>ヒント表示待ち時間</shortdesc>
 	<access>r/w</access>
 	<desc>
-		　ヒントの表示待ち時間を表します。値を設定することもできます。<r/>
+		　ヒントの表示待ち時間をミリ秒単位で表します。値を設定することもできます。<r/>
+		　デフォルトは500ミリ秒です。<r/>
 		　0を設定すると即座に <ref>Window.onHintChanged</ref> が呼び出されます(常時表示状態)。<r/>
 		　-1を設定するとヒントが表示されることはありません。<r/>
 	</desc>
