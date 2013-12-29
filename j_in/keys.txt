@@ -640,6 +640,7 @@ mainImageBufferPitch	top	f_Layer_mainImageBufferPitch.html	Layerクラス
 provinceImageBuffer	top	f_Layer_provinceImageBuffer.html	Layerクラス
 provinceImageBufferForWrite	top	f_Layer_provinceImageBufferForWrite.html	Layerクラス
 provinceImageBufferPitch	top	f_Layer_provinceImageBufferPitch.html	Layerクラス
+ignoreHintSensing	top	f_Layer_ignoreHintSensing.html	Layerクラス
 Pluginsクラス概要	top	f_Plugins.html	Pluginsクラス
 プラグイン	id424	f_Plugins.html	Pluginsクラス
 link	top	f_Plugins_link.html	Pluginsクラス
@@ -967,6 +968,7 @@ onCloseQuery	top	f_Window_onCloseQuery.html	Windowクラス
 onPopupHide	top	f_Window_onPopupHide.html	Windowクラス
 onActivate	top	f_Window_onActivate.html	Windowクラス
 onDeactivate	top	f_Window_onDeactivate.html	Windowクラス
+onHintChanged	top	f_Window_onHintChanged.html	Windowクラス
 close	top	f_Window_close.html	Windowクラス
 bringToFront	top	f_Window_bringToFront.html	Windowクラス
 update	top	f_Window_update.html	Windowクラス
@@ -1047,3 +1049,4 @@ touchPointCount	top	f_Window_touchPointCount.html	Windowクラス
 enableTouch	top	f_Window_enableTouch.html	Windowクラス
 タッチイベント	id551	f_Window_enableTouch.html	Window.enableTouch
 waitVSync	top	f_Window_waitVSync.html	Windowクラス
+hintDelay	top	f_Window_hintDelay.html	Windowクラス

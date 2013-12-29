@@ -791,6 +791,51 @@
 
 </member>
 
+<member>
+	<name>onHintChanged</name>
+	<type>event</type>
+	<shortdesc>ヒントの状態が変化したとき</shortdesc>
+	<arg>
+		<argitem>
+			<name>text</name>
+			<default></default>
+			<desc>
+				　ヒントに表示する文字列が渡されます。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>x</name>
+			<default></default>
+			<desc>
+				　ヒント表示X軸座標値が渡されます。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>y</name>
+			<default></default>
+			<desc>
+				　ヒント表示Y軸座標値が渡されます。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>isshow</name>
+			<default></default>
+			<desc>
+				　ヒントを表示するか、非表示にするかが渡されます。<r/>
+			</desc>
+		</argitem>
+	</arg>
+	<result></result>
+	<desc>
+		　ヒントの状態が変化したときに呼び出されるイベント関数を表します。<r/>
+		　表示/非表示に従いヒントの表示を行います。<r/>
+		　ヒントをレイヤで表示する場合は、そのレイヤのマウスメッセージが無視されるように <ref>Layer.hitThreshold</ref> を256に設定します。<r/>
+		　また、<ref>Layer.ignoreHintSensing</ref> もtrueを指定します。<r/>
+	</desc>
+	<ref>Window.hintDelay</ref>
+	<ref>Layer.ignoreHintSensing</ref>
+	<ref>Layer.hitThreshold</ref>
+</member>
 
 <member>
 	<name>close</name>
@@ -1698,6 +1743,20 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 		　トランジション(画面切り替え)などでディスプレイの垂直同期を待ってから描画するかどうかの設定です。<r/>
 		　設定を変えると、画面のちらつきを抑えられる場合がありますが、描画のパフォーマンスが低下する場合もあります。<r/>
 	</desc>
+</member>
+
+
+<member>
+	<name>hintDelay</name>
+	<type>property</type>
+	<shortdesc>ヒント表示待ち時間</shortdesc>
+	<access>r/w</access>
+	<desc>
+		　ヒントの表示待ち時間を表します。値を設定することもできます。<r/>
+		　0を設定すると即座に <ref>Window.onHintChanged</ref> が呼び出されます(常時表示状態)。<r/>
+		　-1を設定するとヒントが表示されることはありません。<r/>
+	</desc>
+	<ref>Window.onHintChanged</ref>
 </member>
 
 </doc>

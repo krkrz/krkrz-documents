@@ -4880,6 +4880,18 @@
 </member>
 
 
+<member>
+	<name>ignoreHintSensing</name>
+	<type>property</type>
+	<shortdesc>ヒント表示判定有無</shortdesc>
+	<access>r/w</access>
+	<desc>
+		　ヒント表示判定有無を表します。<r/>
+		　trueを設定するとこのレイヤではヒント判定が行われません。<r/>
+		　falseを設定すると判定が行われます。<r/>
+	</desc>
+	<ref>Window.onHintChanged</ref>
+</member>
 
 
 </doc>
