@@ -95,10 +95,10 @@
 			</td></tr>
 <tr><td valign="top"><span class="argname">type</span></td>
 <td>				　アフィン変換のタイプを指定します。<br />
-				<span class="script"><a class="targanchor" name="id315" id="id315">stNearest</a>    </span> : 最近傍点法が用いられます<br />
-				<span class="script"><a class="targanchor" name="id316" id="id316">stFastLinear</a> </span> : 低精度の線形補間が用いられます(一部実装)<br />
-				<span class="script"><a class="targanchor" name="id317" id="id317">stLinear</a>     </span> : 線形補間が用いられます(未実装)<br />
-				<span class="script"><a class="targanchor" name="id318" id="id318">stCubic</a>      </span> : ３次元補間が用いられます(未実装)<br />
+				<span class="script"><a class="targanchor" name="id319" id="id319">stNearest</a>    </span> : 最近傍点法が用いられます<br />
+				<span class="script"><a class="targanchor" name="id320" id="id320">stFastLinear</a> </span> : 低精度の線形補間が用いられます(一部実装)<br />
+				<span class="script"><a class="targanchor" name="id321" id="id321">stLinear</a>     </span> : 線形補間が用いられます(未実装)<br />
+				<span class="script"><a class="targanchor" name="id322" id="id322">stCubic</a>      </span> : ３次元補間が用いられます(未実装)<br />
 				　速度は stNearest &gt; stFastLinear &gt; stLinear &gt; stCubic の順に高速ですが、画質は速度が
 				速ければ速いモードほど低画質になります。<br />
 				　stFastLinear や stLinear, stCubic に対しては、stRefNoClip をビット論理和で追加指定
@@ -122,9 +122,9 @@
 		り、重ね合わせ元のレイヤの不透明度は無視されます ( 常に完全に不透明であると見なされます )。<br />
 		　重ね合わされる画像は、重ね合わせ先の ( メソッドを実行する ) レイ
 		ヤの <a class="jump" href="f_Layer_face.html">Layer.face</a> プロパティの値によって変わります。<br />
-		<span class="script"><a class="targanchor" name="id319" id="id319">dfAlpha</a> (または<a class="targanchor" name="id320" id="id320">dfBoth</a>)    </span> : 重ね合わせ先の不透明度を考慮した重ね合わせが行われます<br />
-		<span class="script"><a class="targanchor" name="id321" id="id321">dfOpaque</a> (または<a class="targanchor" name="id322" id="id322">dfMain</a>)   </span> : 重ね合わせ先の不透明度を無視した重ね合わせが行われます(重ね合わせ先は全面完全不透明として扱われます)。この場合は、<a class="jump" href="f_Layer_holdAlpha.html">Layer.holdAlpha</a>プロパティが偽のとき、type 引数に stFastLinear を指定することにより、線形補間が可能です。<br />
-		<span class="script"><a class="targanchor" name="id323" id="id323">それ以外</a>  </span>                 : できません ( 例外が発生します )<br />
+		<span class="script"><a class="targanchor" name="id323" id="id323">dfAlpha</a> (または<a class="targanchor" name="id324" id="id324">dfBoth</a>)    </span> : 重ね合わせ先の不透明度を考慮した重ね合わせが行われます<br />
+		<span class="script"><a class="targanchor" name="id325" id="id325">dfOpaque</a> (または<a class="targanchor" name="id326" id="id326">dfMain</a>)   </span> : 重ね合わせ先の不透明度を無視した重ね合わせが行われます(重ね合わせ先は全面完全不透明として扱われます)。この場合は、<a class="jump" href="f_Layer_holdAlpha.html">Layer.holdAlpha</a>プロパティが偽のとき、type 引数に stFastLinear を指定することにより、線形補間が可能です。<br />
+		<span class="script"><a class="targanchor" name="id327" id="id327">それ以外</a>  </span>                 : できません ( 例外が発生します )<br />
 		<br />
 		　このメソッドは旧式になりました。代わりに <a class="jump" href="f_Layer_operateAffine.html">Layer.operateAffine</a> を使用してください。演算のモードに omOpaque を指定すると同じ効果になります。<br />
 	</dd>

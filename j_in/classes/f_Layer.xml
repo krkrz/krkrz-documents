@@ -123,6 +123,8 @@
 				<tt><kw>mbLeft</kw>    : </tt>マウスの左ボタンが押された<r/>
 				<tt><kw>mbMiddle</kw>  : </tt>マウスの中ボタンが押された<r/>
 				<tt><kw>mbRight</kw>   : </tt>マウスの右ボタンが押された<r/>
+				<tt><kw>mbX1</kw>      : </tt>マウスのサイドキー第1ボタンが押された<r/>
+				<tt><kw>mbX2</kw>      : </tt>マウスのサイドキー第2ボタンが押された<r/>
 			</desc>
 		</argitem>
 		<argitem>
@@ -171,6 +173,8 @@
 				<tt><kw>mbLeft</kw>    : </tt>マウスの左ボタンが離された<r/>
 				<tt><kw>mbMiddle</kw>  : </tt>マウスの中ボタンが離された<r/>
 				<tt><kw>mbRight</kw>   : </tt>マウスの右ボタンが離された<r/>
+				<tt><kw>mbX1</kw>      : </tt>マウスのサイドキー第1ボタンが離された<r/>
+				<tt><kw>mbX2</kw>      : </tt>マウスのサイドキー第2ボタンが離された<r/>
 			</desc>
 		</argitem>
 		<argitem>

@@ -33,10 +33,10 @@
 <table rules="all" frame="box" cellpadding="3" summary="doCompact の引数">
 <tr><td valign="top"><span class="argname">level</span></td>
 <td>				　レベルを指定します。<br />
-				　<a class="targanchor" name="id442" id="id442">clIdle</a> を指定すると、システムがアイドル状態 (システムが比較的動作をしていない状態) に実行されるコンパクト化と同じ処理が行われます。現バージョンでは TJS2 のガベージコレクションが行われます。<br />
-				　<a class="targanchor" name="id443" id="id443">clDeactivate</a> を指定すると、吉里吉里が非アクティブになったとき (他のアプリケーションがアクティブになったとき) に実行されるコンパクト化と同じ処理が行われます。現バージョンではレイヤの演算用の一時画像バッファ、レイヤキャッシュ、XP3 アーカイブのセグメント(ストレージの断片) キャッシュ、自動検索パスのキャッシュがクリアされます。<br />
-				　<a class="targanchor" name="id444" id="id444">clMinimize</a> を指定すると、吉里吉里が最小化されたときに実行されるコンパクト化と同じ処理が行われます。現バージョンでは、描画文字のキャッシュ、画像キャッシュがクリアされます。<br />
-				　<a class="targanchor" name="id445" id="id445">clAll</a> を指定すると、上記のコンパクト化の全てが実行されます。<br />
+				　<a class="targanchor" name="id446" id="id446">clIdle</a> を指定すると、システムがアイドル状態 (システムが比較的動作をしていない状態) に実行されるコンパクト化と同じ処理が行われます。現バージョンでは TJS2 のガベージコレクションが行われます。<br />
+				　<a class="targanchor" name="id447" id="id447">clDeactivate</a> を指定すると、吉里吉里が非アクティブになったとき (他のアプリケーションがアクティブになったとき) に実行されるコンパクト化と同じ処理が行われます。現バージョンではレイヤの演算用の一時画像バッファ、レイヤキャッシュ、XP3 アーカイブのセグメント(ストレージの断片) キャッシュ、自動検索パスのキャッシュがクリアされます。<br />
+				　<a class="targanchor" name="id448" id="id448">clMinimize</a> を指定すると、吉里吉里が最小化されたときに実行されるコンパクト化と同じ処理が行われます。現バージョンでは、描画文字のキャッシュ、画像キャッシュがクリアされます。<br />
+				　<a class="targanchor" name="id449" id="id449">clAll</a> を指定すると、上記のコンパクト化の全てが実行されます。<br />
 				　コンパクト化のレベルは、clIdle &lt; clDeactivate &lt; clMinimize &lt; clAll の順に強くなります。より上位のレベルを指定すると、下位のレベルで行われるコンパクト化も行われます。たとえば、clDeactivate を実行すると、clIdle での処理も実行されます。<br />
 				　引数を省略すると clAll が指定された物と見なされます。<br />
 			</td></tr>
