@@ -33,6 +33,7 @@
 <table rules="all" frame="box" cellpadding="3" summary="affineCopy の引数">
 <tr><td valign="top"><span class="argname">src</span></td>
 <td>				　コピー元のレイヤオブジェクトを指定します。<br />
+				　Bitmap クラスのオブジェクトも指定可能です。(1.1.0以降)<br />
 			</td></tr>
 <tr><td valign="top"><span class="argname">sleft</span></td>
 <td>				　コピーする矩形の左端位置を ( コピー元レイヤの画像位置における ) ピクセル単位で指定します。<br />
@@ -92,10 +93,10 @@
 			</td></tr>
 <tr><td valign="top"><span class="argname">type</span></td>
 <td>				　アフィン変換のタイプを指定します。<br />
-				<span class="script"><a class="targanchor" name="id306" id="id306">stNearest</a>    </span> : 最近傍点法が用いられます<br />
-				<span class="script"><a class="targanchor" name="id307" id="id307">stFastLinear</a> </span> : 低精度の線形補間が用いられます(一部実装)<br />
-				<span class="script"><a class="targanchor" name="id308" id="id308">stLinear</a>     </span> : 線形補間が用いられます(未実装)<br />
-				<span class="script"><a class="targanchor" name="id309" id="id309">stCubic</a>      </span> : ３次元補間が用いられます(未実装)<br />
+				<span class="script"><a class="targanchor" name="id278" id="id278">stNearest</a>    </span> : 最近傍点法が用いられます<br />
+				<span class="script"><a class="targanchor" name="id279" id="id279">stFastLinear</a> </span> : 低精度の線形補間が用いられます(一部実装)<br />
+				<span class="script"><a class="targanchor" name="id280" id="id280">stLinear</a>     </span> : 線形補間が用いられます(未実装)<br />
+				<span class="script"><a class="targanchor" name="id281" id="id281">stCubic</a>      </span> : ３次元補間が用いられます(未実装)<br />
 				　stFastLinear や stLinear, stCubic に対しては、stRefNoClip をビット論理和で追加指定
 				することができ、この場合は、コピーするビットマップの領域外を参照して色を合成することを
 				許可します。これを指定しない場合は、転送元ビットマップの周囲に余裕があったとしても、

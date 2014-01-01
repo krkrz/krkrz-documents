@@ -33,6 +33,7 @@
 <table rules="all" frame="box" cellpadding="3" summary="operateAffine の引数">
 <tr><td valign="top"><span class="argname">src</span></td>
 <td>				　重ね合わせ元のレイヤオブジェクトを指定します。<br />
+				　Bitmap クラスのオブジェクトも指定可能です。(1.1.0以降)<br />
 			</td></tr>
 <tr><td valign="top"><span class="argname">sleft</span></td>
 <td>				　重ね合わせる矩形の左端位置を ( 重ね合わせ元レイヤの画像位置における ) ピクセル単位で指定します。<br />
@@ -92,43 +93,43 @@
 			</td></tr>
 <tr><td valign="top"><span class="argname">mode</span></td>
 <td>				　演算のモードを指定します。<br />
-				<span class="script"><a class="targanchor" name="id328" id="id328">omAuto</a></span> が指定された場合は演算元レイヤの<a class="jump" href="f_Layer_type.html">Layer.type</a>プロパティに従って演算の種類が自動的に決定されます。<br />
-				<span class="script"><a class="targanchor" name="id329" id="id329">omPsNormal</a></span> が指定された場合はPhotoshop互換のアルファ合成が行われます(現バージョンでは未実装です)。<br />
-				<span class="script"><a class="targanchor" name="id330" id="id330">omPsAdditive</a></span> が指定された場合はPhotoshop互換の覆い焼き(リニア)合成が行われます(現バージョンでは未実装です)。<br />
-				<span class="script"><a class="targanchor" name="id331" id="id331">omPsSubtractive</a></span> が指定された場合はPhotoshop互換の焼き込み(リニア)合成が行われます(現バージョンでは未実装です)。<br />
-				<span class="script"><a class="targanchor" name="id332" id="id332">omPsMultiplicative</a></span> が指定された場合はPhotoshop互換の乗算合成が行われます(現バージョンでは未実装です)。<br />
-				<span class="script"><a class="targanchor" name="id333" id="id333">omPsScreen</a></span> が指定された場合はPhotoshop互換のスクリーン合成が行われます(現バージョンでは未実装です)。<br />
-				<span class="script"><a class="targanchor" name="id334" id="id334">omPsOverlay</a></span> が指定された場合はPhotoshop互換のオーバーレイ合成が行われます(現バージョンでは未実装です)。<br />
-				<span class="script"><a class="targanchor" name="id335" id="id335">omPsHardLight</a></span> が指定された場合はPhotoshop互換のハードライト合成が行われます(現バージョンでは未実装です)。<br />
-				<span class="script"><a class="targanchor" name="id336" id="id336">omPsSoftLight</a></span> が指定された場合はPhotoshop互換のソフトライト合成が行われます(現バージョンでは未実装です)。<br />
-				<span class="script"><a class="targanchor" name="id337" id="id337">omPsColorDodge</a></span> が指定された場合はPhotoshop互換の覆い焼きカラー合成が行われます(現バージョンでは未実装です)。<br />
-				<span class="script"><a class="targanchor" name="id338" id="id338">omPsColorDodge5</a></span> が指定された場合はPhotoshopのバージョン5.x 以下と互換の覆い焼きカラー合成が行われます(現バージョンでは未実装です)。<br />
-				<span class="script"><a class="targanchor" name="id339" id="id339">omPsColorBurn</a></span> が指定された場合はPhotoshop互換の焼き込みカラー合成が行われます(現バージョンでは未実装です)。<br />
-				<span class="script"><a class="targanchor" name="id340" id="id340">omPsLighten</a></span> が指定された場合はPhotoshop互換の比較(明)合成が行われます(現バージョンでは未実装です)。<br />
-				<span class="script"><a class="targanchor" name="id341" id="id341">omPsDarken</a></span> が指定された場合はPhotoshop互換の比較(暗)合成が行われます(現バージョンでは未実装です)。<br />
-				<span class="script"><a class="targanchor" name="id342" id="id342">omPsDifference</a></span> が指定された場合はPhotoshop互換の差の絶対値合成が行われます(現バージョンでは未実装です)。<br />
-				<span class="script"><a class="targanchor" name="id343" id="id343">omPsDifference5</a></span> が指定された場合はPhotoshopのバージョン 5.x 以下と互換の差の絶対値合成が行われます(現バージョンでは未実装です)。<br />
-				<span class="script"><a class="targanchor" name="id344" id="id344">omPsExclusion</a></span> が指定された場合はPhotoshop互換の除外合成が行われます(現バージョンでは未実装です)。<br />
-				<span class="script"><a class="targanchor" name="id345" id="id345">omAdditive</a></span> が指定された場合は加算合成が行われます(現バージョンでは未実装です)。<br />
-				<span class="script"><a class="targanchor" name="id346" id="id346">omSubtractive</a></span> が指定された場合は減算合成が行われます(現バージョンでは未実装です)。<br />
-				<span class="script"><a class="targanchor" name="id347" id="id347">omMultiplicative</a></span> が指定された場合は乗算合成が行われます(現バージョンでは未実装です)。<br />
-				<span class="script"><a class="targanchor" name="id348" id="id348">omDodge</a></span> が指定された場合は覆い焼き合成が行われます(現バージョンでは未実装です)。<br />
-				<span class="script"><a class="targanchor" name="id349" id="id349">omDarken</a></span> が指定された場合は比較(暗)合成が行われます(現バージョンでは未実装です)。<br />
-				<span class="script"><a class="targanchor" name="id350" id="id350">omLighten</a></span> が指定された場合は比較(明)合成が行われます(現バージョンでは未実装です)。<br />
-				<span class="script"><a class="targanchor" name="id351" id="id351">omScreen</a></span> が指定された場合はスクリーン乗算合成が行われます(現バージョンでは未実装です)。<br />
-				<span class="script"><a class="targanchor" name="id352" id="id352">omAlpha</a></span> が指定された場合はアルファ合成が行われます。<br />
-				<span class="script"><a class="targanchor" name="id353" id="id353">omAddAlpha</a></span> が指定された場合は加算アルファ合成が行われます。この場合は、転送先の <a class="jump" href="f_Layer_face.html">Layer.face</a> プロパティが dfOpaque かつ <a class="jump" href="f_Layer_holdAlpha.html">Layer.holdAlpha</a> プロパティが偽のとき、type 引数に stFastLinear を指定することにより線形補間が可能です。<br />
-				<span class="script"><a class="targanchor" name="id354" id="id354">omOpaque</a></span> が指定された場合は src のアルファ情報は無視され、src は常に完全不透明であると見なされます。この場合は、転送先の <a class="jump" href="f_Layer_face.html">Layer.face</a> プロパティが dfOpaque かつ <a class="jump" href="f_Layer_holdAlpha.html">Layer.holdAlpha</a> プロパティが偽のとき、type 引数に stFastLinear を指定することにより線形補間が可能です。<br />
+				<span class="script"><a class="targanchor" name="id282" id="id282">omAuto</a></span> が指定された場合は演算元レイヤの<a class="jump" href="f_Layer_type.html">Layer.type</a>プロパティに従って演算の種類が自動的に決定されます。<br />
+				<span class="script"><a class="targanchor" name="id283" id="id283">omPsNormal</a></span> が指定された場合はPhotoshop互換のアルファ合成が行われます(現バージョンでは未実装です)。<br />
+				<span class="script"><a class="targanchor" name="id284" id="id284">omPsAdditive</a></span> が指定された場合はPhotoshop互換の覆い焼き(リニア)合成が行われます(現バージョンでは未実装です)。<br />
+				<span class="script"><a class="targanchor" name="id285" id="id285">omPsSubtractive</a></span> が指定された場合はPhotoshop互換の焼き込み(リニア)合成が行われます(現バージョンでは未実装です)。<br />
+				<span class="script"><a class="targanchor" name="id286" id="id286">omPsMultiplicative</a></span> が指定された場合はPhotoshop互換の乗算合成が行われます(現バージョンでは未実装です)。<br />
+				<span class="script"><a class="targanchor" name="id287" id="id287">omPsScreen</a></span> が指定された場合はPhotoshop互換のスクリーン合成が行われます(現バージョンでは未実装です)。<br />
+				<span class="script"><a class="targanchor" name="id288" id="id288">omPsOverlay</a></span> が指定された場合はPhotoshop互換のオーバーレイ合成が行われます(現バージョンでは未実装です)。<br />
+				<span class="script"><a class="targanchor" name="id289" id="id289">omPsHardLight</a></span> が指定された場合はPhotoshop互換のハードライト合成が行われます(現バージョンでは未実装です)。<br />
+				<span class="script"><a class="targanchor" name="id290" id="id290">omPsSoftLight</a></span> が指定された場合はPhotoshop互換のソフトライト合成が行われます(現バージョンでは未実装です)。<br />
+				<span class="script"><a class="targanchor" name="id291" id="id291">omPsColorDodge</a></span> が指定された場合はPhotoshop互換の覆い焼きカラー合成が行われます(現バージョンでは未実装です)。<br />
+				<span class="script"><a class="targanchor" name="id292" id="id292">omPsColorDodge5</a></span> が指定された場合はPhotoshopのバージョン5.x 以下と互換の覆い焼きカラー合成が行われます(現バージョンでは未実装です)。<br />
+				<span class="script"><a class="targanchor" name="id293" id="id293">omPsColorBurn</a></span> が指定された場合はPhotoshop互換の焼き込みカラー合成が行われます(現バージョンでは未実装です)。<br />
+				<span class="script"><a class="targanchor" name="id294" id="id294">omPsLighten</a></span> が指定された場合はPhotoshop互換の比較(明)合成が行われます(現バージョンでは未実装です)。<br />
+				<span class="script"><a class="targanchor" name="id295" id="id295">omPsDarken</a></span> が指定された場合はPhotoshop互換の比較(暗)合成が行われます(現バージョンでは未実装です)。<br />
+				<span class="script"><a class="targanchor" name="id296" id="id296">omPsDifference</a></span> が指定された場合はPhotoshop互換の差の絶対値合成が行われます(現バージョンでは未実装です)。<br />
+				<span class="script"><a class="targanchor" name="id297" id="id297">omPsDifference5</a></span> が指定された場合はPhotoshopのバージョン 5.x 以下と互換の差の絶対値合成が行われます(現バージョンでは未実装です)。<br />
+				<span class="script"><a class="targanchor" name="id298" id="id298">omPsExclusion</a></span> が指定された場合はPhotoshop互換の除外合成が行われます(現バージョンでは未実装です)。<br />
+				<span class="script"><a class="targanchor" name="id299" id="id299">omAdditive</a></span> が指定された場合は加算合成が行われます(現バージョンでは未実装です)。<br />
+				<span class="script"><a class="targanchor" name="id300" id="id300">omSubtractive</a></span> が指定された場合は減算合成が行われます(現バージョンでは未実装です)。<br />
+				<span class="script"><a class="targanchor" name="id301" id="id301">omMultiplicative</a></span> が指定された場合は乗算合成が行われます(現バージョンでは未実装です)。<br />
+				<span class="script"><a class="targanchor" name="id302" id="id302">omDodge</a></span> が指定された場合は覆い焼き合成が行われます(現バージョンでは未実装です)。<br />
+				<span class="script"><a class="targanchor" name="id303" id="id303">omDarken</a></span> が指定された場合は比較(暗)合成が行われます(現バージョンでは未実装です)。<br />
+				<span class="script"><a class="targanchor" name="id304" id="id304">omLighten</a></span> が指定された場合は比較(明)合成が行われます(現バージョンでは未実装です)。<br />
+				<span class="script"><a class="targanchor" name="id305" id="id305">omScreen</a></span> が指定された場合はスクリーン乗算合成が行われます(現バージョンでは未実装です)。<br />
+				<span class="script"><a class="targanchor" name="id306" id="id306">omAlpha</a></span> が指定された場合はアルファ合成が行われます。<br />
+				<span class="script"><a class="targanchor" name="id307" id="id307">omAddAlpha</a></span> が指定された場合は加算アルファ合成が行われます。この場合は、転送先の <a class="jump" href="f_Layer_face.html">Layer.face</a> プロパティが dfOpaque かつ <a class="jump" href="f_Layer_holdAlpha.html">Layer.holdAlpha</a> プロパティが偽のとき、type 引数に stFastLinear を指定することにより線形補間が可能です。<br />
+				<span class="script"><a class="targanchor" name="id308" id="id308">omOpaque</a></span> が指定された場合は src のアルファ情報は無視され、src は常に完全不透明であると見なされます。この場合は、転送先の <a class="jump" href="f_Layer_face.html">Layer.face</a> プロパティが dfOpaque かつ <a class="jump" href="f_Layer_holdAlpha.html">Layer.holdAlpha</a> プロパティが偽のとき、type 引数に stFastLinear を指定することにより線形補間が可能です。<br />
 			</td></tr>
 <tr><td valign="top"><span class="argname">opa</span></td>
 <td>				　重ね合わせの不透明度 ( 0 ～ 255 ) を指定します。<br />
 			</td></tr>
 <tr><td valign="top"><span class="argname">type</span></td>
 <td>				　アフィン変換のタイプを指定します。<br />
-				<span class="script"><a class="targanchor" name="id355" id="id355">stNearest</a>    </span> : 最近傍点法が用いられます<br />
-				<span class="script"><a class="targanchor" name="id356" id="id356">stFastLinear</a> </span> : 低精度の線形補間が用いられます(一部実装)<br />
-				<span class="script"><a class="targanchor" name="id357" id="id357">stLinear</a>     </span> : 線形補間が用いられます(未実装)<br />
-				<span class="script"><a class="targanchor" name="id358" id="id358">stCubic</a>      </span> : ３次元補間が用いられます(未実装)<br />
+				<span class="script"><a class="targanchor" name="id309" id="id309">stNearest</a>    </span> : 最近傍点法が用いられます<br />
+				<span class="script"><a class="targanchor" name="id310" id="id310">stFastLinear</a> </span> : 低精度の線形補間が用いられます(一部実装)<br />
+				<span class="script"><a class="targanchor" name="id311" id="id311">stLinear</a>     </span> : 線形補間が用いられます(未実装)<br />
+				<span class="script"><a class="targanchor" name="id312" id="id312">stCubic</a>      </span> : ３次元補間が用いられます(未実装)<br />
 				　速度は stNearest &gt; stFastLinear &gt; stLinear &gt; stCubic の順に高速ですが、画質は速度が
 				速ければ速いモードほど低画質になります。<br />
 				　stFastLinear や stLinear, stCubic に対しては、stRefNoClip をビット論理和で追加指定

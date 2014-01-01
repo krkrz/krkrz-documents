@@ -1948,6 +1948,7 @@
 			<default></default>
 			<desc>
 				　コピー元のレイヤオブジェクトを指定します。<r/>
+				　Bitmap クラスのオブジェクトも指定可能です。(1.1.0以降)<r/>
 			</desc>
 		</argitem>
 		<argitem>
@@ -2058,161 +2059,6 @@
 	</desc>
 </member>
 
-<member>
-	<name>pileRect</name>
-	<type>method</type>
-	<shortdesc>矩形ピクセルアルファブレンド重ね合わせ</shortdesc>
-	<arg>
-		<argitem>
-			<name>dleft</name>
-			<default></default>
-			<desc>
-				　重ね合わせ先の矩形の左端位置を ( 重ね合わせ先レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>dtop</name>
-			<default></default>
-			<desc>
-				　重ね合わせ先の矩形の上端位置を ( 重ね合わせ先レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>src</name>
-			<default></default>
-			<desc>
-				　重ね合わせ元のレイヤオブジェクトを指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>sleft</name>
-			<default></default>
-			<desc>
-				　重ね合わせる矩形の左端位置を ( 重ね合わせ元レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>stop</name>
-			<default></default>
-			<desc>
-				　重ね合わせる矩形の上端位置を ( 重ね合わせ元レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>swidth</name>
-			<default></default>
-			<desc>
-				　重ね合わせる矩形の横幅を ( 重ね合わせ元レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>sheight</name>
-			<default></default>
-			<desc>
-				　重ね合わせる矩形の縦幅を ( 重ね合わせ元レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>opa</name>
-			<default>255</default>
-			<desc>
-				　重ね合わせの不透明度 ( 0 ～ 255 ) を指定します。<r/>
-			</desc>
-		</argitem>
-	</arg>
-	<result></result>
-	<desc>
-		　指定された重ね合わせ元レイヤの矩形部分を自分のレイヤの指定位置に重ね合わせます。<r/>
-		　ピクセルごとの不透明度 ( ピクセルアルファ ) を用いた重ね合わせを行うことができます。<r/>
-		　重ね合わされる画像は、重ね合わせ先の ( メソッドを実行する ) レイヤの <ref>Layer.face</ref>
-		プロパティの値によって変わります。<r/>
-		<tt><kw>dfAlpha</kw> (または<kw>dfBoth</kw>)    </tt> : 重ね合わせ先の不透明度を考慮した重ね合わせが行われます<r/>
-		<tt><kw>dfOpaque</kw> (または<kw>dfMain</kw>)   </tt> : 重ね合わせ先の不透明度を無視した重ね合わせが行われます(重ね合わせ先は全面完全不透明として扱われます)<r/>
-		<tt><kw>それ以外</kw>  </tt>                 : できません ( 例外が発生します )<r/>
-		　重ね合わせ元のレイヤの Layer.face プロパティは無視されます ( 常にメイン画像とマスク画像を
-		用いてアルファブレンドが行われます )。<r/>
-		<r/>
-		　このメソッドは旧式になりました。代わりに <ref>Layer.operateRect</ref> を使用してください。演算のモードに omAlpha か omAddAlpha を指定すると同じ効果になります(omAlphaを指定するのかomAddAlphaを指定するのかはsrcのアルファタイプによって異なります。omAutoを指定すればsrcのレイヤタイプに従って自動的に決定されます)。<r/>
-	</desc>
-</member>
-
-<member>
-	<name>blendRect</name>
-	<type>method</type>
-	<shortdesc>矩形重ね合わせ</shortdesc>
-	<arg>
-		<argitem>
-			<name>dleft</name>
-			<default></default>
-			<desc>
-				　重ね合わせ先の矩形の左端位置を ( 重ね合わせ先レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>dtop</name>
-			<default></default>
-			<desc>
-				　重ね合わせ先の矩形の上端位置を ( 重ね合わせ先レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>src</name>
-			<default></default>
-			<desc>
-				　重ね合わせ元のレイヤオブジェクトを指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>sleft</name>
-			<default></default>
-			<desc>
-				　重ね合わせる矩形の左端位置を ( 重ね合わせ元レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>stop</name>
-			<default></default>
-			<desc>
-				　重ね合わせる矩形の上端位置を ( 重ね合わせ元レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>swidth</name>
-			<default></default>
-			<desc>
-				　重ね合わせる矩形の横幅を ( 重ね合わせ元レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>sheight</name>
-			<default></default>
-			<desc>
-				　重ね合わせる矩形の縦幅を ( 重ね合わせ元レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>opa</name>
-			<default>255</default>
-			<desc>
-				　重ね合わせの不透明度 ( 0 ～ 255 ) を指定します。<r/>
-			</desc>
-		</argitem>
-	</arg>
-	<result></result>
-	<desc>
-		　指定された重ね合わせ元レイヤの矩形部分を自分のレイヤの指定位置に重ね合わせます。<r/>
-		　重ね合わせ元のレイヤの Layer.face プロパティは無視されますが、<ref>Layer.pileRect</ref> と異な
-		り、重ね合わせ元のレイヤの不透明度は無視されます ( 常に完全に不透明であると見なされます )。<r/>
-		　重ね合わされる画像は、重ね合わせ先の ( メソッドを実行する ) レイヤの <ref>Layer.face</ref>
-		　プロパティの値によって変わります。<r/>
-		<tt><kw>dfAlpha</kw> (または<kw>dfBoth</kw>)    </tt> : 重ね合わせ先の不透明度を考慮した重ね合わせが行われます<r/>
-		<tt><kw>dfOpaque</kw> (または<kw>dfMain</kw>)   </tt> : 重ね合わせ先の不透明度を無視した重ね合わせが行われます(重ね合わせ先は全面完全不透明として扱われます)<r/>
-		<tt><kw>それ以外</kw>  </tt>                 : できません ( 例外が発生します )<r/>
-		<r/>
-		　このメソッドは旧式になりました。代わりに <ref>Layer.operateRect</ref> を使用してください。演算のモードに omOpaque を指定すると同じ効果になります。<r/>
-	</desc>
-</member>
-
 
 <member>
 	<name>operateRect</name>
@@ -2238,6 +2084,7 @@
 			<default></default>
 			<desc>
 				　演算元のレイヤオブジェクトを指定します。<r/>
+				　Bitmap クラスのオブジェクトも指定可能です。(1.1.0以降)<r/>
 			</desc>
 		</argitem>
 		<argitem>
@@ -2358,6 +2205,7 @@
 			<default></default>
 			<desc>
 				　コピー元のレイヤオブジェクトを指定します。<r/>
+				　Bitmap クラスのオブジェクトも指定可能です。(1.1.0以降)<r/>
 			</desc>
 		</argitem>
 		<argitem>
@@ -2422,227 +2270,6 @@
 </member>
 
 <member>
-	<name>stretchPile</name>
-	<type>method</type>
-	<shortdesc>拡大縮小ピクセルアルファブレンド重ね合わせ</shortdesc>
-	<arg>
-		<argitem>
-			<name>dleft</name>
-			<default></default>
-			<desc>
-				　重ね合わせ先の矩形の左端位置を ( 重ね合わせ先レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>dtop</name>
-			<default></default>
-			<desc>
-				　重ね合わせ先の矩形の上端位置を ( 重ね合わせ先レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>dwidth</name>
-			<default></default>
-			<desc>
-				　重ね合わせ先の矩形の横幅を ( 重ね合わせ先レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>dheight</name>
-			<default></default>
-			<desc>
-				　重ね合わせ先の矩形の縦幅を ( 重ね合わせ先レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>src</name>
-			<default></default>
-			<desc>
-				　重ね合わせ元のレイヤオブジェクトを指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>sleft</name>
-			<default></default>
-			<desc>
-				　重ね合わせる矩形の左端位置を ( 重ね合わせ元レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>stop</name>
-			<default></default>
-			<desc>
-				　重ね合わせる矩形の上端位置を ( 重ね合わせ元レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>swidth</name>
-			<default></default>
-			<desc>
-				　重ね合わせる矩形の横幅を ( 重ね合わせ元レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>sheight</name>
-			<default></default>
-			<desc>
-				　重ね合わせる矩形の縦幅を ( 重ね合わせ元レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>opa</name>
-			<default>255</default>
-			<desc>
-				　重ね合わせの不透明度 ( 0 ～ 255 ) を指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>type</name>
-			<default>stNearest</default>
-			<desc>
-				　拡大縮小のタイプを指定します。<r/>
-				<tt><kw>stNearest</kw>    </tt> : 最近傍点法が用いられます<r/>
-				<tt><kw>stFastLinear</kw> </tt> : 低精度の線形補間が用いられます(未実装)<r/>
-				<tt><kw>stLinear</kw>     </tt> : 線形補間が用いられます(未実装)<r/>
-				<tt><kw>stCubic</kw>      </tt> : ３次元補間が用いられます(未実装)<r/>
-				　速度は stNearest > stFastLinear > stLinear > stCubic の順に高速ですが、画質は速度が
-				速ければ速いタイプほど低画質になります。<r/>
-				　stFastLinear や stLinear, stCubic に対しては、stRefNoClip をビット論理和で追加指定
-				することができ、この場合は、コピーするビットマップの領域外を参照して色を合成することを
-				許可します。これを指定しない場合は、転送元ビットマップの周囲に余裕があったとしても、
-				転送元ビットマップの範囲外を参照することはありません(範囲外の色はもっとも近い位置にある
-				範囲内のピクセルの色と見なされます)。<r/>
-			</desc>
-		</argitem>
-	</arg>
-	<result></result>
-	<desc>
-		　指定された重ね合わせ元レイヤの矩形を、重ね合わせ先 ( メソッドを実行するレイヤ ) の矩形に
-		重ね合わせます。重ね合わせ元矩形と重ね合わせ先矩形のサイズが異なる場合は拡大または縮小が
-		行われます。<r/>
-		　ピクセルごとの不透明度 ( ピクセルアルファ ) を用いた重ね合わせを行うことができます。<r/>
-		　現バージョンでは mode には stNearest のみ指定できます。<r/>
-		　重ね合わされる画像は、重ね合わせ先の ( メソッドを実行する ) レイ
-		ヤの <ref>Layer.face</ref> プロパティの値によって変わります。<r/>
-		<tt><kw>dfAlpha</kw> (または<kw>dfBoth</kw>)    </tt> : 重ね合わせ先の不透明度を考慮した重ね合わせが行われます<r/>
-		<tt><kw>dfOpaque</kw> (または<kw>dfMain</kw>)   </tt> : 重ね合わせ先の不透明度を無視した重ね合わせが行われます(重ね合わせ先は全面完全不透明として扱われます)<r/>
-		<tt><kw>それ以外</kw>  </tt>                 : できません ( 例外が発生します )<r/>
-		<r/>
-		　このメソッドは旧式になりました。代わりに <ref>Layer.operateStretch</ref> を使用してください。演算のモードに omAlpha か omAddAlpha を指定すると同じ効果になります(omAlphaを指定するのかomAddAlphaを指定するのかはsrcのアルファタイプによって異なります。omAutoを指定すればsrcのレイヤタイプに従って自動的に決定されます)。<r/>
-	</desc>
-</member>
-
-<member>
-	<name>stretchBlend</name>
-	<type>method</type>
-	<shortdesc>拡大縮小重ね合わせ</shortdesc>
-	<arg>
-		<argitem>
-			<name>dleft</name>
-			<default></default>
-			<desc>
-				　重ね合わせ先の矩形の左端位置を ( 重ね合わせ先レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>dtop</name>
-			<default></default>
-			<desc>
-				　重ね合わせ先の矩形の上端位置を ( 重ね合わせ先レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>dwidth</name>
-			<default></default>
-			<desc>
-				　重ね合わせ先の矩形の横幅を ( 重ね合わせ先レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>dheight</name>
-			<default></default>
-			<desc>
-				　重ね合わせ先の矩形の縦幅を ( 重ね合わせ先レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>src</name>
-			<default></default>
-			<desc>
-				　重ね合わせ元のレイヤオブジェクトを指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>sleft</name>
-			<default></default>
-			<desc>
-				　重ね合わせる矩形の左端位置を ( 重ね合わせ元レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>stop</name>
-			<default></default>
-			<desc>
-				　重ね合わせる矩形の上端位置を ( 重ね合わせ元レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>swidth</name>
-			<default></default>
-			<desc>
-				　重ね合わせる矩形の横幅を ( 重ね合わせ元レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>sheight</name>
-			<default></default>
-			<desc>
-				　重ね合わせる矩形の縦幅を ( 重ね合わせ元レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>opa</name>
-			<default>255</default>
-			<desc>
-				　重ね合わせの不透明度 ( 0 ～ 255 ) を指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>type</name>
-			<default>stNearest</default>
-			<desc>
-				　拡大縮小のタイプを指定します。<r/>
-				<tt><kw>stNearest</kw>    </tt> : 最近傍点法が用いられます<r/>
-				<tt><kw>stFastLinear</kw> </tt> : 低精度の線形補間が用いられます(一部実装)<r/>
-				<tt><kw>stLinear</kw>     </tt> : 線形補間が用いられます(未実装)<r/>
-				<tt><kw>stCubic</kw>      </tt> : ３次元補間が用いられます(未実装)<r/>
-				　速度は stNearest > stFastLinear > stLinear > stCubic の順に高速ですが、画質は速度が
-				速ければ速いタイプほど低画質になります。<r/>
-				　stFastLinear や stLinear, stCubic に対しては、stRefNoClip をビット論理和で追加指定
-				することができ、この場合は、コピーするビットマップの領域外を参照して色を合成することを
-				許可します。これを指定しない場合は、転送元ビットマップの周囲に余裕があったとしても、
-				転送元ビットマップの範囲外を参照することはありません(範囲外の色はもっとも近い位置にある
-				範囲内のピクセルの色と見なされます)。<r/>
-			</desc>
-		</argitem>
-	</arg>
-	<result></result>
-	<desc>
-		　指定された重ね合わせ元レイヤの矩形を、重ね合わせ先 ( メソッドを実行するレイヤ ) の矩形に
-		重ね合わせます。重ね合わせ元矩形と重ね合わせ先矩形のサイズが異なる場合は拡大または縮小が
-		行われます。<r/>
-		　重ね合わせ元のレイヤの Layer.face プロパティは無視されますが、<ref>Layer.stretchPile</ref> と異な
-		り、重ね合わせ元のレイヤの不透明度は無視されます ( 常に完全に不透明であると見なされます )。<r/>
-		　重ね合わされる画像は、重ね合わせ先の ( メソッドを実行する ) レイヤの <ref>Layer.face</ref> プロパティの値によって変わります。<r/>
-		<tt><kw>dfAlpha</kw> (または<kw>dfBoth</kw>)    </tt> : 重ね合わせ先の不透明度を考慮した重ね合わせが行われます<r/>
-		<tt><kw>dfOpaque</kw> (または<kw>dfMain</kw>)   </tt> : 重ね合わせ先の不透明度を無視した重ね合わせが行われます(重ね合わせ先は全面完全不透明として扱われます)。この場合は、<ref>Layer.holdAlpha</ref>プロパティが偽のとき、type 引数に stFastLinear を指定することにより、線形補間が可能です。<r/>
-		<tt><kw>それ以外</kw>  </tt>                 : できません ( 例外が発生します )<r/>
-		<r/>
-		　このメソッドは旧式になりました。代わりに <ref>Layer.operateStretch</ref> を使用してください。演算のモードに omOpaque を指定すると同じ効果になります。<r/>
-	</desc>
-</member>
-
-<member>
 	<name>operateStretch</name>
 	<type>method</type>
 	<shortdesc>拡大縮小演算合成</shortdesc>
@@ -2680,6 +2307,7 @@
 			<default></default>
 			<desc>
 				　重ね合わせ元のレイヤオブジェクトを指定します。<r/>
+				　Bitmap クラスのオブジェクトも指定可能です。(1.1.0以降)<r/>
 			</desc>
 		</argitem>
 		<argitem>
@@ -2791,6 +2419,7 @@
 			<default></default>
 			<desc>
 				　コピー元のレイヤオブジェクトを指定します。<r/>
+				　Bitmap クラスのオブジェクトも指定可能です。(1.1.0以降)<r/>
 			</desc>
 		</argitem>
 		<argitem>
@@ -2941,314 +2570,6 @@
 	</desc>
 </member>
 
-<member>
-	<name>affinePile</name>
-	<type>method</type>
-	<shortdesc>アフィン変換ピクセルアルファブレンド重ね合わせ</shortdesc>
-	<arg>
-		<argitem>
-			<name>src</name>
-			<default></default>
-			<desc>
-				　重ね合わせ元のレイヤオブジェクトを指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>sleft</name>
-			<default></default>
-			<desc>
-				　重ね合わせる矩形の左端位置を ( 重ね合わせ元レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>stop</name>
-			<default></default>
-			<desc>
-				　重ね合わせる矩形の上端位置を ( 重ね合わせ元レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>swidth</name>
-			<default></default>
-			<desc>
-				　重ね合わせる矩形の横幅を ( 重ね合わせ元レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>sheight</name>
-			<default></default>
-			<desc>
-				　重ね合わせる矩形の縦幅を ( 重ね合わせ元レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>affine</name>
-			<default></default>
-			<desc>
-				　続く６つの引数 (A ～ F パラメータ)をどのように扱うかを指定します。<r/>
-				　真を指定すると、６つのパラメータはそれぞれ以下のように解釈されます。<r/>
-				<tt>A   : 2Dアフィン変換行列の a</tt><r/>
-				<tt>B   : 2Dアフィン変換行列の b</tt><r/>
-				<tt>C   : 2Dアフィン変換行列の c</tt><r/>
-				<tt>D   : 2Dアフィン変換行列の d</tt><r/>
-				<tt>E   : 2Dアフィン変換行列の tx</tt><r/>
-				<tt>F   : 2Dアフィン変換行列の ty</tt><r/>
-				<r/>
-				　アフィン変換により、重ね合わせ元の画像位置 (x, y) ( ただし、重ね合わせ元矩形の左上隅を (0, 0) とする ) は以下の式により、重ね合わせ先の画像位置 (x', y')に変換されます。<r/>
-				x' =  a*x + c*y + tx<r/>
-				y' =  b*x + d*y + ty<r/>
-				<r/>
-				　偽を指定すると、６つのパラメータはそれぞれ以下のように解釈されます。<r/>
-				<tt>A   : コピー元矩形の左上隅の点の、コピー先での画像位置における X 座標位置(x0)</tt><r/>
-				<tt>B   : コピー元矩形の左上隅の点の、コピー先での画像位置における Y 座標位置(y0)</tt><r/>
-				<tt>C   : コピー元矩形の右上隅の点の、コピー先での画像位置における X 座標位置(x1)</tt><r/>
-				<tt>D   : コピー元矩形の右上隅の点の、コピー先での画像位置における Y 座標位置(y1)</tt><r/>
-				<tt>E   : コピー元矩形の左下隅の点の、コピー先での画像位置における X 座標位置(x2)</tt><r/>
-				<tt>F   : コピー元矩形の左下隅の点の、コピー先での画像位置における Y 座標位置(y2)</tt><r/>
-				<r/>
-				　偽を指定した場合、重ね合わせ元の右下隅に対応する、重ね合わせ先位置(x3, y3)は自動的に以下の式によって計算されます。<r/>
-				x3 = x1 - x0 + x2<r/>
-				y3 = y1 - y0 + y2<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>A</name>
-			<default></default>
-			<desc>
-				　A パラメータです。affine 引数によって解釈が変わります。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>B</name>
-			<default></default>
-			<desc>
-				　B パラメータです。affine 引数によって解釈が変わります。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>C</name>
-			<default></default>
-			<desc>
-				　C パラメータです。affine 引数によって解釈が変わります。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>D</name>
-			<default></default>
-			<desc>
-				　D パラメータです。affine 引数によって解釈が変わります。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>E</name>
-			<default></default>
-			<desc>
-				　E パラメータです。affine 引数によって解釈が変わります。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>F</name>
-			<default></default>
-			<desc>
-				　F パラメータです。affine 引数によって解釈が変わります。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>opa</name>
-			<default>255</default>
-			<desc>
-				　重ね合わせの不透明度 ( 0 ～ 255 ) を指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>type</name>
-			<default>stNearest</default>
-			<desc>
-				　アフィン変換のタイプを指定します。<r/>
-				<tt><kw>stNearest</kw>    </tt> : 最近傍点法が用いられます<r/>
-				<tt><kw>stFastLinear</kw> </tt> : 低精度の線形補間が用いられます(未実装)<r/>
-				<tt><kw>stLinear</kw>     </tt> : 線形補間が用いられます(未実装)<r/>
-				<tt><kw>stCubic</kw>      </tt> : ３次元補間が用いられます(未実装)<r/>
-				　stFastLinear や stLinear, stCubic に対しては、stRefNoClip をビット論理和で追加指定
-				することができ、この場合は、コピーするビットマップの領域外を参照して色を合成することを
-				許可します。これを指定しない場合は、転送元ビットマップの周囲に余裕があったとしても、
-				転送元ビットマップの範囲外を参照することはありません(範囲外の色はもっとも近い位置にある
-				範囲内のピクセルの色と見なされます)。<r/>
-			</desc>
-		</argitem>
-	</arg>
-	<result></result>
-	<desc>
-		　指定された重ね合わせ元レイヤの矩形を、重ね合わせ先 ( メソッドを実行するレイヤ ) に
-		アフィン変換を行いながら重ね合わせます。<r/>
-		　アフィン変換については <ref>Layer.affineCopy</ref> も参照してください。<r/>
-		　ピクセルごとの不透明度 ( ピクセルアルファ ) を用いた重ね合わせを行うことができます。<r/>
-		　現バージョンでは mode には stNearest のみ指定できます。<r/>
-		　重ね合わされる画像は、重ね合わせ先の ( メソッドを実行する ) レイ
-		ヤの <ref>Layer.face</ref> プロパティの値によって変わります。<r/>
-		<tt><kw>dfAlpha</kw> (または<kw>dfBoth</kw>)    </tt> : 重ね合わせ先の不透明度を考慮した重ね合わせが行われます<r/>
-		<tt><kw>dfOpaque</kw> (または<kw>dfMain</kw>)   </tt> : 重ね合わせ先の不透明度を無視した重ね合わせが行われます(重ね合わせ先は全面完全不透明として扱われます)<r/>
-		<tt><kw>それ以外</kw>  </tt>                 : できません ( 例外が発生します )<r/>
-		<r/>
-		　このメソッドは旧式になりました。代わりに <ref>Layer.operateAffine</ref> を使用してください。演算のモードに omAlpha か omAddAlpha を指定すると同じ効果になります(omAlphaを指定するのかomAddAlphaを指定するのかはsrcのアルファタイプによって異なります。omAutoを指定すればsrcのレイヤタイプに従って自動的に決定されます)。<r/>
-	</desc>
-</member>
-
-<member>
-	<name>affineBlend</name>
-	<type>method</type>
-	<shortdesc>アフィン変換重ね合わせ</shortdesc>
-	<arg>
-		<argitem>
-			<name>src</name>
-			<default></default>
-			<desc>
-				　重ね合わせ元のレイヤオブジェクトを指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>sleft</name>
-			<default></default>
-			<desc>
-				　重ね合わせる矩形の左端位置を ( 重ね合わせ元レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>stop</name>
-			<default></default>
-			<desc>
-				　重ね合わせる矩形の上端位置を ( 重ね合わせ元レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>swidth</name>
-			<default></default>
-			<desc>
-				　重ね合わせる矩形の横幅を ( 重ね合わせ元レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>sheight</name>
-			<default></default>
-			<desc>
-				　重ね合わせる矩形の縦幅を ( 重ね合わせ元レイヤの画像位置における ) ピクセル単位で指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>affine</name>
-			<default></default>
-			<desc>
-				　続く６つの引数 (A ～ F パラメータ)をどのように扱うかを指定します。<r/>
-				　真を指定すると、６つのパラメータはそれぞれ以下のように解釈されます。<r/>
-				<tt>A   : 2Dアフィン変換行列の a</tt><r/>
-				<tt>B   : 2Dアフィン変換行列の b</tt><r/>
-				<tt>C   : 2Dアフィン変換行列の c</tt><r/>
-				<tt>D   : 2Dアフィン変換行列の d</tt><r/>
-				<tt>E   : 2Dアフィン変換行列の tx</tt><r/>
-				<tt>F   : 2Dアフィン変換行列の ty</tt><r/>
-				<r/>
-				　アフィン変換により、重ね合わせ元の画像位置 (x, y) ( ただし、重ね合わせ元矩形の左上隅を (0, 0) とする ) は以下の式により、重ね合わせ先の画像位置 (x', y')に変換されます。<r/>
-				x' =  a*x + c*y + tx<r/>
-				y' =  b*x + d*y + ty<r/>
-				<r/>
-				　偽を指定すると、６つのパラメータはそれぞれ以下のように解釈されます。<r/>
-				<tt>A   : コピー元矩形の左上隅の点の、コピー先での画像位置における X 座標位置(x0)</tt><r/>
-				<tt>B   : コピー元矩形の左上隅の点の、コピー先での画像位置における Y 座標位置(y0)</tt><r/>
-				<tt>C   : コピー元矩形の右上隅の点の、コピー先での画像位置における X 座標位置(x1)</tt><r/>
-				<tt>D   : コピー元矩形の右上隅の点の、コピー先での画像位置における Y 座標位置(y1)</tt><r/>
-				<tt>E   : コピー元矩形の左下隅の点の、コピー先での画像位置における X 座標位置(x2)</tt><r/>
-				<tt>F   : コピー元矩形の左下隅の点の、コピー先での画像位置における Y 座標位置(y2)</tt><r/>
-				<r/>
-				　偽を指定した場合、重ね合わせ元の右下隅に対応する、重ね合わせ先位置(x3, y3)は自動的に以下の式によって計算されます。<r/>
-				x3 = x1 - x0 + x2<r/>
-				y3 = y1 - y0 + y2<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>A</name>
-			<default></default>
-			<desc>
-				　A パラメータです。affine 引数によって解釈が変わります。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>B</name>
-			<default></default>
-			<desc>
-				　B パラメータです。affine 引数によって解釈が変わります。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>C</name>
-			<default></default>
-			<desc>
-				　C パラメータです。affine 引数によって解釈が変わります。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>D</name>
-			<default></default>
-			<desc>
-				　D パラメータです。affine 引数によって解釈が変わります。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>E</name>
-			<default></default>
-			<desc>
-				　E パラメータです。affine 引数によって解釈が変わります。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>F</name>
-			<default></default>
-			<desc>
-				　F パラメータです。affine 引数によって解釈が変わります。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>opa</name>
-			<default>255</default>
-			<desc>
-				　重ね合わせの不透明度 ( 0 ～ 255 ) を指定します。<r/>
-			</desc>
-		</argitem>
-		<argitem>
-			<name>type</name>
-			<default>stNearest</default>
-			<desc>
-				　アフィン変換のタイプを指定します。<r/>
-				<tt><kw>stNearest</kw>    </tt> : 最近傍点法が用いられます<r/>
-				<tt><kw>stFastLinear</kw> </tt> : 低精度の線形補間が用いられます(一部実装)<r/>
-				<tt><kw>stLinear</kw>     </tt> : 線形補間が用いられます(未実装)<r/>
-				<tt><kw>stCubic</kw>      </tt> : ３次元補間が用いられます(未実装)<r/>
-				　速度は stNearest > stFastLinear > stLinear > stCubic の順に高速ですが、画質は速度が
-				速ければ速いモードほど低画質になります。<r/>
-				　stFastLinear や stLinear, stCubic に対しては、stRefNoClip をビット論理和で追加指定
-				することができ、この場合は、コピーするビットマップの領域外を参照して色を合成することを
-				許可します。これを指定しない場合は、転送元ビットマップの周囲に余裕があったとしても、
-				転送元ビットマップの範囲外を参照することはありません(範囲外の色はもっとも近い位置にある
-				範囲内のピクセルの色と見なされます)。<r/>
-			</desc>
-		</argitem>
-	</arg>
-	<result></result>
-	<desc>
-		　指定された重ね合わせ元レイヤの矩形を、重ね合わせ先 ( メソッドを実行するレイヤ ) に
-		アフィン変換を行いながら重ね合わせます。<r/>
-		　アフィン変換については <ref>Layer.affineCopy</ref> も参照してください。<r/>
-		　重ね合わせ元のレイヤの Layer.face プロパティは無視されますが、<ref>Layer.affinePile</ref> と異な
-		り、重ね合わせ元のレイヤの不透明度は無視されます ( 常に完全に不透明であると見なされます )。<r/>
-		　重ね合わされる画像は、重ね合わせ先の ( メソッドを実行する ) レイ
-		ヤの <ref>Layer.face</ref> プロパティの値によって変わります。<r/>
-		<tt><kw>dfAlpha</kw> (または<kw>dfBoth</kw>)    </tt> : 重ね合わせ先の不透明度を考慮した重ね合わせが行われます<r/>
-		<tt><kw>dfOpaque</kw> (または<kw>dfMain</kw>)   </tt> : 重ね合わせ先の不透明度を無視した重ね合わせが行われます(重ね合わせ先は全面完全不透明として扱われます)。この場合は、<ref>Layer.holdAlpha</ref>プロパティが偽のとき、type 引数に stFastLinear を指定することにより、線形補間が可能です。<r/>
-		<tt><kw>それ以外</kw>  </tt>                 : できません ( 例外が発生します )<r/>
-		<r/>
-		　このメソッドは旧式になりました。代わりに <ref>Layer.operateAffine</ref> を使用してください。演算のモードに omOpaque を指定すると同じ効果になります。<r/>
-	</desc>
-</member>
-
 
 <member>
 	<name>operateAffine</name>
@@ -3260,6 +2581,7 @@
 			<default></default>
 			<desc>
 				　重ね合わせ元のレイヤオブジェクトを指定します。<r/>
+				　Bitmap クラスのオブジェクトも指定可能です。(1.1.0以降)<r/>
 			</desc>
 		</argitem>
 		<argitem>
@@ -4428,14 +3750,8 @@
 		<ref>Layer.fillRect</ref><r/>
 		<ref>Layer.colorRect</ref><r/>
 		<ref>Layer.drawText</ref><r/>
-		<ref>Layer.pileRect</ref><r/>
-		<ref>Layer.blendRect</ref><r/>
 		<ref>Layer.operateRect</ref><r/>
-		<ref>Layer.stretchPile</ref><r/>
-		<ref>Layer.stretchBlend</ref><r/>
 		<ref>Layer.operateStretch</ref><r/>
-		<ref>Layer.affinePile</ref><r/>
-		<ref>Layer.affineBlend</ref><r/>
 		<ref>Layer.operateAffine</ref><r/>
 	</desc>
 </member>
