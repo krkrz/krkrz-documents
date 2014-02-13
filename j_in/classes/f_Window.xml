@@ -1,41 +1,41 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <doc>
 <title>Window</title>
 <desc>
-�@Window �N���X�́A<kw>�E�B���h�E</kw>���Ǘ����邽�߂̃N���X�ł��B<r/>
+　Window クラスは、<kw>ウィンドウ</kw>を管理するためのクラスです。<r/>
 </desc>
 
 <member>
 	<name>Window</name>
 	<type>constructor</type>
-	<shortdesc>Window �I�u�W�F�N�g�̍\�z</shortdesc>
+	<shortdesc>Window オブジェクトの構築</shortdesc>
 	<arg>
 		<argitem>
 			<name>parent</name>
 			<default></default>
 			<desc>
-				�@�e�E�B���h�E���w�肵�܂��B<r/>
-				�@�e�E�B���h�E���w�肷��ƁA���̎q�E�B���h�E�Ƃ��Đ�������܂��B<r/>
-				�@�w�肵�Ȃ��ꍇ�͏ȗ����܂��B<r/>
+				　親ウィンドウを指定します。<r/>
+				　親ウィンドウを指定すると、その子ウィンドウとして生成されます。<r/>
+				　指定しない場合は省略します。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@Window �N���X�̃I�u�W�F�N�g���\�z���܂��B<r/>
-		�@�E�B���h�E�͔�\���̏�Ԃō쐬����A�ʒu��T�C�Y�͖���` ( �ǂ����ɂ̈ʒu�ɓK���ȃT�C�Y ) �ł��B<r/>
+		　Window クラスのオブジェクトを構築します。<r/>
+		　ウィンドウは非表示の状態で作成され、位置やサイズは未定義 ( どこかにの位置に適当なサイズ ) です。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>onMouseEnter</name>
 	<type>event</type>
-	<shortdesc>�}�E�X�������Ă���</shortdesc>
+	<shortdesc>マウスが入ってきた</shortdesc>
 	<arg>
 	</arg>
 	<result></result>
 	<desc>
-		�@�}�E�X���E�B���h�E�̃N���C�A���g�̈���ɓ����Ă����Ƃ��ɔ������܂��B<r/>
+		　マウスがウィンドウのクライアント領域内に入ってきたときに発生します。<r/>
 	</desc>
 	<ref>Window.onMouseLeave</ref>
 </member>
@@ -43,12 +43,12 @@
 <member>
 	<name>onMouseLeave</name>
 	<type>event</type>
-	<shortdesc>�}�E�X���o�Ă�����</shortdesc>
+	<shortdesc>マウスが出ていった</shortdesc>
 	<arg>
 	</arg>
 	<result></result>
 	<desc>
-		�@�}�E�X���E�B���h�E�̃N���C�A���g�̈������o�Ă������Ƃ��ɔ������܂��B<r/>
+		　マウスがウィンドウのクライアント領域内から出ていったときに発生します。<r/>
 	</desc>
 	<ref>Window.onMouseEnter</ref>
 </member>
@@ -56,26 +56,26 @@
 <member>
 	<name>onClick</name>
 	<type>event</type>
-	<shortdesc>�E�B���h�E���N���b�N���ꂽ</shortdesc>
+	<shortdesc>ウィンドウがクリックされた</shortdesc>
 	<arg>
 		<argitem>
 			<name>x</name>
 			<default></default>
 			<desc>
-				�@�E�B���h�E���N���b�N���ꂽ�ʒu�� x ���W ( �N���C�A���g���W�ł� ) �̒l�ł��B<r/>
+				　ウィンドウがクリックされた位置の x 座標 ( クライアント座標での ) の値です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>y</name>
 			<default></default>
 			<desc>
-				�@�E�B���h�E���N���b�N���ꂽ�ʒu�� y ���W ( �N���C�A���g���W�ł� ) �̒l�ł��B<r/>
+				　ウィンドウがクリックされた位置の y 座標 ( クライアント座標での ) の値です。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�E�B���h�E���N���b�N���ꂽ���ɔ������܂��B<r/>
+		　ウィンドウがクリックされた時に発生します。<r/>
 	</desc>
 	<ref>Window.onMouseDown</ref>
 	<ref>Window.onDoubleClick</ref>
@@ -84,26 +84,26 @@
 <member>
 	<name>onDoubleClick</name>
 	<type>event</type>
-	<shortdesc>�E�B���h�E���_�u���N���b�N���ꂽ</shortdesc>
+	<shortdesc>ウィンドウがダブルクリックされた</shortdesc>
 	<arg>
 		<argitem>
 			<name>x</name>
 			<default></default>
 			<desc>
-				�@�E�B���h�E���_�u���N���b�N���ꂽ�ʒu�� x ���W ( �N���C�A���g���W�ł� ) �̒l�ł��B<r/>
+				　ウィンドウがダブルクリックされた位置の x 座標 ( クライアント座標での ) の値です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>y</name>
 			<default></default>
 			<desc>
-				�@�E�B���h�E���_�u���N���b�N���ꂽ�ʒu�� y ���W ( �N���C�A���g���W�ł� ) �̒l�ł��B<r/>
+				　ウィンドウがダブルクリックされた位置の y 座標 ( クライアント座標での ) の値です。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�E�B���h�E���_�u���N���b�N���ꂽ���ɔ������܂��B<r/>
+		　ウィンドウがダブルクリックされた時に発生します。<r/>
 	</desc>
 	<ref>Window.onClick</ref>
 </member>
@@ -111,49 +111,49 @@
 <member>
 	<name>onMouseDown</name>
 	<type>event</type>
-	<shortdesc>�}�E�X�̃{�^���������ꂽ</shortdesc>
+	<shortdesc>マウスのボタンが押された</shortdesc>
 	<arg>
 		<argitem>
 			<name>x</name>
 			<default></default>
 			<desc>
-				�@�}�E�X�̃{�^���������ꂽ�ʒu�� x ���W ( �N���C�A���g���W�ł� ) �̒l�ł��B<r/>
+				　マウスのボタンが押された位置の x 座標 ( クライアント座標での ) の値です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>y</name>
 			<default></default>
 			<desc>
-				�@�}�E�X�̃{�^���������ꂽ�ʒu�� y ���W ( �N���C�A���g���W�ł� ) �̒l�ł��B<r/>
+				　マウスのボタンが押された位置の y 座標 ( クライアント座標での ) の値です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>button</name>
 			<default></default>
 			<desc>
-				�@�����ꂽ�}�E�X�{�^���ł��B�ȉ��̂����ꂩ�̒l�ɂȂ�܂��B<r/>
-				<tt><kw>mbLeft</kw>    : </tt>�}�E�X�̍��{�^���������ꂽ<r/>
-				<tt><kw>mbMiddle</kw>  : </tt>�}�E�X�̒��{�^���������ꂽ<r/>
-				<tt><kw>mbRight</kw>   : </tt>�}�E�X�̉E�{�^���������ꂽ<r/>
-				<tt><kw>mbX1</kw>      : </tt>�}�E�X�̃T�C�h�L�[��1�{�^���������ꂽ<r/>
-				<tt><kw>mbX2</kw>      : </tt>�}�E�X�̃T�C�h�L�[��2�{�^���������ꂽ<r/>
+				　押されたマウスボタンです。以下のいずれかの値になります。<r/>
+				<tt><kw>mbLeft</kw>    : </tt>マウスの左ボタンが押された<r/>
+				<tt><kw>mbMiddle</kw>  : </tt>マウスの中ボタンが押された<r/>
+				<tt><kw>mbRight</kw>   : </tt>マウスの右ボタンが押された<r/>
+				<tt><kw>mbX1</kw>      : </tt>マウスのサイドキー第1ボタンが押された<r/>
+				<tt><kw>mbX2</kw>      : </tt>マウスのサイドキー第2ボタンが押された<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>shift</name>
 			<default></default>
 			<desc>
-				�@�}�E�X�{�^���������ꂽ�Ƃ��ɓ����ɉ�����Ă����V�t�g�n�̃L�[�̏�Ԃł��B
-				�ȉ��̒l�̃r�b�g OR �ɂ��g�ݍ��킹�ɂȂ�܂��B<r/>
-				<tt><kw>ssAlt</kw>     : </tt>ALT �L�[��������Ă���<r/>
-				<tt><kw>ssShift</kw>   : </tt>SHIFT �L�[��������Ă���<r/>
-				<tt><kw>ssCtrl</kw>    : </tt>CTRL �L�[��������Ă���<r/>
+				　マウスボタンが押されたときに同時に押されていたシフト系のキーの状態です。
+				以下の値のビット OR による組み合わせになります。<r/>
+				<tt><kw>ssAlt</kw>     : </tt>ALT キーが押されていた<r/>
+				<tt><kw>ssShift</kw>   : </tt>SHIFT キーが押されていた<r/>
+				<tt><kw>ssCtrl</kw>    : </tt>CTRL キーが押されていた<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�}�E�X�{�^���������ꂽ���ɔ������܂��B<r/>
+		　マウスボタンが押された時に発生します。<r/>
 	</desc>
 	<ref>Window.onClick</ref>
 </member>
@@ -161,403 +161,403 @@
 <member>
 	<name>onMouseUp</name>
 	<type>event</type>
-	<shortdesc>�}�E�X�̃{�^���������ꂽ</shortdesc>
+	<shortdesc>マウスのボタンが離された</shortdesc>
 	<arg>
 		<argitem>
 			<name>x</name>
 			<default></default>
 			<desc>
-				�@�}�E�X�̃{�^���������ꂽ�ʒu�� x ���W ( �N���C�A���g���W�ł� ) �̒l�ł��B<r/>
+				　マウスのボタンが離された位置の x 座標 ( クライアント座標での ) の値です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>y</name>
 			<default></default>
 			<desc>
-				�@�}�E�X�̃{�^���������ꂽ�ʒu�� y ���W ( �N���C�A���g���W�ł� ) �̒l�ł��B<r/>
+				　マウスのボタンが離された位置の y 座標 ( クライアント座標での ) の値です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>button</name>
 			<default></default>
 			<desc>
-				�@�����ꂽ�}�E�X�{�^���ł��B�ȉ��̂����ꂩ�̒l�ɂȂ�܂��B<r/>
-				<tt><kw>mbLeft</kw>    : </tt>�}�E�X�̍��{�^���������ꂽ<r/>
-				<tt><kw>mbMiddle</kw>  : </tt>�}�E�X�̒��{�^���������ꂽ<r/>
-				<tt><kw>mbRight</kw>   : </tt>�}�E�X�̉E�{�^���������ꂽ<r/>
-				<tt><kw>mbX1</kw>      : </tt>�}�E�X�̃T�C�h�L�[��1�{�^���������ꂽ<r/>
-				<tt><kw>mbX2</kw>      : </tt>�}�E�X�̃T�C�h�L�[��2�{�^���������ꂽ<r/>
+				　離されたマウスボタンです。以下のいずれかの値になります。<r/>
+				<tt><kw>mbLeft</kw>    : </tt>マウスの左ボタンが離された<r/>
+				<tt><kw>mbMiddle</kw>  : </tt>マウスの中ボタンが離された<r/>
+				<tt><kw>mbRight</kw>   : </tt>マウスの右ボタンが離された<r/>
+				<tt><kw>mbX1</kw>      : </tt>マウスのサイドキー第1ボタンが離された<r/>
+				<tt><kw>mbX2</kw>      : </tt>マウスのサイドキー第2ボタンが離された<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>shift</name>
 			<default></default>
 			<desc>
-				�@�}�E�X�{�^���������ꂽ���ɓ����ɉ�����Ă����V�t�g�n�̃L�[�̏�Ԃł��B
-				�ȉ��̒l�̃r�b�g OR �ɂ��g�ݍ��킹�ɂȂ�܂��B<r/>
-				<tt><kw>ssAlt</kw>     : </tt>ALT �L�[��������Ă���<r/>
-				<tt><kw>ssShift</kw>   : </tt>SHIFT �L�[��������Ă���<r/>
-				<tt><kw>ssCtrl</kw>    : </tt>CTRL �L�[��������Ă���<r/>
+				　マウスボタンが離された時に同時に押されていたシフト系のキーの状態です。
+				以下の値のビット OR による組み合わせになります。<r/>
+				<tt><kw>ssAlt</kw>     : </tt>ALT キーが押されていた<r/>
+				<tt><kw>ssShift</kw>   : </tt>SHIFT キーが押されていた<r/>
+				<tt><kw>ssCtrl</kw>    : </tt>CTRL キーが押されていた<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�}�E�X�{�^���������ꂽ���ɔ������܂��B<r/>
+		　マウスボタンが離された時に発生します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>onMouseMove</name>
 	<type>event</type>
-	<shortdesc>�}�E�X���ړ�����</shortdesc>
+	<shortdesc>マウスが移動した</shortdesc>
 	<arg>
 		<argitem>
 			<name>x</name>
 			<default></default>
 			<desc>
-				�@�}�E�X���ړ������ʒu�� x ���W ( �N���C�A���g���W�ł� ) �̒l�ł��B<r/>
+				　マウスが移動した位置の x 座標 ( クライアント座標での ) の値です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>y</name>
 			<default></default>
 			<desc>
-				�@�}�E�X���ړ������ʒu�� y ���W ( �N���C�A���g���W�ł� ) �̒l�ł��B<r/>
+				　マウスが移動した位置の y 座標 ( クライアント座標での ) の値です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>shift</name>
 			<default></default>
 			<desc>
-				�@�}�E�X���ړ����Ă������ɓ����ɉ�����Ă����V�t�g�n�̃L�[��}�E�X�̃{�^���̏�Ԃł��B
-				�ȉ��̒l�̃r�b�g OR �ɂ��g�ݍ��킹�ɂȂ�܂��B<r/>
-				<tt><kw>ssAlt</kw>     : </tt>ALT �L�[��������Ă���<r/>
-				<tt><kw>ssShift</kw>   : </tt>SHIFT �L�[��������Ă���<r/>
-				<tt><kw>ssCtrl</kw>    : </tt>CTRL �L�[��������Ă���<r/>
-				<tt><kw>ssLeft</kw>    : </tt>�}�E�X�̍��{�^����������Ă���<r/>
-				<tt><kw>ssMiddle</kw>  : </tt>�}�E�X�̒��{�^����������Ă���<r/>
-				<tt><kw>ssRight</kw>   : </tt>�}�E�X�̉E�{�^����������Ă���<r/>
+				　マウスが移動していた時に同時に押されていたシフト系のキーやマウスのボタンの状態です。
+				以下の値のビット OR による組み合わせになります。<r/>
+				<tt><kw>ssAlt</kw>     : </tt>ALT キーが押されていた<r/>
+				<tt><kw>ssShift</kw>   : </tt>SHIFT キーが押されていた<r/>
+				<tt><kw>ssCtrl</kw>    : </tt>CTRL キーが押されていた<r/>
+				<tt><kw>ssLeft</kw>    : </tt>マウスの左ボタンが押されていた<r/>
+				<tt><kw>ssMiddle</kw>  : </tt>マウスの中ボタンが押されていた<r/>
+				<tt><kw>ssRight</kw>   : </tt>マウスの右ボタンが押されていた<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�}�E�X���ړ��������ɔ������܂��B<r/>
+		　マウスが移動した時に発生します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>onMouseWheel</name>
 	<type>event</type>
-	<shortdesc>�}�E�X�z�C�[������]����</shortdesc>
+	<shortdesc>マウスホイールが回転した</shortdesc>
 	<arg>
 		<argitem>
 			<name>shift</name>
 			<default></default>
 			<desc>
-				�@�}�E�X���ړ����Ă������ɓ����ɉ�����Ă����V�t�g�n�̃L�[��}�E�X�̃{�^���̏�Ԃł��B
-				�ȉ��̒l�̃r�b�g OR �ɂ��g�ݍ��킹�ɂȂ�܂��B<r/>
-				<tt><kw>ssAlt</kw>     : </tt>ALT �L�[��������Ă���<r/>
-				<tt><kw>ssShift</kw>   : </tt>SHIFT �L�[��������Ă���<r/>
-				<tt><kw>ssCtrl</kw>    : </tt>CTRL �L�[��������Ă���<r/>
-				<tt><kw>ssLeft</kw>    : </tt>�}�E�X�̍��{�^����������Ă���<r/>
-				<tt><kw>ssMiddle</kw>  : </tt>�}�E�X�̒��{�^����������Ă���<r/>
-				<tt><kw>ssRight</kw>   : </tt>�}�E�X�̉E�{�^����������Ă���<r/>
+				　マウスが移動していた時に同時に押されていたシフト系のキーやマウスのボタンの状態です。
+				以下の値のビット OR による組み合わせになります。<r/>
+				<tt><kw>ssAlt</kw>     : </tt>ALT キーが押されていた<r/>
+				<tt><kw>ssShift</kw>   : </tt>SHIFT キーが押されていた<r/>
+				<tt><kw>ssCtrl</kw>    : </tt>CTRL キーが押されていた<r/>
+				<tt><kw>ssLeft</kw>    : </tt>マウスの左ボタンが押されていた<r/>
+				<tt><kw>ssMiddle</kw>  : </tt>マウスの中ボタンが押されていた<r/>
+				<tt><kw>ssRight</kw>   : </tt>マウスの右ボタンが押されていた<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>delta</name>
 			<default></default>
 			<desc>
-				�@�z�C�[���̉�]�p�ł��B�����(���[�U�̔��Α��̕���)�ɉ񂳂ꂽ�ꍇ�͐��A
-				������(���[�U���̕���)�ɉ񂳂ꂽ�ꍇ�͕��̒l�ɂȂ�܂��B�ʏ�A�ŏ��ʂ� 120
-				�ƂȂ�܂��B<r/>
+				　ホイールの回転角です。上方向(ユーザの反対側の方向)に回された場合は正、
+				下方向(ユーザ側の方向)に回された場合は負の値になります。通常、最小量は 120
+				となります。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>x</name>
 			<default></default>
 			<desc>
-				�@�z�C�[������]�����ʒu�� x ���W ( �N���C�A���g���W�ł� ) �̒l�ł��B<r/>
+				　ホイールが回転した位置の x 座標 ( クライアント座標での ) の値です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>y</name>
 			<default></default>
 			<desc>
-				�@�z�C�[������]�����ʒu�� y ���W ( �N���C�A���g���W�ł� ) �̒l�ł��B<r/>
+				　ホイールが回転した位置の y 座標 ( クライアント座標での ) の値です。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�}�E�X�z�C�[������]�������ɔ������܂��B<r/>
+		　マウスホイールが回転した時に発生します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>onTouchDown</name>
 	<type>event</type>
-	<shortdesc>��ʂ��^�b�`���ꂽ</shortdesc>
+	<shortdesc>画面がタッチされた</shortdesc>
 	<arg>
 		<argitem>
 			<name>x</name>
 			<default></default>
 			<desc>
-				�@�^�b�`���ꂽ�ʒu�� x ���W ( �N���C�A���g���W�ł� ) �̒l�ł��B<r/>
+				　タッチされた位置の x 座標 ( クライアント座標での ) の値です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>y</name>
 			<default></default>
 			<desc>
-				�@�^�b�`���ꂽ�ʒu�� y ���W ( �N���C�A���g���W�ł� ) �̒l�ł��B<r/>
+				　タッチされた位置の y 座標 ( クライアント座標での ) の値です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>cx</name>
 			<default></default>
 			<desc>
-				�@�w���ڐG���Ă��鉡�����s�N�Z�����ł��B<r/>
-				�@�f�o�C�X���Ή����Ă��Ȃ��ꍇ�͏��1�ł��B<r/>
+				　指が接触している横方向ピクセル数です。<r/>
+				　デバイスが対応していない場合は常に1です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>cy</name>
 			<default></default>
 			<desc>
-				�@�w���ڐG���Ă���c�����s�N�Z�����ł��B<r/>
-				�@�f�o�C�X���Ή����Ă��Ȃ��ꍇ�͏��1�ł��B<r/>
+				　指が接触している縦方向ピクセル数です。<r/>
+				　デバイスが対応していない場合は常に1です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>id</name>
 			<default></default>
 			<desc>
-				�@�^�b�`ID�ł��B<r/>
-				�@�}���`�^�b�`���A�e�ʒu���ƂɌŗL�̒l���ݒ肳��A����ID�ɂ���Ĉʒu�����ʂł��܂��B<r/>
+				　タッチIDです。<r/>
+				　マルチタッチ時、各位置ごとに固有の値が設定され、このIDによって位置を識別できます。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�^�b�`�p�l���Ƀ^�b�`���ꂽ���ɔ������܂��B<r/>
+		　タッチパネルにタッチされた時に発生します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>onTouchUp</name>
 	<type>event</type>
-	<shortdesc>��ʂ���w�������ꂽ</shortdesc>
+	<shortdesc>画面から指が離された</shortdesc>
 	<arg>
 		<argitem>
 			<name>x</name>
 			<default></default>
 			<desc>
-				�@�����ꂽ�ʒu�� x ���W ( �N���C�A���g���W�ł� ) �̒l�ł��B<r/>
+				　離された位置の x 座標 ( クライアント座標での ) の値です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>y</name>
 			<default></default>
 			<desc>
-				�@�����ꂽ�ʒu�� y ���W ( �N���C�A���g���W�ł� ) �̒l�ł��B<r/>
+				　離された位置の y 座標 ( クライアント座標での ) の値です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>cx</name>
 			<default></default>
 			<desc>
-				�@�w���ڐG���Ă��鉡�����s�N�Z�����ł��B<r/>
-				�@�f�o�C�X���Ή����Ă��Ȃ��ꍇ�͏��1�ł��B<r/>
+				　指が接触している横方向ピクセル数です。<r/>
+				　デバイスが対応していない場合は常に1です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>cy</name>
 			<default></default>
 			<desc>
-				�@�w���ڐG���Ă���c�����s�N�Z�����ł��B<r/>
-				�@�f�o�C�X���Ή����Ă��Ȃ��ꍇ�͏��1�ł��B<r/>
+				　指が接触している縦方向ピクセル数です。<r/>
+				　デバイスが対応していない場合は常に1です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>id</name>
 			<default></default>
 			<desc>
-				�@�^�b�`ID�ł��B<r/>
-				�@�}���`�^�b�`���A�e�ʒu���ƂɌŗL�̒l���ݒ肳��A����ID�ɂ���Ĉʒu�����ʂł��܂��B<r/>
+				　タッチIDです。<r/>
+				　マルチタッチ時、各位置ごとに固有の値が設定され、このIDによって位置を識別できます。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�^�b�`�p�l������w�������ꂽ���ɔ������܂��B<r/>
+		　タッチパネルから指が離された時に発生します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>onTouchMove</name>
 	<type>event</type>
-	<shortdesc>�w���ړ�����</shortdesc>
+	<shortdesc>指が移動した</shortdesc>
 	<arg>
 		<argitem>
 			<name>x</name>
 			<default></default>
 			<desc>
-				�@�^�b�`�ʒu�� x ���W ( �N���C�A���g���W�ł� ) �̒l�ł��B<r/>
+				　タッチ位置の x 座標 ( クライアント座標での ) の値です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>y</name>
 			<default></default>
 			<desc>
-				�@�^�b�`�ʒu�� y ���W ( �N���C�A���g���W�ł� ) �̒l�ł��B<r/>
+				　タッチ位置の y 座標 ( クライアント座標での ) の値です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>cx</name>
 			<default></default>
 			<desc>
-				�@�w���ڐG���Ă��鉡�����s�N�Z�����ł��B<r/>
-				�@�f�o�C�X���Ή����Ă��Ȃ��ꍇ�͏��1�ł��B<r/>
+				　指が接触している横方向ピクセル数です。<r/>
+				　デバイスが対応していない場合は常に1です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>cy</name>
 			<default></default>
 			<desc>
-				�@�w���ڐG���Ă���c�����s�N�Z�����ł��B<r/>
-				�@�f�o�C�X���Ή����Ă��Ȃ��ꍇ�͏��1�ł��B<r/>
+				　指が接触している縦方向ピクセル数です。<r/>
+				　デバイスが対応していない場合は常に1です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>id</name>
 			<default></default>
 			<desc>
-				�@�^�b�`ID�ł��B<r/>
-				�@�}���`�^�b�`���A�e�ʒu���ƂɌŗL�̒l���ݒ肳��A����ID�ɂ���Ĉʒu�����ʂł��܂��B<r/>
+				　タッチIDです。<r/>
+				　マルチタッチ時、各位置ごとに固有の値が設定され、このIDによって位置を識別できます。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�^�b�`�p�l����ŐG��Ă���w���ړ��������ɔ������܂��B<r/>
+		　タッチパネル上で触れている指が移動した時に発生します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>onTouchScaling</name>
 	<type>event</type>
-	<shortdesc>�g�呀�삵��</shortdesc>
+	<shortdesc>拡大操作した</shortdesc>
 	<arg>
 		<argitem>
 			<name>startdistance</name>
 			<default></default>
 			<desc>
-				�@�}���`�^�b�`���J�n���ꂽ���̃s�N�Z�������ł��B<r/>
+				　マルチタッチが開始された時のピクセル距離です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>currentdistance</name>
 			<default></default>
 			<desc>
-				�@�C�x���g�������̃^�b�`�̃s�N�Z�������ł��B<r/>
+				　イベント発生時のタッチのピクセル距離です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>cx</name>
 			<default></default>
 			<desc>
-				�@���S�ʒu�� x ���W ( �N���C�A���g���W�ł� ) �̒l�ł��B<r/>
+				　中心位置の x 座標 ( クライアント座標での ) の値です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>cy</name>
 			<default></default>
 			<desc>
-				�@���S�ʒu�� y ���W ( �N���C�A���g���W�ł� ) �̒l�ł��B<r/>
+				　中心位置の y 座標 ( クライアント座標での ) の値です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>flag</name>
 			<default></default>
 			<desc>
-				�@�}���`�^�b�`��ԃt���O�ł��B<r/>
-				<tt><kw>0x01</kw>     : </tt>�}���`�^�b�`���J�n���ꂽ�ŏ��̃C�x���g�ɐݒ肳��Ă��܂��B<r/>
+				　マルチタッチ状態フラグです。<r/>
+				<tt><kw>0x01</kw>     : </tt>マルチタッチが開始された最初のイベントに設定されています。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�^�b�`�p�l����Ń}���`�^�b�`�ɂ���Ċg�呀�삵�����ɔ������܂��B<r/>
+		　タッチパネル上でマルチタッチによって拡大操作した時に発生します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>onTouchRotate</name>
 	<type>event</type>
-	<shortdesc>��]���삵��</shortdesc>
+	<shortdesc>回転操作した</shortdesc>
 	<arg>
 		<argitem>
 			<name>startangle</name>
 			<default></default>
 			<desc>
-				�@�}���`�^�b�`���J�n���ꂽ���̃��W�A���p�x�ł��B<r/>
+				　マルチタッチが開始された時のラジアン角度です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>currentangle</name>
 			<default></default>
 			<desc>
-				�@�C�x���g�������̃^�b�`�̃��W�A���p�x�ł��B<r/>
+				　イベント発生時のタッチのラジアン角度です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>distance</name>
 			<default></default>
 			<desc>
-				�@�C�x���g�������̃^�b�`�̃s�N�Z�������ł��B<r/>
+				　イベント発生時のタッチのピクセル距離です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>cx</name>
 			<default></default>
 			<desc>
-				�@���S�ʒu�� x ���W ( �N���C�A���g���W�ł� ) �̒l�ł��B<r/>
+				　中心位置の x 座標 ( クライアント座標での ) の値です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>cy</name>
 			<default></default>
 			<desc>
-				�@���S�ʒu�� y ���W ( �N���C�A���g���W�ł� ) �̒l�ł��B<r/>
+				　中心位置の y 座標 ( クライアント座標での ) の値です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>flag</name>
 			<default></default>
 			<desc>
-				�@�}���`�^�b�`��ԃt���O�ł��B<r/>
-				<tt><kw>0x01</kw>     : </tt>�}���`�^�b�`���J�n���ꂽ�ŏ��̃C�x���g�ɐݒ肳��Ă��܂��B<r/>
+				　マルチタッチ状態フラグです。<r/>
+				<tt><kw>0x01</kw>     : </tt>マルチタッチが開始された最初のイベントに設定されています。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�^�b�`�p�l����Ń}���`�^�b�`�ɂ���ĉ�]���삵�����ɔ������܂��B<r/>
+		　タッチパネル上でマルチタッチによって回転操作した時に発生します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>onMultiTouch</name>
 	<type>event</type>
-	<shortdesc>�}���`�^�b�`��Ԃ��ω�����</shortdesc>
+	<shortdesc>マルチタッチ状態が変化した</shortdesc>
 	<arg></arg>
 	<result></result>
 	<desc>
-		�@�}���`�^�b�`��Ԃ��J�n���ꂽ��A�ړ�������A���ꂽ���ɔ������܂��B<r/>
-		�@���W���� <ref>Window.touchPointCount</ref> �v���p�e�B�� <ref>Window.getTouchPoint</ref> ���\�b�h�Ŏ擾�ł��܂��B<r/>
+		　マルチタッチ状態が開始されたり、移動したり、離れた時に発生します。<r/>
+		　座標情報は <ref>Window.touchPointCount</ref> プロパティと <ref>Window.getTouchPoint</ref> メソッドで取得できます。<r/>
 	</desc>
 	<ref>Window.getTouchPoint</ref>
 	<ref>Window.touchPointCount</ref>
@@ -566,91 +566,91 @@
 <member>
 	<name>onKeyDown</name>
 	<type>event</type>
-	<shortdesc>�L�[�������ꂽ</shortdesc>
+	<shortdesc>キーが押された</shortdesc>
 	<arg>
 		<argitem>
 			<name>key</name>
 			<default></default>
 			<desc>
-				�@�����ꂽ�L�[��<kw>���z�L�[�R�[�h</kw>�̒l�ł��B<r/>
+				　押されたキーの<kw>仮想キーコード</kw>の値です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>shift</name>
 			<default></default>
 			<desc>
-				�@�L�[�������ꂽ���ɓ����ɉ�����Ă����V�t�g�n�̃L�[��}�E�X�̃{�^���̏�Ԃł��B
-				�ȉ��̒l�̃r�b�g OR �ɂ��g�ݍ��킹�ɂȂ�܂��B<r/>
-				<tt><kw>ssAlt</kw>     : </tt>ALT �L�[��������Ă���<r/>
-				<tt><kw>ssShift</kw>   : </tt>SHIFT �L�[��������Ă���<r/>
-				<tt><kw>ssCtrl</kw>    : </tt>CTRL �L�[��������Ă���<r/>
-				<tt><kw>ssLeft</kw>    : </tt>�}�E�X�̍��{�^����������Ă���<r/>
-				<tt><kw>ssMiddle</kw>  : </tt>�}�E�X�̒��{�^����������Ă���<r/>
-				<tt><kw>ssRight</kw>   : </tt>�}�E�X�̉E�{�^����������Ă���<r/>
-				�@�܂��A�L�[�{�[�h�������ԉ�����A�L�[���s�[�g���������Ă���ꍇ��
-				�ȉ��̒l���g�ݍ��킳��܂��B<r/>
-				<tt><kw>ssRepeat</kw>  : </tt>�L�[���s�[�g����������<r/>
+				　キーが押された時に同時に押されていたシフト系のキーやマウスのボタンの状態です。
+				以下の値のビット OR による組み合わせになります。<r/>
+				<tt><kw>ssAlt</kw>     : </tt>ALT キーが押されていた<r/>
+				<tt><kw>ssShift</kw>   : </tt>SHIFT キーが押されていた<r/>
+				<tt><kw>ssCtrl</kw>    : </tt>CTRL キーが押されていた<r/>
+				<tt><kw>ssLeft</kw>    : </tt>マウスの左ボタンが押されていた<r/>
+				<tt><kw>ssMiddle</kw>  : </tt>マウスの中ボタンが押されていた<r/>
+				<tt><kw>ssRight</kw>   : </tt>マウスの右ボタンが押されていた<r/>
+				　また、キーボードが長時間押され、キーリピートが発生している場合は
+				以下の値も組み合わされます。<r/>
+				<tt><kw>ssRepeat</kw>  : </tt>キーリピートが発生した<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�L�[�������ꂽ���ɔ������܂��B<r/>
+		　キーが押された時に発生します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>onKeyUp</name>
 	<type>event</type>
-	<shortdesc>�L�[�������ꂽ</shortdesc>
+	<shortdesc>キーが離された</shortdesc>
 	<arg>
 		<argitem>
 			<name>key</name>
 			<default></default>
 			<desc>
-				�@�����ꂽ�L�[��<kw>���z�L�[�R�[�h</kw>�̒l�ł��B<r/>
+				　離されたキーの<kw>仮想キーコード</kw>の値です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>shift</name>
 			<default></default>
 			<desc>
-				�@�L�[�������ꂽ���ɓ����ɉ�����Ă����V�t�g�n�̃L�[��}�E�X�̃{�^���̏�Ԃł��B
-				�ȉ��̒l�̃r�b�g OR �ɂ��g�ݍ��킹�ɂȂ�܂��B<r/>
-				<tt><kw>ssAlt</kw>     : </tt>ALT �L�[��������Ă���<r/>
-				<tt><kw>ssShift</kw>   : </tt>SHIFT �L�[��������Ă���<r/>
-				<tt><kw>ssCtrl</kw>    : </tt>CTRL �L�[��������Ă���<r/>
-				<tt><kw>ssLeft</kw>    : </tt>�}�E�X�̍��{�^����������Ă���<r/>
-				<tt><kw>ssMiddle</kw>  : </tt>�}�E�X�̒��{�^����������Ă���<r/>
-				<tt><kw>ssRight</kw>   : </tt>�}�E�X�̉E�{�^����������Ă���<r/>
+				　キーが離された時に同時に押されていたシフト系のキーやマウスのボタンの状態です。
+				以下の値のビット OR による組み合わせになります。<r/>
+				<tt><kw>ssAlt</kw>     : </tt>ALT キーが押されていた<r/>
+				<tt><kw>ssShift</kw>   : </tt>SHIFT キーが押されていた<r/>
+				<tt><kw>ssCtrl</kw>    : </tt>CTRL キーが押されていた<r/>
+				<tt><kw>ssLeft</kw>    : </tt>マウスの左ボタンが押されていた<r/>
+				<tt><kw>ssMiddle</kw>  : </tt>マウスの中ボタンが押されていた<r/>
+				<tt><kw>ssRight</kw>   : </tt>マウスの右ボタンが押されていた<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�L�[�������ꂽ���ɔ������܂��B<r/>
+		　キーが離された時に発生します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>onKeyPress</name>
 	<type>event</type>
-	<shortdesc>���������͂��ꂽ</shortdesc>
+	<shortdesc>文字が入力された</shortdesc>
 	<arg>
 		<argitem>
 			<name>key</name>
 			<default></default>
 			<desc>
-				�@���͂��ꂽ�����ł��B<r/>
+				　入力された文字です。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@���������͂��ꂽ�Ƃ��ɔ������܂��B<ref>Window.onKeyDown</ref> �ƈقȂ�̂́AonKeyDown ��
-		���z�L�[�R�[�h�������̂ɑ΂��A���̃C�x���g�͕������̂��̂������܂��B�����ꂽ�L�[��
-		�����Ƃ͊֌W�̂Ȃ��L�[ (�t�@���N�V�����L�[�Ȃ�) �̏ꍇ�͂��̃C�x���g�͔������܂���B<r/>
-		Ctrl�L�[�Ɠ����ɉ����ꂽ�ꍇ�́A�ȉ��Ɏ����悤�ȃR���g���[���R�[�h�������Ă��܂��B<r/>
+		　文字が入力されたときに発生します。<ref>Window.onKeyDown</ref> と異なるのは、onKeyDown が
+		仮想キーコードを扱うのに対し、このイベントは文字そのものを扱います。押されたキーが
+		文字とは関係のないキー (ファンクションキーなど) の場合はこのイベントは発生しません。<r/>
+		Ctrlキーと同時に押された場合は、以下に示すようなコントロールコードが送られてきます。<r/>
 		<tt>0x00 : </tt>Ctrl+@<r/>
 		<tt>0x01 : </tt>Ctrl+A<r/>
 		<tt>0x02 : </tt>Ctrl+B<r/>
@@ -689,69 +689,69 @@
 <member>
 	<name>onResize</name>
 	<type>event</type>
-	<shortdesc>�E�B���h�E�̃T�C�Y���ω�����</shortdesc>
+	<shortdesc>ウィンドウのサイズが変化した</shortdesc>
 	<arg>
 	</arg>
 	<result></result>
 	<desc>
-		�@�E�B���h�E�̃T�C�Y���ω��������ɔ������܂��B<r/>
-		�@���ۂ̃T�C�Y�� <ref>Window.width</ref> �v���p�e�B�� <ref>Window.height</ref> �v���p�e�B�ȂǂŎ擾���Ă��������B<r/>
+		　ウィンドウのサイズが変化した時に発生します。<r/>
+		　実際のサイズは <ref>Window.width</ref> プロパティや <ref>Window.height</ref> プロパティなどで取得してください。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>onFileDrop</name>
 	<type>event</type>
-	<shortdesc>�t�@�C�����h���b�v���ꂽ</shortdesc>
+	<shortdesc>ファイルがドロップされた</shortdesc>
 	<arg>
 		<argitem>
 			<name>files</name>
 			<default></default>
 			<desc>
-				�@�h���b�v���ꂽ�t�@�C�������i�[���ꂽ�z��(Array)�I�u�W�F�N�g�ł��B<r/>
+				　ドロップされたファイル名が格納された配列(Array)オブジェクトです。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�t�@�C�����G�N�X�v���[���Ȃǂ���E�B���h�E�Ƀh���b�v���ꂽ�Ƃ��ɔ������܂��B<r/>
-		�@�P��̃t�@�C�����h���b�v���ꂽ�ꍇ�ł������ɂ͔z��I�u�W�F�N�g���n����܂� (�ŏ��̗v�f��
-		���̃t�@�C���ɂȂ�܂� )�B<r/>
+		　ファイルがエクスプローラなどからウィンドウにドロップされたときに発生します。<r/>
+		　単一のファイルがドロップされた場合でも引数には配列オブジェクトが渡されます (最初の要素が
+		そのファイルになります )。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>onCloseQuery</name>
 	<type>event</type>
-	<shortdesc>�E�B���h�E�����m�F</shortdesc>
+	<shortdesc>ウィンドウを閉じる確認</shortdesc>
 	<arg>
 		<argitem>
 			<name>canclose</name>
 			<default></default>
 			<desc>
-				�@�E�B���h�E����邱�Ƃ��ł��邩�ǂ������n����܂��B���ʃN���X�����ʃN���X�̃C�x���g�n���h����
-				�Ă΂��ے��ŁA���ʃN���X�����肵���u�E�B���h�E����邱�Ƃ��ł��邩�v���n����܂��B<r/>
+				　ウィンドウを閉じることができるかどうかが渡されます。下位クラスから上位クラスのイベントハンドラが
+				呼ばれる課程で、下位クラスが決定した「ウィンドウを閉じることができるか」が渡されます。<r/>
 				
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�E�B���h�E����邱�Ƃ��ł��邩�ǂ������m�F���邽�߂̃C�x���g�ł��B�E�B���h�E����邱�Ƃ�
-		�ł��Ȃ��ꍇ�A��ʃN���X�̓����\�b�h�Ɉ����Ƃ��� false ��n���Ă��������B<r/>
+		　ウィンドウを閉じることができるかどうかを確認するためのイベントです。ウィンドウを閉じることが
+		できない場合、上位クラスの同メソッドに引数として false を渡してください。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>onPopupHide</name>
 	<type>event</type>
-	<shortdesc>�|�b�v�A�b�v�E�B���h�E�����</shortdesc>
+	<shortdesc>ポップアップウィンドウを閉じる</shortdesc>
 	<arg>
 	</arg>
 	<result></result>
 	<desc>
-		�@�|�b�v�A�b�v�E�B���h�E������ׂ����ɔ�������C�x���g�ł��B���̃C�x���g�́A<ref>Window.stayOnTop</ref> �v���p�e�B���^�ŁA���A<ref>Window.focusable</ref> �v���p�e�B���U�̏ꍇ�A�u���̃E�B���h�E���N���b�N���ꂽ�v���邢�́u���̃A�v���P�[�V�������A�N�e�B�u�ɂȂ����v���ɔ������܂��B<r/>
-		�@�ʏ�́A�����ŃE�B���h�E�������A��\���ɂ��鏈�����s���Ă��������B<r/>
+		　ポップアップウィンドウが閉じるべき時に発生するイベントです。このイベントは、<ref>Window.stayOnTop</ref> プロパティが真で、かつ、<ref>Window.focusable</ref> プロパティが偽の場合、「他のウィンドウがクリックされた」あるいは「他のアプリケーションがアクティブになった」時に発生します。<r/>
+		　通常は、ここでウィンドウを閉じたり、非表示にする処理を行ってください。<r/>
 	</desc>
 	<ref>Window.focusable</ref>
 	<ref>Window.stayOnTop</ref>
@@ -760,13 +760,13 @@
 <member>
 	<name>onActivate</name>
 	<type>event</type>
-	<shortdesc>�E�B���h�E���A�N�e�B�u�ɂȂ����Ƃ�</shortdesc>
+	<shortdesc>ウィンドウがアクティブになったとき</shortdesc>
 	<arg>
 	</arg>
 	<result></result>
 	<desc>
-		�@�E�B���h�E���A�N�e�B�u�ɂȂ����Ƃ��ɌĂяo�����C�x���g�֐���\���܂��B<r/>
-		�@���̃C�x���g�́A�E�B���h�E�����ɃA�N�e�B�u�̏ꍇ�ɂ���������\��������̂Œ��ӂ��Ă������� (���S�� onActivate �� onDeactivate �� onActivate �� �c�c �̏��ɔ�������ۏ؂��Ȃ� )�B<r/>
+		　ウィンドウがアクティブになったときに呼び出されるイベント関数を表します。<r/>
+		　このイベントは、ウィンドウが既にアクティブの場合にも発生する可能性があるので注意してください (完全に onActivate → onDeactivate → onActivate → …… の順に発生する保証がない )。<r/>
 	</desc>
 	<ref>Window.onDeactivate</ref>
 	<ref>System.onActivate</ref>
@@ -777,13 +777,13 @@
 <member>
 	<name>onDeactivate</name>
 	<type>event</type>
-	<shortdesc>�E�B���h�E����A�N�e�B�u�ɂȂ����Ƃ�</shortdesc>
+	<shortdesc>ウィンドウが非アクティブになったとき</shortdesc>
 	<arg>
 	</arg>
 	<result></result>
 	<desc>
-		�@�E�B���h�E����A�N�e�B�u�ɂȂ����Ƃ��ɌĂяo�����C�x���g�֐���\���܂��B<r/>
-		�@���̃C�x���g�́A�E�B���h�E�����ɔ�A�N�e�B�u�̏ꍇ�ɂ���������\��������̂Œ��ӂ��Ă������� (���S�� onActivate �� onDeactivate �� onActivate �� �c�c �̏��ɔ�������ۏ؂��Ȃ� )�B<r/>
+		　ウィンドウが非アクティブになったときに呼び出されるイベント関数を表します。<r/>
+		　このイベントは、ウィンドウが既に非アクティブの場合にも発生する可能性があるので注意してください (完全に onActivate → onDeactivate → onActivate → …… の順に発生する保証がない )。<r/>
 	</desc>
 	<ref>Window.onActivate</ref>
 	<ref>System.onActivate</ref>
@@ -794,43 +794,43 @@
 <member>
 	<name>onHintChanged</name>
 	<type>event</type>
-	<shortdesc>�q���g�̏�Ԃ��ω������Ƃ�</shortdesc>
+	<shortdesc>ヒントの状態が変化したとき</shortdesc>
 	<arg>
 		<argitem>
 			<name>text</name>
 			<default></default>
 			<desc>
-				�@�q���g�ɕ\�����镶���񂪓n����܂��B<r/>
+				　ヒントに表示する文字列が渡されます。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>x</name>
 			<default></default>
 			<desc>
-				�@�q���g�\��X�����W�l���n����܂��B<r/>
+				　ヒント表示X軸座標値が渡されます。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>y</name>
 			<default></default>
 			<desc>
-				�@�q���g�\��Y�����W�l���n����܂��B<r/>
+				　ヒント表示Y軸座標値が渡されます。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>isshow</name>
 			<default></default>
 			<desc>
-				�@�q���g��\�����邩�A��\���ɂ��邩���n����܂��B<r/>
+				　ヒントを表示するか、非表示にするかが渡されます。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�q���g�̏�Ԃ��ω������Ƃ��ɌĂяo�����C�x���g�֐���\���܂��B<r/>
-		�@�\��/��\���ɏ]���q���g�̕\�����s���܂��B<r/>
-		�@�q���g�����C���ŕ\������ꍇ�́A���̃��C���̃}�E�X���b�Z�[�W�����������悤�� <ref>Layer.hitThreshold</ref> ��256�ɐݒ肵�܂��B<r/>
-		�@�܂��A<ref>Layer.ignoreHintSensing</ref> ��true���w�肵�܂��B<r/>
+		　ヒントの状態が変化したときに呼び出されるイベント関数を表します。<r/>
+		　表示/非表示に従いヒントの表示を行います。<r/>
+		　ヒントをレイヤで表示する場合は、そのレイヤのマウスメッセージが無視されるように <ref>Layer.hitThreshold</ref> を256に設定します。<r/>
+		　また、<ref>Layer.ignoreHintSensing</ref> もtrueを指定します。<r/>
 	</desc>
 	<ref>Window.hintDelay</ref>
 	<ref>Layer.ignoreHintSensing</ref>
@@ -840,12 +840,12 @@
 <member>
 	<name>close</name>
 	<type>method</type>
-	<shortdesc>�E�B���h�E�����</shortdesc>
+	<shortdesc>ウィンドウを閉じる</shortdesc>
 	<arg>
 	</arg>
 	<result></result>
 	<desc>
-		�@<ref>Window.showModal</ref> ���\�b�h�ŕ\�����ꂽ�E�B���h�E����܂��B�E�B���h�E�����O�� <ref>Window.onCloseQuery</ref> �C�x���g���������A�E�B���h�E����邱�Ƃ��ł��邩�ǂ������m�F���邱�Ƃ��ł��܂��B<r/>
+		　<ref>Window.showModal</ref> メソッドで表示されたウィンドウを閉じます。ウィンドウを閉じる前に <ref>Window.onCloseQuery</ref> イベントが発生し、ウィンドウを閉じることができるかどうかを確認することができます。<r/>
 	</desc>
 	<ref>Window.showModal</ref>
 	<ref>Window.onCloseQuery</ref>
@@ -854,79 +854,79 @@
 <member>
 	<name>bringToFront</name>
 	<type>method</type>
-	<shortdesc>�E�B���h�E���őO�ʂɈړ�</shortdesc>
+	<shortdesc>ウィンドウを最前面に移動</shortdesc>
 	<arg>
 	</arg>
 	<result></result>
 	<desc>
-		�@�E�B���h�E���őO�ʂɈړ����܂��B�A�v���P�[�V��������A�N�e�B�u�̏ꍇ�̓A�v���P�[�V����
-		���̂��A�N�e�B�u�ɂ��܂��B<r/>
+		　ウィンドウを最前面に移動します。アプリケーションが非アクティブの場合はアプリケーション
+		自体もアクティブにします。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>update</name>
 	<type>method</type>
-	<shortdesc>�E�B���h�E���e�̋����I�ȕ`��</shortdesc>
+	<shortdesc>ウィンドウ内容の強制的な描画</shortdesc>
 	<arg>
 		<argitem>
 			<name>type</name>
 			<default>tutNormal</default>
 			<desc>
-				�@�E�B���h�E�`��̃^�C�v���w�肵�܂��B<r/>
-				�@<tt><kw>tutNormal</kw></tt> ���w�肷��ƒʏ�̕`�� ( �����`�� )�A
-				<tt><kw>tutEntire</kw></tt> ���w�肷��ƃE�B���h�E���e�S�̂�`�悵�܂��B<r/>
+				　ウィンドウ描画のタイプを指定します。<r/>
+				　<tt><kw>tutNormal</kw></tt> を指定すると通常の描画 ( 差分描画 )、
+				<tt><kw>tutEntire</kw></tt> を指定するとウィンドウ内容全体を描画します。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�����͌��o�[�W�����ł͖�������܂��B<r/>
-		�@tutNormal �� tutEntire �͎�������Ă��܂���B<r/>
+		　引数は現バージョンでは無視されます。<r/>
+		　tutNormal や tutEntire は実装されていません。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>showModal</name>
 	<type>method</type>
-	<shortdesc>���[�_���ŃE�B���h�E��\��</shortdesc>
+	<shortdesc>モーダルでウィンドウを表示</shortdesc>
 	<arg>
 	</arg>
 	<result></result>
 	<desc>
-		�@�E�B���h�E��<kw>���[�_��</kw> ( <kw>���[�h�t��</kw> ) �ŕ\�����܂��B
-		���̃��\�b�h�̓E�B���h�E��\����Ԃ�
-		���A���A���̃E�B���h�E���ꎞ�I�ɖ����ɂ��܂��B���̂��߃��[�U�͂��̃E�B���h�E�݂̂�
-		�A�N�Z�X�ł����ԂɂȂ�܂� ( ��������[�h�t���̏�ԂƌĂт܂� )�B�E�B���h�E���������
-		���[�h�t���̏�Ԃ͉�������܂��B<r/>
-		�@���̃��\�b�h���Ăяo�����_�ł̓E�B���h�E�͔�\���łȂ��Ă͂Ȃ�܂���B<r/>
+		　ウィンドウを<kw>モーダル</kw> ( <kw>モード付き</kw> ) で表示します。
+		このメソッドはウィンドウを表示状態に
+		し、かつ、他のウィンドウを一時的に無効にします。そのためユーザはこのウィンドウのみに
+		アクセスできる状態になります ( これをモード付きの状態と呼びます )。ウィンドウが閉じられると
+		モード付きの状態は解除されます。<r/>
+		　このメソッドを呼び出す時点ではウィンドウは非表示でなくてはなりません。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>setMaskRegion</name>
 	<type>method</type>
-	<shortdesc>�E�B���h�E���[�W�������}�X�N�ɏ]���Đݒ�</shortdesc>
+	<shortdesc>ウィンドウリージョンをマスクに従って設定</shortdesc>
 	<arg>
 		<argitem>
 			<name>threshold</name>
 			<default>1</default>
 			<desc>
-				�@�}�X�N�̃X���b�V�����h ( �~���l ) ���w�肵�܂��B<r/>
-				�@�v���C�}�����C���̃}�X�N ( ���C���̕s�����x�̏�� ) �̂����A���̒l�����傫�������̌`��
-				�E�B���h�E���؂����ĕ\������܂��B<r/>
+				　マスクのスレッショルド ( 敷居値 ) を指定します。<r/>
+				　プライマリレイヤのマスク ( レイヤの不透明度の情報 ) のうち、この値よりも大きい部分の形に
+				ウィンドウが切り取られて表示されます。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�E�B���h�E���[�W�������v���C�}�����C���̃}�X�N ( ���C���̕s�����x�̏�� ) �ɏ]���Đݒ肵�܂��B<r/>
-		�@�E�B���h�E��s��`�ɂ��鎖���ł��܂��B<r/>
-		�@�\�������v���C�}�����C���ƁA�E�B���h�E�̑傫���A�ʒu������Ȃ��悤�ɂ���ɂ�
-		�ȉ��̂��Ƃ��s���K�v������܂��B<r/>
+		　ウィンドウリージョンをプライマリレイヤのマスク ( レイヤの不透明度の情報 ) に従って設定します。<r/>
+		　ウィンドウを不定形にする事ができます。<r/>
+		　表示されるプライマリレイヤと、ウィンドウの大きさ、位置がずれないようにするには
+		以下のことを行う必要があります。<r/>
 		<ul>
-		<li><ref>Window.borderStyle</ref> �� bsNone �ɐݒ肵�܂��B</li>
-		<li><ref>Layer.imageLeft</ref> ����� <ref>Layer.imageTop</ref> �� 0 �ɐݒ肵�܂��B</li>
+		<li><ref>Window.borderStyle</ref> は bsNone に設定します。</li>
+		<li><ref>Layer.imageLeft</ref> および <ref>Layer.imageTop</ref> は 0 に設定します。</li>
 		</ul>
 	</desc>
 	<ref>Window.removeMaskRegion</ref>
@@ -935,12 +935,12 @@
 <member>
 	<name>removeMaskRegion</name>
 	<type>method</type>
-	<shortdesc>�E�B���h�E���[�W�����̉���</shortdesc>
+	<shortdesc>ウィンドウリージョンの解除</shortdesc>
 	<arg>
 	</arg>
 	<result></result>
 	<desc>
-		�@<ref>Window.setMaskRegion</ref>�Őݒ肵���E�B���h�E���[�W�������������A�E�B���h�E����`�ɖ߂��܂��B<r/>
+		　<ref>Window.setMaskRegion</ref>で設定したウィンドウリージョンを解除し、ウィンドウを矩形に戻します。<r/>
 	</desc>
 	<ref>Window.setMaskRegion</ref>
 </member>
@@ -948,20 +948,20 @@
 <member>
 	<name>add</name>
 	<type>method</type>
-	<shortdesc>�Ǘ��I�u�W�F�N�g�̒ǉ�</shortdesc>
+	<shortdesc>管理オブジェクトの追加</shortdesc>
 	<arg>
 		<argitem>
 			<name>object</name>
 			<default></default>
 			<desc>
-				�@�Ǘ������I�u�W�F�N�g���w�肵�܂��B<r/>
+				　管理されるオブジェクトを指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�Ǘ��I�u�W�F�N�g��ǉ����܂��B�����Ŏw�肳�ꂽ�I�u�W�F�N�g�́A�E�B���h�E��������
-		�����Ƃ��Ɏ����I�ɖ����������悤�ɂȂ�܂��B<r/>
+		　管理オブジェクトを追加します。ここで指定されたオブジェクトは、ウィンドウが無効化
+		されるときに自動的に無効化されるようになります。<r/>
 	</desc>
 	<ref>Window.remove</ref>
 </member>
@@ -969,19 +969,19 @@
 <member>
 	<name>remove</name>
 	<type>method</type>
-	<shortdesc>�Ǘ��I�u�W�F�N�g�̍폜</shortdesc>
+	<shortdesc>管理オブジェクトの削除</shortdesc>
 	<arg>
 		<argitem>
 			<name>object</name>
 			<default></default>
 			<desc>
-				�@�Ǘ��I�u�W�F�N�g�̃��X�g����폜����I�u�W�F�N�g���w�肵�܂��B<r/>
+				　管理オブジェクトのリストから削除するオブジェクトを指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�Ǘ��I�u�W�F�N�g�̃��X�g����w�肳�ꂽ�I�u�W�F�N�g���폜���܂��B<r/>
+		　管理オブジェクトのリストから指定されたオブジェクトを削除します。<r/>
 	</desc>
 	<ref>Window.add</ref>
 </member>
@@ -989,29 +989,29 @@
 <member>
 	<name>setSize</name>
 	<type>method</type>
-	<shortdesc>�E�B���h�E�T�C�Y�̐ݒ�</shortdesc>
+	<shortdesc>ウィンドウサイズの設定</shortdesc>
 	<arg>
 		<argitem>
 			<name>width</name>
 			<default></default>
 			<desc>
-				�@�E�B���h�E�̉������w�肵�܂��B<r/>
+				　ウィンドウの横幅を指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>height</name>
 			<default></default>
 			<desc>
-				�@�E�B���h�E�̏c�����w�肵�܂��B<r/>
+				　ウィンドウの縦幅を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�E�B���h�E�̃T�C�Y���w�肵�܂��B<r/>
-		�@�E�B���h�E�̃T�C�Y���w�肷��Ƃ��ɂ́A<ref>Window.width</ref> ��
-		<ref>Window.height</ref> �v���p�e�B���X�ɐݒ肷�����
-		���̃��\�b�h�ň�C�Ɏw�肵�����������I�ł��B<r/>
+		　ウィンドウのサイズを指定します。<r/>
+		　ウィンドウのサイズを指定するときには、<ref>Window.width</ref> や
+		<ref>Window.height</ref> プロパティを個々に設定するよりも
+		このメソッドで一気に指定した方が効率的です。<r/>
 	</desc>
 	<ref>Window.width</ref>
 	<ref>Window.height</ref>
@@ -1024,26 +1024,26 @@
 <member>
 	<name>setMinSize</name>
 	<type>method</type>
-	<shortdesc>�E�B���h�E�̍ŏ��T�C�Y�̐ݒ�</shortdesc>
+	<shortdesc>ウィンドウの最小サイズの設定</shortdesc>
 	<arg>
 		<argitem>
 			<name>width</name>
 			<default></default>
 			<desc>
-				�@�E�B���h�E�̍ŏ��̉������w�肵�܂��B0���w�肷��Ɛ����͖����Ȃ�܂��B<r/>
+				　ウィンドウの最小の横幅を指定します。0を指定すると制限は無くなります。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>height</name>
 			<default></default>
 			<desc>
-				�@�E�B���h�E�̍ŏ��̏c�����w�肵�܂��B0���w�肷��Ɛ����͖����Ȃ�܂��B<r/>
+				　ウィンドウの最小の縦幅を指定します。0を指定すると制限は無くなります。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�E�B���h�E�̍ŏ��T�C�Y���w�肵�܂��B�E�B���h�E�͂��̃��\�b�h�Ŏw�肵���T�C�Y��菬�����Ȃ邱�Ƃ͂ł��܂���B
+		　ウィンドウの最小サイズを指定します。ウィンドウはこのメソッドで指定したサイズより小さくなることはできません。
 	</desc>
 	<ref>Window.setMaxSize</ref>
 	<ref>Window.setSize</ref>
@@ -1054,26 +1054,26 @@
 <member>
 	<name>setMaxSize</name>
 	<type>method</type>
-	<shortdesc>�E�B���h�E�̍ő�T�C�Y�̐ݒ�</shortdesc>
+	<shortdesc>ウィンドウの最大サイズの設定</shortdesc>
 	<arg>
 		<argitem>
 			<name>width</name>
 			<default></default>
 			<desc>
-				�@�E�B���h�E�̍ő�̉������w�肵�܂��B0���w�肷��Ɛ����͖����Ȃ�܂��B<r/>
+				　ウィンドウの最大の横幅を指定します。0を指定すると制限は無くなります。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>height</name>
 			<default></default>
 			<desc>
-				�@�E�B���h�E�̍ő�̏c�����w�肵�܂��B0���w�肷��Ɛ����͖����Ȃ�܂��B<r/>
+				　ウィンドウの最大の縦幅を指定します。0を指定すると制限は無くなります。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�E�B���h�E�̍ő�T�C�Y���w�肵�܂��B�E�B���h�E�͂��̃��\�b�h�Ŏw�肵���T�C�Y���傫���Ȃ邱�Ƃ͂ł��܂���B
+		　ウィンドウの最大サイズを指定します。ウィンドウはこのメソッドで指定したサイズより大きくなることはできません。
 	</desc>
 	<ref>Window.setMixSize</ref>
 	<ref>Window.setSize</ref>
@@ -1084,29 +1084,29 @@
 <member>
 	<name>setPos</name>
 	<type>method</type>
-	<shortdesc>�E�B���h�E�ʒu�̐ݒ�</shortdesc>
+	<shortdesc>ウィンドウ位置の設定</shortdesc>
 	<arg>
 		<argitem>
 			<name>left</name>
 			<default></default>
 			<desc>
-				�@�E�B���h�E�̍��[�ʒu���w�肵�܂��B<r/>
+				　ウィンドウの左端位置を指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>top</name>
 			<default></default>
 			<desc>
-				�@�E�B���h�E�̏�[�ʒu���w�肵�܂��B<r/>
+				　ウィンドウの上端位置を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�E�B���h�E�̈ʒu���w�肵�܂��B<r/>
-		�@�E�B���h�E�̈ʒu���w�肷��Ƃ��ɂ́A<ref>Window.left</ref> ��
-		<ref>Window.top</ref> �v���p�e�B���X�ɐݒ肷�����
-		���̃��\�b�h�ň�C�Ɏw�肵�����������I�ł��B<r/>
+		　ウィンドウの位置を指定します。<r/>
+		　ウィンドウの位置を指定するときには、<ref>Window.left</ref> や
+		<ref>Window.top</ref> プロパティを個々に設定するよりも
+		このメソッドで一気に指定した方が効率的です。<r/>
 	</desc>
 	<ref>Window.left</ref>
 	<ref>Window.top</ref>
@@ -1116,31 +1116,31 @@
 <member>
 	<name>setInnerSize</name>
 	<type>method</type>
-	<shortdesc>�N���C�A���g�T�C�Y�̐ݒ�</shortdesc>
+	<shortdesc>クライアントサイズの設定</shortdesc>
 	<arg>
 		<argitem>
 			<name>width</name>
 			<default></default>
 			<desc>
-				�@�N���C�A���g�̉������w�肵�܂��B<r/>
+				　クライアントの横幅を指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>height</name>
 			<default></default>
 			<desc>
-				�@�N���C�A���g�̏c�����w�肵�܂��B<r/>
+				　クライアントの縦幅を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�E�B���h�E�̃N���C�A���g�T�C�Y���w�肵�܂��B<r/>
-		�@�N���C�A���g�́A���C����\���\�ȃE�B���h�E���̗̈�ł��B<r/>
-		�@���̃T�C�Y��ݒ肷��ƃE�B���h�E�̃T�C�Y������ɉ����ĕω����܂��B<r/>
-		�@�N���C�A���g�̃T�C�Y���w�肷��Ƃ��ɂ́A<ref>Window.innerWidth</ref> ��
-		<ref>Window.innerHeight</ref> �v���p�e�B���X�ɐݒ肷�����
-		���̃��\�b�h�ň�C�Ɏw�肵�����������I�ł��B<r/>
+		　ウィンドウのクライアントサイズを指定します。<r/>
+		　クライアントは、レイヤを表示可能なウィンドウ内の領域です。<r/>
+		　このサイズを設定するとウィンドウのサイズもそれに応じて変化します。<r/>
+		　クライアントのサイズを指定するときには、<ref>Window.innerWidth</ref> や
+		<ref>Window.innerHeight</ref> プロパティを個々に設定するよりも
+		このメソッドで一気に指定した方が効率的です。<r/>
 	</desc>
 	<ref>Window.innerWidth</ref>
 	<ref>Window.innerHeight</ref>
@@ -1149,29 +1149,29 @@
 <member>
 	<name>setZoom</name>
 	<type>method</type>
-	<shortdesc>���C���g��{���̐ݒ�</shortdesc>
+	<shortdesc>レイヤ拡大倍率の設定</shortdesc>
 	<arg>
 		<argitem>
 			<name>numer</name>
 			<default></default>
 			<desc>
-				�@�{���̕��q�𐮐��Ŏw�肵�܂��B<r/>
+				　倍率の分子を整数で指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>denom</name>
 			<default></default>
 			<desc>
-				�@�{���̕���𐮐��Ŏw�肵�܂��B<r/>
+				　倍率の分母を整数で指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@���C���̊g��{�����w�肵�܂��B���q/����Ŏw�肵���T�C�Y�ŉ摜���g��A���邢�͏k������ĕ\������܂��B<r/>
-		�@���q�E���ꂪ���񐔂����ꍇ�͎����I�ɖ񕪂���邽�߁A<ref>Window.zoomNumer</ref> �v���p�e�B�� <ref>Window.zoomDenom</ref> �v���p�e�B�œǂݏo�����l�́A���̃��\�b�h�Ŏw�肵���l�Ƃ͈قȂ�ꍇ������܂��B<r/>
-		�@���o�[�W�����̋g���g���ł́A�g��E�k�����ɕ�Ԃ������邩�ǂ����̓O���t�B�b�N�J�[�h�̃n�[�h�E�F�A��h���C�o�ɉe������܂��B��Ԃ�������Ȃ��n�[�h�E�F�A��h���C�o�̏ꍇ�́A�掿���r���Ȃ�܂��B<r/>
-		�@�I�v�V�����ɂ���ẮA�g���g���͊g��E�k���Ɏg�p�\�ȃn�[�h�E�F�A���A�{�����ύX����邽�тɒ������邽�߁A���̃��\�b�h�͊g�嗦��A���I�ɕω������ĉ��o���s���悤�ȗp�r�ɂ͓K���Ă��܂���B<r/>
+		　レイヤの拡大倍率を指定します。分子/分母で指定したサイズで画像が拡大、あるいは縮小されて表示されます。<r/>
+		　分子・分母が公約数を持つ場合は自動的に約分されるため、<ref>Window.zoomNumer</ref> プロパティや <ref>Window.zoomDenom</ref> プロパティで読み出される値は、このメソッドで指定した値とは異なる場合があります。<r/>
+		　現バージョンの吉里吉里では、拡大・縮小時に補間がかかるかどうかはグラフィックカードのハードウェアやドライバに影響されます。補間がかからないハードウェアやドライバの場合は、画質が荒くなります。<r/>
+		　オプションによっては、吉里吉里は拡大・縮小に使用可能なハードウェアを、倍率が変更されるたびに調査するため、このメソッドは拡大率を連続的に変化させて演出を行うような用途には適していません。<r/>
 	</desc>
 	<ref>Window.zoomNumer</ref>
 	<ref>Window.zoomDenom</ref>
@@ -1180,17 +1180,17 @@
 <member>
 	<name>postInputEvent</name>
 	<type>method</type>
-	<shortdesc>���̓C�x���g�̐���</shortdesc>
+	<shortdesc>入力イベントの生成</shortdesc>
 	<arg>
 		<argitem>
 			<name>eventname</name>
 			<default></default>
 			<desc>
-				�@�C�x���g���̂��w�肵�܂��B�ȉ��̕�����Ŏw�肵�܂��B<r/>
+				　イベント名称を指定します。以下の文字列で指定します。<r/>
 				<ul>
-				<li>"<kw>onKeyDown</kw>" �� <ref>Window.onKeyDown</ref> �C�x���g�𐶐����܂��B</li>
-				<li>"<kw>onKeyPress</kw>" �� <ref>Window.onKeyPress</ref> �C�x���g�𐶐����܂��B</li>
-				<li>"<kw>onKeyUp</kw>" �� <ref>Window.onKeyUp</ref> �C�x���g�𐶐����܂��BonKeyDown��onKeyUp�͑΂ɂȂ�̂ŁAonKeyDown�𐶐�������Ή�����onKeyUp���������邱�Ƃ𐄏����܂��B</li>
+				<li>"<kw>onKeyDown</kw>" は <ref>Window.onKeyDown</ref> イベントを生成します。</li>
+				<li>"<kw>onKeyPress</kw>" は <ref>Window.onKeyPress</ref> イベントを生成します。</li>
+				<li>"<kw>onKeyUp</kw>" は <ref>Window.onKeyUp</ref> イベントを生成します。onKeyDownとonKeyUpは対になるので、onKeyDownを生成したら対応するonKeyUpも生成することを推奨します。</li>
 				</ul>
 			</desc>
 		</argitem>
@@ -1198,23 +1198,23 @@
 			<name>params</name>
 			<default>null</default>
 			<desc>
-				�@�C�x���g�̃p�����[�^���i�[���ꂽ�����z����w�肵�܂��B<r/>
+				　イベントのパラメータが格納された辞書配列を指定します。<r/>
 				<ul>
-				<li>"onKeyDown" �C�x���g�� "onKeyUp" �C�x���g�ł́A"key" �ɉ��z�L�[�R�[�h�A"shift" �ɃV�t�g��Ԃ��i�[���܂��B"shift" ���ȗ������ 0 �ł���ƌ��Ȃ���܂��B</li>
-				<li>"onKeyPress" �C�x���g�ł� "key" �ɕ������w�肵�܂��B</li>
+				<li>"onKeyDown" イベントや "onKeyUp" イベントでは、"key" に仮想キーコード、"shift" にシフト状態を格納します。"shift" を省略すると 0 であると見なされます。</li>
+				<li>"onKeyPress" イベントでは "key" に文字を指定します。</li>
 				</ul>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@���̓C�x���g�𐶐����܂��B���o�[�W�����ł̓L�[���͂Ɋւ���R�̃C�x���g�𐶐��ł��܂��B<r/>
-		�@���̃��\�b�h�́A�C�x���g��񓯊��C�x���g�Ƃ��Đ������܂��B�܂�A���̃��\�b�h�́A�Ή�����C�x���g�n���h���̏I����҂����ɋA��܂��B���ۂɃC�x���g�n���h�����Ă΂�ď������s����̂́A��������g���g���ɐ��䂪�߂�����ƂȂ�܂��B<r/>
-		�@���̓C�x���g�́AWindow�N���X�̂ق��A�ʏ�̓��̓C�x���g�Ɠ������ALayer�N���X�̊Y������C�x���g�Ƃ��Ă��������܂��B<r/>
+		　入力イベントを生成します。現バージョンではキー入力に関する３つのイベントを生成できます。<r/>
+		　このメソッドは、イベントを非同期イベントとして生成します。つまり、このメソッドは、対応するイベントハンドラの終了を待たずに帰ります。実際にイベントハンドラが呼ばれて処理が行われるのは、いったん吉里吉里に制御が戻った後となります。<r/>
+		　入力イベントは、Windowクラスのほか、通常の入力イベントと同じく、Layerクラスの該当するイベントとしても発生します。<r/>
 		<example>
 postInputEvent('onKeyDown', %[key: VK_UP, shift: ssShift]);<r/>
 postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
-	// ���J�[�\���L�[������<r/></example>
+	// 左カーソルキーを押す<r/></example>
 	</desc>
 
 </member>
@@ -1223,14 +1223,14 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 <member>
 	<name>hideMouseCursor</name>
 	<type>method</type>
-	<shortdesc>�}�E�X�J�[�\�����ꎞ�I�ɉB��</shortdesc>
+	<shortdesc>マウスカーソルを一時的に隠す</shortdesc>
 	<arg>
 	</arg>
 	<result></result>
 	<desc>
-		�@�}�E�X�J�[�\�����ꎞ�I�ɉB���܂��B�}�E�X�������ł���������
-		�}�E�X�J�[�\���͍Ăѕ\�������悤�ɂȂ�܂��B<r/>
-		�@���̃��\�b�h�́A<ref>Window.mouseCursorState</ref>��<tt><kw>mcsTempHidden</kw></tt>�ɐݒ肷��̂Ɠ������ʂ������܂��B<r/>
+		　マウスカーソルを一時的に隠します。マウスを少しでも動かすと
+		マウスカーソルは再び表示されるようになります。<r/>
+		　このメソッドは、<ref>Window.mouseCursorState</ref>を<tt><kw>mcsTempHidden</kw></tt>に設定するのと同じ効果を持ちます。<r/>
 	</desc>
 </member>
 
@@ -1238,50 +1238,50 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 <member>
 	<name>registerMessageReceiver</name>
 	<type>method</type>
-	<shortdesc>���b�Z�[�W��M�֐��̓o�^/�o�^�폜</shortdesc>
+	<shortdesc>メッセージ受信関数の登録/登録削除</shortdesc>
 	<arg>
 		<argitem>
 			<name>mode</name>
 			<default></default>
 			<desc>
-				�@�o�^���邩�A�o�^�폜���邩�ǂ������w�肵�܂��B<r/>
-				�@<kw>wrmRegister</kw> ���w�肷��Ɠo�^�ɂȂ�܂��B<kw>wrmUnregister</kw> ��
-				�w�肷��Ɠo�^�폜�ɂȂ�܂��B<r/>
-				�@wrm �Ŏn�܂�萔�� tp_stub.h �ɒ�`����Ă��܂��B<r/>
+				　登録するか、登録削除するかどうかを指定します。<r/>
+				　<kw>wrmRegister</kw> を指定すると登録になります。<kw>wrmUnregister</kw> を
+				指定すると登録削除になります。<r/>
+				　wrm で始まる定数は tp_stub.h に定義されています。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>func</name>
 			<default></default>
 			<desc>
-				�@���b�Z�[�W��M�֐����w�肵�܂��B<r/>
-				�@���b�Z�[�W��M�֐��� bool __stdcall func(void *userdata, tTVPWindowMessage *Message)
-				�̌`���ł���K�v������A���̃��\�b�h�ɓn���ۂɂ��̊֐��|�C���^�𐮐��^�ɃL���X�g���ēn��
-				�K�v������܂��B<r/>
-				�@�\���� tTVPWindowMessage �� tp_stub.h �ɒ�`����Ă��܂��B<r/>
-				�@���̊֐��� true ��Ԃ��Ƌg���g���{�̑��͂��̃E�B���h�E���b�Z�[�W�Ɋ֒m���Ȃ��Ȃ�܂��B<r/>
+				　メッセージ受信関数を指定します。<r/>
+				　メッセージ受信関数は bool __stdcall func(void *userdata, tTVPWindowMessage *Message)
+				の形式である必要があり、このメソッドに渡す際にその関数ポインタを整数型にキャストして渡す
+				必要があります。<r/>
+				　構造体 tTVPWindowMessage は tp_stub.h に定義されています。<r/>
+				　この関数が true を返すと吉里吉里本体側はそのウィンドウメッセージに関知しなくなります。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>userdata</name>
 			<default></default>
 			<desc>
-				�@func �����Ŏw�肳�ꂽ��M�֐��� userdata �����ɓn�����߂̃f�[�^�|�C���^���w�肵�܂��B<r/>
-				�@���̃��\�b�h�ɓn���ۂɂ͂��̃|�C���^�𐮐��^�ɃL���X�g���ēn���K�v������܂��B<r/>
-				�@���̈����� mode ������ wrmRegister �łȂ��Ƃ��͖�������܂��B<r/>
+				　func 引数で指定された受信関数の userdata 引数に渡すためのデータポインタを指定します。<r/>
+				　このメソッドに渡す際にはそのポインタを整数型にキャストして渡す必要があります。<r/>
+				　この引数は mode 引数が wrmRegister でないときは無視されます。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@���̃��\�b�h�� C++ ���ŋL�q���ꂽ�v���O�C�����痘�p����邱�Ƃ�z�肵�Ă��郁�\�b�h�ł��BTJS2
-		����͐���ɗ��p�ł��܂���B<r/>
-		�@���̃��\�b�h�ł́A���̃E�B���h�E��ʉ߂��郁�b�Z�[�W���g���b�v���邽�߂̃��b�Z�[�W��M�֐���
-		�o�^���邱�Ƃ��ł��܂��B���b�Z�[�W��M�֐��ł͒ʏ�̃E�B���h�E���b�Z�[�W�̑��A
-		TVP_WM_DETACH �� TVP_WM_ATTACH �Ƃ����Q�̏d�v�ȃ��b�Z�[�W���g���b�v���邱�Ƃ��ł��A
-		�E�B���h�E���č\�z��j�������^�C�~���O�ɂ����āA�q�E�B���h�E�����O���Ƃ����悤��
-		�p�r�Ɏg�p�ł��܂��B<r/>
-		�@�g���g���\�[�X�z�z�p�b�P�[�W���� src/plugins/win32/wmrdump �ɊȒP�Ȏg�p�@�̐���������܂��B<r/>
+		　このメソッドは C++ 等で記述されたプラグインから利用されることを想定しているメソッドです。TJS2
+		からは正常に利用できません。<r/>
+		　このメソッドでは、このウィンドウを通過するメッセージをトラップするためのメッセージ受信関数を
+		登録することができます。メッセージ受信関数では通常のウィンドウメッセージの他、
+		TVP_WM_DETACH と TVP_WM_ATTACH という２つの重要なメッセージもトラップすることができ、
+		ウィンドウが再構築や破棄されるタイミングにおいて、子ウィンドウを取り外すというような
+		用途に使用できます。<r/>
+		　吉里吉里ソース配布パッケージ中の src/plugins/win32/wmrdump に簡単な使用法の説明があります。<r/>
 	</desc>
 	<ref>Window.HWND</ref>
 </member>
@@ -1289,26 +1289,26 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 <member>
 	<name>getTouchPoint</name>
 	<type>method</type>
-	<shortdesc>�^�b�`���W�̎擾</shortdesc>
+	<shortdesc>タッチ座標の取得</shortdesc>
 	<arg>
 		<argitem>
 			<name>index</name>
 			<default></default>
 			<desc>
-				�@�^�b�`���W�z��̃C���f�b�N�X���w�肵�܂��B<r/>
+				　タッチ座標配列のインデックスを指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@���݂̃^�b�`���W�z�񂩂�w��C���f�b�N�X�̍��W�����擾���܂��B<r/>
-		�@���W���� <ref>Window.touchPointCount</ref> �v���p�e�B�Ŏ擾�ł��܂��B<r/>
-		�@���W���͈ȉ��̗v�f���܂ގ����ŕԂ���܂��B<r/>
-		<tt><kw>startX</kw>     : </tt>���̃^�b�`�̊J�n���W�� x ���W�l ( �N���C�A���g���W�n ) �ł�<r/>
-		<tt><kw>startY</kw>   : </tt>���̃^�b�`�̊J�n���W�� y ���W�l ( �N���C�A���g���W�n ) �ł�<r/>
-		<tt><kw>x</kw>    : </tt>���̃^�b�`�̌��ݍ��W�� x ���W�l ( �N���C�A���g���W�n ) �ł�<r/>
-		<tt><kw>y</kw>    : </tt>���̃^�b�`�̌��ݍ��W�� y ���W�l ( �N���C�A���g���W�n ) �ł�<r/>
-		<tt><kw>ID</kw>    : </tt>���̃^�b�`�̎��ʗp ID�ł�<r/>
+		　現在のタッチ座標配列から指定インデックスの座標情報を取得します。<r/>
+		　座標数は <ref>Window.touchPointCount</ref> プロパティで取得できます。<r/>
+		　座標情報は以下の要素を含む辞書で返されます。<r/>
+		<tt><kw>startX</kw>     : </tt>このタッチの開始座標の x 座標値 ( クライアント座標系 ) です<r/>
+		<tt><kw>startY</kw>   : </tt>このタッチの開始座標の y 座標値 ( クライアント座標系 ) です<r/>
+		<tt><kw>x</kw>    : </tt>このタッチの現在座標の x 座標値 ( クライアント座標系 ) です<r/>
+		<tt><kw>y</kw>    : </tt>このタッチの現在座標の y 座標値 ( クライアント座標系 ) です<r/>
+		<tt><kw>ID</kw>    : </tt>このタッチの識別用 IDです<r/>
 	</desc>
 	<ref>Window.touchPointCount</ref>
 </member>
@@ -1319,32 +1319,32 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 <member>
 	<name>visible</name>
 	<type>property</type>
-	<shortdesc>�E�B���h�E���\������Ă��邩�ǂ���</shortdesc>
+	<shortdesc>ウィンドウが表示されているかどうか</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�E�B���h�E���\������Ă��邩�ǂ�����\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
-		�@�^�Ȃ�΃E�B���h�E���\������Ă��āA�U�Ȃ�΃E�B���h�E�͔�\���̏�Ԃł��B<r/>
+		　ウィンドウが表示されているかどうかを表します。値を設定することもできます。<r/>
+		　真ならばウィンドウが表示されていて、偽ならばウィンドウは非表示の状態です。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>caption</name>
 	<type>property</type>
-	<shortdesc>�E�B���h�E�̃L���v�V����</shortdesc>
+	<shortdesc>ウィンドウのキャプション</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�E�B���h�E��<kw>�L���v�V����</kw> ( �^�C�g���o�[�̃^�C�g�� ) ��\���܂��B
-		�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
+		　ウィンドウの<kw>キャプション</kw> ( タイトルバーのタイトル ) を表します。
+		値を設定することもできます。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>width</name>
 	<type>property</type>
-	<shortdesc>�E�B���h�E�̉���</shortdesc>
+	<shortdesc>ウィンドウの横幅</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�E�B���h�E�̉�����\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
+		　ウィンドウの横幅を表します。値を設定することもできます。<r/>
 	</desc>
 	<ref>Window.height</ref>
 	<ref>Window.setSize</ref>
@@ -1353,10 +1353,10 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 <member>
 	<name>height</name>
 	<type>property</type>
-	<shortdesc>�E�B���h�E�̏c��</shortdesc>
+	<shortdesc>ウィンドウの縦幅</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�E�B���h�E�̏c����\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
+		　ウィンドウの縦幅を表します。値を設定することもできます。<r/>
 	</desc>
 	<ref>Window.width</ref>
 	<ref>Window.setSize</ref>
@@ -1365,10 +1365,10 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 <member>
 	<name>minWidth</name>
 	<type>property</type>
-	<shortdesc>�E�B���h�E�̍ŏ��̉���</shortdesc>
+	<shortdesc>ウィンドウの最小の横幅</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�E�B���h�E�̍ŏ��̉�����\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B0���w�肷��Ɛ����͖����Ȃ�܂��B<r/>
+		　ウィンドウの最小の横幅を表します。値を設定することもできます。0を指定すると制限は無くなります。<r/>
 	</desc>
 	<ref>Window.width</ref>
 	<ref>Window.minHeight</ref>
@@ -1382,10 +1382,10 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 <member>
 	<name>minHeight</name>
 	<type>property</type>
-	<shortdesc>�E�B���h�E�̍ŏ��̏c��</shortdesc>
+	<shortdesc>ウィンドウの最小の縦幅</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�E�B���h�E�̍ŏ��̏c����\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B0���w�肷��Ɛ����͖����Ȃ�܂��B<r/>
+		　ウィンドウの最小の縦幅を表します。値を設定することもできます。0を指定すると制限は無くなります。<r/>
 	</desc>
 	<ref>Window.height</ref>
 	<ref>Window.minWidth</ref>
@@ -1399,10 +1399,10 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 <member>
 	<name>maxWidth</name>
 	<type>property</type>
-	<shortdesc>�E�B���h�E�̍ő�̉���</shortdesc>
+	<shortdesc>ウィンドウの最大の横幅</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�E�B���h�E�̍ő�̉�����\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B0���w�肷��Ɛ����͖����Ȃ�܂��B<r/>
+		　ウィンドウの最大の横幅を表します。値を設定することもできます。0を指定すると制限は無くなります。<r/>
 	</desc>
 	<ref>Window.width</ref>
 	<ref>Window.maxHeight</ref>
@@ -1416,10 +1416,10 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 <member>
 	<name>maxHeight</name>
 	<type>property</type>
-	<shortdesc>�E�B���h�E�̍ő�̏c��</shortdesc>
+	<shortdesc>ウィンドウの最大の縦幅</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�E�B���h�E�̍ő�̏c����\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B0���w�肷��Ɛ����͖����Ȃ�܂��B<r/>
+		　ウィンドウの最大の縦幅を表します。値を設定することもできます。0を指定すると制限は無くなります。<r/>
 	</desc>
 	<ref>Window.height</ref>
 	<ref>Window.maxWidth</ref>
@@ -1433,11 +1433,11 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 <member>
 	<name>left</name>
 	<type>property</type>
-	<shortdesc>�E�B���h�E�̍��[�ʒu</shortdesc>
+	<shortdesc>ウィンドウの左端位置</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�E�B���h�E�̍��[�ʒu��\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
-		�@���[�ʒu�̓X�N���[���̌��_ ( ����� ) ����� x ���W�ł��B<r/>
+		　ウィンドウの左端位置を表します。値を設定することもできます。<r/>
+		　左端位置はスクリーンの原点 ( 左上隅 ) からの x 座標です。<r/>
 	</desc>
 	<ref>Window.top</ref>
 	<ref>Window.setPos</ref>
@@ -1446,11 +1446,11 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 <member>
 	<name>top</name>
 	<type>property</type>
-	<shortdesc>�E�B���h�E�̏�[�ʒu</shortdesc>
+	<shortdesc>ウィンドウの上端位置</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�E�B���h�E�̏�[�ʒu��\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
-		�@��[�ʒu�̓X�N���[���̌��_ ( ����� ) ����� y ���W�ł��B<r/>
+		　ウィンドウの上端位置を表します。値を設定することもできます。<r/>
+		　上端位置はスクリーンの原点 ( 左上隅 ) からの y 座標です。<r/>
 	</desc>
 	<ref>Window.left</ref>
 	<ref>Window.setPos</ref>
@@ -1459,14 +1459,14 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 <member>
 	<name>focusable</name>
 	<type>property</type>
-	<shortdesc>�t�H�[�J�X���擾�\��</shortdesc>
+	<shortdesc>フォーカスを取得可能か</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�t�H�[�J�X���擾�\���ǂ�����\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
-		�@�U�ɐݒ肷��ƁA�t�H�[�J�X���擾�ł��Ȃ��Ȃ�A�܂�A�E�B���h�E���A�N�e�B�u�ɂȂ�Ȃ��Ȃ�܂��B����p�Ƃ��āA�^�C�g���o�[������ł̃E�B���h�E�̈ړ���E�B���h�E�̃��T�C�Y�A�u�~�v�{�^���������ăE�B���h�E����鑀����ł��Ȃ��Ȃ�܂��B<r/>
-		�@�L�[�{�[�h���͂𓾂����Ƃ��� <ref>Window.trapKey</ref> �v���p�e�B���g�p���邱�Ƃ��ł��܂��B<r/>
-		�@�ʏ�A����́A�|�b�v�A�b�v���j���[�̂悤�ɁA�����Ƃ���O�ɕ\������邪�A���ꎩ�g�̓t�H�[�J�X�𓾂Ȃ��E�B���h�E�̎����ɗp���܂��B<r/>
-		�@���o�[�W�����ł́A�E�B���h�E���t���X�N���[��������Ƃ��A���邢�̓t���X�N���[�����畜�A����Ƃ��ɁA���̃v���p�e�B�̐ݒ���e��������\��������܂��B<r/>
+		　フォーカスを取得可能かどうかを表します。値を設定することもできます。<r/>
+		　偽に設定すると、フォーカスを取得できなくなる、つまり、ウィンドウがアクティブにならなくなります。副作用として、タイトルバーをつかんでのウィンドウの移動やウィンドウのリサイズ、「×」ボタンを押してウィンドウを閉じる操作もできなくなります。<r/>
+		　キーボード入力を得たいときは <ref>Window.trapKey</ref> プロパティを使用することができます。<r/>
+		　通常、これは、ポップアップメニューのように、もっとも手前に表示されるが、それ自身はフォーカスを得ないウィンドウの実装に用います。<r/>
+		　現バージョンでは、ウィンドウがフルスクリーン化するとき、あるいはフルスクリーンから復帰するときに、このプロパティの設定内容が失われる可能性があります。<r/>
 	</desc>
 	<ref>Window.trapKey</ref>
 	<ref>Window.onPopupHide</ref>
@@ -1475,12 +1475,12 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 <member>
 	<name>trapKey</name>
 	<type>property</type>
-	<shortdesc>�L�[���͂��g���b�v���邩</shortdesc>
+	<shortdesc>キー入力をトラップするか</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�L�[���͂��g���b�v���邩�ǂ�����\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
-		�@�^�ɐݒ肷��ƁA���̃E�B���h�E�Ŕ��������L�[���̓C�x���g������肵�A���̃E�B���h�E��Ŕ��������邱�Ƃ��ł��܂��B<r/>
-		�@�����̃E�B���h�E�̂��̃v���p�e�B���^�ɐݒ肳��Ă���ꍇ�́A�����Ƃ��Ō�ɍ쐬�����E�B���h�E�ɑ΂��ăL�[���̓C�x���g���������܂��B<r/>
+		　キー入力をトラップするかどうかを表します。値を設定することもできます。<r/>
+		　真に設定すると、他のウィンドウで発生したキー入力イベントを横取りし、このウィンドウ上で発生させることができます。<r/>
+		　複数のウィンドウのこのプロパティが真に設定されている場合は、もっとも最後に作成したウィンドウに対してキー入力イベントが発生します。<r/>
 	</desc>
 	<ref>Window.focusable</ref>
 </member>
@@ -1488,11 +1488,11 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 <member>
 	<name>innerWidth</name>
 	<type>property</type>
-	<shortdesc>�N���C�A���g�̈�̉���</shortdesc>
+	<shortdesc>クライアント領域の横幅</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�N���C�A���g�̈�̉�����\���܂��B
-		�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
+		　クライアント領域の横幅を表します。
+		値を設定することもできます。<r/>
 	</desc>
 	<ref>Window.innerHeight</ref>
 	<ref>Window.setInnerSize</ref>
@@ -1501,11 +1501,11 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 <member>
 	<name>innerHeight</name>
 	<type>property</type>
-	<shortdesc>�N���C�A���g�̈�̏c��</shortdesc>
+	<shortdesc>クライアント領域の縦幅</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�N���C�A���g�̈�̏c����\���܂��B
-		�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
+		　クライアント領域の縦幅を表します。
+		値を設定することもできます。<r/>
 	</desc>
 	<ref>Window.innerWidth</ref>
 	<ref>Window.setInnerSize</ref>
@@ -1514,13 +1514,13 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 <member>
 	<name>zoomNumer</name>
 	<type>property</type>
-	<shortdesc>���C���g��{��(���q)</shortdesc>
+	<shortdesc>レイヤ拡大倍率(分子)</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@���C���̊g��{���̕��q��\���܂��B
-		�ꉞ�A�l��ݒ肷�邱�Ƃ��ł��܂����A�l��ݒ肷��ꍇ�� <ref>Window.setZoom</ref> ���\�b�h���g�p���Ă��������B<r/>
-		�@����� <ref>Window.zoomDenom</ref> �v���p�e�B���\���܂��B<r/>
-		�@�ڂ����� <ref>Window.setZoom</ref> ���\�b�h���Q�Ƃ��Ă��������B<r/>
+		　レイヤの拡大倍率の分子を表します。
+		一応、値を設定することもできますが、値を設定する場合は <ref>Window.setZoom</ref> メソッドを使用してください。<r/>
+		　分母は <ref>Window.zoomDenom</ref> プロパティが表します。<r/>
+		　詳しくは <ref>Window.setZoom</ref> メソッドを参照してください。<r/>
 	</desc>
 	<ref>Window.setZoom</ref>
 	<ref>Window.zoomDenom</ref>
@@ -1529,13 +1529,13 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 <member>
 	<name>zoomDenom</name>
 	<type>property</type>
-	<shortdesc>���C���g��{��(����)</shortdesc>
+	<shortdesc>レイヤ拡大倍率(分母)</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@���C���̊g��{���̕����\���܂��B
-		�ꉞ�A�l��ݒ肷�邱�Ƃ��ł��܂����A�l��ݒ肷��ꍇ�� <ref>Window.setZoom</ref> ���\�b�h���g�p���Ă��������B<r/>
-		�@���q�� <ref>Window.zoomNumer</ref> �v���p�e�B���\���܂��B<r/>
-		�@�ڂ����� <ref>Window.setZoom</ref> ���\�b�h���Q�Ƃ��Ă��������B<r/>
+		　レイヤの拡大倍率の分母を表します。
+		一応、値を設定することもできますが、値を設定する場合は <ref>Window.setZoom</ref> メソッドを使用してください。<r/>
+		　分子は <ref>Window.zoomNumer</ref> プロパティが表します。<r/>
+		　詳しくは <ref>Window.setZoom</ref> メソッドを参照してください。<r/>
 	</desc>
 	<ref>Window.setZoom</ref>
 	<ref>Window.zoomNumer</ref>
@@ -1544,71 +1544,71 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 <member>
 	<name>drawDevice</name>
 	<type>property</type>
-	<shortdesc>�`��f�o�C�X</shortdesc>
+	<shortdesc>描画デバイス</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�`��f�o�C�X�I�u�W�F�N�g��\���܂��B<r/>
-		�@�l��ݒ肷�邱�Ƃ��ł��܂��B�l��ݒ肷��ƁA�ȑO���̃E�B���h�E�Ɏw�肳��Ă����`��f�o�C�X�͎����I��
-		�����ɂȂ�܂� (invalidate����܂�)�B<r/>
-		�@�f�t�H���g�ł́AWindow.BasicDrawDevice �Ƃ����N���X�̃C���X�^���X���w�肳��Ă��܂��B<r/>
-		�@Window.BasicDrawDevice �̏ڍׂɂ��ẮA�g���g���\�[�X�� core/visual/win32/BasicDrawDevice.cpp ���̐������Q�Ƃ��Ă��������B<r/>
-		�@�Ǝ��̕`��f�o�C�X (�v���O�C���Œ񋟂���镨) ���w�肷��ꍇ�́A���̃v���O�C���̃h�L�������g��
-		�]���Ă��������B<r/>
+		　描画デバイスオブジェクトを表します。<r/>
+		　値を設定することもできます。値を設定すると、以前このウィンドウに指定されていた描画デバイスは自動的に
+		無効になります (invalidateされます)。<r/>
+		　デフォルトでは、Window.BasicDrawDevice というクラスのインスタンスが指定されています。<r/>
+		　Window.BasicDrawDevice の詳細については、吉里吉里ソースの core/visual/win32/BasicDrawDevice.cpp 内の説明も参照してください。<r/>
+		　独自の描画デバイス (プラグインで提供される物) を指定する場合は、そのプラグインのドキュメントに
+		従ってください。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>borderStyle</name>
 	<type>property</type>
-	<shortdesc>�E�B���h�E�O��</shortdesc>
+	<shortdesc>ウィンドウ外見</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�E�B���h�E�̊O����\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
-		�@�ȉ��̒l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
-<tt><kw>bsDialog</kw>      :</tt> �T�C�Y�ύX�s�́A�_�C�A���O�{�b�N�X�Ɠ��l�̊O���������܂��B<r/>
-<tt><kw>bsSingle</kw>      :</tt> �T�C�Y�ύX�s�̃E�B���h�E�ł��B<r/>
-<tt><kw>bsNone</kw>        :</tt> �{�[�_�[�̂Ȃ��E�B���h�E�ł��B<r/>
-<tt><kw>bsSizeable</kw>    :</tt> �T�C�Y�ύX�̈�ʓI�ȃE�B���h�E�ł��B�f�t�H���g�ł��B<r/>
-<tt><kw>bsToolWindow</kw>  :</tt> �T�C�Y�ύX�s�̃c�[���E�B���h�E(�L���v�V�����̏������E�B���h�E) �ł��B<r/>
-<tt><kw>bsSizeToolWin</kw> :</tt> bsToolWindow �Ǝ��Ă��܂����A�T�C�Y�ύX���\�ł��B<r/>
+		　ウィンドウの外見を表します。値を設定することもできます。<r/>
+		　以下の値を設定することができます。<r/>
+<tt><kw>bsDialog</kw>      :</tt> サイズ変更不可の、ダイアログボックスと同様の外見を持ちます。<r/>
+<tt><kw>bsSingle</kw>      :</tt> サイズ変更不可のウィンドウです。<r/>
+<tt><kw>bsNone</kw>        :</tt> ボーダーのないウィンドウです。<r/>
+<tt><kw>bsSizeable</kw>    :</tt> サイズ変更可の一般的なウィンドウです。デフォルトです。<r/>
+<tt><kw>bsToolWindow</kw>  :</tt> サイズ変更不可のツールウィンドウ(キャプションの小さいウィンドウ) です。<r/>
+<tt><kw>bsSizeToolWin</kw> :</tt> bsToolWindow と似ていますが、サイズ変更が可能です。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>stayOnTop</name>
 	<type>property</type>
-	<shortdesc>��ɍŏ�ʂɕ\�����邩�ǂ���</shortdesc>
+	<shortdesc>常に最上位に表示するかどうか</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�E�B���h�E����ɍŏ�� ( ��Ԏ�O ) �ɕ\�����邩�ǂ�����\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
-		�@�^�Ȃ�΃E�B���h�E�͏�ɍŏ�ʂɕ\������܂��B<r/>
-		�@���o�[�W�����ł́A�E�B���h�E���t���X�N���[��������Ƃ��A���邢�̓t���X�N���[�����畜�A����Ƃ��ɁA���̃v���p�e�B�̐ݒ���e��������\��������܂��B<r/>
+		　ウィンドウを常に最上位 ( 一番手前 ) に表示するかどうかを表します。値を設定することもできます。<r/>
+		　真ならばウィンドウは常に最上位に表示されます。<r/>
+		　現バージョンでは、ウィンドウがフルスクリーン化するとき、あるいはフルスクリーンから復帰するときに、このプロパティの設定内容が失われる可能性があります。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>imeMode</name>
 	<type>property</type>
-	<shortdesc>�f�t�H���g��IME���[�h</shortdesc>
+	<shortdesc>デフォルトのIMEモード</shortdesc>
 	<access>r</access>
 	<desc>
-		�@�f�t�H���g��IME���[�h��\���܂��B<r/>
-		�@�����Ŏw�肵�����[�h�́A�ǂ̃��C���ɂ��t�H�[�J�X��������Ԃɐݒ肳��郂�[�h�ł��B<r/>
-		�@���w��̏ꍇ�� <kw>imDisable</kw>�ŁA����͂ǂ̃��C���ɂ��t�H�[�J�X��������Ԃł� IME �͖�����Ԃł���Ƃ������ƂɂȂ�܂��B<r/>
-		�@�w��\�Ȓl�ɂ��Ă� <ref>Layer.imeMode</ref> ���Q�Ƃ��Ă��������B<r/>
+		　デフォルトのIMEモードを表します。<r/>
+		　ここで指定したモードは、どのレイヤにもフォーカスが無い状態に設定されるモードです。<r/>
+		　未指定の場合は <kw>imDisable</kw>で、これはどのレイヤにもフォーカスが無い状態では IME は無効状態であるということになります。<r/>
+		　指定可能な値については <ref>Layer.imeMode</ref> を参照してください。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>mouseCursorState</name>
 	<type>property</type>
-	<shortdesc>�}�E�X�J�[�\���\�����</shortdesc>
+	<shortdesc>マウスカーソル表示状態</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�}�E�X�J�[�\���̕\����Ԃ�\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
-		�@<tt><kw>mcsVisible</kw></tt>���w�肷��ƁA�}�E�X�J�[�\���͕\����ԂɂȂ�܂��B����̓f�t�H���g�̏�Ԃł��B<r/>
-		�@<tt><kw>mcsTempHidden</kw></tt>���w�肷��ƁA�}�E�X�J�[�\���͔�\����ԂɂȂ�܂����A�����ł��}�E�X�𓮂�����<tt>mcsVisible</tt>�ɕς��A�\����ԂɂȂ�܂��B<ref>Window.hideMouseCursor</ref>���\�b�h���Ăяo���Ƃ��̏�ԂɂȂ�܂��B<r/>
-		�@<tt><kw>mcsHidden</kw></tt>���w�肷��ƁA�}�E�X�J�[�\���͔�\����ԂɂȂ�܂��B�}�E�X�𓮂����Ă��\����Ԃɂ͂Ȃ�܂���B<r/>
+		　マウスカーソルの表示状態を表します。値を設定することもできます。<r/>
+		　<tt><kw>mcsVisible</kw></tt>を指定すると、マウスカーソルは表示状態になります。これはデフォルトの状態です。<r/>
+		　<tt><kw>mcsTempHidden</kw></tt>を指定すると、マウスカーソルは非表示状態になりますが、少しでもマウスを動かすと<tt>mcsVisible</tt>に変わり、表示状態になります。<ref>Window.hideMouseCursor</ref>メソッドを呼び出すとこの状態になります。<r/>
+		　<tt><kw>mcsHidden</kw></tt>を指定すると、マウスカーソルは非表示状態になります。マウスを動かしても表示状態にはなりません。<r/>
 	</desc>
 </member>
 
@@ -1616,71 +1616,71 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 <member>
 	<name>useMouseKey</name>
 	<type>property</type>
-	<shortdesc>�}�E�X�L�[���g�p���邩�ǂ���</shortdesc>
+	<shortdesc>マウスキーを使用するかどうか</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�}�E�X�L�[���g�p���邩�ǂ�����\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
-		�@�^�Ȃ�΃}�E�X�L�[���g�p���邱�Ƃ��ł��܂��B<r/>
-		�@�}�E�X�L�[���L���ɂȂ�ƁA�J�[�\���L�[���g���ă}�E�X�J�[�\�����ړ������邱�Ƃ�
-		�ł��܂����A�L�[���͌n�̃C�x���g�͂��������������Ȃ��Ȃ�܂��B<r/>
+		　マウスキーを使用するかどうかを表します。値を設定することもできます。<r/>
+		　真ならばマウスキーを使用することができます。<r/>
+		　マウスキーが有効になると、カーソルキーを使ってマウスカーソルを移動させることが
+		できますが、キー入力系のイベントはいっさい発生しなくなります。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>fullScreen</name>
 	<type>property</type>
-	<shortdesc>�t���X�N���[�����ǂ���</shortdesc>
+	<shortdesc>フルスクリーンかどうか</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@<kw>�t���X�N���[��</kw>���ǂ�����\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
-		�@�^���w�肷��ƌ��݂̃E�B���h�E�̃N���C�A���g�̈悪�t���X�N���[���ɂȂ�܂��B�t���X�N���[��
-		���̉�ʉ𑜓x�̓N���C�A���g�̈�̃T�C�Y�ɂȂ�܂��B<r/>
-		�@�U���w�肷��ƃE�B���h�E�\���ɂȂ�܂��B<r/>
+		　<kw>フルスクリーン</kw>かどうかを表します。値を設定することもできます。<r/>
+		　真を指定すると現在のウィンドウのクライアント領域がフルスクリーンになります。フルスクリーン
+		時の画面解像度はクライアント領域のサイズになります。<r/>
+		　偽を指定するとウィンドウ表示になります。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>mainWindow</name>
 	<type>property</type>
-	<shortdesc>���C���E�B���h�E</shortdesc>
+	<shortdesc>メインウィンドウ</shortdesc>
 	<access>r</access>
 	<desc>
-		�@���C���E�B���h�E ( �ŏ��ɍ쐬���ꂽ�E�B���h�E ) ��\���܂��B<r/>
+		　メインウィンドウ ( 最初に作成されたウィンドウ ) を表します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>focusedLayer</name>
 	<type>property</type>
-	<shortdesc>�t�H�[�J�X�������Ă��郌�C���I�u�W�F�N�g</shortdesc>
+	<shortdesc>フォーカスを持っているレイヤオブジェクト</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@���� <kw>�t�H�[�J�X</kw> �������Ă��郌�C���I�u�W�F�N�g��\���܂��B
-		�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
-		�@null �̏ꍇ�͂ǂ̃��C�����t�H�[�J�X�������Ă��܂���B���C���I�u�W�F�N�g��
-		�ݒ肷��Ƃ��̃��C���Ƀt�H�[�J�X���ڂ�܂��B<r/>
+		　現在 <kw>フォーカス</kw> を持っているレイヤオブジェクトを表します。
+		値を設定することもできます。<r/>
+		　null の場合はどのレイヤもフォーカスを持っていません。レイヤオブジェクトを
+		設定するとそのレイヤにフォーカスが移ります。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>primaryLayer</name>
 	<type>property</type>
-	<shortdesc>�v���C�}�����C���I�u�W�F�N�g</shortdesc>
+	<shortdesc>プライマリレイヤオブジェクト</shortdesc>
 	<access>r</access>
 	<desc>
-		�@<kw>�v���C�}�����C��</kw>�I�u�W�F�N�g��\���܂��B<r/>
+		　<kw>プライマリレイヤ</kw>オブジェクトを表します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>HWND</name>
 	<type>property</type>
-	<shortdesc>�E�B���h�E�n���h��</shortdesc>
+	<shortdesc>ウィンドウハンドル</shortdesc>
 	<access>r</access>
 	<desc>
-		�@�E�B���h�E�n���h����\���܂��B<r/>
-		�@�����œ�����̂͐����ł����A�v���O�C���Ȃǂł��̐��l���g���ꍇ�� HWND �^��
-		�L���X�g���Ďg���Ă��������B<r/>
+		　ウィンドウハンドルを表します。<r/>
+		　ここで得られるのは整数ですが、プラグインなどでこの数値を使う場合は HWND 型に
+		キャストして使ってください。<r/>
 	</desc>
 	<ref>Window.registerMessageReceiver</ref>
 </member>
@@ -1688,12 +1688,12 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 <member>
 	<name>touchScaleThreshold</name>
 	<type>property</type>
-	<shortdesc>�}���`�^�b�`�g��臒l</shortdesc>
+	<shortdesc>マルチタッチ拡大閾値</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�}���`�^�b�`�Ŋg����J�n����臒l�ł��B<r/>
-		�@2�̃^�b�`�ʒu�̋��������̒l�ȏ�ω��������Ɋg��C�x���g���������܂��B<r/>
-		�@��x臒l�𒴂���Ƃ�������w���������܂Ŋg��C�x���g�͗L���ɂȂ�܂��B<r/>
+		　マルチタッチで拡大を開始する閾値です。<r/>
+		　2つのタッチ位置の距離がこの値以上変化した時に拡大イベントが発生します。<r/>
+		　一度閾値を超えるといったん指が離されるまで拡大イベントは有効になります。<r/>
 	</desc>
 	<ref>Window.onTouchScaling</ref>
 </member>
@@ -1701,12 +1701,12 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 <member>
 	<name>touchRotateThreshold</name>
 	<type>property</type>
-	<shortdesc>�}���`�^�b�`��]臒l</shortdesc>
+	<shortdesc>マルチタッチ回転閾値</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�}���`�^�b�`�ŉ�]���J�n����臒l�ł��B<r/>
-		�@�e�^�b�`�ʒu�̈ړ����������̒l�ȏ�ω��������ɉ�]�C�x���g���������܂��B<r/>
-		�@��x臒l�𒴂���Ƃ�������w���������܂ŉ�]�C�x���g�͗L���ɂȂ�܂��B<r/>
+		　マルチタッチで回転を開始する閾値です。<r/>
+		　各タッチ位置の移動距離がこの値以上変化した時に回転イベントが発生します。<r/>
+		　一度閾値を超えるといったん指が離されるまで回転イベントは有効になります。<r/>
 	</desc>
 	<ref>Window.onTouchRotate</ref>
 </member>
@@ -1714,10 +1714,10 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 <member>
 	<name>touchPointCount</name>
 	<type>property</type>
-	<shortdesc>�^�b�`��</shortdesc>
+	<shortdesc>タッチ数</shortdesc>
 	<access>r</access>
 	<desc>
-		�@�^�b�`�p�l���Ƀ^�b�`����Ă��鐔�ł��B<r/>
+		　タッチパネルにタッチされている数です。<r/>
 	</desc>
 	<ref>Window.getTouchPoint</ref>
 </member>
@@ -1725,23 +1725,23 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 <member>
 	<name>enableTouch</name>
 	<type>property</type>
-	<shortdesc>�^�b�`�C�x���g�L��/����</shortdesc>
+	<shortdesc>タッチイベント有効/無効</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@<kw>�^�b�`�C�x���g</kw>���L�����ǂ�����\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
-		�@�^���w�肷���<ref>Window.onTouchDown</ref>���̃C�x���g���L���ɂȂ�A�^�b�`����ł�<ref>Window.onMouseDown</ref>�Ȃǂ��������Ȃ��Ȃ�܂��B<r/>
-		�@�^�b�`�f�o�C�X������}���`�^�b�`���L���Ȋ��ł́A�f�t�H���g�� true �ɂȂ�܂��B<r/>
+		　<kw>タッチイベント</kw>が有効かどうかを表します。値を設定することもできます。<r/>
+		　真を指定すると<ref>Window.onTouchDown</ref>等のイベントが有効になり、タッチ操作では<ref>Window.onMouseDown</ref>などが発生しなくなります。<r/>
+		　タッチデバイスがありマルチタッチが有効な環境では、デフォルトが true になります。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>waitVSync</name>
 	<type>property</type>
-	<shortdesc>���������҂�</shortdesc>
+	<shortdesc>垂直同期待ち</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�g�����W�V����(��ʐ؂�ւ�)�ȂǂŃf�B�X�v���C�̐���������҂��Ă���`�悷�邩�ǂ����̐ݒ�ł��B<r/>
-		�@�ݒ��ς���ƁA��ʂ̂������}������ꍇ������܂����A�`��̃p�t�H�[�}���X���ቺ����ꍇ������܂��B<r/>
+		　トランジション(画面切り替え)などでディスプレイの垂直同期を待ってから描画するかどうかの設定です。<r/>
+		　設定を変えると、画面のちらつきを抑えられる場合がありますが、描画のパフォーマンスが低下する場合もあります。<r/>
 	</desc>
 </member>
 
@@ -1749,13 +1749,13 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 <member>
 	<name>hintDelay</name>
 	<type>property</type>
-	<shortdesc>�q���g�\���҂�����</shortdesc>
+	<shortdesc>ヒント表示待ち時間</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�q���g�̕\���҂����Ԃ��~���b�P�ʂŕ\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
-		�@�f�t�H���g��500�~���b�ł��B<r/>
-		�@0��ݒ肷��Ƒ����� <ref>Window.onHintChanged</ref> ���Ăяo����܂�(�펞�\�����)�B<r/>
-		�@-1��ݒ肷��ƃq���g���\������邱�Ƃ͂���܂���B<r/>
+		　ヒントの表示待ち時間をミリ秒単位で表します。値を設定することもできます。<r/>
+		　デフォルトは500ミリ秒です。<r/>
+		　0を設定すると即座に <ref>Window.onHintChanged</ref> が呼び出されます(常時表示状態)。<r/>
+		　-1を設定するとヒントが表示されることはありません。<r/>
 	</desc>
 	<ref>Window.onHintChanged</ref>
 </member>

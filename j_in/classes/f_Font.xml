@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <doc>
 <title>Font</title>
 <desc>
-�@Font �N���X�́A<kw>�t�H���g</kw>���Ǘ����邽�߂̃N���X�ł��B<r/>
+　Font クラスは、<kw>フォント</kw>を管理するためのクラスです。<r/>
 </desc>
 
 
@@ -10,20 +10,20 @@
 <member>
 	<name>getTextWidth</name>
 	<type>method</type>
-	<shortdesc>������̉����𓾂�</shortdesc>
+	<shortdesc>文字列の横幅を得る</shortdesc>
 	<arg>
 		<argitem>
 			<name>text</name>
 			<default></default>
 			<desc>
-				�@�����𓾂�����������w�肵�܂��B<r/>
+				　横幅を得たい文字列を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
-	<result>�w�肳�ꂽ������̉������s�N�Z���P�ʂŖ߂�܂�</result>
+	<result>指定された文字列の横幅がピクセル単位で戻ります</result>
 	<desc>
-		�@���̃��\�b�h�ł́A���݂̃t�H���g�̐ݒ�Ŏw��̕������`�悵���Ƃ��ɕK�v��
-		�����𓾂邱�Ƃ��ł��܂��B<r/>
+		　このメソッドでは、現在のフォントの設定で指定の文字列を描画したときに必要な
+		横幅を得ることができます。<r/>
 	</desc>
 	<ref>Font.getTextHeight</ref>
 </member>
@@ -31,19 +31,19 @@
 <member>
 	<name>getTextHeight</name>
 	<type>method</type>
-	<shortdesc>������̏c���𓾂�</shortdesc>
+	<shortdesc>文字列の縦幅を得る</shortdesc>
 	<arg>
 		<argitem>
 			<name>text</name>
 			<default></default>
 			<desc>
-				�@�c���𓾂�����������w�肵�܂��B<r/>
+				　縦幅を得たい文字列を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
-	<result>�w�肳�ꂽ������̏c�����s�N�Z���P�ʂŖ߂�܂�</result>
+	<result>指定された文字列の縦幅がピクセル単位で戻ります</result>
 	<desc>
-		�@���̃��\�b�h�ł́A���̃t�H���g�Ŏw��̕������`�悵���Ƃ��ɕK�v�ȏc���𓾂邱�Ƃ��ł��܂��B<r/>
+		　このメソッドでは、このフォントで指定の文字列を描画したときに必要な縦幅を得ることができます。<r/>
 	</desc>
 	<ref>Font.getTextWidth</ref>
 </member>
@@ -51,22 +51,22 @@
 <member>
 	<name>getEscWidthX</name>
 	<type>method</type>
-	<shortdesc>�����̉������ւ� X ���W�̈ړ���</shortdesc>
+	<shortdesc>文字の横方向への X 座標の移動量</shortdesc>
 	<arg>
 		<argitem>
 			<name>text</name>
 			<default></default>
 			<desc>
-				�@�����̉������ւ� X ���W�̈ړ��ʂ𓾂�����������w�肵�܂��B<r/>
+				　文字の横方向への X 座標の移動量を得たい文字列を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
-	<result>�����̉������ւ� X ���W�̈ړ��ʂ��s�N�Z���P�ʂŖ߂�܂�</result>
+	<result>文字の横方向への X 座標の移動量がピクセル単位で戻ります</result>
 	<desc>
-		�@���݂̃t�H���g�̐ݒ�Ŏw�肳�ꂽ������`�悵���Ƃ��ɕK�v�ȕ����`��ʒu�̈ړ��ʂ�
-		���邱�Ƃ��ł��܂��B<r/>
-		�@���̃��\�b�h�ł́A�����̕`������ɑ΂��ĉ� ( �� ) �ɐi�񂾂Ƃ��� X ���W��ł̈ړ��ʂ�
-		���邱�Ƃ��ł��܂��B<r/>
+		　現在のフォントの設定で指定された文字を描画したときに必要な文字描画位置の移動量を
+		得ることができます。<r/>
+		　このメソッドでは、文字の描画方向に対して横 ( 左 ) に進んだときの X 座標上での移動量を
+		得ることができます。<r/>
 	</desc>
 	<ref>Font.getEscWidthY</ref>
 	<ref>Font.getEscHeightX</ref>
@@ -76,22 +76,22 @@
 <member>
 	<name>getEscWidthY</name>
 	<type>method</type>
-	<shortdesc>�����̉������ւ� Y ���W�̈ړ���</shortdesc>
+	<shortdesc>文字の横方向への Y 座標の移動量</shortdesc>
 	<arg>
 		<argitem>
 			<name>text</name>
 			<default></default>
 			<desc>
-				�@�����̉������ւ� Y ���W�̈ړ��ʂ𓾂�����������w�肵�܂��B<r/>
+				　文字の横方向への Y 座標の移動量を得たい文字列を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
-	<result>�����̉������ւ� Y ���W�̈ړ��ʂ��s�N�Z���P�ʂŖ߂�܂�</result>
+	<result>文字の横方向への Y 座標の移動量がピクセル単位で戻ります</result>
 	<desc>
-		�@���݂̃t�H���g�̐ݒ�Ŏw�肳�ꂽ������`�悵���Ƃ��ɕK�v�ȕ����`��ʒu�̈ړ��ʂ�
-		���邱�Ƃ��ł��܂��B<r/>
-		�@���̃��\�b�h�ł́A�����̕`������ɑ΂��ĉ� ( �� ) �ɐi�񂾂Ƃ��� Y ���W��ł̈ړ��ʂ�
-		���邱�Ƃ��ł��܂��B<r/>
+		　現在のフォントの設定で指定された文字を描画したときに必要な文字描画位置の移動量を
+		得ることができます。<r/>
+		　このメソッドでは、文字の描画方向に対して横 ( 左 ) に進んだときの Y 座標上での移動量を
+		得ることができます。<r/>
 	</desc>
 	<ref>Font.getEscWidthX</ref>
 	<ref>Font.getEscHeightX</ref>
@@ -101,22 +101,22 @@
 <member>
 	<name>getEscHeightX</name>
 	<type>method</type>
-	<shortdesc>�����̏c�����ւ� X ���W�̈ړ���</shortdesc>
+	<shortdesc>文字の縦方向への X 座標の移動量</shortdesc>
 	<arg>
 		<argitem>
 			<name>text</name>
 			<default></default>
 			<desc>
-				�@�����̏c�����ւ� X ���W�̈ړ��ʂ𓾂�����������w�肵�܂��B<r/>
+				　文字の縦方向への X 座標の移動量を得たい文字列を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
-	<result>�����̏c�����ւ� X ���W�̈ړ��ʂ��s�N�Z���P�ʂŖ߂�܂�</result>
+	<result>文字の縦方向への X 座標の移動量がピクセル単位で戻ります</result>
 	<desc>
-		�@���݂̃t�H���g�̐ݒ�Ŏw�肳�ꂽ������`�悵���Ƃ��ɕK�v�ȕ����`��ʒu�̈ړ��ʂ�
-		���邱�Ƃ��ł��܂��B<r/>
-		�@���̃��\�b�h�ł́A�����̕`������ɑ΂��ďc ( �� ) �ɐi�񂾂Ƃ��� X ���W��ł̈ړ��ʂ�
-		���邱�Ƃ��ł��܂��B<r/>
+		　現在のフォントの設定で指定された文字を描画したときに必要な文字描画位置の移動量を
+		得ることができます。<r/>
+		　このメソッドでは、文字の描画方向に対して縦 ( 下 ) に進んだときの X 座標上での移動量を
+		得ることができます。<r/>
 	</desc>
 	<ref>Font.getEscWidthX</ref>
 	<ref>Font.getEscWidthY</ref>
@@ -126,22 +126,22 @@
 <member>
 	<name>getEscHeightY</name>
 	<type>method</type>
-	<shortdesc>�����̏c�����ւ� Y ���W�̈ړ���</shortdesc>
+	<shortdesc>文字の縦方向への Y 座標の移動量</shortdesc>
 	<arg>
 		<argitem>
 			<name>text</name>
 			<default></default>
 			<desc>
-				�@�����̏c�����ւ� Y ���W�̈ړ��ʂ𓾂�����������w�肵�܂��B<r/>
+				　文字の縦方向への Y 座標の移動量を得たい文字列を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
-	<result>�����̏c�����ւ� Y ���W�̈ړ��ʂ��s�N�Z���P�ʂŖ߂�܂�</result>
+	<result>文字の縦方向への Y 座標の移動量がピクセル単位で戻ります</result>
 	<desc>
-		�@���݂̃t�H���g�̐ݒ�Ŏw�肳�ꂽ������`�悵���Ƃ��ɕK�v�ȕ����`��ʒu�̈ړ��ʂ�
-		���邱�Ƃ��ł��܂��B<r/>
-		�@���̃��\�b�h�ł́A�����̕`������ɑ΂��ďc ( �� ) �ɐi�񂾂Ƃ��� Y ���W��ł̈ړ��ʂ�
-		���邱�Ƃ��ł��܂��B<r/>
+		　現在のフォントの設定で指定された文字を描画したときに必要な文字描画位置の移動量を
+		得ることができます。<r/>
+		　このメソッドでは、文字の描画方向に対して縦 ( 下 ) に進んだときの Y 座標上での移動量を
+		得ることができます。<r/>
 	</desc>
 	<ref>Font.getEscWidthX</ref>
 	<ref>Font.getEscWidthY</ref>
@@ -151,21 +151,21 @@
 <member>
 	<name>getGlyphDrawRect</name>
 	<type>method</type>
-	<shortdesc>������̎��`��͈�</shortdesc>
+	<shortdesc>文字列の実描画範囲</shortdesc>
 	<arg>
 		<argitem>
 			<name>text</name>
 			<default></default>
 			<desc>
-				�@�͈͂𓾂�����������w�肵�܂��B<r/>
+				　範囲を得たい文字列を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
-	<result>������̎��`��͈�</result>
+	<result>文字列の実描画範囲</result>
 	<desc>
-		�@���݂̃t�H���g�̐ݒ�Ŏw�肳�ꂽ������`�悵���Ƃ��ɁA�O���t�摜���`�����͈͂𓾂邱�Ƃ��ł��܂��B<r/>
-		�@������͈͂� 0,0 ���W����ɂ��� Rect �N���X�̃I�u�W�F�N�g�ł��B<r/>
-		�@�������̂ݑΉ����Ă��܂��B<r/>
+		　現在のフォントの設定で指定された文字を描画したときに、グリフ画像が描かれる範囲を得ることができます。<r/>
+		　得られる範囲は 0,0 座標を基準にした Rect クラスのオブジェクトです。<r/>
+		　横向きのみ対応しています。<r/>
 	</desc>
 	<ref>Rect</ref>
 </member>
@@ -173,48 +173,48 @@
 <member>
 	<name>getList</name>
 	<type>method</type>
-	<shortdesc>�t�H���g���̗�</shortdesc>
+	<shortdesc>フォント名の列挙</shortdesc>
 	<arg>
 		<argitem>
 			<name>flags</name>
 			<default></default>
 			<desc>
-				�@�t�H���g���ǂ̂悤�ɗ񋓂��邩���w�肵�܂��B<r/>
-				�@���̒l�̃r�b�g�_���a�ɂ��g�ݍ��킹�w�肵�܂��B<r/>
-				<tt><kw>fsfFixedPitch</kw>    </tt> : �Œ�s�b�`�t�H���g�̂ݗ񋓂��܂�<r/>
-				<tt><kw>fsfSameCharSet</kw>   </tt> : �����L�����N�^�Z�b�g�̃t�H���g�̂ݗ񋓂��܂�<r/>
-				<tt><kw>fsfNoVertical</kw>    </tt> : �c�����p�t�H���g��񋓂��܂���<r/>
-				<tt><kw>fsfTrueTypeOnly</kw>  </tt> : TrueType �t�H���g�̂ݗ񋓂��܂�<r/>
-				<tt><kw>fsfIgnoreSymbol</kw>  </tt> : �V���{���L�����Z�b�g�����O���܂�<r/>
-				�@fsfSameCharSet ���w�肵���ꍇ�́A���ݑI������Ă���t�H���g�Ɠ����L�����N�^�Z�b�g��
-				�t�H���g���񋓂���܂��B<r/>
+				　フォントをどのように列挙するかを指定します。<r/>
+				　次の値のビット論理和による組み合わせ指定します。<r/>
+				<tt><kw>fsfFixedPitch</kw>    </tt> : 固定ピッチフォントのみ列挙します<r/>
+				<tt><kw>fsfSameCharSet</kw>   </tt> : 同じキャラクタセットのフォントのみ列挙します<r/>
+				<tt><kw>fsfNoVertical</kw>    </tt> : 縦書き用フォントを列挙しません<r/>
+				<tt><kw>fsfTrueTypeOnly</kw>  </tt> : TrueType フォントのみ列挙します<r/>
+				<tt><kw>fsfIgnoreSymbol</kw>  </tt> : シンボルキャラセットを除外します<r/>
+				　fsfSameCharSet を指定した場合は、現在選択されているフォントと同じキャラクタセットの
+				フォントが列挙されます。<r/>
 			</desc>
 		</argitem>
 	</arg>
-	<result>�t�H���g��(������)���e�v�f�Ƃ��Ċi�[����Ă���z��</result>
+	<result>フォント名(文字列)が各要素として格納されている配列</result>
 	<desc>
-		�t�H���g����񋓂��A�z��Ƃ��ĕԂ��܂��B
+		フォント名を列挙し、配列として返します。
 	</desc>
 </member>
 
 <member>
 	<name>mapPrerenderedFont</name>
 	<type>method</type>
-	<shortdesc>�����_�����O�ς݃t�H���g�̊��蓖��</shortdesc>
+	<shortdesc>レンダリング済みフォントの割り当て</shortdesc>
 	<arg>
 		<argitem>
 			<name>fontstorage</name>
 			<default></default>
 			<desc>
-				�@�����_�����O�ς݃t�H���g�X�g���[�W���w�肵�܂��B<r/>
+				　レンダリング済みフォントストレージを指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@���ݑI������Ă���t�H���g���ɑ΂���<kw>�����_�����O�ς݃t�H���g</kw>�̊��蓖�Ă��s���܂��B<r/>
-		�@�ȍ~�A�����ݒ�̃t�H���g�ɑ΂��Ă͎w�肳�ꂽ�����_�����O�ς݃t�H���g������Ɏg���܂��B<r/>
-		�@���ׂẴ��C���ɑ΂��Đݒ肪�L���ɂȂ�܂��B<r/>
+		　現在選択されているフォント名に対して<kw>レンダリング済みフォント</kw>の割り当てを行います。<r/>
+		　以降、同じ設定のフォントに対しては指定されたレンダリング済みフォントが代わりに使われます。<r/>
+		　すべてのレイヤに対して設定が有効になります。<r/>
 	</desc>
 	<ref>Font.unmapPrerenderedFont</ref>
 </member>
@@ -222,12 +222,12 @@
 <member>
 	<name>unmapPrerenderedFont</name>
 	<type>method</type>
-	<shortdesc>�����_�����O�ς݃t�H���g�̊��蓖�ĉ���</shortdesc>
+	<shortdesc>レンダリング済みフォントの割り当て解除</shortdesc>
 	<arg>
 	</arg>
 	<result></result>
 	<desc>
-		�@���ݑI������Ă���t�H���g���ɑ΂���<kw>�����_�����O�ς݃t�H���g</kw>�̊��蓖�Ă��������܂��B<r/>
+		　現在選択されているフォント名に対する<kw>レンダリング済みフォント</kw>の割り当てを解除します。<r/>
 	</desc>
 	<ref>Font.mapPrerenderedFont</ref>
 </member>
@@ -236,94 +236,94 @@
 <member>
 	<name>face</name>
 	<type>property</type>
-	<shortdesc>�t�H���g��</shortdesc>
+	<shortdesc>フォント名</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�t�H���g����\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
-		�@�J���}�ŋ�؂��ĕ����̌����w�肷�邱�Ƃ��ł��܂��B���̏ꍇ�́A���ۂɑ��݂���t�H���g���g�p����A�擪�ɏ��������̂قǗD�悳��܂��B���ۂɑ��݂���t�H���g���ǂ����� OS �̃t�H���g�̃��X�g���Q�Ƃ��邱�Ƃɂ��s���܂��B�ǂ̌��ɂ����v���Ȃ������ꍇ�́A�f�t�H���g�̃t�H���g���g�p����܂� (���o�[�W�����ł� "�l�r �o�S�V�b�N" �Œ�)�B<r/>
-		�@�擪���J���}�ɂ��A����Ƀt�H���g���������ƁA���ۂɂ��̃t�H���g��OS���񋓂��Ȃ��Ă��AOS�ɂ��̃t�H���g���w�肵�悤�Ƃ��܂� (���Ƃ��� ",My Original Font" )�B����ɂ�� AddFontResource Win32 API ���œo�^�����񋓕s�\�ȃt�H���g���g�p���邱�Ƃ��ł��܂��B<r/>
+		　フォント名を表します。値を設定することもできます。<r/>
+		　カンマで区切って複数の候補を指定することができます。この場合は、実際に存在するフォントが使用され、先頭に書いたものほど優先されます。実際に存在するフォントかどうかは OS のフォントのリストを参照することにより行われます。どの候補にも合致しなかった場合は、デフォルトのフォントが使用されます (現バージョンでは "ＭＳ Ｐゴシック" 固定)。<r/>
+		　先頭をカンマにし、直後にフォント名を書くと、実際にそのフォントをOSが列挙しなくても、OSにそのフォントを指定しようとします (たとえば ",My Original Font" )。これにより AddFontResource Win32 API 等で登録した列挙不可能なフォントを使用することができます。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>height</name>
 	<type>property</type>
-	<shortdesc>�t�H���g����</shortdesc>
+	<shortdesc>フォント高さ</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�`�悳��镶���̍������s�N�Z���P�ʂŕ\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
+		　描画される文字の高さをピクセル単位で表します。値を設定することもできます。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>bold</name>
 	<type>property</type>
-	<shortdesc>�{�[���h</shortdesc>
+	<shortdesc>ボールド</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�{�[���h ( ���� ) �ł��邩�ǂ�����\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
-		�@�^���w�肷��ƃ{�[���h�ɂȂ�܂��B<r/>
+		　ボールド ( 太字 ) であるかどうかを表します。値を設定することもできます。<r/>
+		　真を指定するとボールドになります。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>italic</name>
 	<type>property</type>
-	<shortdesc>�C�^���b�N</shortdesc>
+	<shortdesc>イタリック</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�C�^���b�N ( �Α� ) �ł��邩�ǂ�����\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
-		�@�^���w�肷��ƃC�^���b�N�ɂȂ�܂��B<r/>
+		　イタリック ( 斜体 ) であるかどうかを表します。値を設定することもできます。<r/>
+		　真を指定するとイタリックになります。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>strikeout</name>
 	<type>property</type>
-	<shortdesc>�����</shortdesc>
+	<shortdesc>取消線</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�������`�悷�邩�ǂ����\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
-		�@�^���w�肷��ƕ����̏�Ɏ������`�悵�܂��B<r/>
+		　取消線を描画するかどうか表します。値を設定することもできます。<r/>
+		　真を指定すると文字の上に取消線を描画します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>underline</name>
 	<type>property</type>
-	<shortdesc>�A���_�[���C��</shortdesc>
+	<shortdesc>アンダーライン</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�A���_�[���C�� ( �����܂��͖T�� ) ��`�悷�邩�ǂ����\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
-		�@�^���w�肷��ƃA���_�[���C����`�悵�܂��B<r/>
+		　アンダーライン ( 下線または傍線 ) を描画するかどうか表します。値を設定することもできます。<r/>
+		　真を指定するとアンダーラインを描画します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>angle</name>
 	<type>property</type>
-	<shortdesc>�����`��p�x</shortdesc>
+	<shortdesc>文字描画角度</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�����`��p�x��\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
-		�@�P�ʂ͊p�x ( degree ) �� 10 �{�̒l�ł��B0 �` 3600 �̒l���Ƃ�܂��B<r/>
-		�@�c�������s���ꍇ�̓t�H���g���ɏc�����p�̃t�H���g�����w�肵����ŁA���̃v���p�e�B
-		�� 2700 ���w�肵�܂��B<r/>
+		　文字描画角度を表します。値を設定することもできます。<r/>
+		　単位は角度 ( degree ) の 10 倍の値です。0 縲鰀 3600 の値をとります。<r/>
+		　縦書きを行う場合はフォント名に縦書き用のフォント名を指定した上で、このプロパティ
+		に 2700 を指定します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>rasterizer</name>
 	<type>property</type>
-	<shortdesc>������`�����</shortdesc>
+	<shortdesc>文字列描画方式</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@������`�������\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
-		�@�l�͈ȉ��̂ǂ��炩���w�肵�܂��B<r/>
-		<tt><kw>frGDI</kw>      </tt> : GDI ���g���ĕ�����`�悵�܂�<r/>
-		<tt><kw>frFreeType</kw> </tt> : FreeType ���g���ĕ�����`�悵�܂�<r/>
-		FreeType ���w�肵���ꍇ�A�������ɂ̂ݑΉ����Ă��܂��B���̑��͖��Ή��ł��B<r/>
-		���̃v���p�e�B�̓X�^�e�B�b�N�ł��BFont.rasterizer ��p���Ēl��ݒ肵�Ă��������B<r/>
+		　文字列描画方式を表します。値を設定することもできます。<r/>
+		　値は以下のどちらかを指定します。<r/>
+		<tt><kw>frGDI</kw>      </tt> : GDI を使って文字を描画します<r/>
+		<tt><kw>frFreeType</kw> </tt> : FreeType を使って文字を描画します<r/>
+		FreeType を指定した場合、横書きにのみ対応しています。その他は未対応です。<r/>
+		このプロパティはスタティックです。Font.rasterizer を用いて値を設定してください。<r/>
 	</desc>
 </member>
 

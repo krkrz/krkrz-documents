@@ -1,85 +1,85 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <doc>
-<title>�N���̎d��</title>
+<title>起動の仕方</title>
 
 <para>
-<ptitle>�g���g���̋N���ɂ���</ptitle>
-�@�g���g�����N�����A�X�N���v�g���w�肷�邽�߂ɂ͒ʏ�A<kw>�v���W�F�N�g�t�H���_</kw> �����肷��K�v������܂� ( <link href="StorageSystem"/> �Q�� )�B<r/>
-�@�v���W�F�N�g�t�H���_�����肷����@�͂���������܂����A���L�ɋ��������ɗD�悳��܂� ( ��̂ق��ɏ��������̂��K�p�ł���ΓK�p����� )�B<r/>
-�@�N�����ɋg���g���ɓn���I�v�V�����ɂ��Ă� <link href="CommandLine"/> ���Q�Ƃ��Ă��������B<r/>
+<ptitle>吉里吉里の起動について</ptitle>
+　吉里吉里を起動し、スクリプトを指定するためには通常、<kw>プロジェクトフォルダ</kw> を決定する必要があります ( <link href="StorageSystem"/> 参照 )。<r/>
+　プロジェクトフォルダを決定する方法はいくつかありますが、下記に挙げた順に優先されます ( 上のほうに書いたものが適用できれば適用される )。<r/>
+　起動時に吉里吉里に渡すオプションについては <link href="CommandLine"/> を参照してください。<r/>
 </para>
 
 <para>
-<ptitle>�v���W�F�N�g�t�H���_�̌��菇��</ptitle>
+<ptitle>プロジェクトフォルダの決定順序</ptitle>
 <dl>
-<dt>�R�}���h���C���Ɏw�肳�ꂽ�t�H���_��A�[�J�C�u</dt>
+<dt>コマンドラインに指定されたフォルダやアーカイブ</dt>
 <dd>
-�@�R�}���h���C���̈����Ƃ��ăt�H���_���w�肳�ꂽ�ꍇ�A������v���W�F�N�g�t�H���_�ƌ��Ȃ��A���s���܂��B<r/>
-�@�R�}���h���C���̈����Ƃ��� XP3 �A�[�J�C�u���w�肳�ꂽ�ꍇ�A���̒��Ƀv���W�F�N�g�t�H���_�������Ă���ƌ��Ȃ��A���s���܂��B<r/>
-�@�R�}���h���C���̈����Ƃ��� �t�@�C����t�H���_���w�肷��̂̓R�}���h�v�����v�g������ł��܂����A��ԊȒP�Ȃ̂́A�G�N�X�v���[����u�J���v�ŁA�g���g���̎��s�\�t�@�C���̃A�C�R���̏�Ƀv���W�F�N�g�t�H���_��t�@�C�����h���b�v���邱�Ƃł��B<r/>
-�@�܂��A�g���g���̎��s�\�t�@�C���ւ̈����Ƃ��ē���̃v���W�F�N�g�t�H���_���������V���[�g�J�b�g���f�X�N�g�b�v�Ȃǂɂ����Ă����ƕ֗��ł��傤�B
+　コマンドラインの引数としてフォルダが指定された場合、それをプロジェクトフォルダと見なし、実行します。<r/>
+　コマンドラインの引数として XP3 アーカイブが指定された場合、その中にプロジェクトフォルダが入っていると見なし、実行します。<r/>
+　コマンドラインの引数として ファイルやフォルダを指定するのはコマンドプロンプトからもできますが、一番簡単なのは、エクスプローラや「開く」で、吉里吉里の実行可能ファイルのアイコンの上にプロジェクトフォルダやファイルをドロップすることです。<r/>
+　また、吉里吉里の実行可能ファイルへの引数として特定のプロジェクトフォルダを書いたショートカットをデスクトップなどにおいておくと便利でしょう。
 </dd>
 
-<dt>���s�\�t�@�C���Ɠ����ꏊ�� content-data �t�H���_</dt>
+<dt>実行可能ファイルと同じ場所の content-data フォルダ</dt>
 <dd>
-�@���s�\�t�@�C���Ɠ����ꏊ�� "content-data" �Ƃ������̃t�H���_������ꍇ�͂�����v���W�F�N�g�t�H���_�ƌ��Ȃ��A���s���܂��B
+　実行可能ファイルと同じ場所に "content-data" という名のフォルダがある場合はそれをプロジェクトフォルダと見なし、実行します。
 </dd>
 
-<dt>���s�\�t�@�C���Ɠ����ꏊ�� "data.xp3" �t�@�C��</dt>
+<dt>実行可能ファイルと同じ場所の "data.xp3" ファイル</dt>
 <dd>
-�@���s�\�t�@�C���Ɠ����ꏊ�� data.xp3 �Ƃ������̃A�[�J�C�u�t�@�C��������ꍇ�́A����� XP3 �A�[�J�C�u�`���Ƃ��Ă��̒��Ƀv���W�F�N�g�t�H���_�������Ă���ƌ��Ȃ��A���s���܂��B
+　実行可能ファイルと同じ場所に data.xp3 という名のアーカイブファイルがある場合は、それを XP3 アーカイブ形式としてその中にプロジェクトフォルダが入っていると見なし、実行します。
 </dd>
 
 <!--
-<dt>�������g�� XP3 �A�[�J�C�u����������Ă���Ƃ�</dt>
+<dt>自分自身に XP3 アーカイブが結合されているとき</dt>
 <dd>
-�@XP3 �`���A�[�J�C�u�͎��s�\�t�@�C���ƌ������邱�Ƃ��ł��܂����A�������g�� XP3 �A�[�J�C�u�ƌ�������Ă����ꍇ�A�������g�Ƀv���W�F�N�g�t�H���_�������Ă���ƌ��Ȃ��A���s���܂��B
+　XP3 形式アーカイブは実行可能ファイルと結合することができますが、自分自身が XP3 アーカイブと結合されていた場合、自分自身にプロジェクトフォルダが入っていると見なし、実行します。
 </dd>
 -->
 
-<dt>���s�\�t�@�C���Ɠ����ꏊ�� data �t�H���_</dt>
+<dt>実行可能ファイルと同じ場所の data フォルダ</dt>
 <dd>
-�@���s�\�t�@�C���Ɠ����ꏊ�� "data" �Ƃ������̃t�H���_������ꍇ�͂�����v���W�F�N�g�t�H���_�ƌ��Ȃ��A���s���܂��B
+　実行可能ファイルと同じ場所に "data" という名のフォルダがある場合はそれをプロジェクトフォルダと見なし、実行します。
 </dd>
 </dl>
 <r/>
-�@������̕��@�ł�����ł��Ȃ������ꍇ�́A�t�H���_/�A�[�J�C�u�I���̉�ʂ��o�܂��B<r/>
-�@�������A�����[�X�I�v�V������ �uXP3�A�[�J�C�u�݂̂�����s�v���w�肳��Ă����ꍇ�́Adata.xp3�t�@�C���Adata.exe�t�@�C���A�u�������g�� XP3 �A�[�J�C�u����������Ă���Ƃ��v�̏ꍇ�̓��삵�����܂��� ( <link href="Configure"/> �Q�� )�B<r/>
+　いずれの方法でも決定できなかった場合は、フォルダ/アーカイブ選択の画面が出ます。<r/>
+　ただし、リリースオプションで 「XP3アーカイブのみから実行」が指定されていた場合は、data.xp3ファイル、data.exeファイル、「自分自身に XP3 アーカイブが結合されているとき」の場合の動作しかしません ( <link href="Configure"/> 参照 )。<r/>
 </para>
 
 <para>
-<ptitle>�t�H���_/�A�[�J�C�u�I��</ptitle>
-�@�t�H���_/�A�[�J�C�u�I���̉�ʂ͈ȉ��̂悤�ɂȂ�܂��B<r/>
+<ptitle>フォルダ/アーカイブ選択</ptitle>
+　フォルダ/アーカイブ選択の画面は以下のようになります。<r/>
 <img src="FolderSelector.png"/><r/><r/>
 <dl>
 
-<dt>�uOK�v�{�^��</dt>
+<dt>「OK」ボタン</dt>
 <dd>
-�@���ݑI�𒆂̃t�H���_��t�@�C���̎��s���J�n���܂��B
+　現在選択中のフォルダやファイルの実行を開始します。
 </dd>
 
-<dt>�u�L�����Z���v�{�^��</dt>
+<dt>「キャンセル」ボタン</dt>
 <dd>
-�@���������ɋg���g�����I�����܂��B
+　何もせずに吉里吉里を終了します。
 </dd>
 </dl>
 </para>
 
 <para>
-<ptitle>�ŏ��Ɏ��s�����t�@�C��</ptitle>
-�@�v���W�F�N�g�t�H���_�����A�ŏ��Ɏ��s�����̂́A�v���W�F�N�g�t�H���_���� startup.tjs �ł��B���ꂪ�Ȃ��ꍇ�̓G���[�ɂȂ�܂��B<r/>
-�@�ŏ��Ɏ��s�����t�@�C���� -startup �Ŏw�肷�邱�Ƃ��\�ł��B<link href="CommandLine"/> ���Q�Ƃ��Ă��������B<r/>
+<ptitle>最初に実行されるファイル</ptitle>
+　プロジェクトフォルダ決定後、最初に実行されるのは、プロジェクトフォルダ内の startup.tjs です。これがない場合はエラーになります。<r/>
+　最初に実行されるファイルは -startup で指定することも可能です。<link href="CommandLine"/> を参照してください。<r/>
 </para>
 
 <para>
-<ptitle>���b�Z�[�W�}�b�v�t�@�C��</ptitle>
-�@�g���g���́A�N������ɋg���g���Ɠ����t�H���_�� msgmap.tjs �����邩�ǂ����𒲂ׁA���ꂪ���݂���Ύ��s���܂��B�����������[�X�I�v�V�����ł����ǂݍ��܂Ȃ��悤�Ɏw�肳��Ă����ꍇ�������܂� ( <link href="Configure"/> �Q�� )�Bmsgmap.tjs �ł� <at href="f_System_assignMessage.html">System.assignMessage</at> ���g�p���ă��b�Z�[�W�̊��蓖�Ă�ύX���邱�Ƃ��ł��܂��Bmsgmap.tjs �� <link href="Controller" /> �ł��쐬���邱�Ƃ��ł��܂��B<r/>
+<ptitle>メッセージマップファイル</ptitle>
+　吉里吉里は、起動直後に吉里吉里と同じフォルダに msgmap.tjs があるかどうかを調べ、それが存在すれば実行します。ただしリリースオプションでこれを読み込まないように指定されていた場合を除きます ( <link href="Configure"/> 参照 )。msgmap.tjs では <at href="f_System_assignMessage.html">System.assignMessage</at> を使用してメッセージの割り当てを変更することができます。msgmap.tjs は <link href="Controller" /> でも作成することができます。<r/>
 </para>
 
 <para>
-<ptitle>�ݒ�t�@�C��</ptitle>
-�@�g���g���́A<link href="Configure"/> �ō쐬�����ݒ�t�@�C�� (.cf �t�@�C���� .cfu �t�@�C��) ��ǂݍ��݁A�����ɋL�q���Ă���ݒ�ɂ��������ē��삵�܂��B<r/>
-�@�t�@�C������t�@�C���̍쐬�����ꏊ�ɂ��Ă� <link href="Configure"/> ���Q�Ƃ��Ă��������B<r/>
+<ptitle>設定ファイル</ptitle>
+　吉里吉里は、<link href="Configure"/> で作成した設定ファイル (.cf ファイルや .cfu ファイル) を読み込み、そこに記述してある設定にしたがって動作します。<r/>
+　ファイル名やファイルの作成される場所については <link href="Configure"/> を参照してください。<r/>
 </para>
 
 </doc>

@@ -1,51 +1,51 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <doc>
-<title>�g���g���ݒ�</title>
+<title>吉里吉里設定</title>
 
 <para>
-<ptitle>�g���g���ݒ�ɂ���</ptitle>
-�@�u�g���g���ݒ�v�́A�g���g���̃I�v�V������ GUI �Őݒ�ł���c�[���ł��B<r/>
-�@�G���h���[�U ( �Q�����[�U ) ���������g�ł�����x�g���u���V���[�e�B���O��p�t�H�[�}���X�̒������ł���悤�ɂ��邽�߂ɂ���܂��B<r/>
-�@�G���W���ݒ�́A�g���g�����s�\�t�@�C���{�̂� -userconf �������ċN�����܂��B<r/>
+<ptitle>吉里吉里設定について</ptitle>
+　「吉里吉里設定」は、吉里吉里のオプションを GUI で設定できるツールです。<r/>
+　エンドユーザ ( ２次ユーザ ) が自分自身である程度トラブルシューティングやパフォーマンスの調整をできるようにするためにあります。<r/>
+　エンジン設定は、吉里吉里実行可能ファイル本体に -userconf を加えて起動します。<r/>
 <r/>
-�@�I�v�V�����̖��O��ݒ�\�Ȓl��I�v�V�����̐����́A�g���g���{�̂ɓ�������Ă�������g���܂��B<r/>
+　オプションの名前や設定可能な値やオプションの説明は、吉里吉里本体に内蔵されている情報を使います。<r/>
 </para>
 
 <para>
-<ptitle>�ݒ�t�@�C���ɂ���</ptitle>
-�@�g���g���̐ݒ�t�@�C���͂Q��ނ���܂��B�g���g���̎��s�\�t�@�C���Ɠ����ꏊ�ɔz�u����A���s�\�t�@�C���̖��O�̊g���q��<kw>cf</kw>�ɕς������ƁA<link href="CommandLine"/> �� -datapath �Ŏw�肳�ꂽ�f�[�^�ۑ��ꏊ�ɔz�u���ꂽ�A���s�\�t�@�C���̖��O�̊g���q��<kw>cfu</kw>�ɕς������̓�ł��B<r/>
-�@cfu�̓G���h���[�U�����́u�G���W���ݒ� (-userconf)�v���������܂��B<r/>
-�@Releaser�Őݒ���s�����ꍇ�� .cf �t�@�C�����쐬����܂����A���̃t�@�C���͋g���g���{�̂ƂƂ��ɔz�z���Ȃ���΁A�ݒ肵���I�v�V���������f����Ȃ��̂Œ��ӂ��Ă��������B<r/>
-�@�����̃t�@�C���́A�������݂��Ȃ���΁A�G���W���ݒ���N�����AOK �{�^�������������ۂɍ쐬����܂��B<r/>
+<ptitle>設定ファイルについて</ptitle>
+　吉里吉里の設定ファイルは２種類あります。吉里吉里の実行可能ファイルと同じ場所に配置され、実行可能ファイルの名前の拡張子を<kw>cf</kw>に変えた物と、<link href="CommandLine"/> の -datapath で指定されたデータ保存場所に配置された、実行可能ファイルの名前の拡張子を<kw>cfu</kw>に変えた物の二つです。<r/>
+　cfuはエンドユーザ向けの「エンジン設定 (-userconf)」が生成します。<r/>
+　Releaserで設定を行った場合は .cf ファイルが作成されますが、このファイルは吉里吉里本体とともに配布しなければ、設定したオプションが反映されないので注意してください。<r/>
+　これらのファイルは、もし存在しなければ、エンジン設定を起動し、OK ボタンを押下した際に作成されます。<r/>
 <note>
-�ݒ�t�@�C���̒��́A��s���A�u���O="�l"�v�̋L�q������ł��܂��B"�l"�̕����� \xNN ���A�����Ă���`�ɂȂ��Ă���A���ꂼ�ꂪ UNICODE �ɂ�����R�[�h�|�C���g�̒l�ƂȂ��Ă��܂��B���Ƃ��� opt="\x61\x62\x63\x3042\x3044\x3046" �ƋL�q���Ă���ꍇ�́A����́uabc�������v��\���܂��B���̃A�v���P�[�V�����Ȃǂ��炱���̃t�@�C���ɏ������ލۂ͒��ӂ��Ă��������B<r/>
-�Ȃ��Aopt="abc������" �̂悤�� \xNN �`�����g�킸�ɋL�q�����ꍇ�A�g���g���{�̂͂���𐳂����F�����邱�Ƃ��ł��܂����A�G���W���ݒ�͂��̌`����F�����邱�Ƃ��ł����ɁA�z�肵����������Ȃ��\��������܂��B�l�̗����̃_�u���N�I�[�e�[�V�������K�{�ł��B
+設定ファイルの中は、一行ずつ、「名前="値"」の記述が並んでいます。"値"の部分は \xNN が連続している形になっており、それぞれが UNICODE におけるコードポイントの値となっています。たとえば opt="\x61\x62\x63\x3042\x3044\x3046" と記述してある場合は、これは「abcあいう」を表します。他のアプリケーションなどからこれらのファイルに書き込む際は注意してください。<r/>
+なお、opt="abcあいう" のように \xNN 形式を使わずに記述した場合、吉里吉里本体はこれを正しく認識することができますが、エンジン設定はこの形式を認識することができずに、想定した動作をしない可能性があります。値の両側のダブルクオーテーションも必須です。
 </note>
 </para>
 
 
 <para>
-<ptitle>�G���W���ݒ�̉��</ptitle>
-�@�G���W���ݒ��ʂ͈ȉ��̂悤�ɂȂ�܂��B<r/>
+<ptitle>エンジン設定の画面</ptitle>
+　エンジン設定画面は以下のようになります。<r/>
 <r/>
 <img src="Configure.png"/><r/>
 <r/>
 <dl>
-<dt>�u�I�v�V�����̖��O�v</dt>
+<dt>「オプションの名前」</dt>
 <dd>
-�@�ݒ�ł���I�v�V�������ꗗ�\������Ă��܂��B<r/>
-�@<link href="CommandLine"/> ���Q�Ƃ��Ă��������B
+　設定できるオプションが一覧表示されています。<r/>
+　<link href="CommandLine"/> も参照してください。
 </dd>
 
-<dt>�u�I�v�V�����̒l�v</dt>
+<dt>「オプションの値」</dt>
 <dd>
-�@�u�I�v�V�����̖��O�v�őI�񂾃I�v�V�����ɑ΂��Đݒ�ł���I�v�V�����̒l���ꗗ�\������܂��B<r/>
-�@�I�����Ă��������B
+　「オプションの名前」で選んだオプションに対して設定できるオプションの値が一覧表示されます。<r/>
+　選択してください。
 </dd>
 
-<dt>�u�I�v�V�����̐����v</dt>
+<dt>「オプションの説明」</dt>
 <dd>
-�@�u�I�v�V�����̖��O�v�őI�񂾃I�v�V�����ɑ΂���������\������܂��B
+　「オプションの名前」で選んだオプションに対する説明が表示されます。
 </dd>
 
 </dl>

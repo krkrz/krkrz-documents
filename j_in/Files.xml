@@ -1,106 +1,106 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <doc>
-<title>�t�@�C��/�t�H���_��</title>
+<title>ファイル/フォルダ覧</title>
 
 <para>
-<ptitle>�t�@�C��/�t�H���_��</ptitle>
-�����ł́A�g���g���Ɋ֘A����t�@�C����t�H���_��������܂��B<r/>
-���ׂẴt�@�C����ԗ�����킯�ł͂���܂���B���ɒ��ӂ��K�v�ȃt�@�C�������S�ɂȂ��Ă��܂��B�g���g��Z SDK �z�z�A�[�J�C�u�̃t�H���_�\���ɂ��Ă� readme.txt ���Q�Ƃ��Ă��������B<r/>
-�֋X��AKAG�Ɋ֘A����t�@�C�����f�ڂ��Ă��܂��B<r/>
+<ptitle>ファイル/フォルダ覧</ptitle>
+ここでは、吉里吉里に関連するファイルやフォルダを説明します。<r/>
+すべてのファイルを網羅するわけではありません。特に注意が必要なファイルが中心になっています。吉里吉里Z SDK 配布アーカイブのフォルダ構造については readme.txt を参照してください。<r/>
+便宜上、KAGに関連するファイルも掲載しています。<r/>
 </para>
 
 <para>
-<ptitle>�t�H���_</ptitle>
+<ptitle>フォルダ</ptitle>
 <dl>
   <dt><kw>plugin</kw></dt>
-  <dd>�g���g�����v���O�C����T���t�H���_�ł��B�g���g���́A�g���g���̎��s�\�t�@�C��������t�H���_�ɂ��̃t�H���_������ƁA���̒��ɔz�u����Ă���v���O�C�����Q�Ƃ��܂��B�� <link href="Plugins"/></dd>
+  <dd>吉里吉里がプラグインを探すフォルダです。吉里吉里は、吉里吉里の実行可能ファイルがあるフォルダにこのフォルダがあると、その中に配置されているプラグインを参照します。→ <link href="Plugins"/></dd>
 
-  <dt><kw>data</kw> �� <kw>content-data</kw></dt>
-  <dd>�g���g���g���̎��s�\�t�@�C��������t�H���_�ɂ��̃t�H���_������ꍇ�A�t�H���_���v���W�F�N�g�t�H���_�ƌ��Ȃ��Ď��s���܂��B�� <link href="Startup"/></dd>
+  <dt><kw>data</kw> と <kw>content-data</kw></dt>
+  <dd>吉里吉里吉里の実行可能ファイルがあるフォルダにこのフォルダがある場合、フォルダをプロジェクトフォルダと見なして実行します。→ <link href="Startup"/></dd>
 
 </dl>
 </para>
 
 <para>
-<ptitle>�t�@�C��</ptitle>
+<ptitle>ファイル</ptitle>
 <dl>
   <dt>*.<kw>xp3</kw></dt>
-  <dd>�g���g���p�̃A�[�J�C�u�t�@�C���ł��B�� <link href="Releaser"/></dd>
+  <dd>吉里吉里用のアーカイブファイルです。→ <link href="Releaser"/></dd>
 
-  <dt><kw>data.xp3</kw> �� <kw>data.exe</kw></dt>
-  <dd>�g���g���́A���̃t�@�C�����g���g���̎��s�\�t�@�C���Ɠ����t�H���_�ɂ���ꍇ�A������v���W�F�N�g�t�H���_�Ƃ݂Ȃ��Ď��s���܂��B�� <link href="Startup"/></dd>
+  <dt><kw>data.xp3</kw> と <kw>data.exe</kw></dt>
+  <dd>吉里吉里は、このファイルが吉里吉里の実行可能ファイルと同じフォルダにある場合、それをプロジェクトフォルダとみなして実行します。→ <link href="Startup"/></dd>
 
   <dt>*.<kw>tpm</kw></dt>
-  <dd>�g���g���p�̃v���O�C���ŁA�N�����Ɏ����I�ɓǂݍ��܂�镨�ł��B�� <link href="Plugins"/></dd>
+  <dd>吉里吉里用のプラグインで、起動時に自動的に読み込まれる物です。→ <link href="Plugins"/></dd>
 
   <dt><kw>krdevui.dll</kw></dt>
-  <dd>�g���g���̊J���p�c�[�������ʂŎg�p����DLL�ł��B���̃t�@�C�����G���h���[�U�����̔z�z���ɓ�������K�v�͂���܂���B</dd>
+  <dd>吉里吉里の開発用ツールが共通で使用するDLLです。このファイルをエンドユーザ向けの配布物に同梱する必要はありません。</dd>
 
   <dt><kw>krmovie.dll</kw></dt>
-  <dd>�g���g���� WMV/MPG �̍Đ����s���ꍇ�ɕK�v�ɂȂ�܂��B�r�f�I�Đ����s��Ȃ��ꍇ�̓G���h���[�U�����̔z�z���ɂ���𓯍�����K�v�͂���܂���B�� <at href="f_VideoOverlay.html">VideoOverlay�N���X</at></dd>
+  <dd>吉里吉里で WMV/MPG の再生を行う場合に必要になります。ビデオ再生を行わない場合はエンドユーザ向けの配布物にこれを同梱する必要はありません。→ <at href="f_VideoOverlay.html">VideoOverlayクラス</at></dd>
 
   <dt>*.<kw>dll</kw></dt>
-  <dd>�g���g���p�̃v���O�C���̏ꍇ�́A�G���h���[�U�����̔z�z���ɓ������Ȃ���΂Ȃ�܂���B�������A�K�v�̂Ȃ��v���O�C���𓯍�����K�v�͂���܂���B�� <link href="Plugins"/></dd>
+  <dd>吉里吉里用のプラグインの場合は、エンドユーザ向けの配布物に同梱しなければなりません。もちろん、必要のないプラグインを同梱する必要はありません。→ <link href="Plugins"/></dd>
 
   <dt><kw>krkr.eXe</kw></dt>
-  <dd>�g���g���{�̂ł��B�G���h���[�U�����ɔz�z����ۂɃt�@�C������ύX���Ă����܂��܂���B</dd>
+  <dd>吉里吉里本体です。エンドユーザ向けに配布する際にファイル名を変更してもかまいません。</dd>
 
-  <dt>*.<kw>cf</kw> �� *.<kw>cfu</kw></dt>
-  <dd>�g���g���{�̂ɑ΂���I�v�V�������L�q���ꂽ�t�@�C���ł��B�u�g���g���ݒ�v(-userconf)�ŋg���g���{�̂Ɏw�������I�v�V����(����ɂ�-datapath�I�v�V�����̎w��Ȃǂ��܂܂�܂�)��L���ɂ��邽�߂ɂ́A�G���h���[�U�����̔z�z���ɂ������������K�v������܂��B�� <link href="Configure"/></dd>
+  <dt>*.<kw>cf</kw> と *.<kw>cfu</kw></dt>
+  <dd>吉里吉里本体に対するオプションが記述されたファイルです。「吉里吉里設定」(-userconf)で吉里吉里本体に指示したオプション(これには-datapathオプションの指定などが含まれます)を有効にするためには、エンドユーザ向けの配布物にこれも同梱する必要があります。→ <link href="Configure"/></dd>
 
-  <dt><kw>�t�@�C���j���`�F�b�N�c�[��.exe</kw> �Ƃ��� .<kw>ini</kw> �t�@�C��</dt>
-  <dd>�t�@�C���j���`�F�b�N�c�[���ł��B�G���h���[�U�����ɔz�z����ۂɃt�@�C������ύX���Ă����܂��܂��񂪁A���̏ꍇ�� .exe �t�@�C���� .ini �t�@�C���̗����̖��O�𓯂����ɂ��Ȃ���΂Ȃ�܂���B�g���g��Z SDK �z�z���� enduser-tools ���ɓ����Ă��܂����A�G���h���[�U�ɔz�z����ۂ́A�ʏ�A�g���g���̎��s�\�t�@�C���Ɠ����t�H���_�ɔz�u����K�v������܂��B�� <link href="FileChkTool"/></dd>
+  <dt><kw>ファイル破損チェックツール.exe</kw> とその .<kw>ini</kw> ファイル</dt>
+  <dd>ファイル破損チェックツールです。エンドユーザ向けに配布する際にファイル名を変更してもかまいませんが、その場合は .exe ファイルと .ini ファイルの両方の名前を同じ物にしなければなりません。吉里吉里Z SDK 配布時は enduser-tools 内に入っていますが、エンドユーザに配布する際は、通常、吉里吉里の実行可能ファイルと同じフォルダに配置する必要があります。→ <link href="FileChkTool"/></dd>
 
   <dt><kw>startup.tjs</kw></dt>
-  <dd>TJS�X�N���v�g�t�@�C���ł��B�g���g���́A�v���W�F�N�g�t�H���_�����̂��̃t�@�C����T���A��ԍŏ��Ɏ��s���܂��B�� <link href="Startup"/></dd>
+  <dd>TJSスクリプトファイルです。吉里吉里は、プロジェクトフォルダ直下のこのファイルを探し、一番最初に実行します。→ <link href="Startup"/></dd>
 
   <dt>*.<kw>tjs</kw></dt>
-  <dd>TJS�X�N���v�g�t�@�C���ł��B</dd>
+  <dd>TJSスクリプトファイルです。</dd>
 
   <dt><kw>msgmap.tjs</kw></dt>
-  <dd>���b�Z�[�W�}�b�v�t�@�C���ł��B�쐬�����o�����Ȃ��Ȃ�΁A���̃t�@�C�����G���h���[�U�����̔z�z���ɓ�������K�v�͂���܂���B�� <link href="Controller"/></dd>
+  <dd>メッセージマップファイルです。作成した覚えがないならば、このファイルをエンドユーザ向けの配布物に同梱する必要はありません。→ <link href="Controller"/></dd>
 
   <dt>*.<kw>sig</kw></dt>
-  <dd>�L�[�E�����c�[�����o�͂��鏐���t�@�C���ł��B�t�@�C���j���`�F�b�N�c�[���Ȃǂ��Q�Ƃ��܂��B�� <link href="SignTool"/></dd>
+  <dd>キー・署名ツールが出力する署名ファイルです。ファイル破損チェックツールなどが参照します。→ <link href="SignTool"/></dd>
 
   <dt>*.<kw>rpf</kw></dt>
-  <dd>Releaser�̃v���t�@�C���ł��BReleaser�̐ݒ��񂪋L�^����Ă��܂��B���̃t�@�C���̓G���h���[�U�����̔z�z���ɓ�������K�v�͂���܂���(Releaser �ł͂��̃t�@�C���������I�ɏ��O���܂�)�B�� <link href="Releaser"/></dd>
+  <dd>Releaserのプロファイルです。Releaserの設定情報が記録されています。このファイルはエンドユーザ向けの配布物に同梱する必要はありません(Releaser ではこのファイルを自動的に除外します)。→ <link href="Releaser"/></dd>
 
   <dt><kw>hwexcept.log</kw></dt>
-  <dd>�g���g���{�̂��N���b�V�������ۂɁA-datapath �I�v�V�����Ŏw�肳�ꂽ�ʒu�ɍ쐬�����\��������܂��B�N���b�V���Ƃ����Ă��l�X�ȏ󋵂�����܂����A���̃t�@�C�����쐬����Ă����ꍇ�͂��Ȃ�d�ǂ̃N���b�V���ł��̂ŁA�G���h���[�U���������A�K�v�ł���΋g���g���̍�҂܂ő����Ă��������B���̃t�@�C���̓G���h���[�U�����̔z�z���ɓ�������K�v�͂���܂���B</dd>
+  <dd>吉里吉里本体がクラッシュした際に、-datapath オプションで指定された位置に作成される可能性があります。クラッシュといっても様々な状況がありますが、このファイルが作成されていた場合はかなり重症のクラッシュですので、エンドユーザから回収し、必要であれば吉里吉里の作者まで送ってください。このファイルはエンドユーザ向けの配布物に同梱する必要はありません。</dd>
 
   <dt>*.<kw>console.log</kw></dt>
-  <dd>�g���g���̃R���\�[���̃��O�t�@�C���ł��B�ʏ�A�g���g�����N���b�V�������ۂȂǂɁA-datapath �I�v�V�����Ŏw�肳�ꂽ�ʒu�ɍ쐬�����\��������܂��B���̃t�@�C�����L�^���郍�O�͂قƂ�ǂ̏ꍇ�́A�X�N���v�g�̋L�q�~�X�ɋN�����镨�ł��B�A�v���P�[�V�����̊J�����A���邢�̓G���h���[�U�ɔz�z������̓G���h���[�U���������A�f�o�b�O�ɖ𗧂ĂĂ��������B���̃t�@�C�����G���h���[�U�����̔z�z���ɓ�������K�v�͂���܂���B</dd>
+  <dd>吉里吉里のコンソールのログファイルです。通常、吉里吉里がクラッシュした際などに、-datapath オプションで指定された位置に作成される可能性があります。このファイルが記録するログはほとんどの場合は、スクリプトの記述ミスに起因する物です。アプリケーションの開発中、あるいはエンドユーザに配布した後はエンドユーザから回収し、デバッグに役立ててください。このファイルをエンドユーザ向けの配布物に同梱する必要はありません。</dd>
 
   <dt>*.<kw>dump.txt</kw></dt>
-  <dd>TJS�̃_���v�t�@�C���ł��B���̃t�@�C�����G���h���[�U�����̔z�z���ɓ�������K�v�͂���܂���B�� <link href="Controller"/></dd>
+  <dd>TJSのダンプファイルです。このファイルをエンドユーザ向けの配布物に同梱する必要はありません。→ <link href="Controller"/></dd>
 
   <dt>*.<kw>sli</kw></dt>
-  <dd>���[�v�`���[�i���o�͂���A���[�v��`�t�@�C���ł��B�� <link href="LoopTuner"/></dd>
+  <dd>ループチューナが出力する、ループ定義ファイルです。→ <link href="LoopTuner"/></dd>
 
   <dt>*.<kw>tft</kw></dt>
-  <dd>�����_�����O�ς݃t�H���g�f�[�^�쐬�c�[�����o�͂���A�����_�����O�ς݃t�H���g�f�[�^�ł��B�� <link href="FontMaker"/></dd>
+  <dd>レンダリング済みフォントデータ作成ツールが出力する、レンダリング済みフォントデータです。→ <link href="FontMaker"/></dd>
 
   <dt>*.png *.jpeg *.jpg *.tlg *.bmp</dt>
-  <dd>�摜�t�@�C���ł��B�� <link href="GraphicSystem"/></dd>
+  <dd>画像ファイルです。→ <link href="GraphicSystem"/></dd>
 
   <dt>*.wav *.tcw *.ogg</dt>
-  <dd>�����t�@�C���ł��B�� <link href="SoundSystem"/></dd>
+  <dd>音声ファイルです。→ <link href="SoundSystem"/></dd>
 
   <dt>*.wmv *.mpg</dt>
-  <dd>����t�@�C���ł��B�� <at href="f_VideoOverlay.html">VideoOverlay�N���X</at></dd>
+  <dd>動画ファイルです。→ <at href="f_VideoOverlay.html">VideoOverlayクラス</at></dd>
 
   <dt>*.ks</dt>
-  <dd>KAG�̃V�i���I�t�@�C���ł��B</dd>
+  <dd>KAGのシナリオファイルです。</dd>
 
   <dt>*.ksd *.kdt</dt>
-  <dd>KAG�̃Z�[�u�f�[�^�ł��B</dd>
+  <dd>KAGのセーブデータです。</dd>
 
   <dt>*.asd</dt>
-  <dd>KAG�̃A�j���[�V������`�t�@�C���ł��B</dd>
+  <dd>KAGのアニメーション定義ファイルです。</dd>
  
   <dt>*.ma</dt>
-  <dd>KAG�̗̈�A�N�V������`�t�@�C���ł��B</dd>
+  <dd>KAGの領域アクション定義ファイルです。</dd>
  
 
 </dl>

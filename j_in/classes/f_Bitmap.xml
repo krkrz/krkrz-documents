@@ -1,126 +1,126 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <doc>
 <title>Bitmap</title>
 <desc>
-�@Bitmap �N���X�́A�摜����ێ�����N���X�ł��B<r/>
+　Bitmap クラスは、画像情報を保持するクラスです。<r/>
 </desc>
 
 <member>
 	<name>Bitmap</name>
 	<type>constructor</type>
-	<shortdesc>Bitmap �I�u�W�F�N�g�̍\�z</shortdesc>
+	<shortdesc>Bitmap オブジェクトの構築</shortdesc>
 	<arg></arg>
 	<result></result>
 	<desc>
-		�@Bitmap �N���X�̃I�u�W�F�N�g���\�z���܂��B<r/>
-		�@������Ԃł� ���ƍ�����32�s�N�Z���ɂȂ��Ă��܂��B<r/>
+		　Bitmap クラスのオブジェクトを構築します。<r/>
+		　初期状態では 幅と高さは32ピクセルになっています。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>Bitmap</name>
 	<type>constructor</type>
-	<shortdesc>Bitmap �I�u�W�F�N�g�̍\�z</shortdesc>
+	<shortdesc>Bitmap オブジェクトの構築</shortdesc>
 	<arg>
 		<argitem>
 			<name>width</name>
 			<default></default>
 			<desc>
-				�@�摜�̕����w�肵�܂��B<r/>
+				　画像の幅を指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>height</name>
 			<default></default>
 			<desc>
-				�@�摜�̍������w�肵�܂��B<r/>
+				　画像の高さを指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>bpp</name>
 			<default>32</default>
 			<desc>
-				�@�摜�̊e�s�N�Z���̃r�b�g�����w�肵�܂��B<r/>
-				32 �� 8 �̂����ꂩ���w�肵�Ă��������B<r/>
+				　画像の各ピクセルのビット数を指定します。<r/>
+				32 か 8 のいずれかを指定してください。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@Bitmap �N���X�̃I�u�W�F�N�g���w��̑傫���ō\�z���܂��B<r/>
+		　Bitmap クラスのオブジェクトを指定の大きさで構築します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>Bitmap</name>
 	<type>constructor</type>
-	<shortdesc>Bitmap �I�u�W�F�N�g�̍\�z</shortdesc>
+	<shortdesc>Bitmap オブジェクトの構築</shortdesc>
 	<arg>
 		<argitem>
 			<name>filename</name>
 			<default></default>
 			<desc>
-				�@�摜�̃t�@�C�������w�肵�܂��B<r/>
+				　画像のファイル名を指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>colorkey</name>
 			<default>clNone</default>
 			<desc>
-				�@�J���[�L�[���w�肵�܂��B<r/>
-				�l�� <ref>Layer.loadImages</ref> �Ɠ����ł��B<r/>
+				　カラーキーを指定します。<r/>
+				値は <ref>Layer.loadImages</ref> と同じです。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@Bitmap �N���X�̃I�u�W�F�N�g���t�@�C������\�z���܂��B<r/>
+		　Bitmap クラスのオブジェクトをファイルから構築します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>onLoaded</name>
 	<type>event</type>
-	<shortdesc>�񓯊��Ǎ��݂���������</shortdesc>
+	<shortdesc>非同期読込みが完了した</shortdesc>
 	<arg>
 		<argitem>
 			<name>meta</name>
 			<default></default>
 			<desc>
-				�@�ǂݍ��񂾉摜�̃^�O���ł��B<r/>
+				　読み込んだ画像のタグ情報です。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>async</name>
 			<default></default>
 			<desc>
-				�@�񓯊��œǂݍ��܂ꂽ���ǂ����ł��B<r/>
-				�@�摜�f�[�^���L���b�V�����ɂ���ꍇ�A <ref>Bitmap.loadAsync</ref> ���s���ɖ{�C�x���g���������܂��B<r/>
+				　非同期で読み込まれたかどうかです。<r/>
+				　画像データがキャッシュ内にある場合、 <ref>Bitmap.loadAsync</ref> 実行中に本イベントが発生します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>error</name>
 			<default></default>
 			<desc>
-				�@�摜�Ǎ��݂ŃG���[�������������ǂ����ł��B<r/>
+				　画像読込みでエラーが発生したかどうかです。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>message</name>
 			<default></default>
 			<desc>
-				�@�G���[���b�Z�[�W�ł��B<r/>
-				�@�G���[�����������ꍇ�A�G���[���b�Z�[�W���n����܂��B<r/>
+				　エラーメッセージです。<r/>
+				　エラーが発生した場合、エラーメッセージが渡されます。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�񓯊��Ǎ��݂������������ɔ������܂��B<r/>
-		�@�ǂݍ��񂾉摜�� <ref>Layer.copyFromBitmapToMainImage</ref> �� Layer �ɃR�s�[�ł��܂��B<r/>
-		�@�Ǎ��ݏ����͔񓯊��ł��邽�߁A�Ǎ��݂������������ɁA���̉摜��n�� Layer �����ɖ���������Ă���\��������܂��B<r/>
-		�@�{�C�x���g�ő��̃I�u�W�F�N�g�փA�N�Z�X����ꍇ�́A����������Ă��Ȃ����m�F���ĉ������B<r/>
-		�@�������́A�{�C�x���g����������܂őΏۃI�u�W�F�N�g������������Ȃ��悤�ɂ��Ă��������B<r/>
+		　非同期読込みが完了した時に発生します。<r/>
+		　読み込んだ画像は <ref>Layer.copyFromBitmapToMainImage</ref> で Layer にコピーできます。<r/>
+		　読込み処理は非同期であるため、読込みが完了した時に、その画像を渡す Layer が既に無効化されている可能性があります。<r/>
+		　本イベントで他のオブジェクトへアクセスする場合は、無効化されていないか確認して下さい。<r/>
+		　もしくは、本イベントが完了するまで対象オブジェクトが無効化されないようにしてください。<r/>
 	</desc>
 	<ref>Bitmap.loadAsync</ref>
 	<ref>Layer.copyFromBitmapToMainImage</ref>
@@ -129,26 +129,26 @@
 <member>
 	<name>getPixel</name>
 	<type>method</type>
-	<shortdesc>�s�N�Z���l�̎擾</shortdesc>
+	<shortdesc>ピクセル値の取得</shortdesc>
 	<arg>
 		<argitem>
 			<name>x</name>
 			<default></default>
 			<desc>
-				�@�擾���� x ���W�l���s�N�Z���P�ʂŎw�肵�܂��B<r/>
+				　取得する x 座標値をピクセル単位で指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>y</name>
 			<default></default>
 			<desc>
-				�@�擾���� y ���W�l���s�N�Z���P�ʂŎw�肵�܂��B<r/>
+				　取得する y 座標値をピクセル単位で指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
-	<result>�s�N�Z���l</result>
+	<result>ピクセル値</result>
 	<desc>
-		�@�摜�̃s�N�Z���l���擾���܂��B<r/>
+		　画像のピクセル値を取得します。<r/>
 	</desc>
 	<ref>Bitmap.setPixel</ref>
 </member>
@@ -156,33 +156,33 @@
 <member>
 	<name>setPixel</name>
 	<type>method</type>
-	<shortdesc>�s�N�Z���l�̐ݒ�</shortdesc>
+	<shortdesc>ピクセル値の設定</shortdesc>
 	<arg>
 		<argitem>
 			<name>x</name>
 			<default></default>
 			<desc>
-				�@�ݒ肷�� x ���W�l���s�N�Z���P�ʂŎw�肵�܂��B<r/>
+				　設定する x 座標値をピクセル単位で指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>y</name>
 			<default></default>
 			<desc>
-				�@�ݒ肷�� y ���W�l���s�N�Z���P�ʂŎw�肵�܂��B<r/>
+				　設定する y 座標値をピクセル単位で指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>value</name>
 			<default></default>
 			<desc>
-				�@�ݒ肷��s�N�Z���l���w�肵�܂��B<r/>
+				　設定するピクセル値を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�摜�̃s�N�Z���l��ݒ肵�܂��B<r/>
+		　画像のピクセル値を設定します。<r/>
 	</desc>
 	<ref>Bitmap.getPixel</ref>
 </member>
@@ -190,26 +190,26 @@
 <member>
 	<name>getMaskPixel</name>
 	<type>method</type>
-	<shortdesc>�s�N�Z���̃A���t�@�l�̎擾</shortdesc>
+	<shortdesc>ピクセルのアルファ値の取得</shortdesc>
 	<arg>
 		<argitem>
 			<name>x</name>
 			<default></default>
 			<desc>
-				�@�擾���� x ���W�l���s�N�Z���P�ʂŎw�肵�܂��B<r/>
+				　取得する x 座標値をピクセル単位で指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>y</name>
 			<default></default>
 			<desc>
-				�@�擾���� y ���W�l���s�N�Z���P�ʂŎw�肵�܂��B<r/>
+				　取得する y 座標値をピクセル単位で指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
-	<result>�s�N�Z���̃A���t�@�l</result>
+	<result>ピクセルのアルファ値</result>
 	<desc>
-		�@�摜�̃s�N�Z���̃A���t�@�l���擾���܂��B<r/>
+		　画像のピクセルのアルファ値を取得します。<r/>
 	</desc>
 	<ref>Bitmap.setMaskPixel</ref>
 </member>
@@ -217,33 +217,33 @@
 <member>
 	<name>setMaskPixel</name>
 	<type>method</type>
-	<shortdesc>�s�N�Z���̃A���t�@�l�̎擾</shortdesc>
+	<shortdesc>ピクセルのアルファ値の取得</shortdesc>
 	<arg>
 		<argitem>
 			<name>x</name>
 			<default></default>
 			<desc>
-				�@�ݒ肷�� x ���W�l���s�N�Z���P�ʂŎw�肵�܂��B<r/>
+				　設定する x 座標値をピクセル単位で指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>y</name>
 			<default></default>
 			<desc>
-				�@�ݒ肷�� y ���W�l���s�N�Z���P�ʂŎw�肵�܂��B<r/>
+				　設定する y 座標値をピクセル単位で指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>value</name>
 			<default></default>
 			<desc>
-				�@�ݒ肷��s�N�Z���̃A���t�@�l���w�肵�܂��B<r/>
+				　設定するピクセルのアルファ値を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�摜�̃s�N�Z���̃A���t�@�l��ݒ肵�܂��B<r/>
+		　画像のピクセルのアルファ値を設定します。<r/>
 	</desc>
 	<ref>Bitmap.getMaskPixel</ref>
 </member>
@@ -251,80 +251,80 @@
 <member>
 	<name>independ</name>
 	<type>method</type>
-	<shortdesc>�摜�̋��L�̉���</shortdesc>
+	<shortdesc>画像の共有の解除</shortdesc>
 	<arg>
 		<argitem>
 			<name>copy</name>
 			<default>true</default>
 			<desc>
-				�@���L��Ԃ���������ہA���̉摜���R�s�[���邩�ǂ������w�肵�܂��B<r/>
-				�@�^���w�肷��ƌ��̉摜���R�s�[���܂��B�U���w�肷��ƌ��̉摜�̓R�s�[���ꂸ�A�摜��
-				���e�͕s��ƂȂ�܂��B
+				　共有状態を解除する際、元の画像をコピーするかどうかを指定します。<r/>
+				　真を指定すると元の画像をコピーします。偽を指定すると元の画像はコピーされず、画像の
+				内容は不定となります。
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�摜�̋��L��Ԃ������I�ɉ������܂��B<r/>
-		�@�g���g���́AassignImages �Ȃǂŉ摜���܂邲�ƃR�s�[�����ꍇ�A���ۂɂ�
-		�摜�o�b�t�@�̃R�s�[���s�킸�A����̉摜�����L����悤�ɂȂ�܂��B<r/>
-		�@�ʏ�A�摜�ɕύX�������悤�Ƃ��钼�O�ł��̋��L��Ԃ͎����I�ɉ�������܂����A
-		���̃��\�b�h�ŋ����I�ɉ������邱�Ƃ��ł��܂��B<r/>
-		�@copy ������ false ���w�肵���ꍇ�́A�摜�̋��L�͉�������܂����A���̉摜��
-		�����p�����Ƃ͕ۏ؂���܂��� ( �摜�̓��e�͕s��ɂȂ�܂� ) ���A���L�̉�����
-		��荂���ɍs�����Ƃ��ł��܂��B�摜�S��������������ꍇ�͌��̉摜��
-		�����p���K�v�͂���܂���̂ŁA�`����s���O�ɂ��炩���߂��̃��\�b�h�� false ��
-		�w�肵�ČĂяo���ƌ������ǂ��Ȃ�ꍇ������܂��B<r/>
-		�@���̃��\�b�h�́A�摜�����L����Ă��Ȃ��ꍇ�͉������܂���B<r/>
+		　画像の共有状態を強制的に解除します。<r/>
+		　吉里吉里は、assignImages などで画像をまるごとコピーした場合、実際には
+		画像バッファのコピーを行わず、同一の画像を共有するようになります。<r/>
+		　通常、画像に変更を加えようとする直前でこの共有状態は自動的に解除されますが、
+		このメソッドで強制的に解除することができます。<r/>
+		　copy 引数に false を指定した場合は、画像の共有は解除されますが、元の画像を
+		引き継ぐことは保証されません ( 画像の内容は不定になります ) が、共有の解除を
+		より高速に行うことができます。画像全部を書き換える場合は元の画像を
+		引き継ぐ必要はありませんので、描画を行う前にあらかじめこのメソッドに false を
+		指定して呼び出すと効率が良くなる場合があります。<r/>
+		　このメソッドは、画像が共有されていない場合は何もしません。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>setSize</name>
 	<type>method</type>
-	<shortdesc>�摜�T�C�Y�̐ݒ�</shortdesc>
+	<shortdesc>画像サイズの設定</shortdesc>
 	<arg>
 		<argitem>
 			<name>width</name>
 			<default></default>
 			<desc>
-				�@�摜�̉������s�N�Z���P�ʂŎw�肵�܂��B<r/>
-				�@���̒l�� <ref>Bitmap.width</ref> �v���p�e�B�ł��擾��ݒ肪�ł��܂��B<r/>
+				　画像の横幅をピクセル単位で指定します。<r/>
+				　この値は <ref>Bitmap.width</ref> プロパティでも取得や設定ができます。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>height</name>
 			<default></default>
 			<desc>
-				�@�摜�̏c�����s�N�Z���P�ʂŎw�肵�܂��B<r/>
-				�@���̒l�� <ref>Bitmap.height</ref> �v���p�e�B�ł��擾��ݒ肪�ł��܂��B<r/>
+				　画像の縦幅をピクセル単位で指定します。<r/>
+				　この値は <ref>Bitmap.height</ref> プロパティでも取得や設定ができます。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�摜�T�C�Y���w�肵�܂��B<r/>
+		　画像サイズを指定します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>copyFrom</name>
 	<type>method</type>
-	<shortdesc>�摜�̃R�s�[</shortdesc>
+	<shortdesc>画像のコピー</shortdesc>
 	<arg>
 		<argitem>
 			<name>src</name>
 			<default></default>
 			<desc>
-				�@�R�s�[���� Bitmap �I�u�W�F�N�g���w�肵�܂��B<r/>
+				　コピー元の Bitmap オブジェクトを指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�摜�̃R�s�[���s���܂��B<r/>
-		�@�R�s�[�Ƃ����Ă��A���ۂ́u�����摜���ȏ�̃I�u�W�F�N�g�ŋ��L���Ă���v�Ƃ�����ԂɂȂ邾���Ȃ̂�
-		���̃��\�b�h�͂قƂ�ǎ��s���Ԃ�������܂���B<r/>
+		　画像のコピーを行います。<r/>
+		　コピーといっても、実際は「同じ画像を二つ以上のオブジェクトで共有している」という状態になるだけなので
+		このメソッドはほとんど実行時間がかかりません。<r/>
 	</desc>
 </member>
 
@@ -332,78 +332,78 @@
 <member>
 	<name>save</name>
 	<type>method</type>
-	<shortdesc>�摜�̕ۑ�</shortdesc>
+	<shortdesc>画像の保存</shortdesc>
 	<arg>
 		<argitem>
 			<name>name</name>
 			<default></default>
 			<desc>
-				�@�ۑ�����X�g���[�W�����w�肵�܂��B<r/>
+				　保存するストレージ名を指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>type</name>
 			<default>"bmp"</default>
 			<desc>
-				�@�ۑ�����摜�`���𕶎���Ŏw�肵�܂��B���o�[�W�����ł͈ȉ��̌`�����w��\�ł��B<r/>
+				　保存する画像形式を文字列で指定します。現バージョンでは以下の形式を指定可能です。<r/>
 				<r/>
 				<dl>
-				<dt>"<kw>bmp</kw>" �܂��� "<kw>bmp32</kw>"</dt>
+				<dt>"<kw>bmp</kw>" または "<kw>bmp32</kw>"</dt>
 				<dd>
-					�@32bpp �� BMP �ł��B�A���t�@�`�����l��(�}�X�N)���ۑ����܂��B<r/>
+					　32bpp の BMP です。アルファチャンネル(マスク)も保存します。<r/>
 				</dd>
 				<r/>
 				<dt>"<kw>bmp24</kw>"</dt>
 				<dd>
-					�@24bpp �� BMP �ł��B�A���t�@�`�����l��(�}�X�N)�͕ۑ�����܂���B<r/>
+					　24bpp の BMP です。アルファチャンネル(マスク)は保存されません。<r/>
 				</dd>
 				<r/>
 				<dt>"<kw>bmp8</kw>"</dt>
 				<dd>
-					�@8bpp �� BMP �ł��B�A���t�@�`�����l��(�}�X�N)�͕ۑ�����܂���B�摜��
-					252�F�̌Œ�p���b�g�ɂ��4�~4�g�D���f�B�U�����O��p���Č��F����܂��B<r/>
+					　8bpp の BMP です。アルファチャンネル(マスク)は保存されません。画像は
+					252色の固定パレットによる4×4組織化ディザリングを用いて減色されます。<r/>
 				</dd>
 				<r/>
 				<dt>"<kw>jpg</kw>"</dt>
 				<dd>
-					�@JPEG �ł��B�A���t�@�`�����l��(�}�X�N)�͕ۑ�����܂���B�摜��
-					�N�I���e�B�[90%�ŕۑ�����܂��B<r/>
+					　JPEG です。アルファチャンネル(マスク)は保存されません。画像は
+					クオリティー90%で保存されます。<r/>
 				</dd>
 				<r/>
 				<dt>"<kw>jpg###</kw>"</dt>
 				<dd>
-					�@JPEG �ł��B�A���t�@�`�����l��(�}�X�N)�͕ۑ�����܂���B�摜��
-					###�Ŏw�肳�ꂽ�N�I���e�B�[�ŕۑ�����܂��B"jpg010" �� 10%�A"jpg100" �� 100%�A"jpg080" �� 80%�ł��B<r/>
+					　JPEG です。アルファチャンネル(マスク)は保存されません。画像は
+					###で指定されたクオリティーで保存されます。"jpg010" で 10%、"jpg100" で 100%、"jpg080" で 80%です。<r/>
 				</dd>
 				<r/>
 				<dt>"<kw>png</kw>"</dt>
 				<dd>
-					�@32bpp �� PNG �ł��B�A���t�@�`�����l��(�}�X�N)���ۑ����܂��B<r/>
+					　32bpp の PNG です。アルファチャンネル(マスク)も保存します。<r/>
 				</dd>
 				<r/>
 				<dt>"<kw>png24</kw>"</dt>
 				<dd>
-					�@24bpp �� PNG �ł��B�A���t�@�`�����l��(�}�X�N)�͕ۑ�����܂���B<r/>
+					　24bpp の PNG です。アルファチャンネル(マスク)は保存されません。<r/>
 				</dd>
 				<r/>
 				<dt>"<kw>tlg5</kw>"</dt>
 				<dd>
-					�@32bpp �� TLG5 �ł��B�A���t�@�`�����l��(�}�X�N)���ۑ����܂��B<r/>
+					　32bpp の TLG5 です。アルファチャンネル(マスク)も保存します。<r/>
 				</dd>
 				<r/>
 				<dt>"<kw>tlg524</kw>"</dt>
 				<dd>
-					�@24bpp �� TLG5 �ł��B�A���t�@�`�����l��(�}�X�N)�͕ۑ�����܂���B<r/>
+					　24bpp の TLG5 です。アルファチャンネル(マスク)は保存されません。<r/>
 				</dd>
 				<r/>
 				<dt>"<kw>tlg6</kw>"</dt>
 				<dd>
-					�@32bpp �� TLG6 �ł��B�A���t�@�`�����l��(�}�X�N)���ۑ����܂��B<r/>
+					　32bpp の TLG6 です。アルファチャンネル(マスク)も保存します。<r/>
 				</dd>
 				<r/>
 				<dt>"<kw>tlg624</kw>"</dt>
 				<dd>
-					�@24bpp �� TLG6 �ł��B�A���t�@�`�����l��(�}�X�N)�͕ۑ�����܂���B<r/>
+					　24bpp の TLG6 です。アルファチャンネル(マスク)は保存されません。<r/>
 				</dd>
 				<r/>
 				</dl>
@@ -413,83 +413,83 @@
 			<name>meta</name>
 			<default>null</default>
 			<desc>
-				�@�ۑ�����^�O���������`���Ŏw�肵�܂��B<r/>
-				�@�^�O��񂪕ۑ������̂� TLG �`���ŕۑ������ꍇ�݂̂ł��B<r/>
+				　保存するタグ情報を辞書形式で指定します。<r/>
+				　タグ情報が保存されるのは TLG 形式で保存した場合のみです。<r/>
 			</desc>
 		</argitem>
 		
 	</arg>
 	<result></result>
 	<desc>
-		�@name �Ŏw�肵���X�g���[�W (�t�@�C��) �ɁAtype �Ŏw�肵���摜�`���Ńt�@�C����ۑ����܂��B<r/>
+		　name で指定したストレージ (ファイル) に、type で指定した画像形式でファイルを保存します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>load</name>
 	<type>method</type>
-	<shortdesc>�摜�̓ǂݍ���</shortdesc>
+	<shortdesc>画像の読み込み</shortdesc>
 	<arg>
 		<argitem>
 			<name>image</name>
 			<default></default>
 			<desc>
-				�@�ǂݍ��މ摜�X�g���[�W���w�肵�܂��B<r/>
+				　読み込む画像ストレージを指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>colorkey</name>
 			<default>clNone</default>
 			<desc>
-				�@�ǂݍ��މ摜�̃J���[�L�[ ( �����F ) ���w�肵�܂��B<r/>
-				�@0xRRGGBB �`���ŐF���w�肷��ƁA���̐F���J���[�L�[�Ƃ��܂��B<r/>
-				�@<tt><kw>clPalIdx</kw></tt> �� �C�ӂ̃p���b�g�C���f�b�N�X�����Z�������l���w�肷��ƁA
-				���̃p���b�g�C���f�b�N�X�������F�ɂȂ�܂� ( 256 �F�ȉ��̉摜�̏ꍇ )�B<r/>
-				�@<tt><kw>clAdapt</kw></tt> ���w�肷��ƁA�摜�̈�ԏ�̃��C���ɂ�����
-				�����Ƃ������g���Ă���F�������I�ɓ����F�ɂȂ�܂��B<r/>
-				�@<tt><kw>clAlphaMat</kw></tt> �� 0xRRGGBB
-				�`���̐F��\�����l�����Z�������̂��w�肷��ƁA�摜�����̐F�̏��
-				���u�����h(ltAlpha�̕���)��p���ďd�ˍ��킹���܂��B
-				���Ƃ��΁A(clAlphaMat + 0xffffff) ���w�肷��ƁA
-				�ǂݍ��܂ꂽ�摜�������F�̏�ɏd�ˍ��킹���܂��B
-				�摜�͑S�ĕs�����ȉ摜�ƂȂ�܂�
-				( �摜�͑S�ĕs�����ƂȂ�܂����A
-				���̃��[�h�ł̓^�O���͂��������ύX����Ȃ��̂�
-				���ӂ��Ă������� )�B<r/>
+				　読み込む画像のカラーキー ( 透明色 ) を指定します。<r/>
+				　0xRRGGBB 形式で色を指定すると、その色をカラーキーとします。<r/>
+				　<tt><kw>clPalIdx</kw></tt> に 任意のパレットインデックスを加算した数値を指定すると、
+				そのパレットインデックスが透明色になります ( 256 色以下の画像の場合 )。<r/>
+				　<tt><kw>clAdapt</kw></tt> を指定すると、画像の一番上のラインにおいて
+				もっとも多く使われている色が自動的に透明色になります。<r/>
+				　<tt><kw>clAlphaMat</kw></tt> に 0xRRGGBB
+				形式の色を表す数値を加算したものを指定すると、画像がその色の上に
+				αブレンド(ltAlphaの方式)を用いて重ね合わせられます。
+				たとえば、(clAlphaMat + 0xffffff) を指定すると、
+				読み込まれた画像が白い色の上に重ね合わせられます。
+				画像は全て不透明な画像となります
+				( 画像は全て不透明となりますが、
+				このモードではタグ情報はいっさい変更されないので
+				注意してください )。<r/>
 			</desc>
 		</argitem>
 	</arg>
-	<result>�^�O���̎����z��</result>
+	<result>タグ情報の辞書配列</result>
 	<desc>
-		�@�摜��ǂݍ��݂܂��B<r/>
-		�@�߂�l�Ƃ��ă^�O���(���̉摜�̃��C���^�C�v��\���ʒu�ȂǁA�摜���̂��̂ɑ΂�����)�̎����z�񂪕Ԃ�܂��B<r/>
-		�@�摜���^�O���������Ȃ��ꍇ�� null ���Ԃ�܂��B<r/>
-		�@���o�[�W�����ł́A�^�O���� PNG, TLG5/6 �`���݂̂������Ƃ��ł��܂��B�擾�\�ȏ��ɂ��ẮA<link href="TPC"/> ���Q�Ƃ��Ă��������B<r/>
+		　画像を読み込みます。<r/>
+		　戻り値としてタグ情報(その画像のレイヤタイプや表示位置など、画像そのものに対する情報)の辞書配列が返ります。<r/>
+		　画像がタグ情報を持たない場合は null が返ります。<r/>
+		　現バージョンでは、タグ情報は PNG, TLG5/6 形式のみが持つことができます。取得可能な情報については、<link href="TPC"/> を参照してください。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>loadAsync</name>
 	<type>method</type>
-	<shortdesc>�摜�̔񓯊��ǂݍ���</shortdesc>
+	<shortdesc>画像の非同期読み込み</shortdesc>
 	<arg>
 		<argitem>
 			<name>image</name>
 			<default></default>
 			<desc>
-				�@�ǂݍ��މ摜�X�g���[�W���w�肵�܂��B<r/>
-				�@�����Ŏw�肷��t�@�C�����͊g���q���܂񂾂��̂ɂȂ邱�Ƃɒ��ӂ��Ă��������B<r/>
-				�@�g���q���Ȃ��ƃt�@�C���������炸�G���[�ƂȂ�܂��B<r/>
+				　読み込む画像ストレージを指定します。<r/>
+				　ここで指定するファイル名は拡張子を含んだものになることに注意してください。<r/>
+				　拡張子がないとファイルが見つからずエラーとなります。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�摜��񓯊��œǂݍ��݂܂��B<r/>
-		�@�Ǎ��݂̊����� <ref>Bitmap.onLoaded</ref> �Ŏ󂯎��܂��B<r/>
-		�@�񓯊��Ǎ��ݒ����ۂ��� <ref>Bitmap.loading</ref> �Ŋm�F�ł��܂��B<r/>
-		�@�񓯊��Ǎ��ݒ��� <ref>Bitmap.loading</ref> �ȊO�̃����o�փA�N�Z�X����Ɨ�O���������܂��B<r/>
-		�@<ref>Bitmap.onLoaded</ref> �̐������m�F���Ă��������B<r/>
+		　画像を非同期で読み込みます。<r/>
+		　読込みの完了は <ref>Bitmap.onLoaded</ref> で受け取れます。<r/>
+		　非同期読込み中か否かは <ref>Bitmap.loading</ref> で確認できます。<r/>
+		　非同期読込み中は <ref>Bitmap.loading</ref> 以外のメンバへアクセスすると例外が発生します。<r/>
+		　<ref>Bitmap.onLoaded</ref> の説明も確認してください。<r/>
 	</desc>
 	<ref>Bitmap.onLoaded</ref>
 	<ref>Bitmap.loading</ref>
@@ -499,11 +499,11 @@
 <member>
 	<name>width</name>
 	<type>property</type>
-	<shortdesc>�摜����</shortdesc>
+	<shortdesc>画像横幅</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�摜�̉������s�N�Z���P�ʂŎw�肵�܂��B<r/>
-		�@�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
+		　画像の横幅をピクセル単位で指定します。<r/>
+		　値を設定することもできます。<r/>
 	</desc>
 	<ref>Bitmap.setSize</ref>
 </member>
@@ -511,11 +511,11 @@
 <member>
 	<name>height</name>
 	<type>property</type>
-	<shortdesc>�摜�c��</shortdesc>
+	<shortdesc>画像縦幅</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�摜�̏c�����s�N�Z���P�ʂŎw�肵�܂��B<r/>
-		�@�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
+		　画像の縦幅をピクセル単位で指定します。<r/>
+		　値を設定することもできます。<r/>
 	</desc>
 	<ref>Bitmap.setSize</ref>
 </member>
@@ -523,20 +523,20 @@
 <member>
 	<name>buffer</name>
 	<type>property</type>
-	<shortdesc>�摜�o�b�t�@�|�C���^</shortdesc>
+	<shortdesc>画像バッファポインタ</shortdesc>
 	<access>r</access>
 	<desc>
-		�@�摜 ( �F�ƃ}�X�N(�s�����x)�̏����܂� 32bpp �̃r�b�g�}�b�v ) �̉摜�o�b�t�@������ւ̃|�C���^
-		��\���܂��B<r/>
-		�@���̃v���p�e�B�́A�v���O�C���Ȃǂ̂��߂ɉ摜�o�b�t�@�ւ̒��ڂ̃A�N�Z�X�̎�i��񋟂���
-		���߂ɂ���܂��B<r/>
-		�@�����^�ŕԂ���܂����A�v���O�C���Ȃǂł͓K�؂Ȍ^ ( const unsigned long * �� ) �ɃL���X�g���Ďg����
-		���������B<r/>
-		�@���̃v���p�e�B�œ���ꂽ�|�C���^�ɂ͒l���������܂Ȃ��ł��������B
-		<ref>Bitmap.bufferForWrite</ref> �œ���ꂽ�|�C���^�Ȃ�Ώ������ނ��Ƃ��ł��܂��B<r/>
-		�@�摜�̃T�C�Y�� <ref>Bitmap.width</ref> �� <ref>Bitmap.height</ref> �v���p�e�B��
-		�\���Ă��܂��B<r/>
-		�@�|�C���^�̌v�Z���@�� <ref>Bitmap.bufferPitch</ref> ���Q�Ƃ��Ă��������B<r/>
+		　画像 ( 色とマスク(不透明度)の情報を含む 32bpp のビットマップ ) の画像バッファ左上隅へのポインタ
+		を表します。<r/>
+		　このプロパティは、プラグインなどのために画像バッファへの直接のアクセスの手段を提供する
+		ためにあります。<r/>
+		　整数型で返されますが、プラグインなどでは適切な型 ( const unsigned long * 等 ) にキャストして使って
+		ください。<r/>
+		　このプロパティで得られたポインタには値を書き込まないでください。
+		<ref>Bitmap.bufferForWrite</ref> で得られたポインタならば書き込むことができます。<r/>
+		　画像のサイズは <ref>Bitmap.width</ref> と <ref>Bitmap.height</ref> プロパティが
+		表しています。<r/>
+		　ポインタの計算方法は <ref>Bitmap.bufferPitch</ref> を参照してください。<r/>
 	</desc>
 	<ref>Bitmap.bufferForWrite</ref>
 	<ref>Bitmap.bufferPitch</ref>
@@ -545,21 +545,21 @@
 <member>
 	<name>bufferForWrite</name>
 	<type>property</type>
-	<shortdesc>�摜�o�b�t�@�|�C���^(�������ݗp)</shortdesc>
+	<shortdesc>画像バッファポインタ(書き込み用)</shortdesc>
 	<access>r</access>
 	<desc>
-		�@�摜 ( �F�ƃ}�X�N(�s�����x)�̏����܂� 32bpp �̃r�b�g�}�b�v ) �̉摜�o�b�t�@������ւ̃|�C���^
-		��\���܂��B<r/>
-		�@���̃v���p�e�B�́A�v���O�C���Ȃǂ̂��߂ɉ摜�o�b�t�@�ւ̒��ڂ̃A�N�Z�X�̎�i��񋟂���
-		���߂ɂ���܂��B<r/>
-		�@�����^�ŕԂ���܂����A�v���O�C���Ȃǂł͓K�؂Ȍ^ ( unsigned long * �� ) �ɃL���X�g���Ďg����
-		���������B<r/>
-		�@���̃v���p�e�B�œ���ꂽ�|�C���^�ɂ� <ref>Bitmap.buffer</ref> �ƈقȂ�A
-		�l���������ނ��Ƃ��ł��܂��B�g���g�������ł͑S�������摜�͕����̃I�u�W�F�g�Ԃŋ��L���܂����A
-		���̃v���p�e�B���Q�Ƃ���Ƃ��̋��L��Ԃ��������܂��B<r/>
-		�@�摜�̃T�C�Y�� <ref>Bitmap.width</ref> �� <ref>Bitmap.height</ref> �v���p�e�B��
-		�\���Ă��܂��B<r/>
-		�@�|�C���^�̌v�Z���@�� <ref>Bitmap.bufferPitch</ref> ���Q�Ƃ��Ă��������B<r/>
+		　画像 ( 色とマスク(不透明度)の情報を含む 32bpp のビットマップ ) の画像バッファ左上隅へのポインタ
+		を表します。<r/>
+		　このプロパティは、プラグインなどのために画像バッファへの直接のアクセスの手段を提供する
+		ためにあります。<r/>
+		　整数型で返されますが、プラグインなどでは適切な型 ( unsigned long * 等 ) にキャストして使って
+		ください。<r/>
+		　このプロパティで得られたポインタには <ref>Bitmap.buffer</ref> と異なり、
+		値を書き込むことができます。吉里吉里内部では全く同じ画像は複数のオブジェト間で共有しますが、
+		このプロパティを参照するとその共有状態を解除します。<r/>
+		　画像のサイズは <ref>Bitmap.width</ref> と <ref>Bitmap.height</ref> プロパティが
+		表しています。<r/>
+		　ポインタの計算方法は <ref>Bitmap.bufferPitch</ref> を参照してください。<r/>
 	</desc>
 	<ref>Bitmap.buffer</ref>
 	<ref>Bitmap.bufferPitch</ref>
@@ -568,19 +568,19 @@
 <member>
 	<name>bufferPitch</name>
 	<type>property</type>
-	<shortdesc>�摜�o�b�t�@�s�b�`</shortdesc>
+	<shortdesc>画像バッファピッチ</shortdesc>
 	<access>r</access>
 	<desc>
-		�@�摜 ( �F�ƃ}�X�N(�s�����x)�̏����܂� 32bpp �̃r�b�g�}�b�v ) �̉摜�o�b�t�@�̃s�b�`
-		( ����̃X�L�������C���܂ł̃o�C�g�� ) ��\���܂��B<r/>
-		�@���̃v���p�e�B�́A�v���O�C���Ȃǂ̂��߂ɉ摜�o�b�t�@�ւ̒��ڂ̃A�N�Z�X�̎�i��񋟂���
-		���߂ɂ���܂��B<r/>
-		�@tjs_uint32 �� 32bit �̐����^�Atjs_uint8 �� 8bit (1byte) �̐����^�Ƃ��āA�摜�ʒu (x, y) �ւ�
-		�|�C���^�� C ����ŏ����ƈȉ��̂悤�Ɍv�Z���邱�Ƃ��ł��܂��B<r/>
+		　画像 ( 色とマスク(不透明度)の情報を含む 32bpp のビットマップ ) の画像バッファのピッチ
+		( 一つ下のスキャンラインまでのバイト数 ) を表します。<r/>
+		　このプロパティは、プラグインなどのために画像バッファへの直接のアクセスの手段を提供する
+		ためにあります。<r/>
+		　tjs_uint32 が 32bit の整数型、tjs_uint8 が 8bit (1byte) の整数型として、画像位置 (x, y) への
+		ポインタは C 言語で書くと以下のように計算することができます。<r/>
 		<tt>( (tjs_uint32*)( (tjs_uint8*)buffer + y*bufferPitch )) + x</tt><r/>
-		�@���̃v���p�e�B�́A���̃X�L�������C���܂ł̃s�N�Z�����ł͂Ȃ��A�o�C�g����Ԃ����Ƃ�
-		���ӂ��Ă��������B���̐��l�͉摜�����҂�����ɕK�v�ȃo�C�g�������኱�傫���ꍇ������܂��B<r/>
-		�@���̃v���p�e�B�͒l�����ɂȂ蓾�܂��̂Œ��ӂ��Ă��������B<r/>
+		　このプロパティは、次のスキャンラインまでのピクセル数ではなく、バイト数を返すことに
+		注意してください。この数値は画像横幅ぴったりに必要なバイト数よりも若干大きい場合があります。<r/>
+		　このプロパティは値が負になり得ますので注意してください。<r/>
 	</desc>
 	<ref>Bitmap.buffer</ref>
 	<ref>Bitmap.bufferForWrite</ref>
@@ -589,12 +589,12 @@
 <member>
 	<name>loading</name>
 	<type>property</type>
-	<shortdesc>�񓯊��Ǎ��ݒ��m�F</shortdesc>
+	<shortdesc>非同期読込み中確認</shortdesc>
 	<access>r</access>
 	<desc>
-		�@�񓯊��Ǎ��ݒ����ǂ�����\���܂��B<r/>
-		�@���̒l���^�̎��񓯊��Ǎ��ݒ��ł��B<r/>
-		�@�񓯊��Ǎ��ݒ��ɑ��̃����o�ɃA�N�Z�X����Ɨ�O����������̂Œ��ӂ��Ă��������B<r/>
+		　非同期読込み中かどうかを表します。<r/>
+		　この値が真の時非同期読込み中です。<r/>
+		　非同期読込み中に他のメンバにアクセスすると例外が発生するので注意してください。<r/>
 	</desc>
 	<ref>Bitmap.buffer</ref>
 	<ref>Bitmap.bufferPitch</ref>

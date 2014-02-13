@@ -1,33 +1,33 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <doc>
 <title>Storages</title>
 <desc>
-�@Storages �N���X�� �g���g���{�̂�<kw>�X�g���[�W�V�X�e��</kw>�Ɋւ��郁�\�b�h��v���p�e�B���������N���X�ł��B���̃N���X����I�u�W�F�N�g���쐬���邱�Ƃ͂ł��܂���B<r/>
+　Storages クラスは 吉里吉里本体の<kw>ストレージシステム</kw>に関するメソッドやプロパティを持ったクラスです。このクラスからオブジェクトを作成することはできません。<r/>
 </desc>
 
 <member>
 	<name>addAutoPath</name>
 	<type>method</type>
-	<shortdesc>���������p�X�ւ̒ǉ�</shortdesc>
+	<shortdesc>自動検索パスへの追加</shortdesc>
 	<arg>
 		<argitem>
 			<name>path</name>
 			<default></default>
 			<desc>
-				�@���������p�X�ɒǉ�����p�X���w�肵�܂��B<r/>
-				�@�p�X�̍Ō�́A�A�[�J�C�u���̃��[�g�t�H���_���w�肷��Ƃ��� '&gt;'�A�ʏ�̃t�H���_��
-				�w�肷��Ƃ��� '/' �ŏI���K�v������܂�
-				( �� : <tt>"Archive/arc.xp3&gt;"</tt> �� <tt>"System/"</tt> ) �B<r/>
-				�@2.19 beta 14 ���A�[�J�C�u�̋�؂蕶���� '#' ���� '&gt;' �ɕς��܂����B<r/>
+				　自動検索パスに追加するパスを指定します。<r/>
+				　パスの最後は、アーカイブ内のルートフォルダを指定するときは '&gt;'、通常のフォルダを
+				指定するときは '/' で終わる必要があります
+				( 例 : <tt>"Archive/arc.xp3&gt;"</tt> や <tt>"System/"</tt> ) 。<r/>
+				　2.19 beta 14 よりアーカイブの区切り文字が '#' から '&gt;' に変わりました。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@<kw>���������p�X</kw>�ɁA�w�肵���p�X��ǉ����܂��B�g���g���́A���p�\�ȃX�g���[�W��
-		��������Ƃ��A���̎��������p�X�ɓo�^���ꂽ�p�X��T���܂��B<r/>
-		�@���������p�X�́A��Ɏw�肵�����̂����D�悳��Č�������܂��B<r/>
-		�@�܂��A�v���W�F�N�g�t�H���_�͂����Ƃ��D�悳��Č�������܂��B<r/>
+		　<kw>自動検索パス</kw>に、指定したパスを追加します。吉里吉里は、利用可能なストレージを
+		検索するとき、この自動検索パスに登録されたパスを探します。<r/>
+		　自動検索パスは、後に指定したものがより優先されて検索されます。<r/>
+		　また、プロジェクトフォルダはもっとも優先されて検索されます。<r/>
 	</desc>
 	<ref>Storages.removeAutoPath</ref>
 </member>
@@ -35,19 +35,19 @@
 <member>
 	<name>removeAutoPath</name>
 	<type>method</type>
-	<shortdesc>���������p�X�̍폜</shortdesc>
+	<shortdesc>自動検索パスの削除</shortdesc>
 	<arg>
 		<argitem>
 			<name>path</name>
 			<default></default>
 			<desc>
-				�@������������폜����p�X���w�肵�܂��B<r/>
+				　自動検索から削除するパスを指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@���������p�X����A�w�肵���p�X���폜���܂��B<r/>
+		　自動検索パスから、指定したパスを削除します。<r/>
 	</desc>
 	<ref>Storages.addAutoPath</ref>
 </member>
@@ -55,21 +55,21 @@
 <member>
 	<name>getFullPath</name>
 	<type>method</type>
-	<shortdesc>���S�ȓ���X�g���[�W���̎擾</shortdesc>
+	<shortdesc>完全な統一ストレージ名の取得</shortdesc>
 	<arg>
 		<argitem>
 			<name>path</name>
 			<default></default>
 			<desc>
-				�@���S�ȓ���X�g���[�W���ɂ������X�g���[�W�����w�肵�܂��B<r/>
+				　完全な統一ストレージ名にしたいストレージ名を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
-	<result>���S�ȓ���X�g���[�W��</result>
+	<result>完全な統一ストレージ名</result>
 	<desc>
-		�@path �Ŏw�肳�ꂽ�X�g���[�W�������S��<kw>����X�g���[�W��</kw>�ɕϊ����܂��B<r/>
-		�@�璷�ȃp�X�A�N�Z�X ( ���Ƃ��� <tt>system/flags/../data/</tt> �Ȃ� ) �͂��ׂĈ��k����܂��B<r/>
-		�@�J�����g���f�B�A�A�J�����g�t�H���_���w�肳��Ă��Ȃ���΁A�⊮���܂��B<r/>
+		　path で指定されたストレージ名を完全な<kw>統一ストレージ名</kw>に変換します。<r/>
+		　冗長なパスアクセス ( たとえば <tt>system/flags/../data/</tt> など ) はすべて圧縮されます。<r/>
+		　カレントメディア、カレントフォルダが指定されていなければ、補完します。<r/>
 	</desc>
 	<ref>Storages.getPlacedPath</ref>
 </member>
@@ -77,19 +77,19 @@
 <member>
 	<name>getPlacedPath</name>
 	<type>method</type>
-	<shortdesc>�X�g���[�W�̌���</shortdesc>
+	<shortdesc>ストレージの検索</shortdesc>
 	<arg>
 		<argitem>
 			<name>storage</name>
 			<default></default>
 			<desc>
-				�@�����������X�g���[�W�����w�肵�܂��B<r/>
+				　検索したいストレージ名を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
-	<result>�������ꂽ�ꏊ������X�g���[�W���ŕԂ�܂��B������Ȃ������ꍇ�͋󕶎��񂪕Ԃ�܂��B</result>
+	<result>発見された場所が統一ストレージ名で返ります。見つからなかった場合は空文字列が返ります。</result>
 	<desc>
-		�@storage �Ŏw�肳�ꂽ�X�g���[�W��<kw>���������p�X</kw>���猟�����܂��B<r/>
+		　storage で指定されたストレージを<kw>自動検索パス</kw>から検索します。<r/>
 	</desc>
 	<ref>Storages.getFullPath</ref>
 	<ref>Storages.isExistentStorage</ref>
@@ -98,20 +98,20 @@
 <member>
 	<name>isExistentStorage</name>
 	<type>method</type>
-	<shortdesc>�X�g���[�W�̑��݊m�F</shortdesc>
+	<shortdesc>ストレージの存在確認</shortdesc>
 	<arg>
 		<argitem>
 			<name>storage</name>
 			<default></default>
 			<desc>
-				�@���݂��m�F�������X�g���[�W�����w�肵�܂��B<r/>
+				　存在を確認したいストレージ名を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
-	<result>���݂��m�F�ł���ΐ^�A�Ȃ���΋U���Ԃ�܂��B</result>
+	<result>存在を確認できれば真、なければ偽が返ります。</result>
 	<desc>
-		�@storage �Ŏw�肵���X�g���[�W�����݂��邩�ǂ������m�F���܂��BgetPlacedPath ��p������͍���
-		�ł��B<r/>
+		　storage で指定したストレージが存在するかどうかを確認します。getPlacedPath を用いるよりは高速
+		です。<r/>
 	</desc>
 	<ref>Storages.getPlacedPath</ref>
 </member>
@@ -119,20 +119,20 @@
 <member>
 	<name>extractStorageExt</name>
 	<type>method</type>
-	<shortdesc>�X�g���[�W���̊g���q�̒��o</shortdesc>
+	<shortdesc>ストレージ名の拡張子の抽出</shortdesc>
 	<arg>
 		<argitem>
 			<name>storage</name>
 			<default></default>
 			<desc>
-				�@�g���q�����𒊏o�������X�g���[�W�����w�肵�܂��B<r/>
+				　拡張子部分を抽出したいストレージ名を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
-	<result>�g���q�������Ԃ�܂��B�g���q������ <tt>.</tt> (�h�b�g)���܂݂܂��B�g���q��
-		�Ȃ������ꍇ�͋󕶎��񂪕Ԃ�܂��B</result>
+	<result>拡張子部分が返ります。拡張子部分は <tt>.</tt> (ドット)も含みます。拡張子が
+		なかった場合は空文字列が返ります。</result>
 	<desc>
-		�@�w�肳�ꂽ�X�g���[�W������g���q�̕����𒊏o���ĕԂ��܂��B<r/>
+		　指定されたストレージ名から拡張子の部分を抽出して返します。<r/>
 	</desc>
 	<ref>Storages.extractStorageName</ref>
 	<ref>Storages.extractStoragePath</ref>
@@ -142,20 +142,20 @@
 <member>
 	<name>extractStorageName</name>
 	<type>method</type>
-	<shortdesc>�X�g���[�W���̒��o</shortdesc>
+	<shortdesc>ストレージ名の抽出</shortdesc>
 	<arg>
 		<argitem>
 			<name>storage</name>
 			<default></default>
 			<desc>
-				�@�X�g���[�W���𒊏o�������X�g���[�W�����w�肵�܂��B<r/>
+				　ストレージ名を抽出したいストレージ名を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
-	<result>�X�g���[�W�����Ԃ�܂��B�X�g���[�W�����Ȃ������ꍇ�͋󕶎��񂪕Ԃ�܂��B</result>
+	<result>ストレージ名が返ります。ストレージ名がなかった場合は空文字列が返ります。</result>
 	<desc>
-		�@�w�肳�ꂽ�X�g���[�W������A�X�g���[�W���̕��� ( �p�X������ ) �𒊏o���ĕԂ��܂��B<r/>
-		�@���Ƃ��� <tt>"System/hoge.txt"</tt> ��n�����ꍇ�A<tt>"hoge.txt"</tt> ���Ԃ�܂��B<r/>
+		　指定されたストレージ名から、ストレージ名の部分 ( パスを除く ) を抽出して返します。<r/>
+		　たとえば <tt>"System/hoge.txt"</tt> を渡した場合、<tt>"hoge.txt"</tt> が返ります。<r/>
 	</desc>
 	<ref>Storages.extractStorageExt</ref>
 	<ref>Storages.extractStoragePath</ref>
@@ -164,21 +164,21 @@
 <member>
 	<name>extractStoragePath</name>
 	<type>method</type>
-	<shortdesc>�X�g���[�W���̃p�X�̒��o</shortdesc>
+	<shortdesc>ストレージ名のパスの抽出</shortdesc>
 	<arg>
 		<argitem>
 			<name>storage</name>
 			<default></default>
 			<desc>
-				�@�p�X�𒊏o�������X�g���[�W�����w�肵�܂��B<r/>
+				　パスを抽出したいストレージ名を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
-	<result>�p�X���Ԃ�܂��B�p�X���Ȃ������ꍇ�͋󕶎��񂪕Ԃ�܂��B</result>
+	<result>パスが返ります。パスがなかった場合は空文字列が返ります。</result>
 	<desc>
-		�@�w�肳�ꂽ�X�g���[�W������A�p�X�̕����𒊏o���ĕԂ��܂��B<r/>
-		�@���Ƃ��� <tt>"file://home/dee/hoge.txt"</tt> ��n�����ꍇ�A<tt>"file://home/dee/"</tt> ��
-		�Ԃ�܂��B<r/>
+		　指定されたストレージ名から、パスの部分を抽出して返します。<r/>
+		　たとえば <tt>"file://home/dee/hoge.txt"</tt> を渡した場合、<tt>"file://home/dee/"</tt> が
+		返ります。<r/>
 	</desc>
 	<ref>Storages.extractStorageExt</ref>
 	<ref>Storages.extractStorageName</ref>
@@ -187,21 +187,21 @@
 <member>
 	<name>chopStorageExt</name>
 	<type>method</type>
-	<shortdesc>�X�g���[�W���̊g���q�̐؂藎�Ƃ�</shortdesc>
+	<shortdesc>ストレージ名の拡張子の切り落とし</shortdesc>
 	<arg>
 		<argitem>
 			<name>storage</name>
 			<default></default>
 			<desc>
-				�@�g���q������؂藎�Ƃ������X�g���[�W�����w�肵�܂��B<r/>
+				　拡張子部分を切り落としたいストレージ名を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
-	<result>�g���q�������؂藎�Ƃ��ꂽ�X�g���[�W�����Ԃ�܂��B</result>
+	<result>拡張子部分が切り落とされたストレージ名が返ります。</result>
 	<desc>
-		�@�w�肳�ꂽ�X�g���[�W������g���q�̕�����؂藎�Ƃ��ĕԂ��܂��B<r/>
-		�@���Ƃ��� <tt>"file://home/dee/hoge.txt"</tt> ��n�����ꍇ�A<tt>"file://home/dee/hoge"</tt> ����
-		��܂��B
+		　指定されたストレージ名から拡張子の部分を切り落として返します。<r/>
+		　たとえば <tt>"file://home/dee/hoge.txt"</tt> を渡した場合、<tt>"file://home/dee/hoge"</tt> が返
+		ります。
 	</desc>
 	<ref>Storages.extractStorageExt</ref>
 </member>
@@ -210,137 +210,137 @@
 <member>
 	<name>searchCD</name>
 	<type>method</type>
-	<shortdesc>CD �̌���</shortdesc>
+	<shortdesc>CD の検索</shortdesc>
 	<arg>
 		<argitem>
 			<name>volume</name>
 			<default></default>
 			<desc>
-				�@��������CD�̃{�����[�����x�����w�肵�܂��B<r/>
+				　検索するCDのボリュームラベルを指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
-	<result>�������� CD-ROM �h���C�u�̃h���C�u�������Ԃ�܂��B</result>
+	<result>見つかった CD-ROM ドライブのドライブ文字が返ります。</result>
 	<desc>
-		�@�w�肳�ꂽ�{�����[�����x�������� CD �h���C�u��T���āA���̃h���C�u���� ( 'H' �Ȃ� ) ��Ԃ�
-		�܂��B<r/>
-		�@�������A�h���C�u�ɂ͊Y������ CD-ROM ���}������Ă��Ȃ���΂Ȃ�܂���B<r/>
+		　指定されたボリュームラベルを持つ CD ドライブを探して、そのドライブ文字 ( 'H' など ) を返し
+		ます。<r/>
+		　もちろん、ドライブには該当する CD-ROM が挿入されていなければなりません。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>getLocalName</name>
 	<type>method</type>
-	<shortdesc>���[�J���t�@�C�����̎擾</shortdesc>
+	<shortdesc>ローカルファイル名の取得</shortdesc>
 	<arg>
 		<argitem>
 			<name>path</name>
 			<default></default>
 			<desc>
-				�@<kw>���[�J���t�@�C����</kw> �ɕϊ�����������X�g���[�W�����w�肵�܂��B<r/>
+				　<kw>ローカルファイル名</kw> に変換したい統一ストレージ名を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
-	<result>���[�J���t�@�C�������Ԃ�܂��B���[�J���t�@�C�����ɕϊ��ł��Ȃ������ꍇ�͋󕶎����Ԃ邩�A
-		��O���������܂��B</result>
+	<result>ローカルファイル名が返ります。ローカルファイル名に変換できなかった場合は空文字が返るか、
+		例外が発生します。</result>
 	<desc>
-		�@�w�肳�ꂽ����X�g���[�W�����AOS �l�C�e�B�u�̌`�� ( ���[�J���t�@�C���� ) �ɕϊ����ĕԂ��܂��B<r/>
+		　指定された統一ストレージ名を、OS ネイティブの形式 ( ローカルファイル名 ) に変換して返します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>selectFile</name>
 	<type>method</type>
-	<shortdesc>�t�@�C���I���_�C�A���O�{�b�N�X��\��</shortdesc>
+	<shortdesc>ファイル選択ダイアログボックスを表示</shortdesc>
 	<arg>
 		<argitem>
 			<name>params</name>
 			<default></default>
 			<desc>
-				�@�f�[�^�̎󂯓n���ɗp���鎫���z����w�肵�܂��B<r/>
-				�@���̃��\�b�h�ɓn���Ƃ��A�ȉ��̃����o���w�肷�邱�Ƃ��ł��܂��B�܂��A
-				�������̃����o�͂��̃��\�b�h���I���ƒl���ύX����܂��B<r/>
+				　データの受け渡しに用いる辞書配列を指定します。<r/>
+				　このメソッドに渡すとき、以下のメンバを指定することができます。また、
+				いくつかのメンバはこのメソッドが終わると値が変更されます。<r/>
 				<r/>
 				<dl>
 				<dt><kw>filter</kw></dt>
 				<dd>
-					�@�t�B���^�������z��œn���܂��B<r/>
-					�@�t�B���^������́A�t�B���^�̐����� �t�B���^�� | (���p�c�_) �ŋ�؂��Ďw��
-					������̂ŁA�t�B���^�ɂ̓��C���h�J�[�h���w�肵�܂��B��̃t�B���^�ɕ�����
-					�g���q���Ή�����ꍇ�� ; (���p�Z�~�R����) �ŋ�؂�܂��B<r/>
-					�@�����̃t�B���^���w�肷��ɂ͔z��Ŏw�肵�܂��B<r/>
-					�@�ȗ�����ƃt�B���^�͗p���܂���B<r/>
+					　フィルタ文字列を配列で渡します。<r/>
+					　フィルタ文字列は、フィルタの説明と フィルタを | (半角縦棒) で区切って指定
+					するもので、フィルタにはワイルドカードを指定します。一つのフィルタに複数の
+					拡張子が対応する場合は ; (半角セミコロン) で区切ります。<r/>
+					　複数のフィルタを指定するには配列で指定します。<r/>
+					　省略するとフィルタは用いません。<r/>
 					<r/>
-					�� :<r/>
-					<tt><nobr>["�摜�t�@�C��(*.bmp;*.png;*.jpg;*.jpeg;*.eri;*.tlg)|*.bmp;*.png;*.jpg;*.jpeg;*.eri;*.tlg", </nobr></tt><r/>
-					<tt><nobr> "�X�N���v�g�t�@�C��(*.tjs;*.ks)|*.tjs;*.ks"]</nobr></tt><r/>
+					例 :<r/>
+					<tt><nobr>["画像ファイル(*.bmp;*.png;*.jpg;*.jpeg;*.eri;*.tlg)|*.bmp;*.png;*.jpg;*.jpeg;*.eri;*.tlg", </nobr></tt><r/>
+					<tt><nobr> "スクリプトファイル(*.tjs;*.ks)|*.tjs;*.ks"]</nobr></tt><r/>
 				</dd>
 				<r/>
 				<dt><kw>filterIndex</kw></dt>
 				<dd>
-					�@�I������Ă���t�B���^�̔ԍ� ( filter �Ŏw�肵������ ) ���w�肵�܂��B<r/>
-					�@1 ���w�肷��ƁAfilter �Ŏw�肳�ꂽ�ŏ��̃t�B���^��������Ԃɂ�����
-					�I������Ă��܂��B2 ���w�肷���2�Ԗڂ̃t�B���^���I�����Ă����Ԃ�
-					�Ȃ�܂� ( 0 ����n�܂�C���f�b�N�X�ԍ��ł͂Ȃ����Ƃɒ��ӂ��Ă�������;
-					�擪�� 1 �ł� )�B<r/>
-					�@�ȗ�����Ɛ擪�̃t�B���^���I������܂��B<r/>
-					�@�܂��A���[�U�� OK �{�^�����������ꍇ�A�Ō�Ƀ_�C�A���O�{�b�N�X���
-					�I�΂�Ă����t�B���^�̃C���f�b�N�X�����̃����o�ɐݒ肳��܂��B<r/>
+					　選択されているフィルタの番号 ( filter で指定したもの ) を指定します。<r/>
+					　1 を指定すると、filter で指定された最初のフィルタが初期状態において
+					選択されています。2 を指定すると2番目のフィルタが選択さている状態に
+					なります ( 0 から始まるインデックス番号ではないことに注意してください;
+					先頭は 1 です )。<r/>
+					　省略すると先頭のフィルタが選択されます。<r/>
+					　また、ユーザが OK ボタンを押した場合、最後にダイアログボックス上で
+					選ばれていたフィルタのインデックスがこのメンバに設定されます。<r/>
 				</dd>
 				<r/>
 				<dt><kw>name</kw></dt>
 				<dd>
-					�@�t�@�C�������w�肵�܂��B�ȗ�������A�󕶎�����w�肷��Ə�����Ԃł͂Ȃɂ��t�@�C����I��
-					����Ă��Ȃ���Ԃɂ��邱�Ƃ��ł��܂��B<r/>
-					�@�܂��A���[�U�� OK �{�^�����������ꍇ�A�I�����ꂽ�t�@�C�������̃����o��
-					�ݒ肳��܂��B<r/>
+					　ファイル名を指定します。省略したり、空文字列を指定すると初期状態ではなにもファイルを選択
+					されていない状態にすることができます。<r/>
+					　また、ユーザが OK ボタンを押した場合、選択されたファイルがこのメンバに
+					設定されます。<r/>
 				</dd>
 				<r/>
 				<dt><kw>initialDir</kw></dt>
 				<dd>
-					�@������Ԃŕ\������t�H���_���w�肵�܂��B<r/>
-					�@�ȗ�����ƃJ�����g�f�B���N�g�����g�p����܂��B<r/>
+					　初期状態で表示するフォルダを指定します。<r/>
+					　省略するとカレントディレクトリが使用されます。<r/>
 				</dd>
 				<r/>
 				<dt><kw>title</kw></dt>
 				<dd>
-					�@�_�C�A���O�{�b�N�X�̃^�C�g����\�����܂��B<r/>
-					�@�ȗ������ƃf�t�H���g�́u�J���v��u���O��t���ĕۑ��v�ɂȂ�܂�
-					( save �����o�̐ݒ�ɂ��܂� )�B
+					　ダイアログボックスのタイトルを表示します。<r/>
+					　省略されるとデフォルトの「開く」や「名前を付けて保存」になります
+					( save メンバの設定によります )。
 				</dd>
 				<r/>
 				<dt><kw>save</kw></dt>
 				<dd>
-					�@�_�C�A���O�{�b�N�X�̎�ނ��w�肵�܂��B<r/>
-					�@false(�f�t�H���g) �̏ꍇ�A�u�J���v�̃_�C�A���O�{�b�N�X���g���܂��B<r/>
-					�@true �̏ꍇ�A�u���O��t���ĕۑ��v�̃_�C�A���O�{�b�N�X���g���܂��B<r/>
+					　ダイアログボックスの種類を指定します。<r/>
+					　false(デフォルト) の場合、「開く」のダイアログボックスが使われます。<r/>
+					　true の場合、「名前を付けて保存」のダイアログボックスが使われます。<r/>
 				</dd>
 				<r/>
 				<dt><kw>defaultExt</kw></dt>
 				<dd>
-					�@�f�t�H���g�̊g���q���w�肵�܂��B���[�U���g���q���w�肵�Ȃ������ꍇ��
-					�����I�ɂ��̊g���q��t�����܂��B�����Ŏw�肷��g���q�ɂ� . (�s���I�h)��
-					�w�肵�Ȃ��ł��������B<r/>
-					�@�ȗ�����ƁA�g���q���t������邱�Ƃ͂���܂���B<r/>
+					　デフォルトの拡張子を指定します。ユーザが拡張子を指定しなかった場合に
+					自動的にこの拡張子を付加します。ここで指定する拡張子には . (ピリオド)を
+					指定しないでください。<r/>
+					　省略すると、拡張子が付加されることはありません。<r/>
 				</dd>
 				</dl>
 			</desc>
 		</argitem>
 	</arg>
-	<result>���[�U���t�@�C����I������ OK �{�^���������ΐ^�A�L�����Z���{�^���������΋U���߂�܂��B</result>
+	<result>ユーザがファイルを選択して OK ボタンを押せば真、キャンセルボタンを押せば偽が戻ります。</result>
 	<desc>
-		�@�t�@�C���I���_�C�A���O�{�b�N�X���J���܂��B<r/>
+		　ファイル選択ダイアログボックスを開きます。<r/>
 		<example>
 var params = %[<r/>
-filter : [ "�e�L�X�g�t�@�C��(*.txt)|*.txt", "�o�C�i���t�@�C��(*.bin)|*.bin" ],<r/>
+filter : [ "テキストファイル(*.txt)|*.txt", "バイナリファイル(*.bin)|*.bin" ],<r/>
 filterIndex : 1,<r/>
 name : "",<r/>
 initialDir : System.exePath,<r/>
-title : "�t�@�C�����J��",<r/>
+title : "ファイルを開く",<r/>
 save : false,<r/>
 ];<r/>
 if(Storages.selectFile(params))<r/>
-System.inform("�I�������t�@�C���� : " + params.name);<r/>
+System.inform("選択したファイルは : " + params.name);<r/>
 		</example>
 	</desc>
 </member>

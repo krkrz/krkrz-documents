@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <doc>
 <anchor target="main"/>
 <keywords/>
-<title>‹g—¢‹g—¢Z –ÚŽŸ</title>
+<title>å‰é‡Œå‰é‡ŒZ ç›®æ¬¡</title>
 <para>
-<ptitle>ŠT—v‚ÆŠe‹@”\</ptitle>
+<ptitle>æ¦‚è¦ã¨å„æ©Ÿèƒ½</ptitle>
 <link href="about"/><r/>
 <link href="Copyrights"/><r/>
 <r/>
@@ -27,29 +27,29 @@
 <link href="ComputerDependentProblems"/><r/>
 </para>
 <para>
-<ptitle>ƒNƒ‰ƒXƒŠƒtƒ@ƒŒƒ“ƒX</ptitle>
-<at href="f_System.html">System ƒNƒ‰ƒX</at><r/>
-<at href="f_Storages.html">Storages ƒNƒ‰ƒX</at><r/>
-<at href="f_Debug.html">Debug ƒNƒ‰ƒX</at><r/>
-<at href="f_Scripts.html">Scripts ƒNƒ‰ƒX</at><r/>
-<at href="f_Plugins.html">Plugins ƒNƒ‰ƒX</at><r/>
-<at href="f_Timer.html">Timer ƒNƒ‰ƒX</at><r/>
-<at href="f_AsyncTrigger.html">AsyncTrigger ƒNƒ‰ƒX</at><r/>
-<at href="f_Rect.html">Rect ƒNƒ‰ƒX</at><r/>
-<at href="f_Window.html">Window ƒNƒ‰ƒX</at><r/>
-<at href="f_Window.BasicDrawDevice.html">Window.BasicDrawDevice ƒNƒ‰ƒX</at><r/>
-<at href="f_Layer.html">Layer ƒNƒ‰ƒX</at><r/>
-<at href="f_Font.html">Font ƒNƒ‰ƒX</at><r/>
-<at href="f_Bitmap.html">Bitmap ƒNƒ‰ƒX</at><r/>
-<at href="f_ImageFunction.html">ImageFunction ƒNƒ‰ƒX</at><r/>
-<at href="f_Clipboard.html">Clipboard ƒNƒ‰ƒX</at><r/>
-<at href="f_WaveSoundBuffer.html">WaveSoundBuffer ƒNƒ‰ƒX</at><r/>
-<at href="f_WaveSoundBuffer.PhaseVocoder.html">WaveSoundBuffer.PhaseVocoder ƒNƒ‰ƒX</at><r/>
-<at href="f_VideoOverlay.html">VideoOverlay ƒNƒ‰ƒX</at><r/>
+<ptitle>ã‚¯ãƒ©ã‚¹ãƒªãƒ•ã‚¡ãƒ¬ãƒ³ã‚¹</ptitle>
+<at href="f_System.html">System ã‚¯ãƒ©ã‚¹</at><r/>
+<at href="f_Storages.html">Storages ã‚¯ãƒ©ã‚¹</at><r/>
+<at href="f_Debug.html">Debug ã‚¯ãƒ©ã‚¹</at><r/>
+<at href="f_Scripts.html">Scripts ã‚¯ãƒ©ã‚¹</at><r/>
+<at href="f_Plugins.html">Plugins ã‚¯ãƒ©ã‚¹</at><r/>
+<at href="f_Timer.html">Timer ã‚¯ãƒ©ã‚¹</at><r/>
+<at href="f_AsyncTrigger.html">AsyncTrigger ã‚¯ãƒ©ã‚¹</at><r/>
+<at href="f_Rect.html">Rect ã‚¯ãƒ©ã‚¹</at><r/>
+<at href="f_Window.html">Window ã‚¯ãƒ©ã‚¹</at><r/>
+<at href="f_Window.BasicDrawDevice.html">Window.BasicDrawDevice ã‚¯ãƒ©ã‚¹</at><r/>
+<at href="f_Layer.html">Layer ã‚¯ãƒ©ã‚¹</at><r/>
+<at href="f_Font.html">Font ã‚¯ãƒ©ã‚¹</at><r/>
+<at href="f_Bitmap.html">Bitmap ã‚¯ãƒ©ã‚¹</at><r/>
+<at href="f_ImageFunction.html">ImageFunction ã‚¯ãƒ©ã‚¹</at><r/>
+<at href="f_Clipboard.html">Clipboard ã‚¯ãƒ©ã‚¹</at><r/>
+<at href="f_WaveSoundBuffer.html">WaveSoundBuffer ã‚¯ãƒ©ã‚¹</at><r/>
+<at href="f_WaveSoundBuffer.PhaseVocoder.html">WaveSoundBuffer.PhaseVocoder ã‚¯ãƒ©ã‚¹</at><r/>
+<at href="f_VideoOverlay.html">VideoOverlay ã‚¯ãƒ©ã‚¹</at><r/>
 </para>
 
 <para>
-<ptitle>•t‘®ƒc[ƒ‹‚ÌŽg‚¢•û</ptitle>
+<ptitle>ä»˜å±žãƒ„ãƒ¼ãƒ«ã®ä½¿ã„æ–¹</ptitle>
 <!-- <link href="Releaser"/><r/> -->
 <!-- <link href="FontMaker"/><r/> -->
 <link href="Configure"/><r/>
@@ -60,7 +60,7 @@
 </para>
 
 <para>
-<ptitle>•t˜^</ptitle>
+<ptitle>ä»˜éŒ²</ptitle>
 <link href="KeyCodes"/><r/>
 <link href="ColorCodes"/><r/>
 <link href="MouseCursors"/><r/>

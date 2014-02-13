@@ -1,36 +1,36 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <doc>
 <title>AsyncTrigger</title>
 <desc>
-�@AsyncTrigger �N���X�́A��������g���g���ɐ��䂪�߂�������̃C�x���g�z�M�̃^�C�~���O�ɃC�x���g�𔭐������邽�߂̃N���X�ł��B���̋@�\��<kw>�񓯊��g���K</kw> ( asynchronous trigger ) �ƌĂт܂��B<r/>
-�@�g���g���̂悤�ɃC�x���g�쓮�^�̃v���O���~���O���f�����Ƃ�X�N���v�g�ɂ����āA�C�x���g�n���h�����ł͎��s�ł��Ȃ��悤�ȏ��� ( ���Ƃ��΃C�x���g�̔������̃I�u�W�F�N�g�����̃C�x���g�n���h�����Ŗ��������悤�Ƃ���Ȃ� ) ���A���̃C�x���g�n���h���O�ōs���������ɕ֗��ł��B<r/>
+　AsyncTrigger クラスは、いったん吉里吉里に制御が戻った直後のイベント配信のタイミングにイベントを発生させるためのクラスです。この機能を<kw>非同期トリガ</kw> ( asynchronous trigger ) と呼びます。<r/>
+　吉里吉里のようにイベント駆動型のプログラミングモデルをとるスクリプトにおいて、イベントハンドラ内では実行できないような処理 ( たとえばイベントの発生元のオブジェクトをそのイベントハンドラ内で無効化しようとするなど ) を、そのイベントハンドラ外で行いたい時に便利です。<r/>
 </desc>
 
 <member>
 	<name>AsyncTrigger</name>
 	<type>constructor</type>
-	<shortdesc>AsyncTriger �I�u�W�F�N�g�̍\�z</shortdesc>
+	<shortdesc>AsyncTriger オブジェクトの構築</shortdesc>
 	<arg>
 		<argitem>
 			<name>owner</name>
 			<default></default>
 			<desc>
-				�@�C�x���g�̔�������w�肵�܂��B<r/>
+				　イベントの発生先を指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>actionname</name>
 			<default>"action"</default>
 			<desc>
-				�@owner �Ŏw�肵���C�x���g�̔�����I�u�W�F�N�g�ŁA�C�x���g���󂯎�郁�\�b�h����
-				�w�肵�܂��B�󕶎�����w�肷��� owner �̓��\�b�h�Ƃ݂Ȃ���A�C�x���g�̔������Ƃ�
-				owner �����ڌĂ΂�܂��B<r/>
+				　owner で指定したイベントの発生先オブジェクトで、イベントを受け取るメソッド名を
+				指定します。空文字列を指定すると owner はメソッドとみなされ、イベントの発生ごとに
+				owner が直接呼ばれます。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@AsyncTrigger �N���X�̃I�u�W�F�N�g���\�z���܂��B<r/>
+		　AsyncTrigger クラスのオブジェクトを構築します。<r/>
 	</desc>
 </member>
 
@@ -38,11 +38,11 @@
 <member>
 	<name>onFire</name>
 	<type>event</type>
-	<shortdesc>���C����Ƃ�</shortdesc>
+	<shortdesc>発砲するとき</shortdesc>
 	<arg></arg>
 	<result></result>
 	<desc>
-		�@<ref>AsyncTrigger.trigger</ref> ���\�b�h�Ńg���K����������ɔ������܂��B<r/>
+		　<ref>AsyncTrigger.trigger</ref> メソッドでトリガを引いた後に発生します。<r/>
 	</desc>
 </member>
 
@@ -50,27 +50,27 @@
 <member>
 	<name>trigger</name>
 	<type>method</type>
-	<shortdesc>�g���K������</shortdesc>
+	<shortdesc>トリガを引く</shortdesc>
 	<arg>
 	</arg>
 	<result></result>
 	<desc>
-		�@�C�x���g�𔭐������܂��B<r/>
-		�@���̃��\�b�h���Ă񂾌�A�g���g���{�̂ɐ��䂪�߂�A�g���g���{�̂����܂����񓯊��C�x���g��z�M����
-		�i�K�ɂȂ�� <ref>AsyncTrigger.onFire</ref> �C�x���g���������܂��B<r/>
+		　イベントを発生させます。<r/>
+		　このメソッドを呼んだ後、吉里吉里本体に制御が戻り、吉里吉里本体がたまった非同期イベントを配信する
+		段階になると <ref>AsyncTrigger.onFire</ref> イベントが発生します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>cancel</name>
 	<type>method</type>
-	<shortdesc>�g���K�̃L�����Z��</shortdesc>
+	<shortdesc>トリガのキャンセル</shortdesc>
 	<arg>
 	</arg>
 	<result></result>
 	<desc>
-		�@<ref>AsyncTrigger.trigger</ref> ���\�b�h�ň������g���K���L�����Z�����܂��B<r/>
-		�@���C�O�ł���΂��ł��L�����Z���ł��܂��B<r/>
+		　<ref>AsyncTrigger.trigger</ref> メソッドで引いたトリガをキャンセルします。<r/>
+		　発砲前であればいつでもキャンセルできます。<r/>
 	</desc>
 </member>
 
@@ -78,29 +78,29 @@
 <member>
 	<name>cached</name>
 	<type>property</type>
-	<shortdesc>�C�x���g���L���b�V�����邩�ǂ���</shortdesc>
+	<shortdesc>イベントをキャッシュするかどうか</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�C�x���g���L���b�V�����邩�ǂ�����\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
-		�@�^���w�肷��ƁA���C�܂łɉ��x <ref>AsyncTrigger.trigger</ref> ���\�b�h���Ă�ł�
-		���C�͂P�񂾂��ƂȂ�܂��B<r/>
-		�@�U���w�肷��ƁA���C�܂łɌĂ񂾉񐔕��A���C����܂��B<r/>
+		　イベントをキャッシュするかどうかを表します。値を設定することもできます。<r/>
+		　真を指定すると、発砲までに何度 <ref>AsyncTrigger.trigger</ref> メソッドを呼んでも
+		発砲は１回だけとなります。<r/>
+		　偽を指定すると、発砲までに呼んだ回数分、発砲されます。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>mode</name>
 	<type>property</type>
-	<shortdesc>���[�h</shortdesc>
+	<shortdesc>モード</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@����̃��[�h��\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
-		�@�ȉ��̒l�̂����ꂩ���w�肵�܂��B<r/>
-		<tt><kw>atmNormal</kw>    : </tt> �ʏ�̃C�x���g�z�M�̒i�K�Ŕ��C����܂��B<r/>
-		<tt><kw>atmExclusive</kw> : </tt> ���̔񓯊��C�x���g�����D�悳��Ĕ��C����܂�<r/>
-		<tt><kw>atmAtIdle</kw>    : </tt> �A�C�h����� ( ���ɔz�M����C�x���g�������Ȃ����Ƃ� ) �ɔ��C����܂��B<r/>
-		�@�����Ƀg���K���������Ƃ��ɔ��C����鏇���� atmExclusive, atmNormal, atmIdle �̏��ɂȂ�܂��B<r/>
-		�@�������[�h�̃g���K������������Ă���ꍇ�́A�g���K�������ꂽ���ɔ��C���܂��B<r/>
+		　動作のモードを表します。値を設定することもできます。<r/>
+		　以下の値のいずれかを指定します。<r/>
+		<tt><kw>atmNormal</kw>    : </tt> 通常のイベント配信の段階で発砲されます。<r/>
+		<tt><kw>atmExclusive</kw> : </tt> 他の非同期イベントよりも優先されて発砲されます<r/>
+		<tt><kw>atmAtIdle</kw>    : </tt> アイドル状態 ( 他に配信するイベントが無くなったとき ) に発砲されます。<r/>
+		　同時にトリガを引いたときに発砲される順序は atmExclusive, atmNormal, atmIdle の順になります。<r/>
+		　同じモードのトリガが複数引かれている場合は、トリガが引かれた順に発砲します。<r/>
 	</desc>
 	<ref>Timer.mode</ref>
 </member>

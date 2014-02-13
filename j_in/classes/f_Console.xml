@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <doc>
 <title>Console</title>
 <desc>
-�@Console �N���X�́A<kw>�R���\�[��</kw>�Ɋւ���Ǘ����s���N���X�ł��B���̃N���X����I�u�W�F�N�g���쐬���邱�Ƃ͂ł��܂��� ( ���̃N���X�ɂ̓A�N�Z�X�ł��܂��� )�B���̃N���X�̃I�u�W�F�N�g�ɂ� <ref>Debug.console</ref> �ŃA�N�Z�X�ł��܂��B<r/>
+　Console クラスは、<kw>コンソール</kw>に関する管理を行うクラスです。このクラスからオブジェクトを作成することはできません ( このクラスにはアクセスできません )。このクラスのオブジェクトには <ref>Debug.console</ref> でアクセスできます。<r/>
 </desc>
 
 
 <member>
 	<name>visible</name>
 	<type>property</type>
-	<shortdesc>�\������Ă��邩�ǂ���</shortdesc>
+	<shortdesc>表示されているかどうか</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�R���\�[�����\������Ă��邩�ǂ�����\���܂��B�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
-		�@�^���w�肷��ƕ\������܂��B<r/>
+		　コンソールが表示されているかどうかを表します。値を設定することもできます。<r/>
+		　真を指定すると表示されます。<r/>
 	</desc>
 </member>
 

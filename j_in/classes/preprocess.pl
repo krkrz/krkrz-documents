@@ -1,5 +1,7 @@
 # dissolve f_SoundBuffer.xml.in
 
+use utf8;
+
 undef($/);
 
 open FH, "f_SoundBuffer.xml.in";

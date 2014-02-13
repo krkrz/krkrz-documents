@@ -1,126 +1,126 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <doc>
 <title>Releaser</title>
 
 <para>
-<ptitle>Releaser�ɂ���</ptitle>
-�@Releaser �́A�t�H���_���A�[�J�C�u�t�@�C���ɂ܂Ƃ߂邽�߂̃c�[���ł��B<r/>
-�@�܂��A�g���g���̃v���W�F�N�g�t�H���_���w�肵�A���̃v���W�F�N�g�t�H���_������Ɏ������P��̎��s�\�t�@�C�����쐬���邱�Ƃ��ł��܂��B<r/>
+<ptitle>Releaserについて</ptitle>
+　Releaser は、フォルダをアーカイブファイルにまとめるためのツールです。<r/>
+　また、吉里吉里のプロジェクトフォルダを指定し、そのプロジェクトフォルダを内部に持った単一の実行可能ファイルを作成することができます。<r/>
 </para>
 
 <para>
-<ptitle>Releaser �̎g����</ptitle>
+<ptitle>Releaser の使い方</ptitle>
 <img src="ReleaserSelect.png"/><r/><r/>
-�@Releaser ( tools �t�H���_�ɂ��� krkrrel.exe ) �����s����ƁA�ŏ��Ƀt�H���_���w�肷��悤�ɋ��߂��܂��̂Ńt�H���_���w�肵�Ă��������B<r/>
-�@�����Ŏw�肵���t�H���_�̒��ɂ���t�@�C����Ώۂɂ��܂��B<r/>
+　Releaser ( tools フォルダにある krkrrel.exe ) を実行すると、最初にフォルダを指定するように求められますのでフォルダを指定してください。<r/>
+　ここで指定したフォルダの中にあるファイルを対象にします。<r/>
 <r/>
 <note>
-�@Releaser �́A�ŏI�I�ȃA�[�J�C�u���쐬����ߒ��œ��e���S������̃t�@�C����������ƁA���Ƃ��t�@�C�������قȂ��Ă��Ă���ɂ܂Ƃ߂āA����̃t�@�C���̗e�ʂ����g�p���Ȃ��Ƃ����@�\������܂��B
+　Releaser は、最終的なアーカイブを作成する過程で内容が全く同一のファイルを見つけると、たとえファイル名が異なっていても一つにまとめて、一つ分のファイルの容量しか使用しないという機能があります。
 </note>
 <note>
-�@Releaser �́ACVS ���^���f�B���N�g��("CVS"�Ƃ������O�ŁA����"Repository"�Ƃ������O�̃t�@�C�������݂���f�B���N�g��)�������I�ɖ������܂��B�܂��A���O�̐擪�� . (�h�b�g)�Ŏn�܂�t�@�C����f�B���N�g��(UNIX���̉B���t�@�C���� Subversion ���^���f�B���N�g���Ȃ�)�𖳎����܂��B
+　Releaser は、CVS メタ情報ディレクトリ("CVS"という名前で、中に"Repository"という名前のファイルが存在するディレクトリ)を自動的に無視します。また、名前の先頭が . (ドット)で始まるファイルやディレクトリ(UNIX風の隠しファイルや Subversion メタ情報ディレクトリなど)を無視します。
 </note>
 <note>
-�@Releaser �́A�A�[�J�C�u���쐬����ƁA�A�[�J�C�u���쐬�����f�B���N�g���� <kw>default.rpf</kw> �Ƃ����t�@�C�����쐬���܂��B���̒��ɂ̓A�[�J�C�u���쐬����ۂ̃I�v�V�������L�q����Ă���A����A�[�J�C�u���쐬����Ƃ��ɓ����ݒ�ŊȒP�ɍ쐬���邱�Ƃ��ł��܂��B
+　Releaser は、アーカイブを作成すると、アーカイブを作成したディレクトリに <kw>default.rpf</kw> というファイルを作成します。この中にはアーカイブを作成する際のオプションが記述されており、次回アーカイブを作成するときに同じ設定で簡単に作成することができます。
 </note>
 </para>
 
 <para>
-<ptitle>Releaser �̐ݒ���</ptitle>
-�@�t�H���_��I��������͐ݒ��ʂɂȂ�܂��B<r/>
+<ptitle>Releaser の設定画面</ptitle>
+　フォルダを選択した後は設定画面になります。<r/>
 <dl>
-<dt>�u�t�H���_�I���ɖ߂�v�{�^��</dt>
+<dt>「フォルダ選択に戻る」ボタン</dt>
 <dd>
-�@�t�H���_�I������蒼�������ł��܂��B
+　フォルダ選択をやり直す事ができます。
 </dd>
 
-<dt>�u�v���t�@�C�� : �ۑ��v�{�^��</dt>
+<dt>「プロファイル : 保存」ボタン</dt>
 <dd>
-�@���݂̐ݒ���t�@�C���ɕۑ����܂��B
+　現在の設定をファイルに保存します。
 </dd>
 
-<dt>�u�v���t�@�C�� : �ǂݍ��݁v�{�^��</dt>
+<dt>「プロファイル : 読み込み」ボタン</dt>
 <dd>
-�@�ݒ���t�@�C������ǂݍ��݂܂��B
+　設定をファイルから読み込みます。
 </dd>
 
-<dt>�u�쐬�v�{�^��</dt>
+<dt>「作成」ボタン</dt>
 <dd>
-�@���݂̐ݒ�Ɋ�Â��A�A�[�J�C�u�t�@�C���� EXE �`���̎��s�\�t�@�C�����o�͂��܂��B
+　現在の設定に基づき、アーカイブファイルや EXE 形式の実行可能ファイルを出力します。
 </dd>
 
-<dt>�u�L�����Z���v(�܂��͏I��) �{�^��</dt>
+<dt>「キャンセル」(または終了) ボタン</dt>
 <dd>
-�@Releaser ���I�����܂��B
+　Releaser を終了します。
 </dd>
 
-<dt>�u�o�́v�^�u</dt>
+<dt>「出力」タブ</dt>
 <dd>
 <img src="ReleaserOutput.png"/><r/><r/>
 <dl>
-<dt>�u�o�͌`���v</dt>
+<dt>「出力形式」</dt>
 <dd>
-�@�u.XP3 �A�[�J�C�u�v��I�ԂƁAxp3 �`�� ( �g���g���W���̃A�[�J�C�u�`�� ) �̃t�@�C�����o�͂��܂��B�u.EXE �`�����s�\�t�@�C���v��I�ԂƁA���s�\�t�@�C�����o�͂��܂��B�u.EXE �`�����s�\�t�@�C���v��I�񂾏ꍇ�́AReleaser ( krkrrel.exe ) �Ɠ����t�H���_���A���̐e�̃t�H���_�ɂ����Ă��� krkr.eXe ���g�p����܂��B
+　「.XP3 アーカイブ」を選ぶと、xp3 形式 ( 吉里吉里標準のアーカイブ形式 ) のファイルを出力します。「.EXE 形式実行可能ファイル」を選ぶと、実行可能ファイルを出力します。「.EXE 形式実行可能ファイル」を選んだ場合は、Releaser ( krkrrel.exe ) と同じフォルダか、その親のフォルダにおいてある krkr.eXe が使用されます。
 </dd>
 
-<dt>�u�o�̓t�@�C���v</dt>
+<dt>「出力ファイル」</dt>
 <dd>
-�@�o�͂���t�@�C�����w�肵�Ă��������B�u�Q�Ɓv�{�^�����N���b�N����ƃt�@�C�����_�C�A���O�{�b�N�X�Ŏw�肷�邱�Ƃ��ł��܂��B
+　出力するファイルを指定してください。「参照」ボタンをクリックするとファイルをダイアログボックスで指定することができます。
 </dd>
 </dl>
 </dd>
 
-<dt>�u�t�@�C���v�^�u</dt>
+<dt>「ファイル」タブ</dt>
 <dd>
 <img src="ReleaserFiles.png"/><r/><r/>
-�@�g���q���ƂɁA�u���k������́v�u�A�[�J�C�u�ɂ͊܂߂邪���k���Ȃ����́v�u�A�[�J�C�u�ɂ͊܂߂Ȃ����́v��I�Ԏ����ł��܂��B�ʏ�A�f�t�H���g�̕��ނ̂܂܂ł��܂��܂���B<r/>
-�@�u���k������́v�Ƀt�@�C���𕪗ނ���ƈ��k���s���邽�߁A�t�@�C���T�C�Y���������Ȃ�܂��B�܂��A�e�L�X�g�G�f�B�^��o�C�i���G�f�B�^�Œ���`���Ă��ȒP�ɂ͉�ǂł��Ȃ���ԂɂȂ�܂��B�������A���k���s���ƓW�J���Ɏ��Ԃ�������Ƃ����f�����b�g������܂��BPNG �� JPEG �� ERI �Ȃǂ͊��Ɉ��k����Ă��āA�u���k����v�ɕ��ނ��Ă����ʂ�������ɁA�W�J�ɗ]�v�Ɏ��Ԃ�������悤�ɂȂ�̂ŁA���k���邱�Ƃ͂����߂ł��܂���B
+　拡張子ごとに、「圧縮するもの」「アーカイブには含めるが圧縮しないもの」「アーカイブには含めないもの」を選ぶ事ができます。通常、デフォルトの分類のままでかまいません。<r/>
+　「圧縮するもの」にファイルを分類すると圧縮が行われるため、ファイルサイズが小さくなります。また、テキストエディタやバイナリエディタで中を覗いても簡単には解読できない状態になります。しかし、圧縮を行うと展開時に時間がかかるというデメリットもあります。PNG や JPEG や ERI などは既に圧縮されていて、「圧縮する」に分類しても効果が薄い上に、展開に余計に時間がかかるようになるので、圧縮することはお勧めできません。
 </dd>
 
-<dt>�u�I�v�V�����v�^�u</dt>
+<dt>「オプション」タブ</dt>
 <dd>
 <img src="ReleaserSettings.png"/><r/><r/>
 <dl>
-<dt>�u�傫�ȃt�@�C�������k���Ȃ��v</dt>
+<dt>「大きなファイルを圧縮しない」</dt>
 <dd>
-�@�����Y������t�@�C�����u���k������́v�ɕ��ނ���Ă��Ă��A�w�肳�ꂽ�T�C�Y�ȏ�ł���Έ��k���s��Ȃ��A�Ƃ����ݒ�ł��B�g���g���̍\����A���k���ꂽ�t�@�C���̓�������ɓW�J���Ȃ���΂Ȃ�Ȃ����߁A�傫�ȃt�@�C�������k����͎̂��s���̃R�X�g�������Ȃ�܂��B
+　もし該当するファイルが「圧縮するもの」に分類されていても、指定されたサイズ以上であれば圧縮を行わない、という設定です。吉里吉里の構造上、圧縮されたファイルはメモリ上に展開しなければならないため、大きなファイルを圧縮するのは実行時のコストが高くなります。
 </dd>
 
-<dt>�u�W�J�v���e�N�g�v</dt>
+<dt>「展開プロテクト」</dt>
 <dd>
-�@�`�F�b�N����ƁA�A�[�J�C�u�����̃C���f�b�N�X ( �i�[����Ă���t�@�C���̃��X�g ) �Ɂu�W�J�v���e�N�g�v�̑�����t�����܂��B����ɂ��A�[�J�C�u�W�J�c�[���ɑ΂��u����҂̓t�@�C�����W�J����邱�Ƃ�]��ł��Ȃ��v�Ƃ����ӎv�\�������邱�Ƃ��ł��܂��B
+　チェックすると、アーカイブ内部のインデックス ( 格納されているファイルのリスト ) に「展開プロテクト」の属性を付加します。これによりアーカイブ展開ツールに対し「著作者はファイルが展開されることを望んでいない」という意思表示をすることができます。
 </dd>
 
-<dt>�uOggVorbis�R�[�h�u�b�N���L���v</dt>
+<dt>「OggVorbisコードブック共有化」</dt>
 <dd>
-�@�`�F�b�N����ƁAOggVorbis �t�@�C�� ( .ogg �t�@�C�� ) �̃x�N�g���ʎq���p�R�[�h�u�b�N�����L�����܂��BOggVorbis�t�@�C���͕����̃t�@�C���Ԃŋ��ʂ̃R�[�h�u�b�N���t�@�C�����ƂɎ����Ă���ꍇ�������̂ŁA��������ɂ܂Ƃ߂ăT�C�Y�̐ߖ���s�����Ƃ��ł��܂��B
+　チェックすると、OggVorbis ファイル ( .ogg ファイル ) のベクトル量子化用コードブックを共有させます。OggVorbisファイルは複数のファイル間で共通のコードブックをファイルごとに持っている場合が多いので、それらを一つにまとめてサイズの節約を行うことができます。
 </dd>
 
-<dt>�u�C���f�b�N�X�����k����v</dt>
+<dt>「インデックスを圧縮する」</dt>
 <dd>
-�@�`�F�b�N����ƁA�A�[�J�C�u�����̃C���f�b�N�X ( �i�[����Ă���t�@�C���̃��X�g ) �����k���A�T�C�Y�̐ߖ�����邱�Ƃ��ł��܂��B
+　チェックすると、アーカイブ内部のインデックス ( 格納されているファイルのリスト ) を圧縮し、サイズの節約をすることができます。
 </dd>
 </dl>
 <note>
-�u�I�v�V�����v�^�u�́u�W�J�v���e�N�g�v���`�F�b�N���Ă�<b>���ۂɓW�J���ł��Ȃ��悤�ɈÍ����������肷���ł͂���܂���</b>�B�ӎv�\�����s�����Ƃ��ł��邾���ł��B�܂��A�A�[�J�C�u�W�J�c�[�����쐬�������� ( ��������Ƃ��� ) ���̓W�J�v���e�N�g�t���O�̑��݂��l�����Ă������� ( ���̃t���O�������Ă���ΓW�J�����ۂ�����A�W�J����O�Ɍx��������Ȃ� )�B<r/>
+「オプション」タブの「展開プロテクト」をチェックしても<b>実際に展開ができないように暗号化をしたりする訳ではありません</b>。意思表示を行うことができるだけです。また、アーカイブ展開ツールを作成される方は ( もしいるとして ) この展開プロテクトフラグの存在を考慮してください ( このフラグがたっていれば展開を拒否したり、展開する前に警告をするなど )。<r/>
 </note>
 </dd>
 
-<dt>�u���s�\�t�@�C���ݒ�v�^�u</dt>
+<dt>「実行可能ファイル設定」タブ</dt>
 <dd>
-�@�o�͌`���Ɏ��s�\�t�@�C�����w�肵���ꍇ�ɂ̂ݕ\������܂��B<r/>
-�@�����̐ݒ��ʂ� <link href="Configure"/> �Ɠ����ł��B<r/>
+　出力形式に実行可能ファイルを指定した場合にのみ表示されます。<r/>
+　ここの設定画面は <link href="Configure"/> と同じです。<r/>
 <r/>
 <img src="ReleaserExeSettings.png"/><r/><r/>
 <dl>
-<dt>�u�I�v�V�����v</dt>
+<dt>「オプション」</dt>
 <dd>
-�@���s�\�t�@�C���ɑ΂���f�t�H���g�̃I�v�V������ݒ�ł��܂��B
+　実行可能ファイルに対するデフォルトのオプションを設定できます。
 </dd>
 
-<dt>�u�A�C�R���v</dt>
+<dt>「アイコン」</dt>
 <dd>
-�@���s�\�t�@�C���̃A�C�R�����w�肷�邱�Ƃ��ł��܂��B
+　実行可能ファイルのアイコンを指定することができます。
 </dd>
 </dl>
 </dd>
@@ -128,29 +128,29 @@
 </para>
 
 <para>
-<ptitle>�R�}���h���C���I�v�V����</ptitle>
-Releaser �͈ȉ��̃R�}���h���C���I�v�V�������󂯕t���܂��B
+<ptitle>コマンドラインオプション</ptitle>
+Releaser は以下のコマンドラインオプションを受け付けます。
 
 <dl>
 
-<dt>�t�H���_��</dt>
-<dd>�^�[�Q�b�g�̃t�H���_���w�肵�܂��B</dd>
+<dt>フォルダ名</dt>
+<dd>ターゲットのフォルダを指定します。</dd>
 
 <dt>-<kw>go</kw></dt>
-<dd>�����ɃA�[�J�C�u���쐬���A���̂܂܏I�����܂��B�o�b�`�����Ȃǂŗp���Ă��������B�I�v�V�����Ȃǂ͂��炩���߁A�^�[�Q�b�g�̃t�H���_�� default.rpf �Ƃ������O�ŕۑ����Ă����Ă������� (����Ȃ��Ă� -nowriterpf -out �I�v�V�����Ƒg�ݍ��킹�ăA�[�J�C�u����邱�Ƃ͉\�ł� )�B</dd>
+<dd>すぐにアーカイブを作成し、そのまま終了します。バッチ処理などで用いてください。オプションなどはあらかじめ、ターゲットのフォルダに default.rpf という名前で保存しておいてください (これなくても -nowriterpf -out オプションと組み合わせてアーカイブを作ることは可能です )。</dd>
 
 <dt>-nowriterpf</dt>
-<dd>�I������ default.rpf �������o���܂���B</dd>
+<dd>終了時に default.rpf を書き出しません。</dd>
 
-<dt>-out �t�@�C����</dt>
-<dd>�o�̓t�@�C�������w�肵�܂��B</dd>
+<dt>-out ファイル名</dt>
+<dd>出力ファイル名を指定します。</dd>
 
-<dt>-rpf �t�@�C����</dt>
-<dd>�ǂݍ��ރv���t�@�C�����w�肵�܂��B</dd>
+<dt>-rpf ファイル名</dt>
+<dd>読み込むプロファイルを指定します。</dd>
 
 </dl>
 <r/>
-���Ƃ��΁A�ȉ��̂悤�Ɏw�肵�܂��B<r/>
+たとえば、以下のように指定します。<r/>
 <bq>
 krkrrel project -out ..\release\data.xp3 -nowriterpf -go
 </bq>

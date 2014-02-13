@@ -1,71 +1,71 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <doc>
 <title>Debug</title>
 <desc>
-�@Debug �N���X�� �g���g���̃f�o�b�O�Ɋւ���@�\��񋟂���N���X�ł��B���̃N���X����I�u�W�F�N�g���쐬���邱�Ƃ͂ł��܂���B<r/>
-�@�g���g���̃R���\�[���̃��O�̖��O�� krkr.console.log �ɂȂ�܂��B�܂��A�n�[�h�E�F�A��O�����������Ƃ��ɍ쐬�����t�@�C���� hwexcept.log �ƂȂ�܂��B<r/>
-�@�����̃��O�t�@�C���́A�f�t�H���g�ł̓v���W�F�N�g�f�B���N�g���ɂȂ�܂��B�������A�v���W�F�N�g�f�B���N�g�����A�[�J�C�u�ȂǁA�������݂��ł��Ȃ��f�B���N�g���̏ꍇ�͏o�͂���܂���B<r/>
-�@���O�t�@�C���̏o�͐�� logLocation �v���p�e�B�ŕύX���邱�Ƃ��ł��܂� (KAG�̏ꍇ�͞x�f�[�^�̕ۑ���ɐݒ肳��܂�)�B<r/>
+　Debug クラスは 吉里吉里のデバッグに関する機能を提供するクラスです。このクラスからオブジェクトを作成することはできません。<r/>
+　吉里吉里のコンソールのログの名前は krkr.console.log になります。また、ハードウェア例外が発生したときに作成されるファイルは hwexcept.log となります。<r/>
+　これらのログファイルは、デフォルトではプロジェクトディレクトリになります。ただし、プロジェクトディレクトリがアーカイブなど、書き込みができないディレクトリの場合は出力されません。<r/>
+　ログファイルの出力先は logLocation プロパティで変更することができます (KAGの場合は栞データの保存先に設定されます)。<r/>
 </desc>
 
 <member>
 	<name>message</name>
 	<type>method</type>
-	<shortdesc>�R���\�[���փ��b�Z�[�W���o��</shortdesc>
+	<shortdesc>コンソールへメッセージを出力</shortdesc>
 	<arg>
 		<argitem>
 			<name>message</name>
 			<default></default>
 			<desc>
-				�@�o�͂��郁�b�Z�[�W���w�肵�܂��B<r/>
+				　出力するメッセージを指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@<kw>�R���\�[��</kw>�փ��b�Z�[�W���o�͂��܂��B<r/>
+		　<kw>コンソール</kw>へメッセージを出力します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>notice</name>
 	<type>method</type>
-	<shortdesc>�R���\�[���֏d�v�ȃ��b�Z�[�W���o��</shortdesc>
+	<shortdesc>コンソールへ重要なメッセージを出力</shortdesc>
 	<arg>
 		<argitem>
 			<name>message</name>
 			<default></default>
 			<desc>
-				�@�o�͂��郁�b�Z�[�W���w�肵�܂��B<r/>
+				　出力するメッセージを指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@<kw>�R���\�[��</kw>�փ��b�Z�[�W���o�͂��܂��B<r/>
-		<ref>Debug.message</ref> �ƈႢ�A�����ŏo�͂������b�Z�[�W�� ���O�t�@�C���ւ̏����o����r������J�n�����Ƃ��Ă��A
-		�K�����O�t�@�C���ɏ����o����܂� ( Debug.message �ŏo�͂������b�Z�[�W�́A������x�����̂ڂ��Ă܂ł���
-		�������܂�܂��� )�B���O�t�@�C������������Ƃ��ɗL�p�ɂȂ�悤�ȏd�v�ȏ����o�͂��邽�߂Ɏg���܂��B<r/>
+		　<kw>コンソール</kw>へメッセージを出力します。<r/>
+		<ref>Debug.message</ref> と違い、ここで出力したメッセージは ログファイルへの書き出しを途中から開始したとしても、
+		必ずログファイルに書き出されます ( Debug.message で出力したメッセージは、ある程度さかのぼってまでしか
+		書き込まれません )。ログファイルを回収したときに有用になるような重要な情報を出力するために使います。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>startLogToFile</name>
 	<type>method</type>
-	<shortdesc>�R���\�[���̃��O�̏o�͊J�n</shortdesc>
+	<shortdesc>コンソールのログの出力開始</shortdesc>
 	<arg>
 		<argitem>
 			<name>clear</name>
 			<default>false</default>
 			<desc>
-				�@�^���w�肷��ƃ��O�t�@�C���̓N���A����܂��B<r/>
-				�@�U���w�肷��Ɗ����̃t�@�C���ɒǉ�����܂��B<r/>
+				　真を指定するとログファイルはクリアされます。<r/>
+				　偽を指定すると既存のファイルに追加されます。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�R���\�[���̃��O�̃t�@�C���ւ̏o�͂��J�n���܂��B<r/>
+		　コンソールのログのファイルへの出力を開始します。<r/>
 	</desc>
 	<ref>Debug.logToFileOnError</ref>
 	<ref>Debug.clearLogFileOnError</ref>
@@ -74,18 +74,18 @@
 <member>
 	<name>logAsError</name>
 	<type>method</type>
-	<shortdesc>�G���[���Ɠ����悤�Ƀ��O���t�@�C���ɏo�͊J�n����</shortdesc>
+	<shortdesc>エラー時と同じようにログをファイルに出力開始する</shortdesc>
 	<arg>
 	</arg>
 	<result></result>
 	<desc>
-		�@�G���[���O�t�@�C���Ɋւ��A�g���g�����G���[�����������Ƃ��Ɠ�������������܂��B
-		�܂�A
-		<ref>Debug.logToFileOnError</ref> ���^�Ȃ�΃t�@�C���ɃR���\�[���̃��O�̏o�͂�
-		�J�n���܂��B���̍ہA<ref>Debug.clearLogFileOnError</ref> ���^�Ȃ�΃t�@�C����
-		�N���A���܂��B<r/>
-		�@����ɑ΂��A<ref>Debug.startLogToFile</ref> �͖������ŃR���\�[���̃��O��
-		�t�@�C���ւ̏o�͂��J�n���܂��B<r/>
+		　エラーログファイルに関し、吉里吉里がエラーが発生したときと同じ動作をさせます。
+		つまり、
+		<ref>Debug.logToFileOnError</ref> が真ならばファイルにコンソールのログの出力を
+		開始します。その際、<ref>Debug.clearLogFileOnError</ref> が真ならばファイルを
+		クリアします。<r/>
+		　これに対し、<ref>Debug.startLogToFile</ref> は無条件でコンソールのログの
+		ファイルへの出力を開始します。<r/>
 	</desc>
 	<ref>Debug.startLogToFile</ref>
 	<ref>Debug.logToFileOnError</ref>
@@ -95,76 +95,76 @@
 <member>
 	<name>addLoggingHandler</name>
 	<type>method</type>
-	<shortdesc>���O�n���h����ǉ����܂�</shortdesc>
+	<shortdesc>ログハンドラを追加します</shortdesc>
 	<arg>
 		<argitem>
 			<name>handler</name>
 			<default></default>
 			<desc>
-				�@���O�n���h�����w�肵�܂��B<r/>
+				　ログハンドラを指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�G���[���O���o�͂���邲�ƂɌĂяo�����n���h����o�^���܂��B<r/>
-		�@�n���h���̓��O���b�Z�[�W�������ɗ^�����ČĂяo����܂��B<r/>
-		�@�o�^���\�b�h���Ń��O���o�͂��Ă��A�ċA�I�ȌĂяo���͍s��ꂸ��������܂��B<r/>
+		　エラーログが出力されるごとに呼び出されるハンドラを登録します。<r/>
+		　ハンドラはログメッセージを引数に与えられて呼び出されます。<r/>
+		　登録メソッド内でログを出力しても、再帰的な呼び出しは行われず無視されます。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>removeLoggingHandler</name>
 	<type>method</type>
-	<shortdesc>���O�n���h�����폜���܂�</shortdesc>
+	<shortdesc>ログハンドラを削除します</shortdesc>
 	<arg>
 		<argitem>
 			<name>handler</name>
 			<default></default>
 			<desc>
-				�@���O�n���h�����w�肵�܂��B<r/>
+				　ログハンドラを指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�o�^�������O�n���h�����폜���܂��B<r/>
+		　登録したログハンドラを削除します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>getLastLog</name>
 	<type>method</type>
-	<shortdesc>���o�͂̃��O���擾���܂�</shortdesc>
+	<shortdesc>未出力のログを取得します</shortdesc>
 	<arg>
 	</arg>
 	<result></result>
 	<desc>
-		�@�o�͂��Ă��Ȃ����O���擾���܂��B<r/>
+		　出力していないログを取得します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>logLocation</name>
 	<type>property</type>
-	<shortdesc>���O�t�@�C���̏o�͐�</shortdesc>
+	<shortdesc>ログファイルの出力先</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@���O�t�@�C���̏o�͐�f�B���N�g����\���܂��B�l���������ނ��Ƃ��ł��܂��B<r/>
-		�@�f�t�H���g�ł̓f�[�^�ۑ��ꏊ (�R�}���h���C���I�v�V������ -datapath) �ɐݒ肳��Ă��܂��B<r/>
-		�@���̒l��ύX����ƁA�ȍ~�̃��O�͂��̃f�B���N�g������ *.console.log �Ƃ��ďo�͂����悤�ɂȂ�܂��B<r/>
+		　ログファイルの出力先ディレクトリを表します。値を書き込むこともできます。<r/>
+		　デフォルトではデータ保存場所 (コマンドラインオプションの -datapath) に設定されています。<r/>
+		　この値を変更すると、以降のログはそのディレクトリ下の *.console.log として出力されるようになります。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>logToFileOnError</name>
 	<type>property</type>
-	<shortdesc>�G���[�������ɃR���\�[���̃��O���t�@�C���ɏo�͂��邩</shortdesc>
+	<shortdesc>エラー発生時にコンソールのログをファイルに出力するか</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�^�̏ꍇ�A�G���[�����������Ƃ��ɃR���\�[���̃��O�̃t�@�C���ւ̏o�͂��J�n����悤��
-		�Ȃ�܂��B<r/>
-		�@�U�̏ꍇ�̓G���[���������Ă����O�̃t�@�C���ւ̏o�͂͊J�n����܂���B<r/>
+		　真の場合、エラーが発生したときにコンソールのログのファイルへの出力を開始するように
+		なります。<r/>
+		　偽の場合はエラーが発生してもログのファイルへの出力は開始されません。<r/>
 	</desc>
 	<ref>Debug.startLogToFile</ref>
 	<ref>Debug.clearLogFileOnError</ref>
@@ -173,11 +173,11 @@
 <member>
 	<name>clearLogFileOnError</name>
 	<type>property</type>
-	<shortdesc>�G���[�������ɃR���\�[���̃��O�t�@�C�����N���A���邩�ǂ���</shortdesc>
+	<shortdesc>エラー発生時にコンソールのログファイルをクリアするかどうか</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@�^�̏ꍇ�A�G���[�����������Ƃ��ɃR���\�[���̃��O�������I�ɃN���A����悤�ɂȂ�܂��B<r/>
-		�@�U�̏ꍇ�̓N���A�͂��ꂸ�A�����̃��O�t�@�C���ɒǉ�����܂��B<r/>
+		　真の場合、エラーが発生したときにコンソールのログを自動的にクリアするようになります。<r/>
+		　偽の場合はクリアはされず、既存のログファイルに追加されます。<r/>
 	</desc>
 	<ref>Debug.startLogToFile</ref>
 	<ref>Debug.logToFileOnError</ref>

@@ -1,76 +1,76 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <doc>
-<title>�摜�t�H�[�}�b�g�R���o�[�^</title>
+<title>画像フォーマットコンバータ</title>
 
 <para>
-<ptitle>�摜�t�H�[�}�b�g�R���o�[�^�ɂ���</ptitle>
-�@�摜�t�H�[�}�b�g�R���o�[�^ ( tools �t�H���_�ɂ��� krkrtpc.exe ) �́A�g���g���̉摜�̑��ݕϊ����s�����߂̃c�[���ł��B<r/>
-�@�l�X�ȉ摜�̗p�ӂɎg���܂��B<r/>
+<ptitle>画像フォーマットコンバータについて</ptitle>
+　画像フォーマットコンバータ ( tools フォルダにある krkrtpc.exe ) は、吉里吉里の画像の相互変換を行うためのツールです。<r/>
+　様々な画像の用意に使えます。<r/>
 <r/>
-�@���̓t�@�C���t�H�[�}�b�g�Ƃ��Ă� BMP, PNG, JPEG, PSD�A�o�̓t�@�C���t�H�[�}�b�g�Ƃ��Ă� BMP, PNG, TLG5, TLG6, JPEG �̂����ꂩ��I���ł��܂��B<r/>
-�@�g���g�����p����悤�ȃ��C��/�}�X�N�����`���̓��߉摜��ǂݍ��񂾂�A�o�͂��鎖���ł��܂��B�����ŗp���Ă���u�}�X�N�v�Ƃ����p��̓A���t�@�`���l���Ɠ��`�ł��B<r/>
+　入力ファイルフォーマットとしては BMP, PNG, JPEG, PSD、出力ファイルフォーマットとしては BMP, PNG, TLG5, TLG6, JPEG のいずれかを選択できます。<r/>
+　吉里吉里が用いるようなメイン/マスク分離形式の透過画像を読み込んだり、出力する事もできます。ここで用いている「マスク」という用語はアルファチャネルと同義です。<r/>
 <r/>
-�@��{�I�ɂ͉摜�t�H�[�}�b�g��ϊ����邾���Ȃ̂ŁA����ŏo�͂����摜�́A���̃\�t�g��c�[���ɂ��g����Ǝv���܂��B<r/>
+　基本的には画像フォーマットを変換するだけなので、これで出力した画像は、他のソフトやツールにも使えると思います。<r/>
 <r/>
-�@�Ȃ��A���̃c�[���Ɍ��������Ƃł͂���܂��񂪁A<b>�o�b�N�A�b�v�͂��Y��Ȃ��I</b><r/>
+　なお、このツールに限ったことではありませんが、<b>バックアップはお忘れなく！</b><r/>
 </para>
 
 <para>
-<ptitle>���͉摜�t�H�[�}�b�g</ptitle>
-�@���̓t�@�C���t�H�[�}�b�g�Ƃ��ẮA�ȉ��̌`����p���邱�Ƃ��ł��܂��B<r/>
+<ptitle>入力画像フォーマット</ptitle>
+　入力ファイルフォーマットとしては、以下の形式を用いることができます。<r/>
 <r/>
 <dl>
 <dt>BMP</dt>
 <dd>
-�@Windows �W���r�b�g�}�b�v�`���ł��B32 bit (bpp) �`���� BMP �̓A���t�@�`�����l���t�� BMP �ł���ƌ��Ȃ���܂��B<r/>
-�@���̑��̌`���� BMP �́A�s�����ȉ摜(���ߏ��������Ȃ��摜)�ł���ƌ��Ȃ���܂� (��q�̃��C��/�}�X�N�����`���ɗp�����ꍇ������)�B
+　Windows 標準ビットマップ形式です。32 bit (bpp) 形式の BMP はアルファチャンネル付き BMP であると見なされます。<r/>
+　その他の形式の BMP は、不透明な画像(透過情報を持たない画像)であると見なされます (後述のメイン/マスク分離形式に用いた場合を除く)。
 </dd>
 
 <dt>PNG</dt>
 <dd>
-�@Portable Network Graphic �`���ł��B���������̂���(�A���t�@�`���l���ⓧ�ߏ���������) PNG ���ǂݍ��ނ��Ƃ��ł��܂��B
+　Portable Network Graphic 形式です。透明部分のある(アルファチャネルや透過情報を持った) PNG も読み込むことができます。
 </dd>
 
 <dt>PSD</dt>
 <dd>
-�@Adobe Photoshop 3 �ȍ~�ŗp������`���ł��B�������A���̃c�[���œǂݍ��߂� PSD �ɂ͑傫�Ȉȉ��̐���������܂��B<r/>
+　Adobe Photoshop 3 以降で用いられる形式です。ただし、このツールで読み込める PSD には大きな以下の制限があります。<r/>
 <r/>
 <ul>
-<li>�J���[���[�h�� RGB �̂��̈ȊO��ǂݍ��߂Ȃ�</li>
-<li>16bit/�`�����l���̂��̂�ǂݍ��߂Ȃ�</li>
-<li>�����k��RLE���k�̂ݑΉ� ( Photoshop3.0 �`���̏ꍇ�� RLE���k�̂ݑΉ� )</li>
+<li>カラーモードが RGB のもの以外を読み込めない</li>
+<li>16bit/チャンネルのものを読み込めない</li>
+<li>無圧縮とRLE圧縮のみ対応 ( Photoshop3.0 形式の場合は RLE圧縮のみ対応 )</li>
 </ul>
 <r/>
-�@���̌`���̓��C��/�}�X�N�����`���Ƃ��Ă͓ǂݍ��ނ��Ƃ��ł��܂���B
-�@��̂̃f�[�^�͓ǂݍ��߂܂����A�ǂݍ��߂Ȃ��f�[�^������܂��B<r/>
-�@�J���[���[�h�� RGB �ȊO(CMYK�Ȃ�)���g�p���Ă���ꍇ�� RGB �ɕϊ����Ă��������B16bit/�`�����l�����g�p���Ă���ꍇ�� 8bit/�`�����l���ɕϊ����Ă��������B<r/>
-�@�u�ʏ�v�ȊO�̃u�����h���[�h�̃��C���[���܂ޏꍇ�́A���̃c�[���ɓ��͂���O�Ɂu�\�������̓����v���s���Ă����Α��v�ł��B<r/>
+　この形式はメイン/マスク分離形式としては読み込むことができません。
+　大体のデータは読み込めますが、読み込めないデータもあります。<r/>
+　カラーモードに RGB 以外(CMYKなど)を使用している場合は RGB に変換してください。16bit/チャンネルを使用している場合は 8bit/チャンネルに変換してください。<r/>
+　「通常」以外のブレンドモードのレイヤーを含む場合は、このツールに入力する前に「表示部分の統合」を行っておけば大丈夫です。<r/>
 <r/>
-�@PSD �t�@�C���̓ǂݍ��݋@�\�́A�o�͌`���ɂāultAddAlpha�`���ŏo�͂���v���I������邩�A���Ȃ����ɂ���đ傫���ς��܂��B<r/>
+　PSD ファイルの読み込み機能は、出力形式にて「ltAddAlpha形式で出力する」が選択されるか、しないかによって大きく変わります。<r/>
 <r/>
-�@�ultAddAlpha�`���ŏo�͂���v���I������Ă���ꍇ�́A�u�ʏ�v�u�����Ă�(���j�A)�v�u�Ă�����(���j�A)�v�u��Z�v�u�X�N���[���v�u�I�[�o�[���C�v�u�n�[�h���C�g�v�u�\�t�g���C�g�v�u�����Ă��J���[�v�u�Ă����݃J���[�v�u��r(��)�v�u��r(��)�v�u���̐�Βl�v�u���O�v�̃��C���[���܂܂ꂽ PSD �t�@�C����ǂݍ��ނ��Ƃ��ł��܂��B�܂��A�u�ʏ�v�݂̂ō\�����ꂽ�摜�ł���΁A�������̃��C���[���d�Ȃ��Ă��Ă��Ή��ł��܂� (���̃��[�h�ł́A�������̃��C���[���d�Ȃ��Ă���ƑΉ��ł��܂���)�B<r/>
+　「ltAddAlpha形式で出力する」が選択されている場合は、「通常」「覆い焼き(リニア)」「焼き込み(リニア)」「乗算」「スクリーン」「オーバーレイ」「ハードライト」「ソフトライト」「覆い焼きカラー」「焼き込みカラー」「比較(明)」「比較(暗)」「差の絶対値」「除外」のレイヤーが含まれた PSD ファイルを読み込むことができます。また、「通常」のみで構成された画像であれば、複数枚のレイヤーが重なっていても対応できます (他のモードでは、複数枚のレイヤーが重なっていると対応できません)。<r/>
 <r/>
-�@�ultAddAlpha�`���ŏo�͂���v���I������Ă���ꍇ�́A�u�ʏ�v�̃��C���[�Ɓu�����Ă�(���j�A)�v�̃��C���[�ɂ̂ݑΉ��ł��܂��B���̏ꍇ�́A���C���[��������(������)���ɁA�u�C�ӂ̐��́w�ʏ�x���C���[�v�u�C�ӂ̐��́w�����Ă�(���j�A)�x���C���[�v�̏��ɂȂ��Ă��Ȃ���΂Ȃ�܂���B�u�C�ӂ̐��v�Ƃ́A0���A�܂背�C���[���S���Ȃ����A���邢��1���ȏ�̃��C���[�ł��B<r/>
+　「ltAddAlpha形式で出力する」が選択されている場合は、「通常」のレイヤーと「覆い焼き(リニア)」のレイヤーにのみ対応できます。この場合は、レイヤーが下から(奥から)順に、「任意の数の『通常』レイヤー」「任意の数の『覆い焼き(リニア)』レイヤー」の順になっていなければなりません。「任意の数」とは、0枚、つまりレイヤーが全くないか、あるいは1枚以上のレイヤーです。<r/>
 <dl>
-<dt>�ultAddAlpha�`���ŏo�͂���v���I������Ă���ꍇ�ɓǂݍ��݉\�ȗ�</dt>
+<dt>「ltAddAlpha形式で出力する」が選択されている場合に読み込み可能な例</dt>
 <dd>
     <ul>
-        <li>�u�ʏ�v���C���[1���̏�Ɂu�����Ă�(���j�A)�v���C���[1��</li>
-        <li>�u�ʏ�v���C���[���Ȃ��āA�u�����Ă�(���j�A)�v���C���[��1������</li>
-        <li>�u�ʏ�v���C���[1���̂�</li>
-        <li>�u�ʏ�v���C���[3���̏�Ɂu�����Ă�(���j�A)�v���C���[2��</li>
+        <li>「通常」レイヤー1枚の上に「覆い焼き(リニア)」レイヤー1枚</li>
+        <li>「通常」レイヤーがなくて、「覆い焼き(リニア)」レイヤーが1枚だけ</li>
+        <li>「通常」レイヤー1枚のみ</li>
+        <li>「通常」レイヤー3枚の上に「覆い焼き(リニア)」レイヤー2枚</li>
     </ul>
 </dd>
-<dt>�ultAddAlpha�`���ŏo�͂���v���I������Ă���ꍇ�ɓǂݍ��߂Ȃ���</dt>
+<dt>「ltAddAlpha形式で出力する」が選択されている場合に読み込めない例</dt>
 <dd>
     <ul>
-        <li>�u�ʏ�v���C���[1���̏�Ɂu�����Ă�(���j�A)�v���C���[1���A���̏�ɂ���Ɂu�ʏ�v���C���[1��<r/>(�����Ă����j�A�̃��C���[�͒ʏ탌�C���[�̊Ԃɋ��ނ��Ƃ͂ł��܂���)</li>
-        <li>�u�����Ă�(���j�A)�v���C���[1���̏�Ɂu�ʏ�v���C���[1���A����ɂ��̏�Ɂu�����Ă�(���j�A)�v���C���[1��<r/>(�ʏ�̃��C���[�͕����Ă����j�A�̃��C���[�̊Ԃɋ��ނ��Ƃ͂ł��܂���)</li>
-        <li>�u�����Ă��v���C���[1���̂�<r/>(�����Ă��͕����Ă��ł��A������̂́u�����Ă����j�A�v�̃��C���[�����ł�)</li>
+        <li>「通常」レイヤー1枚の上に「覆い焼き(リニア)」レイヤー1枚、その上にさらに「通常」レイヤー1枚<r/>(覆い焼きリニアのレイヤーは通常レイヤーの間に挟むことはできません)</li>
+        <li>「覆い焼き(リニア)」レイヤー1枚の上に「通常」レイヤー1枚、さらにその上に「覆い焼き(リニア)」レイヤー1枚<r/>(通常のレイヤーは覆い焼きリニアのレイヤーの間に挟むことはできません)</li>
+        <li>「覆い焼き」レイヤー1枚のみ<r/>(覆い焼きは覆い焼きでも、扱えるのは「覆い焼きリニア」のレイヤーだけです)</li>
     </ul>
 </dd>
 </dl>
-Photoshop�́u�ʏ�v�͋g���g���̃A���t�@�����A�u�����Ă�(���j�A)�v�͋g���g���̉��Z�����ɑ������܂��BltAdditiveAlpha(���Z�A���t�@����)�ł̓A���t�@�����Ɖ��Z�����̗����𓯎��ɕ\���ł��邽�߁A���̂悤�ȃ��C���[�\����Photoshop�f�[�^��ǂݍ��ނ��Ƃ��ł��܂��B<r/>
+Photoshopの「通常」は吉里吉里のアルファ合成、「覆い焼き(リニア)」は吉里吉里の加算合成に相当します。ltAdditiveAlpha(加算アルファ合成)ではアルファ合成と加算合成の両方を同時に表現できるため、このようなレイヤー構成のPhotoshopデータを読み込むことができます。<r/>
 <r/>
 
 
@@ -78,76 +78,76 @@ Photoshop�́u�ʏ�v�͋g���g���̃A���t�@�����A�u�����Ă�(���j�A)�v�͋g���g���̉��
 
 <dt>JPEG</dt>
 <dd>
-�@�t���J���[�ƃO���C�X�P�[���̈�ʓI�� JPEG �`����ǂݍ��߂܂��B��q�̃��C��/�}�X�N�����`���̓��͂Ƃ��Ďg�����Ƃ��ł��܂��B</dd>
+　フルカラーとグレイスケールの一般的な JPEG 形式を読み込めます。後述のメイン/マスク分離形式の入力として使うこともできます。</dd>
 
-<dt>���C��/�}�X�N�����`��</dt>
+<dt>メイン/マスク分離形式</dt>
 <dd>
-�@���C��/�}�X�N�����`���́A���C��(�F���)�̉摜�ƃ}�X�N(���ߏ��)�̉摜���ʁX�̃t�@�C���ɂȂ��Ă�����̂ł��B<r/>
-�@�}�X�N�摜�́A���C���摜�̃t�@�C�����̍Ō�� _m �̂����t�@�C�����ɂȂ�܂� ( ���Ƃ��� test.jpg �ɑ΂��� test_m.jpg )�B<r/>
-�@���C��/�}�X�N�����`���Ƃ��ėL���ȓ��͉摜�t�H�[�}�b�g�́A���ꂼ�� BMP, JPEG, PNG �ł��B���C���ƃ}�X�N�̃t�H�[�}�b�g���قȂ��Ă��Ă����܂��܂���B
+　メイン/マスク分離形式は、メイン(色情報)の画像とマスク(透過情報)の画像が別々のファイルになっているものです。<r/>
+　マスク画像は、メイン画像のファイル名の最後に _m のついたファイル名になります ( たとえば test.jpg に対して test_m.jpg )。<r/>
+　メイン/マスク分離形式として有効な入力画像フォーマットは、それぞれ BMP, JPEG, PNG です。メインとマスクのフォーマットが異なっていてもかまいません。
 </dd>
 </dl>
 <note>
-�@TLG5 �� TLG6 �`���͓��͂Ƃ��ėp���邱�Ƃ��ł��܂���BERI �`���͌����_�ł͖��Ή��ł��B
+　TLG5 や TLG6 形式は入力として用いることができません。ERI 形式は現時点では未対応です。
 </note>
 </para>
 
 <para>
-<ptitle>�o�͉摜�t�H�[�}�b�g</ptitle>
-�@�o�͉摜�t�H�[�}�b�g�Ƃ��Ă͈ȉ��̌`����p���邱�Ƃ��ł��܂��B<r/>
+<ptitle>出力画像フォーマット</ptitle>
+　出力画像フォーマットとしては以下の形式を用いることができます。<r/>
 <r/>
 <dl>
 <dt>24bit/32bit BMP</dt>
 <dd>
-�@24bit BMP �̓A���t�@�`�����l���������Ȃ� BMP �ł��B<r/>
-�@32bit BMP �̓A���t�@�`���l���������� BMP �ŁA��̃t�@�C������ ���C���ƃ}�X�N�������Ă��� BMP �ł��B
+　24bit BMP はアルファチャンネルを持たない BMP です。<r/>
+　32bit BMP はアルファチャネルを持った BMP で、一つのファイル内に メインとマスクを持っている BMP です。
 </dd>
 
 <dt>PNG</dt>
 <dd>
-�@�t���J���[�� PNG�A���邢�̓A���t�@�`�����l���t���� PNG �ł��B<r/>
+　フルカラーの PNG、あるいはアルファチャンネル付きの PNG です。<r/>
 </dd>
 
 <dt>TLG5</dt>
 <dd>
-�@�t���J���[�� TLG5�A���邢�̓A���t�@�`�����l���t���� TLG5 �ł��B<r/>
+　フルカラーの TLG5、あるいはアルファチャンネル付きの TLG5 です。<r/>
 <note>
-�@TLG5 �`���͈��k�Ɍ��\���Ԃ�������܂��B�v���O�������~�܂��Ă��܂����悤�Ɍ����邩���m��܂���B
+　TLG5 形式は圧縮に結構時間がかかります。プログラムが止まってしまったように見えるかも知れません。
 </note>
 </dd>
 
 <dt>TLG6</dt>
 <dd>
-�@�t���J���[�� TLG6�A���邢�̓A���t�@�`�����l���t���� TLG6 �ł��B<r/>
+　フルカラーの TLG6、あるいはアルファチャンネル付きの TLG6 です。<r/>
 <note>
-�@TLG6 �`���� TLG5 �`���Ɠ������A���k�Ɍ��\���Ԃ�������܂��B�v���O�������~�܂��Ă��܂����悤�Ɍ����邩���m��܂���B
+　TLG6 形式は TLG5 形式と同じく、圧縮に結構時間がかかります。プログラムが止まってしまったように見えるかも知れません。
 </note>
-TLG6�摜�ɂ��Ă�TLG5�摜�Ɠ������A�^�O���������o���܂��B<r/>
+TLG6画像についてはTLG5画像と同じく、タグ情報を書き出します。<r/>
 </dd>
 
-<dt>���C��/�}�X�N�����`��</dt>
+<dt>メイン/マスク分離形式</dt>
 <dd>
-�@���������̂���摜�ɂ����āA���C��/�}�X�N��ʁX�̃t�@�C���ɋL�^��������ł��B���ꂼ��ABMP, JPEG, PNG ��I���ł��܂��B<r/>
-�@�}�X�N�摜�́A���C���摜�̃t�@�C�����̍Ō�� _m �̂����t�@�C�����ɂȂ�܂� ( ���Ƃ��� test.jpg �ɑ΂��� test_m.jpg )�B<r/>
-�@���C���ƃ}�X�N��ʁX�̉摜�`���ɂ��邱�Ƃ��ł��܂����ABMP �� BMP �APNG �� PNG �̑g�ݍ��킹�͂قƂ�ǈӖ����Ȃ��̂ŁA��L�� 32bit BMP �� �A���t�@�`���l���t�� PNG ��I�����������ǂ��ł��傤�B<r/>
-�@�ǂ��炩�A���邢�͗����� JPEG ��p����΃t�@�C���T�C�Y�͐ߖ�ł��܂����A�掿�͈����Ȃ�܂��B<r/>
-�@���C��/�}�X�N�����`���� TLG5 �� TLG6 �`�����w�肷�邱�Ƃ͂ł��܂���B
+　透明部分のある画像において、メイン/マスクを別々のファイルに記録する方式です。それぞれ、BMP, JPEG, PNG を選択できます。<r/>
+　マスク画像は、メイン画像のファイル名の最後に _m のついたファイル名になります ( たとえば test.jpg に対して test_m.jpg )。<r/>
+　メインとマスクを別々の画像形式にすることができますが、BMP と BMP 、PNG と PNG の組み合わせはほとんど意味がないので、上記の 32bit BMP か アルファチャネル付き PNG を選択した方が良いでしょう。<r/>
+　どちらか、あるいは両方に JPEG を用いればファイルサイズは節約できますが、画質は悪くなります。<r/>
+　メイン/マスク分離形式に TLG5 や TLG6 形式を指定することはできません。
 </dd>
 </dl>
 </para>
 
 <para>
-<ptitle>�^�O���</ptitle>
-�摜�t�H�[�}�b�g�R���o�[�^�́ATLG�摜��PNG�摜�Ɂu�^�O���v�������o���܂��B�u�^�O���v�́A�摜�ǂ̂悤�ɕ\�������ׂ����Ȃǂ��܂ޏ��ł��B���̃^�O����<at href="f_Layer_loadImages.html">Layer.loadImages</at>���\�b�h�̖߂�l�Ƃ��ē��邱�Ƃ��ł��܂��B<r/><r/>
-�ȉ��̃^�O��񂪏����o����܂��B<r/>
+<ptitle>タグ情報</ptitle>
+画像フォーマットコンバータは、TLG画像やPNG画像に「タグ情報」を書き出します。「タグ情報」は、画像どのように表示されるべきかなどを含む情報です。このタグ情報は<at href="f_Layer_loadImages.html">Layer.loadImages</at>メソッドの戻り値として得ることができます。<r/><r/>
+以下のタグ情報が書き出されます。<r/>
 <dl>
-<dt><kw>mode</kw> (TLG�̂�)</dt>
+<dt><kw>mode</kw> (TLGのみ)</dt>
 <dd>
-�摜�̕\�����[�h�ł��B�u�s�����ȉ摜�v�̏ꍇ��mode=opaque�ŁA�o�͌`����ltAddAlpha�Ȃ��mode=addalpha�Ƃ������������o���܂��B<r/>
-�u���������̂���摜�v�ŏo�͌`����ltAddAlpha�łȂ��ꍇ�́APSD �t�@�C���ȊO��A�u�ʏ�v�̃��C���[�݂̂��܂� PSD �t�@�C����ǂݍ��񂾏ꍇ�� mode=alpha �ɂȂ�܂��BPSD �t�@�C���ŁA�u�ʏ�v�ȊO�̃��C���[��ǂݍ��񂾏ꍇ�́A���ꂼ��̃u�����h���[�h�ɑΉ������񂪏����o����܂��B<r/>
-KAG�̏ꍇ�A�����image�^�O��mode�����ɂ��̂܂ܑΉ����Aimage�^�O��mode�������ȗ������Ƃ��̏����l�ɂȂ�܂��B�܂�AKAG�ł�mode�������w�肵�Ȃ��Ă��A�����I�ɂ��̉摜�ɓK����mode�������ݒ肳���ƌ������ƂɂȂ�܂��B<r/>
+画像の表示モードです。「不透明な画像」の場合はmode=opaqueで、出力形式がltAddAlphaならばmode=addalphaという情報を書き出します。<r/>
+「透明部分のある画像」で出力形式がltAddAlphaでない場合は、PSD ファイル以外や、「通常」のレイヤーのみを含む PSD ファイルを読み込んだ場合は mode=alpha になります。PSD ファイルで、「通常」以外のレイヤーを読み込んだ場合は、それぞれのブレンドモードに対応する情報が書き出されます。<r/>
+KAGの場合、これはimageタグのmode属性にそのまま対応し、imageタグでmode属性を省略したときの初期値になります。つまり、KAGではmode属性を指定しなくても、自動的にその画像に適したmode属性が設定されると言うことになります。<r/>
 <r/>
-�@�g���g���́ATJS�̃O���[�o���I�u�W�F�N�g�� imageTagLayerType �Ƃ��������z��������ATLG�摜�̎��^�O���� mode �ƃ��C���̃^�C�v���ǂ��Ή��Â����邩��\���Ă���A�ȉ��̂悤�ɒ�`����Ă��܂��B<r/>
+　吉里吉里は、TJSのグローバルオブジェクトに imageTagLayerType という辞書配列を持ち、TLG画像の持つタグ情報の mode とレイヤのタイプがどう対応づけられるかを表しており、以下のように定義されています。<r/>
 <bq>
 global.imageTagLayerType = %[<r/>
     opaque      :%[type:ltOpaque            ],<r/>
@@ -180,26 +180,26 @@ global.imageTagLayerType = %[<r/>
     psexcl      :%[type:ltPsExclusion       ],<r/>
 ]<r/>
 </bq>
-�@���ꂼ��̃��C���̃^�C�v�ɂ��Ă� <link href="GraphicSystem" /> ���Q�Ƃ��Ă��������B
+　それぞれのレイヤのタイプについては <link href="GraphicSystem" /> を参照してください。
 </dd>
 
 <dt><kw>offs_x</kw> <kw>offs_y</kw> <kw>offs_unit</kw> (TLG, PNG)</dt>
 <dd>
-�@�����́A�ϊ�����PNG�ŁA����PNG�����̉摜�̍��������̃I�t�Z�b�g(oFFs�`�����N)�̏����܂�ł���ꍇ�݂̂ɏo�͂���܂��B<r/>
-�@offs_x �͉��ʒu�̍��[����̋����Aoffs_y �͏c�ʒu�̏�[����̋����ł��Boffs_unit �� <kw>pixel</kw> �� <kw>micrometer</kw> �̂ǂ��炩�ɂȂ�A�����̒P�ʂ������܂��B<r/>
+　これらは、変換元がPNGで、そのPNGがその画像の左上隅からのオフセット(oFFsチャンク)の情報を含んでいる場合のみに出力されます。<r/>
+　offs_x は横位置の左端からの距離、offs_y は縦位置の上端からの距離です。offs_unit は <kw>pixel</kw> か <kw>micrometer</kw> のどちらかになり、距離の単位を示します。<r/>
 </dd>
 
 <dt><kw>vpag_w</kw> <kw>vpag_h</kw> <kw>vpag_unit</kw> (TLG, PNG)</dt>
 <dd>
-�@�����́A�ϊ�����PNG�ŁA����PNG�� Virtual PAGe�A�܂�摜�S�̂̃T�C�Y(vpAg�`�����N)�̏����܂�ł���ꍇ�݂̂ɏo�͂���܂��B<r/>
-�@���̏��� PNG �ɏo�͂���\�t�g�E�F�A�Ƃ��� <at target="_top"  href="http://www.imagemagick.org/">ImageMagick</at>���[�e�B���e�B������܂����A���� <kw>ImageMagick</kw> �� trim (�g����)���s�����ۂɁA�g�����O�̉摜�T�C�Y�Ƃ��Ă��̏�񂪏o�͂���܂��B<r/>
-�@vpag_w �͉摜�S�̂̉��̃T�C�Y�Avpag_h �͉摜�S�̂̏c�̃T�C�Y�Aoffs_unit �� <kw>pixel</kw> �� <kw>micrometer</kw> �̂ǂ��炩�ɂȂ�A�T�C�Y�̒P�ʂ������܂��B<r/>
+　これらは、変換元がPNGで、そのPNGが Virtual PAGe、つまり画像全体のサイズ(vpAgチャンク)の情報を含んでいる場合のみに出力されます。<r/>
+　この情報を PNG に出力するソフトウェアとして <at target="_top"  href="http://www.imagemagick.org/">ImageMagick</at>ユーティリティがありますが、この <kw>ImageMagick</kw> で trim (トリム)を行った際に、トリム前の画像サイズとしてこの情報が出力されます。<r/>
+　vpag_w は画像全体の横のサイズ、vpag_h は画像全体の縦のサイズ、offs_unit は <kw>pixel</kw> か <kw>micrometer</kw> のどちらかになり、サイズの単位を示します。<r/>
 </dd>
 
 <dt><kw>reso_x</kw> <kw>reso_y</kw> <kw>reso_unit</kw> (TLG, PNG)</dt>
 <dd>
-�@�����́A�ϊ�����PNG�ŁA����PNG�����̉摜�̉𑜓x(pHYs�`�����N)�̏����܂�ł���ꍇ�݂̂ɏo�͂���܂��B<r/>
-�@reso_x �͉������̉𑜓x�Areso_y �͏c�����̉𑜓x�ł��Breso_unit �� <kw>meter</kw> �ɂȂ�A�𑜓x�̒P�ʂ������܂��B<r/>
+　これらは、変換元がPNGで、そのPNGがその画像の解像度(pHYsチャンク)の情報を含んでいる場合のみに出力されます。<r/>
+　reso_x は横方向の解像度、reso_y は縦方向の解像度です。reso_unit は <kw>meter</kw> になり、解像度の単位を示します。<r/>
 </dd>
 
 </dl>
@@ -207,157 +207,157 @@ global.imageTagLayerType = %[<r/>
 </para>
 
 <para>
-<ptitle>�摜�t�H�[�}�b�g�R���o�[�^�̎g����</ptitle>
+<ptitle>画像フォーマットコンバータの使い方</ptitle>
 <r/>
-�@�ϊ��́A�ϊ��������t�@�C�����摜�t�H�[�}�b�g�R���o�[�^�̃E�B���h�E�̏�Ƀh���b�v���邱�Ƃōs�����Ƃ��ł��܂��B�����̃t�@�C�����h���b�v���鎖���ł��܂��B<r/>
+　変換は、変換したいファイルを画像フォーマットコンバータのウィンドウの上にドロップすることで行うことができます。複数のファイルをドロップする事もできます。<r/>
 <r/>
-�@�s�����ȉ摜�A�����������������摜�ɂ��ꂼ��ʂ̌`�����w�肷�邱�Ƃ��ł��܂��B<r/>
+　不透明な画像、透明部分を持った画像にそれぞれ別の形式を指定することができます。<r/>
 <r/>
-�@�����Ō����u�s�����ȉ摜�v�Ƃ́A�摜�S�悪���S�ɕs�����ȉ摜(���Ƃ��΁AKAG�Ŏg���悤�Ȕw�i�摜)�������܂��B�u�����������������摜�v�Ƃ́A�����ɂȂ镔��������摜(���Ƃ���KAG�Ŏg���悤�ȑO�i�摜)�������܂��B<r/>
-�@�Ȃ��A�摜�`���Ƃ��ē������������Ă���`���ł��A���ʓI�ɉ摜�̂��ׂẴs�N�Z�������S�s�����ł���΁A�u�s�����ȉ摜�v�Ƃ��Ĉ����܂��B<r/>
+　ここで言う「不透明な画像」とは、画像全域が完全に不透明な画像(たとえば、KAGで使うような背景画像)を言います。「透明部分を持った画像」とは、透明になる部分がある画像(たとえばKAGで使うような前景画像)を言います。<r/>
+　なお、画像形式として等価情報を持っている形式でも、結果的に画像のすべてのピクセルが完全不透明であれば、「不透明な画像」として扱われます。<r/>
 <r/>
-�@�ϊ��I����A�e�t�@�C���̕ϊ��������������A�G���[�ɂȂ��������m�F�ł��郍�O���\������܂��̂Ŋm�F���Ă��������B<r/>
+　変換終了後、各ファイルの変換が成功したか、エラーになったかを確認できるログが表示されますので確認してください。<r/>
 <r/>
-�@�ȉ��́A��ʂ̐����ł��B<r/>
+　以下は、画面の説明です。<r/>
 <r/>
 <img src="TPC.png"/><r/><r/>
-�@���s����ƁA��̉�ʂ��\������܂��B<r/>
+　実行すると、上の画面が表示されます。<r/>
 <r/>
 <dl>
-<dt>�u�I�v�V������\���v</dt>
+<dt>「オプションを表示」</dt>
 <dd>
-�@�`�F�b�N����Ă����Ԃł́A���̐ݒ蕔�����\������܂��B�`�F�b�N���͂����ƁA�E�B���h�E�͏㕔���������ƂȂ�A���ɍג����Ȃ�܂��B�I�v�V�����ݒ肪�K�v�Ȃ��ꍇ�ɃE�B���h�E���R���p�N�g�ɂ��邱�Ƃ��ł��܂��B
+　チェックされている状態では、下の設定部分が表示されます。チェックをはずすと、ウィンドウは上部部分だけとなり、横に細長くなります。オプション設定が必要ない場合にウィンドウをコンパクトにすることができます。
 </dd>
 
-<dt>�u�s�����ȉ摜 - 24bit BMP�v</dt>
+<dt>「不透明な画像 - 24bit BMP」</dt>
 <dd>
-�@�s�����ȉ摜�̏o�͌`���Ƃ��� 24bit BMP ��I�����܂��B
+　不透明な画像の出力形式として 24bit BMP を選択します。
 </dd>
 
-<dt>�u�s�����ȉ摜 - PNG�v</dt>
+<dt>「不透明な画像 - PNG」</dt>
 <dd>
-�@�s�����ȉ摜�̏o�͌`���Ƃ��� PNG ��I�����܂��B
+　不透明な画像の出力形式として PNG を選択します。
 </dd>
 
-<dt>�u�s�����ȉ摜 - TLG5�v</dt>
+<dt>「不透明な画像 - TLG5」</dt>
 <dd>
-�@�s�����ȉ摜�̏o�͌`���Ƃ��� TLG5 ��I�����܂��B
+　不透明な画像の出力形式として TLG5 を選択します。
 </dd>
 
-<dt>�u�s�����ȉ摜 - TLG6�v</dt>
+<dt>「不透明な画像 - TLG6」</dt>
 <dd>
-�@�s�����ȉ摜�̏o�͌`���Ƃ��� TLG6 ��I�����܂��B
+　不透明な画像の出力形式として TLG6 を選択します。
 </dd>
 
-<dt>�u�s�����ȉ摜 - JPEG�v</dt>
+<dt>「不透明な画像 - JPEG」</dt>
 <dd>
-�@�s�����ȉ摜�̏o�͌`���Ƃ��� JPEG ��I�����܂��B
+　不透明な画像の出力形式として JPEG を選択します。
 </dd>
 
-<dt>�u�s�����ȉ摜 - JPEG �I�v�V����...�v</dt>
+<dt>「不透明な画像 - JPEG オプション...」</dt>
 <dd>
-�@�s�����ȉ摜�̏o�͌`���Ƃ��� JPEG ��I�������ꍇ�́AJPEG �̈��k�N�I���e�B��I�����܂��B
-</dd>
-
-
-<dt>�u���������̂���摜 - 32bit BMP (���C��+�}�X�N)�v</dt>
-<dd>
-�@���ߏ����������摜�̏o�͌`���Ƃ��� 32bit BMP ��I�����܂��B
-</dd>
-
-<dt>�u���������̂���摜 - ���`���l���t�� PNG (���C��+�}�X�N)�v</dt>
-<dd>
-�@���ߏ����������摜�̏o�͌`���Ƃ��� �A���t�@�`���l���t�� PNG ��I�����܂��B
-</dd>
-
-<dt>�u���������̂���摜 - ���`���l���t�� TLG5 (���C��+�}�X�N)�v</dt>
-<dd>
-�@���ߏ����������摜�̏o�͌`���Ƃ��� �A���t�@�`���l���t�� TLG5 ��I�����܂��B
-</dd>
-
-<dt>�u���������̂���摜 - ���`���l���t�� TLG6 (���C��+�}�X�N)�v</dt>
-<dd>
-�@���ߏ����������摜�̏o�͌`���Ƃ��� �A���t�@�`���l���t�� TLG6 ��I�����܂��B
-</dd>
-
-<dt>�u���������̂���摜 - ���C��/�}�X�N�����`���v</dt>
-<dd>
-�@���ߏ����������摜�̏o�͌`���Ƃ��ă��C��/�}�X�N�����`�����w�肵�܂��B���C��/�}�X�N�ɉ���p���邩�����őI�����܂��B�܂��AJPEG �̏ꍇ�A�uJPEG �I�v�V�����v�{�^�����N���b�N���邱�Ƃɂ���āAJPEG �̈��k�N�I���e�B��I�����邱�Ƃ��ł��܂��B
-</dd>
-
-<dt>�u���������̂���摜 - ���͉摜��ltAddAlpha�`���ł���Ƃ݂Ȃ��v</dt>
-<dd>
-�@���̃I�v�V�������`�F�b�N����Ă���ƁA���͉摜��ltAddAlpha�`���A�܂�g���g����<at href="f_Layer_type.html">Layer.type</at>�v���p�e�B��ltAddAlpha���w�肵�ĕ\������ɓK�����A���Z�A���t�@�����`���ł���ƌ��Ȃ��܂��B���̃I�v�V�����ɉe���������͉摜�`����BMP�APNG�A���C��/�}�X�N�����`���ŁAPSD�`���͉e������܂���B<r/>
-�@���̃I�v�V�������`�F�b�N����Ă��Ȃ��ƁA���͉摜��ltAlpha�`���ł���ƌ��Ȃ���܂��B�قƂ�ǂ̃O���t�B�b�N�\�t�g�̏o�͌`����PNG�̎d�l��ltAlpha�`���ł���ׁA�ʏ�͂��̃I�v�V�����̓`�F�b�N���Ȃ��ł��������B<r/>
-�@���̃I�v�V�����̃`�F�b�N����Ă��Ȃ���ԂŁA����q�́ultAddAlpha�`���ŏo�͂���v���`�F�b�N����Ă���ƁA�摜�t�H�[�}�b�g�R���o�[�^��ltAlpha�`������ltAddAlpha�`���ւ̕ϊ����s���܂��B<r/>
-�@���̃I�v�V�������`�F�b�N����ƁA�ultAddAlpha�`���ŏo�͂���v�̃I�v�V�����͎����I�Ƀ`�F�b�N����܂��B�܂��A�u���S���������̐F���v�̃I�v�V�����͎g�p�s�ɂȂ�܂�(�A���t�@�����F�����摜�t�H�[�}�b�g�R���o�[�^�ł͉��H����Ȃ��Ȃ�܂�)�B<r/>
+　不透明な画像の出力形式として JPEG を選択した場合の、JPEG の圧縮クオリティを選択します。
 </dd>
 
 
-<dt>�u���������̂���摜 - ltAddAlpha�`���ŏo�͂���v</dt>
+<dt>「透明部分のある画像 - 32bit BMP (メイン+マスク)」</dt>
 <dd>
-�@���̃I�v�V�������`�F�b�N����Ă���ƁA�o�͉摜��ltAddAlpha�`���ŏo�͂��܂��B<r/>
-�@���̃I�v�V�������`�F�b�N����Ă��Ȃ��ƁA�o�͉摜�̌`����ltAlpha�`���A���邢�� PSD �t�@�C������̓��͂̏ꍇ�͂��̃t�@�C���Ɋ܂܂�Ă��郌�C���[�̃u�����h���[�h�ɑΉ������`���ɂȂ�܂��B<r/>
-�@�l�X�ȃO���t�B�b�N�\�t�g��APNG�̎d�l�ł�ltAlpha�`���̉摜�݂̂��󂯕t���܂��̂ŁA�o�͉摜���g���g���Ɏg�p�����ł͂Ȃ��ꍇ�́A�ʏ�̓`�F�b�N���Ȃ��ł��������B<r/>
-�@���̃I�v�V�������`�F�b�N����Ă���ƁA�u���S���������̐F���v�̃I�v�V�����͎g�p�s�ɂȂ�܂�(�A���t�@�����F�����摜�t�H�[�}�b�g�R���o�[�^�ł͉��H����Ȃ��Ȃ�܂�)�B<r/>
+　透過情報を持った画像の出力形式として 32bit BMP を選択します。
+</dd>
+
+<dt>「透明部分のある画像 - αチャネル付き PNG (メイン+マスク)」</dt>
+<dd>
+　透過情報を持った画像の出力形式として アルファチャネル付き PNG を選択します。
+</dd>
+
+<dt>「透明部分のある画像 - αチャネル付き TLG5 (メイン+マスク)」</dt>
+<dd>
+　透過情報を持った画像の出力形式として アルファチャネル付き TLG5 を選択します。
+</dd>
+
+<dt>「透明部分のある画像 - αチャネル付き TLG6 (メイン+マスク)」</dt>
+<dd>
+　透過情報を持った画像の出力形式として アルファチャネル付き TLG6 を選択します。
+</dd>
+
+<dt>「透明部分のある画像 - メイン/マスク分離形式」</dt>
+<dd>
+　透過情報を持った画像の出力形式としてメイン/マスク分離形式を指定します。メイン/マスクに何を用いるかを下で選択します。また、JPEG の場合、「JPEG オプション」ボタンをクリックすることによって、JPEG の圧縮クオリティを選択することができます。
+</dd>
+
+<dt>「透明部分のある画像 - 入力画像をltAddAlpha形式であるとみなす」</dt>
+<dd>
+　このオプションがチェックされていると、入力画像をltAddAlpha形式、つまり吉里吉里の<at href="f_Layer_type.html">Layer.type</at>プロパティでltAddAlphaを指定して表示するに適した、加算アルファ合成形式であると見なします。このオプションに影響される入力画像形式はBMP、PNG、メイン/マスク分離形式で、PSD形式は影響されません。<r/>
+　このオプションがチェックされていないと、入力画像はltAlpha形式であると見なされます。ほとんどのグラフィックソフトの出力形式やPNGの仕様はltAlpha形式である為、通常はこのオプションはチェックしないでください。<r/>
+　このオプションのチェックされていない状態で、かつ後述の「ltAddAlpha形式で出力する」がチェックされていると、画像フォーマットコンバータはltAlpha形式からltAddAlpha形式への変換を行います。<r/>
+　このオプションをチェックすると、「ltAddAlpha形式で出力する」のオプションは自動的にチェックされます。また、「完全透明部分の色情報」のオプションは使用不可になります(アルファ情報も色情報も画像フォーマットコンバータでは加工されなくなります)。<r/>
 </dd>
 
 
-<dt>�u���������̂���摜 - ���S���������̐F���v</dt>
+<dt>「透明部分のある画像 - ltAddAlpha形式で出力する」</dt>
 <dd>
-�@�摜�̊��S�ɓ����ȕ����̏������w�肵�܂��B<r/>
-�@�ʏ�AltAlpha �`���̉摜�̏ꍇ�A���S�ɓ����ȕ����ł��F�̏��������Ă��܂��B���̕����͊��S�ɓ����Ȃ̂ŕ\������Ƃ��͒P�ɖ��������̂ł����A�摜�̉��H ( JPEG���ɂ�鈳�k���܂� ) ���s���Ƃ��͖�������܂���B<r/>
-�@���̊��S�ɓ����ȕ����̏����̕������w�肵�܂��B<r/>
+　このオプションがチェックされていると、出力画像をltAddAlpha形式で出力します。<r/>
+　このオプションがチェックされていないと、出力画像の形式はltAlpha形式、あるいは PSD ファイルからの入力の場合はそのファイルに含まれているレイヤーのブレンドモードに対応した形式になります。<r/>
+　様々なグラフィックソフトや、PNGの仕様ではltAlpha形式の画像のみを受け付けますので、出力画像を吉里吉里に使用する訳ではない場合は、通常はチェックしないでください。<r/>
+　このオプションがチェックされていると、「完全透明部分の色情報」のオプションは使用不可になります(アルファ情報も色情報も画像フォーマットコンバータでは加工されなくなります)。<r/>
+</dd>
+
+
+<dt>「透明部分のある画像 - 完全透明部分の色情報」</dt>
+<dd>
+　画像の完全に透明な部分の処理を指定します。<r/>
+　通常、ltAlpha 形式の画像の場合、完全に透明な部分でも色の情報を持っています。その部分は完全に透明なので表示するときは単に無視されるのですが、画像の加工 ( JPEG等による圧縮も含む ) を行うときは無視されません。<r/>
+　この完全に透明な部分の処理の方式を指定します。<r/>
 <r/>
 <dl>
-<dt>����</dt>
+<dt>除去</dt>
 <dd>
-�@�������w�肷��ƁA���S�ɓ����ȕ����̐F���͏�������܂� ( ���m�ɂ͐^�����œh��Ԃ���� )�B<r/>
-�@�ʏ�͂��̎w���OK�ł��B
+　除去を指定すると、完全に透明な部分の色情報は除去されます ( 正確には真っ黒で塗りつぶされる )。<r/>
+　通常はこの指定でOKです。
 </dd>
 
-<dt>���̂܂�</dt>
+<dt>そのまま</dt>
 <dd>
-�@�������s���܂���B���̉摜���̂܂܂ɂȂ�܂��B<r/>
-�@���S���������ɃS�~������ꍇ�A���̃S�~�܂ň��k���邱�ƂɂȂ�̂ň��k���������Ȃ�܂��B
+　処理を行いません。元の画像そのままになります。<r/>
+　完全透明部分にゴミがある場合、そのゴミまで圧縮することになるので圧縮率が悪くなります。
 </dd>
 
-<dt>����</dt>
+<dt>合成</dt>
 <dd>
-�@���S���������̐F���A���̎���ɂ���s�����ȕ����̐F���琄�����A�������܂��B<r/>
-�@�����̋��x�� 1, 2, 3, 5, 8 pixel ����I�ׂ܂��B�����Ńs�N�Z���P�ʂŎw�肳�ꂽ�������ɂ���s�����ȕ����̃s�N�Z���̐F����A���S���������̐F���������܂��B�l���傫���قǏ����Ɏ��Ԃ�������܂��B�����Ŏw�肵�������O�ɂ��銮�S�����ȕ����̐F�͏�������܂��B<r/>
-�@���Ƃ��� JPEG �Ń��C���摜�����k����ꍇ�AJPEG �̓�����A�}���ȐF�̕ω�������ꏊ�ł̓��X�L�[�g�m�C�Y���������܂��B����͑O�i�摜�̏ꍇ�A�����u�����v�����������Ȃ킸�A���S�s���������ƕs���������̋��E�ŋ}���ȐF�̕ω�������ꍇ�A���̕����ɔ������₷���Ȃ�܂��B�u�����v�������s���ƁA���S���������̐F��s���������̐F���獇�����邽�߁A�F�̕ω��̍���}���A���X�L�[�g�m�C�Y�̔�����}���邱�Ƃ��ł��܂��B�܂��A��ʓI�� JPEG �ł� �F�̏�񂪗ׂ̃s�N�Z���ƍ�����܂����A������u�����v�������s�����ƂŁA(�������Ȃ������ꍇ��) �Ӑ}���Ȃ����S���������̐F�ƕs���������̐F�������鎖��}���邱�Ƃ��ł��܂��B<r/>
-�@�ʏ�́u�����v��I��ł��������B���S�ɓ����ȕ����ɂ͐F�̏��͕K�v����܂���B�܂��������s���Ή摜�̈��k��̃t�@�C���T�C�Y�����������邱�Ƃ��ł��܂��B
+　完全透明部分の色を、その周りにある不透明な部分の色から推測し、合成します。<r/>
+　合成の強度を 1, 2, 3, 5, 8 pixel から選べます。ここでピクセル単位で指定された距離内にある不透明な部分のピクセルの色から、完全透明部分の色を合成します。値が大きいほど処理に時間がかかります。ここで指定した距離外にある完全透明な部分の色は除去されます。<r/>
+　たとえば JPEG でメイン画像を圧縮する場合、JPEG の特性上、急激な色の変化がある場所ではモスキートノイズが発生します。これは前景画像の場合、もし「合成」処理をおこなわず、完全不透明部分と不透明部分の境界で急激な色の変化がある場合、その部分に発生しやすくなります。「合成」処理を行うと、完全透明部分の色を不透明部分の色から合成するため、色の変化の差を抑え、モスキートノイズの発生を抑えることができます。また、一般的な JPEG では 色の情報が隣のピクセルと混ざりますが、これも「合成」処理を行うことで、(合成しなかった場合の) 意図しない完全透明部分の色と不透明部分の色が混ざる事を抑えることができます。<r/>
+　通常は「除去」を選んでください。完全に透明な部分には色の情報は必要ありません。また除去を行えば画像の圧縮後のファイルサイズも小さくすることができます。
 </dd>
 </dl>
-�@�ultAddAlpha�`���ŏo�͂���v���`�F�b�N����Ă���ꍇ�͂��̃I�v�V�����͎g�p�s�ɂȂ�܂��BltAddAlpha�`���ł́u���S�����v�́A�s�����x0�A�F�͐^�����ȊO�ɂ��蓾�Ȃ�����ł��B<r/>
+　「ltAddAlpha形式で出力する」がチェックされている場合はこのオプションは使用不可になります。ltAddAlpha形式での「完全透明」は、不透明度0、色は真っ黒以外にあり得ないからです。<r/>
 </dd>
 
-<dt>�u�o�̓t�H���_ - ���̓t�@�C���Ɠ����t�H���_�v</dt>
+<dt>「出力フォルダ - 入力ファイルと同じフォルダ」</dt>
 <dd>
-�@�o�͂���t�@�C�����A���̓t�@�C���Ƃ��Ȃ��t�H���_�ɏo�͂���悤�ɂ��܂��B
+　出力するファイルを、入力ファイルとおなじフォルダに出力するようにします。
 </dd>
 
-<dt>�u�o�̓t�H���_ - �w��t�H���_�v</dt>
+<dt>「出力フォルダ - 指定フォルダ」</dt>
 <dd>
-�@�o�̓t�@�C�����A���̓��͗��Ɏw�肵���t�H���_�ɏo�͂��܂��B<r/>
-�@�u�Q�� ...�v�{�^�����N���b�N����ƁA�o�̓t�H���_��I������_�C�A���O�{�b�N�X��\�����邱�Ƃ��ł��܂��B<r/>
-�@���͗��ɑ��΃t�H���_���w�肵���ꍇ�́A���̓t�@�C���̂���t�H���_����̑��Έʒu�Ŏw�肷�邱�Ƃ��ł��܂��B
+　出力ファイルを、下の入力欄に指定したフォルダに出力します。<r/>
+　「参照 ...」ボタンをクリックすると、出力フォルダを選択するダイアログボックスを表示することができます。<r/>
+　入力欄に相対フォルダを指定した場合は、入力ファイルのあるフォルダからの相対位置で指定することができます。
 </dd>
 
-<dt>�u�o�̓t�H���_ - �����̃t�@�C�����������ꍇ�ɏ㏑������v</dt>
+<dt>「出力フォルダ - 同名のファイルがあった場合に上書きする」</dt>
 <dd>
-�@���̃`�F�b�N�{�b�N�X���`�F�b�N����ƁA�����̃t�@�C�����������ꍇ�A�㏑�����܂��B
+　このチェックボックスをチェックすると、同名のファイルがあった場合、上書きします。
 </dd>
 
-<dt>�u�G���[���������Ȃ������ꍇ�̓��O��\�����Ȃ��v</dt>
+<dt>「エラーが発生しなかった場合はログを表示しない」</dt>
 <dd>
-�@���̃`�F�b�N�{�b�N�X���`�F�b�N����ƁA�ϊ����I����āA�ϊ����ɃG���[���������Ȃ������ꍇ�́A���O���m�F���邽�߂̃E�B���h�E��\�����܂���B
+　このチェックボックスをチェックすると、変換が終わって、変換中にエラーが発生しなかった場合は、ログを確認するためのウィンドウを表示しません。
 </dd>
 
-<dt>�u����v</dt>
+<dt>「閉じる」</dt>
 <dd>
-�@���̃c�[�����I�����܂��B
+　このツールを終了します。
 </dd>
 </dl>
 </para>

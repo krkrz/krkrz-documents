@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <doc>
-<title>���z�L�[�R�[�h�ꗗ</title>
+<title>仮想キーコード一覧</title>
 
 <para>
-<ptitle>���z�L�[�R�[�h�ꗗ</ptitle>
+<ptitle>仮想キーコード一覧</ptitle>
 <r/>
-Alt �L�[�� <tt>VK_MENU</tt> �ł��B<r/>
-VK_PAD???? �̓p�b�h(�W���C�X�e�B�b�N)����̓��͂��A���������L�[�{�[�h����̓��͂ł��邩�̂悤�ɃG�~�����[�g���邽�߂̉��z�L�[�R�[�h�ł��BVK_PADANY�́A<at href="f_System_getKeyState.html">System.getKeyState</at> ���\�b�h�ł��̃L�[�R�[�h�̏�Ԃ��擾���悤�Ƃ���ƁA�p�b�h�̂ǂꂩ��ł��L�[��������Ă��邩�ǂ������擾�ł��܂��B<r/>
+Alt キーは <tt>VK_MENU</tt> です。<r/>
+VK_PAD???? はパッド(ジョイスティック)からの入力を、あたかもキーボードからの入力であるかのようにエミュレートするための仮想キーコードです。VK_PADANYは、<at href="f_System_getKeyState.html">System.getKeyState</at> メソッドでこのキーコードの状態を取得しようとすると、パッドのどれか一つでもキーが押されているかどうかを取得できます。<r/>
 <r/>
 <bq>
  VK_LBUTTON        =0x01;<r/>

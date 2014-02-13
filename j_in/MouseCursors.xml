@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <doc>
-<title>�}�E�X�J�[�\���萔�ꗗ</title>
+<title>マウスカーソル定数一覧</title>
 
 <para>
-<ptitle>�}�E�X�J�[�\���萔�ꗗ</ptitle>
+<ptitle>マウスカーソル定数一覧</ptitle>
 <r/>
-�@cr �Ŏn�܂�}�E�X�J�[�\���萔�̈ꗗ�ł��B�����̒��ɂ́AWindows �̐ݒ�ɏ]���Ď��ۂ̃}�E�X�J�[�\�����ς����̂�����܂��B<r/>
+　cr で始まるマウスカーソル定数の一覧です。これらの中には、Windows の設定に従って実際のマウスカーソルが変わるものもあります。<r/>
 <r/>
 <hr/>
-<tt>crDefault      : crArrow �Ɠ���</tt><r/>
+<tt>crDefault      : crArrow と同じ</tt><r/>
 <hr/>
-<tt>crNone         : ���� ( ��\�� )</tt><r/>
+<tt>crNone         : 透明 ( 非表示 )</tt><r/>
 <hr/>
 <tt>crArrow        : <img src="crArrow.png"/></tt><r/>
 <hr/>

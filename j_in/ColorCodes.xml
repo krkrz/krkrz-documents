@@ -1,40 +1,40 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <doc>
-<title>�F�萔�ꗗ</title>
+<title>色定数一覧</title>
 
 <para>
-<ptitle>�F�萔�ꗗ</ptitle>
+<ptitle>色定数一覧</ptitle>
 <r/>
-�@�����̒萔��l�X�ȐF�w��̏�ʂŎg�����Ƃ��ł��܂��B�����̒l�� Windows �̐ݒ�ɂ���Ď��ۂ̐F���ς��\����������̂ł��B<r/>
+　これらの定数を様々な色指定の場面で使うことができます。これらの値は Windows の設定によって実際の色が変わる可能性があるものです。<r/>
 <r/>
 <bq>
-<colorbox color="Scrollbar"			/>clScrollBar           : �X�N���[���o�[�̐F<r/>
-<colorbox color="Background"		/>clBackground          : �f�X�N�g�b�v�̔w�i�F<r/>
-<colorbox color="ActiveCaption"		/>clActiveCaption       : �A�N�e�B�u�ȃE�B���h�E�̃^�C�g���o�[�̐F<r/>
-<colorbox color="InactiveCaption"	/>clInactiveCaption     : �A�N�e�B�u�łȂ��E�B���h�E�̃^�C�g���o�[�̐F<r/>
-<colorbox color="Menu"				/>clMenu                : ���j���[�̔w�i�F<r/>
-<colorbox color="Window"			/>clWindow              : �E�B���h�E�̔w�i�F<r/>
-<colorbox color="WindowFrame"		/>clWindowFrame         : �E�B���h�E�̘g�̐F<r/>
-<colorbox color="MenuText"			/>clMenuText            : ���j���[�̕����̐F<r/>
-<colorbox color="WindowText"		/>clWindowText          : �E�B���h�E���̕����̐F<r/>
-<colorbox color="CaptionText"		/>clCaptionText         : �A�N�e�B�u�ȃE�B���h�E�̃^�C�g���o�[�̕����̐F<r/>
-<colorbox color="ActiveBorder"		/>clActiveBorder        : �A�N�e�B�u�ȃE�B���h�E�̋��E���̐F<r/>
-<colorbox color="InactiveBorder"	/>clInactiveBorder      : �A�N�e�B�u�łȂ��E�B���h�E�̋��E���̐F<r/>
-<colorbox color="AppWorkspace"		/>clAppWorkSpace        : �A�v���P�[�V�����̍�Ɨ̈�̐F<r/>
-<colorbox color="Highlight"			/>clHighlight           : �I�𕶎��̔w�i�F<r/>
-<colorbox color="HighlightText"		/>clHighlightText       : �I�𕶎��̐F<r/>
-<colorbox color="ButtonFace"		/>clBtnFace             : 3D �I�u�W�F�N�g�̖ʂ̐F<r/>
-<colorbox color="ButtonShadow"		/>clBtnShadow           : 3D �I�u�W�F�N�g�̉e�̐F<r/>
-<colorbox color="GrayText"			/>clGrayText            : �W�F�\������Ă��镶���̐F<r/>
-<colorbox color="ButtonText"		/>clBtnText             : 3D �I�u�W�F�N�g�̃e�L�X�g�̐F<r/>
-<colorbox color="InactiveCaption"	/>clInactiveCaptionText : �A�N�e�B�u�łȂ��E�B���h�E�̃^�C�g���o�[�̕����̐F<r/>
-<colorbox color="ButtonHighlight"	/>clBtnHighlight        : �{�^���̋����\���̐F<r/>
-<colorbox color="ThreeDDarkShadow"	/>cl3DDkShadow          : 3D �I�u�W�F�N�g�̈Â����̉e<r/>
-<colorbox color="ThreeDHighlight"	/>cl3DLight             : 3D �I�u�W�F�N�g�̖��邢�ʂ̉��̐F<r/>
-<colorbox color="InfoText"			/>clInfoText            : �c�[���`�b�v�̃e�L�X�g�F<r/>
-<colorbox color="InfoBackground"	/>clInfoBk              : �c�[���`�b�v�̔w�i�F<r/>
+<colorbox color="Scrollbar"			/>clScrollBar           : スクロールバーの色<r/>
+<colorbox color="Background"		/>clBackground          : デスクトップの背景色<r/>
+<colorbox color="ActiveCaption"		/>clActiveCaption       : アクティブなウィンドウのタイトルバーの色<r/>
+<colorbox color="InactiveCaption"	/>clInactiveCaption     : アクティブでないウィンドウのタイトルバーの色<r/>
+<colorbox color="Menu"				/>clMenu                : メニューの背景色<r/>
+<colorbox color="Window"			/>clWindow              : ウィンドウの背景色<r/>
+<colorbox color="WindowFrame"		/>clWindowFrame         : ウィンドウの枠の色<r/>
+<colorbox color="MenuText"			/>clMenuText            : メニューの文字の色<r/>
+<colorbox color="WindowText"		/>clWindowText          : ウィンドウ内の文字の色<r/>
+<colorbox color="CaptionText"		/>clCaptionText         : アクティブなウィンドウのタイトルバーの文字の色<r/>
+<colorbox color="ActiveBorder"		/>clActiveBorder        : アクティブなウィンドウの境界線の色<r/>
+<colorbox color="InactiveBorder"	/>clInactiveBorder      : アクティブでないウィンドウの境界線の色<r/>
+<colorbox color="AppWorkspace"		/>clAppWorkSpace        : アプリケーションの作業領域の色<r/>
+<colorbox color="Highlight"			/>clHighlight           : 選択文字の背景色<r/>
+<colorbox color="HighlightText"		/>clHighlightText       : 選択文字の色<r/>
+<colorbox color="ButtonFace"		/>clBtnFace             : 3D オブジェクトの面の色<r/>
+<colorbox color="ButtonShadow"		/>clBtnShadow           : 3D オブジェクトの影の色<r/>
+<colorbox color="GrayText"			/>clGrayText            : 淡色表示されている文字の色<r/>
+<colorbox color="ButtonText"		/>clBtnText             : 3D オブジェクトのテキストの色<r/>
+<colorbox color="InactiveCaption"	/>clInactiveCaptionText : アクティブでないウィンドウのタイトルバーの文字の色<r/>
+<colorbox color="ButtonHighlight"	/>clBtnHighlight        : ボタンの強調表示の色<r/>
+<colorbox color="ThreeDDarkShadow"	/>cl3DDkShadow          : 3D オブジェクトの暗い方の影<r/>
+<colorbox color="ThreeDHighlight"	/>cl3DLight             : 3D オブジェクトの明るい面の縁の色<r/>
+<colorbox color="InfoText"			/>clInfoText            : ツールチップのテキスト色<r/>
+<colorbox color="InfoBackground"	/>clInfoBk              : ツールチップの背景色<r/>
 </bq>
-<note>��L�̐F���{ ( �e�F�̍��� <colorbox color="red" /> �̂悤�ȕ\�� ) �́A�u���E�U�ɂ���Ă͐���ɕ\������܂���B</note>
+<note>上記の色見本 ( 各色の左の <colorbox color="red" /> のような表示 ) は、ブラウザによっては正常に表示されません。</note>
 </para>
 
 </doc>

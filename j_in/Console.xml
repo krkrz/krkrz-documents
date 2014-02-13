@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <doc>
-<title>ƒRƒ“ƒ\[ƒ‹</title>
+<title>ã‚³ãƒ³ã‚½ãƒ¼ãƒ«</title>
 
 <para>
-<ptitle>ƒRƒ“ƒ\[ƒ‹‚É‚Â‚¢‚Ä</ptitle>
-@ƒRƒ}ƒ“ƒhƒ‰ƒCƒ“‚©‚ç‹N“®‚·‚é‚ÆAƒRƒ}ƒ“ƒhƒ‰ƒCƒ“ã‚ÉƒƒbƒZ[ƒW‚ª•\Ž¦‚³‚ê‚Ü‚·B<r/>
-@ƒRƒ“ƒ\[ƒ‹‚Å‚ÍA‹g—¢‹g—¢‚ÌƒVƒXƒeƒ€‚âAƒ†[ƒUƒXƒNƒŠƒvƒg‚ª <at href="f_Debug_message.html">Debug.message</at> ƒƒ\ƒbƒh‚Åo—Í‚·‚é—lX‚ÈƒfƒoƒbƒO—pƒƒbƒZ[ƒW‚ð•\Ž¦‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B<r/>
+<ptitle>ã‚³ãƒ³ã‚½ãƒ¼ãƒ«ã«ã¤ã„ã¦</ptitle>
+ã€€ã‚³ãƒžãƒ³ãƒ‰ãƒ©ã‚¤ãƒ³ã‹ã‚‰èµ·å‹•ã™ã‚‹ã¨ã€ã‚³ãƒžãƒ³ãƒ‰ãƒ©ã‚¤ãƒ³ä¸Šã«ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãŒè¡¨ç¤ºã•ã‚Œã¾ã™ã€‚<r/>
+ã€€ã‚³ãƒ³ã‚½ãƒ¼ãƒ«ã§ã¯ã€å‰é‡Œå‰é‡Œã®ã‚·ã‚¹ãƒ†ãƒ ã‚„ã€ãƒ¦ãƒ¼ã‚¶ã‚¹ã‚¯ãƒªãƒ—ãƒˆãŒ <at href="f_Debug_message.html">Debug.message</at> ãƒ¡ã‚½ãƒƒãƒ‰ã§å‡ºåŠ›ã™ã‚‹æ§˜ã€…ãªãƒ‡ãƒãƒƒã‚°ç”¨ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’è¡¨ç¤ºã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚<r/>
 </para>
 
 <para>
-<ptitle>‰æ–Ê‚Ìà–¾</ptitle>
+<ptitle>ç”»é¢ã®èª¬æ˜Ž</ptitle>
 <img src="Console.png"/><r/><r/>
-ƒRƒ}ƒ“ƒhƒ‰ƒCƒ“‚»‚Ì‚à‚Ì‚Å‚·B<r/>
+ã‚³ãƒžãƒ³ãƒ‰ãƒ©ã‚¤ãƒ³ãã®ã‚‚ã®ã§ã™ã€‚<r/>
 </para>
 
 </doc>

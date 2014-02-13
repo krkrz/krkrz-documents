@@ -1,244 +1,244 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <doc>
 <title>Rect</title>
 <desc>
-�@Rect �N���X�́A��`����ێ�����N���X�ł��B<r/>
+　Rect クラスは、矩形情報を保持するクラスです。<r/>
 </desc>
 
 <member>
 	<name>Rect</name>
 	<type>constructor</type>
-	<shortdesc>Rect �I�u�W�F�N�g�̍\�z</shortdesc>
+	<shortdesc>Rect オブジェクトの構築</shortdesc>
 	<arg></arg>
 	<result></result>
 	<desc>
-		�@Rect �N���X�̃I�u�W�F�N�g���\�z���܂��B<r/>
+		　Rect クラスのオブジェクトを構築します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>Rect</name>
 	<type>constructor</type>
-	<shortdesc>Rect �I�u�W�F�N�g�̍\�z</shortdesc>
+	<shortdesc>Rect オブジェクトの構築</shortdesc>
 	<arg>
 		<argitem>
 			<name>left</name>
 			<default></default>
 			<desc>
-				�@���[���w�肵�܂��B<r/>
+				　左端を指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>top</name>
 			<default></default>
 			<desc>
-				�@��[���w�肵�܂��B<r/>
+				　上端を指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>right</name>
 			<default></default>
 			<desc>
-				�@�E�[���w�肵�܂��B<r/>
+				　右端を指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>bottom</name>
 			<default></default>
 			<desc>
-				�@���[���w�肵�܂��B<r/>
+				　下端を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@Rect �N���X�̃I�u�W�F�N�g���w��̑傫���ō\�z���܂��B<r/>
+		　Rect クラスのオブジェクトを指定の大きさで構築します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>Rect</name>
 	<type>constructor</type>
-	<shortdesc>Rect �I�u�W�F�N�g�̍\�z</shortdesc>
+	<shortdesc>Rect オブジェクトの構築</shortdesc>
 	<arg>
 		<argitem>
 			<name>src</name>
 			<default></default>
 			<desc>
-				�@Rect �I�u�W�F�g���w�肵�܂��B<r/>
+				　Rect オブジェトを指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@Rect �N���X�̃I�u�W�F�N�g�� Rect �I�u�W�F�N�g����\�z���܂��B<r/>
+		　Rect クラスのオブジェクトを Rect オブジェクトから構築します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>setSize</name>
 	<type>method</type>
-	<shortdesc>��`�T�C�Y�̐ݒ�</shortdesc>
+	<shortdesc>矩形サイズの設定</shortdesc>
 	<arg>
 		<argitem>
 			<name>width</name>
 			<default></default>
 			<desc>
-				�@��`�̉������w�肵�܂��B<r/>
-				�@���̒l�� <ref>Rect.width</ref> �v���p�e�B�ł��擾��ݒ肪�ł��܂��B<r/>
+				　矩形の横幅を指定します。<r/>
+				　この値は <ref>Rect.width</ref> プロパティでも取得や設定ができます。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>height</name>
 			<default></default>
 			<desc>
-				�@��`�̏c�����w�肵�܂��B<r/>
-				�@���̒l�� <ref>Rect.height</ref> �v���p�e�B�ł��擾��ݒ肪�ł��܂��B<r/>
+				　矩形の縦幅を指定します。<r/>
+				　この値は <ref>Rect.height</ref> プロパティでも取得や設定ができます。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@��`�T�C�Y���w�肵�܂��B<r/>
+		　矩形サイズを指定します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>setOffset</name>
 	<type>method</type>
-	<shortdesc>��`�ʒu�̐ݒ�</shortdesc>
+	<shortdesc>矩形位置の設定</shortdesc>
 	<arg>
 		<argitem>
 			<name>x</name>
 			<default></default>
 			<desc>
-				�@��`�� X ���W�l���w�肵�܂��B<r/>
-				�@���̒l�� <ref>Rect.left</ref> �v���p�e�B�ł��擾��ݒ肪�ł��܂��B<r/>
+				　矩形の X 座標値を指定します。<r/>
+				　この値は <ref>Rect.left</ref> プロパティでも取得や設定ができます。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>y</name>
 			<default></default>
 			<desc>
-				�@��`�� Y ���W�l���w�肵�܂��B<r/>
-				�@���̒l�� <ref>Rect.topt</ref> �v���p�e�B�ł��擾��ݒ肪�ł��܂��B<r/>
+				　矩形の Y 座標値を指定します。<r/>
+				　この値は <ref>Rect.topt</ref> プロパティでも取得や設定ができます。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@��`�ʒu�̐ݒ���s���܂��B<r/>
+		　矩形位置の設定を行います。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>addOffset</name>
 	<type>method</type>
-	<shortdesc>��`�ʒu�̐ݒ�</shortdesc>
+	<shortdesc>矩形位置の設定</shortdesc>
 	<arg>
 		<argitem>
 			<name>x</name>
 			<default></default>
 			<desc>
-				�@��`�̉��ړ��ʂ��w�肵�܂��B<r/>
+				　矩形の横移動量を指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>y</name>
 			<default></default>
 			<desc>
-				�@��`�̏c�ړ��ʂ��w�肵�܂��B<r/>
+				　矩形の縦移動量を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@��`�ʒu���ړ����܂��B<r/>
-		�@�w�肳�ꂽ x, y �l����`���ړ����܂��B<r/>
+		　矩形位置を移動します。<r/>
+		　指定された x, y 値分矩形が移動します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>clear</name>
 	<type>method</type>
-	<shortdesc>��`�����N���A���܂�</shortdesc>
+	<shortdesc>矩形情報をクリアします</shortdesc>
 	<arg></arg>
 	<result></result>
 	<desc>
-		�@��`�̊e�ʒu�����[���N���A���܂��B<r/>
+		　矩形の各位置情報をゼロクリアします。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>set</name>
 	<type>method</type>
-	<shortdesc>��`���W�̐ݒ�</shortdesc>
+	<shortdesc>矩形座標の設定</shortdesc>
 	<arg>
 		<argitem>
 			<name>left</name>
 			<default></default>
 			<desc>
-				�@���[���w�肵�܂��B<r/>
+				　左端を指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>top</name>
 			<default></default>
 			<desc>
-				�@��[���w�肵�܂��B<r/>
+				　上端を指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>right</name>
 			<default></default>
 			<desc>
-				�@�E�[���w�肵�܂��B<r/>
+				　右端を指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>bottom</name>
 			<default></default>
 			<desc>
-				�@���[���w�肵�܂��B<r/>
+				　下端を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		�@�w��̑傫���ɋ�`��ݒ肵�܂��B<r/>
+		　指定の大きさに矩形を設定します。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>isEmpty</name>
 	<type>method</type>
-	<shortdesc>��`���������邩�ǂ���</shortdesc>
+	<shortdesc>矩形内部があるかどうか</shortdesc>
 	<arg></arg>
-	<result>�̈�̗L��</result>
+	<result>領域の有無</result>
 	<desc>
-		�@��`�����ƍ����������Ă��邩�ǂ����m�F���܂��B<r/>
-		�@�ǂ��炩����ł�0�ȉ��̏ꍇ true ���Ԃ�܂��B<r/>
+		　矩形が幅と高さを持っているかどうか確認します。<r/>
+		　どちらか一方でも0以下の場合 true が返ります。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>clip</name>
 	<type>method</type>
-	<shortdesc>��`�̃N���b�s���O</shortdesc>
+	<shortdesc>矩形のクリッピング</shortdesc>
 	<arg>
 		<argitem>
 			<name>r</name>
 			<default></default>
 			<desc>
-				�@�N���b�s���O�����`�I�u�W�F�N�g���w�肵�܂��B<r/>
+				　クリッピングする矩形オブジェクトを指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
-	<result>�N���b�s���O���{�L��</result>
+	<result>クリッピング実施有無</result>
 	<desc>
-		�@��`�̃N���b�s���O���w��̋�`�ōs���܂��B<r/>
-		�@��`����ɂȂ�Ȃ��ꍇ�̂݃N���b�s���O�͍s���܂��B<r/>
-		�@��ɂȂ��Ă��܂��ꍇ�� false ���Ԃ�A�N���b�s���O�͍s���܂���B<r/>
+		　矩形のクリッピングを指定の矩形で行います。<r/>
+		　矩形が空にならない場合のみクリッピングは行われます。<r/>
+		　空になってしまう場合は false が返り、クリッピングは行われません。<r/>
 	</desc>
 	<ref>Rect.isEmpty</ref>
 </member>
@@ -246,21 +246,21 @@
 <member>
 	<name>union</name>
 	<type>method</type>
-	<shortdesc>��`�̍���</shortdesc>
+	<shortdesc>矩形の合成</shortdesc>
 	<arg>
 		<argitem>
 			<name>r</name>
 			<default></default>
 			<desc>
-				�@���������`�I�u�W�F�N�g���w�肵�܂��B<r/>
+				　合成する矩形オブジェクトを指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
-	<result>�������{�L��</result>
+	<result>合成実施有無</result>
 	<desc>
-		�@�w��̋�`�I�u�W�F�N�g�ŋ�`���g�����܂��B<r/>
-		�@�w��̋�`�I�u�W�F�N�g�� 4�Ӓl�ŋ�`�T�C�Y���L��������ő傫���l���Ώۋ�`�̒l�ƂȂ�܂��B<r/>
-		�@�Ώۋ�`����łȂ��ꍇ�̂ݎ��s����A��̏ꍇ�͍s��ꂸ�Afalse ��Ԃ��܂��B<r/>
+		　指定の矩形オブジェクトで矩形を拡張します。<r/>
+		　指定の矩形オブジェクトの 4辺値で矩形サイズが広がる方向で大きい値が対象矩形の値となります。<r/>
+		　対象矩形が空でない場合のみ実行され、空の場合は行われず、false を返します。<r/>
 	</desc>
 	<ref>Rect.isEmpty</ref>
 </member>
@@ -268,101 +268,101 @@
 <member>
 	<name>intersects</name>
 	<type>method</type>
-	<shortdesc>��`�̌�������</shortdesc>
+	<shortdesc>矩形の交差判定</shortdesc>
 	<arg>
 		<argitem>
 			<name>r</name>
 			<default></default>
 			<desc>
-				�@�������肷���`�I�u�W�F�N�g���w�肵�܂��B<r/>
+				　交差判定する矩形オブジェクトを指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
-	<result>�����L��</result>
+	<result>交差有無</result>
 	<desc>
-		�@�w��̋�`�I�u�W�F�N�g�ƌ������邩���肵�܂��B<r/>
-		�@��������ꍇ true ���Ԃ�܂��B<r/>
+		　指定の矩形オブジェクトと交差するか判定します。<r/>
+		　交差する場合 true が返ります。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>included</name>
 	<type>method</type>
-	<shortdesc>��`�����</shortdesc>
+	<shortdesc>矩形内包判定</shortdesc>
 	<arg>
 		<argitem>
 			<name>r</name>
 			<default></default>
 			<desc>
-				�@����肷���`�I�u�W�F�N�g���w�肵�܂��B<r/>
+				　内包判定する矩形オブジェクトを指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
-	<result>����L��</result>
+	<result>内包有無</result>
 	<desc>
-		�@�w��̋�`�I�u�W�F�N�g�����邩���肵�܂��B<r/>
-		�@�����ꍇ true ���Ԃ�܂��B<r/>
-		�@1�ӂł��O�ɏo�Ă���Ɠ���Ă��Ȃ��Ɣ��肳��܂��B<r/>
+		　指定の矩形オブジェクトを内包するか判定します。<r/>
+		　内包する場合 true が返ります。<r/>
+		　1辺でも外に出ていると内包していないと判定されます。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>includedPos</name>
 	<type>method</type>
-	<shortdesc>��`�����</shortdesc>
+	<shortdesc>矩形内包判定</shortdesc>
 	<arg>
 		<argitem>
 			<name>x</name>
 			<default></default>
 			<desc>
-				�@���肷��X�����W�l���w�肵�܂��B<r/>
+				　判定するX軸座標値を指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>y</name>
 			<default></default>
 			<desc>
-				�@���肷��Y�����W�l���w�肵�܂��B<r/>
+				　判定するY軸座標値を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
-	<result>����L��</result>
+	<result>内包有無</result>
 	<desc>
-		�@�w��̈ʒu�����邩���肵�܂��B<r/>
-		�@�����ꍇ true ���Ԃ�܂��B<r/>
-		�@right, bottom �͊܂܂Ȃ��͈͂Ŕ��肳��܂��B<r/>
+		　指定の位置を内包するか判定します。<r/>
+		　内包する場合 true が返ります。<r/>
+		　right, bottom は含まない範囲で判定されます。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>equal</name>
 	<type>method</type>
-	<shortdesc>���ꔻ��</shortdesc>
+	<shortdesc>同一判定</shortdesc>
 	<arg>
 		<argitem>
 			<name>r</name>
 			<default></default>
 			<desc>
-				�@���肷���`�I�u�W�F�N�g���w�肵�܂��B<r/>
+				　判定する矩形オブジェクトを指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
-	<result>�������ǂ���</result>
+	<result>同じかどうか</result>
 	<desc>
-		�@��`���������ǂ������肵�܂��B<r/>
-		�@�����ꍇ true ���Ԃ�܂��B<r/>
-		�@��r��4�ӂ̒l�ōs���܂��B<r/>
+		　矩形が同じかどうか判定します。<r/>
+		　同じ場合 true が返ります。<r/>
+		　比較は4辺の値で行われます。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>width</name>
 	<type>property</type>
-	<shortdesc>��`����</shortdesc>
+	<shortdesc>矩形横幅</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@��`�̉������w�肵�܂��B<r/>
-		�@�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
+		　矩形の横幅を指定します。<r/>
+		　値を設定することもできます。<r/>
 	</desc>
 	<ref>Rect.setSize</ref>
 </member>
@@ -370,11 +370,11 @@
 <member>
 	<name>height</name>
 	<type>property</type>
-	<shortdesc>��`�c��</shortdesc>
+	<shortdesc>矩形縦幅</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@��`�̏c�����w�肵�܂��B<r/>
-		�@�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
+		　矩形の縦幅を指定します。<r/>
+		　値を設定することもできます。<r/>
 	</desc>
 	<ref>Rect.setSize</ref>
 </member>
@@ -382,11 +382,11 @@
 <member>
 	<name>left</name>
 	<type>property</type>
-	<shortdesc>��`���[</shortdesc>
+	<shortdesc>矩形左端</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@��`�̍��[���w�肵�܂��B<r/>
-		�@�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
+		　矩形の左端を指定します。<r/>
+		　値を設定することもできます。<r/>
 	</desc>
 	<ref>Rect.setOffset</ref>
 </member>
@@ -394,11 +394,11 @@
 <member>
 	<name>top</name>
 	<type>property</type>
-	<shortdesc>��`��[</shortdesc>
+	<shortdesc>矩形上端</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@��`�̏�[���w�肵�܂��B<r/>
-		�@�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
+		　矩形の上端を指定します。<r/>
+		　値を設定することもできます。<r/>
 	</desc>
 	<ref>Rect.setOffset</ref>
 </member>
@@ -406,36 +406,36 @@
 <member>
 	<name>right</name>
 	<type>property</type>
-	<shortdesc>��`�E�[</shortdesc>
+	<shortdesc>矩形右端</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@��`�̉E�[���w�肵�܂��B<r/>
-		�@�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
+		　矩形の右端を指定します。<r/>
+		　値を設定することもできます。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>bottom</name>
 	<type>property</type>
-	<shortdesc>��`���[</shortdesc>
+	<shortdesc>矩形下端</shortdesc>
 	<access>r/w</access>
 	<desc>
-		�@��`�̉��[���w�肵�܂��B<r/>
-		�@�l��ݒ肷�邱�Ƃ��ł��܂��B<r/>
+		　矩形の下端を指定します。<r/>
+		　値を設定することもできます。<r/>
 	</desc>
 </member>
 
 <member>
 	<name>nativeArray</name>
 	<type>property</type>
-	<shortdesc>��`�o�b�t�@�|�C���^</shortdesc>
+	<shortdesc>矩形バッファポインタ</shortdesc>
 	<access>r</access>
 	<desc>
-		�@��`�̍��W�z��ւ̃|�C���^��\���܂��B<r/>
-		�@���̃v���p�e�B�́A�v���O�C���Ȃǂ̂��߂ɍ��W�z��o�b�t�@�ւ̒��ڂ̃A�N�Z�X�̎�i��񋟂���
-		���߂ɂ���܂��B<r/>
-		�@�����^�ŕԂ���܂����A�v���O�C���Ȃǂł͓K�؂Ȍ^ ( int[4] �� ) �ɃL���X�g���Ďg����
-		���������B<r/>
+		　矩形の座標配列へのポインタを表します。<r/>
+		　このプロパティは、プラグインなどのために座標配列バッファへの直接のアクセスの手段を提供する
+		ためにあります。<r/>
+		　整数型で返されますが、プラグインなどでは適切な型 ( int[4] 等 ) にキャストして使って
+		ください。<r/>
 	</desc>
 </member>
 

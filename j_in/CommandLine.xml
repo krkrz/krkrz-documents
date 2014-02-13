@@ -1,144 +1,144 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <doc>
-<title>�R�}���h���C���I�v�V����</title>
+<title>コマンドラインオプション</title>
 
 <para>
-<ptitle>�R�}���h���C���I�v�V����</ptitle>
-�@�g���g���̃R�}���h���C���I�v�V�����͒ʏ�̃R�}���h���C������w�肷��ق��ɁA<link href="Releaser" /> ( krkrrel.exe ) �܂��� <link href="Configure" /> ( -userconf ) �Őݒ�t�@�C���ɕۑ����邱�Ƃ��ł��܂��B<r/>
-�I�v�V�������ǂݍ��܂�鏇����
+<ptitle>コマンドラインオプション</ptitle>
+　吉里吉里のコマンドラインオプションは通常のコマンドラインから指定するほかに、<link href="Releaser" /> ( krkrrel.exe ) または <link href="Configure" /> ( -userconf ) で設定ファイルに保存することができます。<r/>
+オプションが読み込まれる順序は
 <ol>
-  <li>�g���g���{�̂ɖ��ߍ��܂ꂽ�I�v�V����</li>
-  <li>�g���g���R�A�Ɠ����f�B���N�g���ɂ��� .cf �t�@�C�� (�t�@�C�����͋g���g���R�A�Ɠ���)</li>
-  <li>�u�G���W���ݒ�v(-userconf)���o�͂����A�f�[�^�ۑ��ꏊ�ɂ��� .cfu �t�@�C�� (�t�@�C�����͋g���g���R�A�Ɠ���)</li>
-  <li>�R�}���h���C���Ɏw�肳�ꂽ�I�v�V����</li>
+  <li>吉里吉里本体に埋め込まれたオプション</li>
+  <li>吉里吉里コアと同じディレクトリにある .cf ファイル (ファイル名は吉里吉里コアと同じ)</li>
+  <li>「エンジン設定」(-userconf)が出力した、データ保存場所にある .cfu ファイル (ファイル名は吉里吉里コアと同じ)</li>
+  <li>コマンドラインに指定されたオプション</li>
 </ol>
-�ƂȂ�܂��B.cf �t�@�C���� .cfu �t�@�C���ɂ��ẮA���݂��Ȃ��ꍇ�͒P�ɖ�������܂��B��ɓǂݍ��񂾎w��قǗD�悳��܂��B<r/>
+となります。.cf ファイルや .cfu ファイルについては、存在しない場合は単に無視されます。後に読み込んだ指定ほど優先されます。<r/>
 <r/>
-�@�R�}���h���C���̃I�v�V�����͊�{�I�� '-' (�n�C�t��) �Ɉ��������A�I�v�V�����̖��O�����܂��B���̂��Ƃ���Ɉ������� '=' �������A�I�v�V�����̒l�������܂��B<r/>
-�@���Ƃ��� -cdvol �Ƃ����I�v�V�����̒l�� direct �Ȃ�΁A-cdvol=direct �Ǝw�肵�܂��B<r/>
+　コマンドラインのオプションは基本的に '-' (ハイフン) に引き続き、オプションの名前が来ます。そのあとそれに引き続き '=' を書き、オプションの値を書きます。<r/>
+　たとえば -cdvol というオプションの値が direct ならば、-cdvol=direct と指定します。<r/>
 <r/>
-�@�u�N���I�v�V�����v��u�f�o�b�O�֘A�̃I�v�V�����v��u�V�X�e���݊����֘A�̃I�v�V�����v�������΁A�قƂ�ǂ͊��ˑ��̖����������邽�߂̔��������s���I�v�V�����ł��B<r/>
-�@���ˑ��̖��̉����ɂ��Ă�<link href="ComputerDependentProblems" />���Q�Ƃ��Ă��������B<r/>
+　「起動オプション」や「デバッグ関連のオプション」や「システム互換性関連のオプション」を除けば、ほとんどは環境依存の問題を解決するための微調整を行うオプションです。<r/>
+　環境依存の問題の解決については<link href="ComputerDependentProblems" />も参照してください。<r/>
 <r/>
 <note>
-Releaser �� -userconf �ł́A�g���g���̎��s�\�t�@�C����O���̐ݒ�t�@�C�������������Ă����̃I�v�V������ύX�ł��܂����A�ʏ�̓f�t�H���g�̂܂܂Ŗ�肠��܂���B<b>��i�𐧍삷�鑤�ŗL�̊��Ŗ�肪����Ƃ������ƂŁA�����̃I�v�V�������f�t�H���g�̕��łȂ����̂ɕς����܂܂̎��s�\�t�@�C����ݒ�t�@�C������ʂɔz�z���邱�Ƃ͂������߂ł��܂���</b> (������� -datapath �̂悤�ɔz�z�`�Ԃ�g�p�`�Ԃɂ��������Đݒ肷�ׂ��I�v�V����������܂�)�B
+Releaser や -userconf では、吉里吉里の実行可能ファイルや外部の設定ファイルを書き換えてこれらのオプションを変更できますが、通常はデフォルトのままで問題ありません。<b>作品を制作する側固有の環境で問題があるということで、これらのオプションをデフォルトの物でないものに変えたままの実行可能ファイルや設定ファイルを一般に配布することはおすすめできません</b> (もちろん -datapath のように配布形態や使用形態にしたがって設定すべきオプションもあります)。
 </note>
 <r/>
-���̃��X�g�̒��Łu���I�ɕύX�\�v�Ƃ����\�L�����镨�́A<a href="f_System_setArgument.html">System.setArgument</a> ���\�b�h�ŕύX���\�ȕ��ł��B����ȊO�̃I�v�V�����͓��I�ɕύX���s�����Ƃ͏o���܂���B<r/>
+下のリストの中で「動的に変更可能」という表記がある物は、<a href="f_System_setArgument.html">System.setArgument</a> メソッドで変更が可能な物です。それ以外のオプションは動的に変更を行うことは出来ません。<r/>
 </para>
 
 
 
 <para>
-<ptitle>�N���I�v�V����</ptitle>
-�@�g���g���̓���̋@�\�݂̂��Ăяo���Ďg�����߂Ɉȉ��̃I�v�V����������܂��B<r/>
+<ptitle>起動オプション</ptitle>
+　吉里吉里の特定の機能のみを呼び出して使うために以下のオプションがあります。<r/>
 <dl>
-<dt>-<kw>userconf</kw> (�G���h���[�U�����ݒ�c�[���̋N��)</dt>
+<dt>-<kw>userconf</kw> (エンドユーザ向け設定ツールの起動)</dt>
 <dd>
-�@�{�̂ɓ�������Ă���G���h���[�U�����ݒ�c�[�����N�����܂��B<r/>
+　本体に内蔵されているエンドユーザ向け設定ツールを起動します。<r/>
 </dd>
-<dt>-<kw>about</kw> (���쌠���_�C�A���O�{�b�N�X�̕\��)</dt>
+<dt>-<kw>about</kw> (著作権情報ダイアログボックスの表示)</dt>
 <dd>
-�@�u�o�[�W�����E���쌠�E�����v�̃_�C�A���O�{�b�N�X��\�����܂��B
+　「バージョン・著作権・環境情報」のダイアログボックスを表示します。
 </dd>
-<dt>-<kw>sel</kw> (�u�t�H���_/�A�[�J�C�u�̑I���v�_�C�A���O�{�b�N�X�̕\��)</dt>
+<dt>-<kw>sel</kw> (「フォルダ/アーカイブの選択」ダイアログボックスの表示)</dt>
 <dd>
-�@�u�t�H���_/�A�[�J�C�u�̑I���v�_�C�A���O�{�b�N�X��\�����܂��Bdata.xp3 �Ȃǂ̃f�[�^�͎������o����܂���B<r/>
-�@�R�}���h���C���p�����[�^�Ƃ���(�擪�Ƀn�C�t����������)�t�H���_���w�肷��ƁA���̃t�H���_��������ԂőI�����ꂽ��ԂŁu�t�H���_/�A�[�J�C�u�̑I���v�_�C�A���O�{�b�N�X���J�����Ƃ��ł��܂��B
+　「フォルダ/アーカイブの選択」ダイアログボックスを表示します。data.xp3 などのデータは自動検出されません。<r/>
+　コマンドラインパラメータとして(先頭にハイフンをつけずに)フォルダを指定すると、そのフォルダが初期状態で選択された状態で「フォルダ/アーカイブの選択」ダイアログボックスを開くことができます。
 </dd>
-<dt>-<kw>printdatapath</kw> (�f�[�^�ۑ��ꏊ�̏o��)</dt>
+<dt>-<kw>printdatapath</kw> (データ保存場所の出力)</dt>
 <dd>
-�@�f�[�^�ۑ��ꏊ (-datapath�I�v�V����) �̐ݒ���e�Ɖ��s��W���o�͂ɏo�͂��A�I�����܂��B���̃I�v�V�����́A�g���g���{�̂ƘA�g���ăZ�[�u�f�[�^�̊Ǘ����s���O���A�v���P�[�V�����Ȃǂ����p���邽�߂ɂ���܂��B<r/>
-�@�f�[�^�ۑ��ꏊ�̂����A$(exepath) �Ȃǂ̓���ȕ�����́A�u��������ꂽ��̏�Ԃŏo�͂���܂��B<r/>
-�@�g���g���{�̂� GUI �A�v���P�[�V�����̂��߁A�R�}���h�v�����v�g����P�ɋg���g�����s�\�t�@�C���� -printdatapath �I�v�V�������w�肵�ċN�����Ă������\������܂���B�o�͓��e����荞�ނɂ̓p�C�v�⃊�_�C���N�g��p���Ă��������B<r/>
+　データ保存場所 (-datapathオプション) の設定内容と改行を標準出力に出力し、終了します。このオプションは、吉里吉里本体と連携してセーブデータの管理を行う外部アプリケーションなどが利用するためにあります。<r/>
+　データ保存場所のうち、$(exepath) などの特殊な文字列は、置き換えられた後の状態で出力されます。<r/>
+　吉里吉里本体は GUI アプリケーションのため、コマンドプロンプトから単に吉里吉里実行可能ファイルに -printdatapath オプションを指定して起動しても何も表示されません。出力内容を取り込むにはパイプやリダイレクトを用いてください。<r/>
 </dd>
-<dt>-<kw>startup</kw> (�N���X�N���v�g�̎w��)</dt>
+<dt>-<kw>startup</kw> (起動スクリプトの指定)</dt>
 <dd>
-�@�ŏ��Ɏ��s����X�N���v�g�t�@�C�������w�肵�܂��B<r/>
-�@�w�肪�Ȃ��ꍇ�́Astartup.tjs �����s����܂��B<r/>
+　最初に実行するスクリプトファイル名を指定します。<r/>
+　指定がない場合は、startup.tjs が実行されます。<r/>
 </dd>
 </dl>
 </para>
 
 <para>
-<ptitle>�V�X�e���S�ʂ̃I�v�V����</ptitle>
+<ptitle>システム全般のオプション</ptitle>
 <dl>
-<dt>-<kw>datapath</kw> (�f�[�^�ۑ��ꏊ)</dt>
+<dt>-<kw>datapath</kw> (データ保存場所)</dt>
 <dd>
-�@�g���g�����l�X�ȃf�[�^��ۑ�����ꏊ(�t�H���_)�̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�͕�����Ŏw�肵�܂��B<r/>
-�@�P���Ƀt�H���_�����t���p�X�Ŏw�肷�邱�Ƃ��ł��܂����A�ʏ�͈ȉ��̓���ȕ�����𖄂ߍ���Ŏg���܂��B<r/>
+　吉里吉里が様々なデータを保存する場所(フォルダ)の設定です。<r/>
+　設定可能な値は文字列で指定します。<r/>
+　単純にフォルダ名をフルパスで指定することもできますが、通常は以下の特殊な文字列を埋め込んで使います。<r/>
 <r/>
 <dl>
- <dt>$(exepath)</dt> <dd>System.exePath(�g���g���R�A�̂���t�H���_��)�ɒu���������܂��B</dd>
- <dt>$(appdatapath)</dt> <dd>System.appDataPath(���[�U�̃z�[���t�H���_)�ɒu���������܂��B���̃t�H���_�͒ʏ�A�B���t�H���_�ɂȂ��Ă��܂��B</dd>
- <dt>$(personalpath)</dt> <dd>System.personalPath(�}�C�h�L�������g�t�H���_)�ɒu���������܂��B</dd>
- <dt>$(vistapath)</dt> <dd>OS��Vista�ȍ~�̏ꍇ��$(appdatapath)�ɁAVista�����̏ꍇ��$(exepath)�ɒu���u���������܂��B</dd>
+ <dt>$(exepath)</dt> <dd>System.exePath(吉里吉里コアのあるフォルダ名)に置き換えられます。</dd>
+ <dt>$(appdatapath)</dt> <dd>System.appDataPath(ユーザのホームフォルダ)に置き換えられます。このフォルダは通常、隠しフォルダになっています。</dd>
+ <dt>$(personalpath)</dt> <dd>System.personalPath(マイドキュメントフォルダ)に置き換えられます。</dd>
+ <dt>$(vistapath)</dt> <dd>OSがVista以降の場合に$(appdatapath)に、Vista未満の場合に$(exepath)に置き置き換えられます。</dd>
 </dl>
 <r/>
-�f�t�H���g�ł́u$(exepath)\savedata�v�ƂȂ��Ă��܂��B���̐ݒ�́A�C���X�g�[���Ȃǂ���ɗp�����Ƀv���O������ zip ���ň��k�E�A�[�J�C�u���Ĕz�z���A���[�U�ɂ����W�J���Ē����Ă����Ƀv���O�������s�A�Ƃ����z�z�`�ԂɓK�����ݒ�ł��B<r/>
-�������A���̃f�t�H���g�̐ݒ�ł́AProgram Files �ȉ��Ƀv���O������z�u�����ꍇ�AProgram Files �ȉ��ɏ������ތ������Ȃ��AWindows XP ���́u�������[�U�v���Ńv���O�������N�������ꍇ�ɁA�t�@�C�����������ނ��Ƃ��ł����ɃG���[�ɂȂ�\��������܂��B<r/>
-�u$(appdatapath)\�A�v���P�[�V�������v��u$(personalpath)\�A�v���P�[�V�������v�̂悤�Ȗ��̂ɂ���΁A���[�U���Ƃ̃t�H���_�ɏ������܂�邱�ƂɂȂ�܂��̂ł����������͔������ɂ����Ȃ�܂����A�Z�[�u�f�[�^�ۑ��ꏊ�̌��ʂ��������Ȃ�̂Ń��[�U���Ƃ܂ǂ���������܂���B<r/>
+デフォルトでは「$(exepath)\savedata」となっています。この設定は、インストーラなどを特に用いずにプログラムを zip 等で圧縮・アーカイブして配布し、ユーザにそれを展開して頂いてすぐにプログラム実行、という配布形態に適した設定です。<r/>
+しかし、このデフォルトの設定では、Program Files 以下にプログラムを配置した場合、Program Files 以下に書き込む権限がない、Windows XP 等の「制限ユーザ」等でプログラムを起動した場合に、ファイルを書き込むことができずにエラーになる可能性があります。<r/>
+「$(appdatapath)\アプリケーション名」や「$(personalpath)\アプリケーション名」のような名称にすれば、ユーザごとのフォルダに書き込まれることになりますのでこういう問題は発生しにくくなりますが、セーブデータ保存場所の見通しが悪くなるのでユーザがとまどうかもしれません。<r/>
 <r/>
-���̃I�v�V�����Ŏw�肳�ꂽ�f�[�^�ۑ��ꏊ�́A�g���g���N�����ɁA�������݂��Ă��Ȃ���΍쐬�����݂��܂��B�쐬�����s���Ă������ŏI���Ƃ͂Ȃ炸�ɏ��������s���܂��̂ŁA�G���[�����̓��[�U�̃X�N���v�g����(�f�[�^���ۑ��ł��Ȃ��Ȃǂ̗�O��ߑ����邱�Ƃɂ��)�s���Ă��������B<r/>
+このオプションで指定されたデータ保存場所は、吉里吉里起動時に、もし存在していなければ作成が試みられます。作成が失敗してもそこで終了とはならずに処理が続行しますので、エラー処理はユーザのスクリプト内で(データが保存できないなどの例外を捕捉することにより)行ってください。<r/>
 <r/>
-�u�G���W���ݒ�v�ōs�����ݒ�́A���̃f�[�^�ۑ��ꏊ�Ŏw�肵���t�H���_�̒��ɍ쐬����܂��B���̂ق��A�e�탍�O���A�W���ł͂��̃t�H���_�̒��ɍ쐬����܂��B<r/>
+「エンジン設定」で行った設定は、このデータ保存場所で指定したフォルダの中に作成されます。そのほか、各種ログも、標準ではこのフォルダの中に作成されます。<r/>
 </dd>
 
-<dt>-<kw>contfreq</kw> (�����E�F�C�g)</dt>
+<dt>-<kw>contfreq</kw> (処理ウェイト)</dt>
 <dd>
-�@�g�����W�V�������Ȃǂ̏������E�F�C�g�������Ȃ���w��̎����ŌĂяo�����Ƃɂ��ACPU�g�p����ጸ�����邩�ǂ����̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� <b>'0' (�E�F�C�g�������Ȃ�)</b> ���邢�͐��̐����ŁA���̃I�v�V�������w�肵�Ȃ��� '0' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B���̐������w�肵���ꍇ�� Hz �P�ʂ̎������w�肷�邱�Ƃ��ł��܂��B<r/>
-�@���̃I�v�V�����̉e�����󂯂�̂̓g�����W�V������ System.addContinuousHandler �œo�^���� Continuous �n���h���ł��B<r/>
-�@'0' �ɂ���ƁA�g�����W�V���������s���Ȃǂ�CPU���g���؂��ď������s���܂��B<r/>
-�@���l���w�肷��ƁA���̎����ŏ������s���悤�ɂȂ�A�]�������Ԃ�CPU���x�܂��邱�ƂɂȂ�܂��B����ɂ��A���̃A�v���P�[�V�����ւ̉e����ACPU���x�̏㏸�A�R���s���[�^�̏���d�͂�}���邱�Ƃ��ł��܂��B�Ⴂ���l���w�肷��΂���قǂ��̌��ʂ͍��܂�܂��B�������A�Ⴂ���l���w�肷��ƃg�����W�V�����Ȃǂ��Ȃ߂炩�łȂ��Ȃ�\��������܂��B<r/>
-�@waitvsync �I�v�V�����Ő��������҂����s���ƁAContinuous �n���h�������������̃^�C�~���O�ɍ��킹�ċ쓮�����悤�ɂȂ�Acontfreq �I�v�V�����̐ݒ���e�͖�������܂��B<r/>
-�@���̃I�v�V�����͓��I�ɕύX���邱�Ƃ��\�ł����A�ύX�����f�����͎̂��Ƀg�����W�V������ Continuous �n���h���̓��삪�Ƃ��ꂽ���ł��B<r/>
+　トランジション時などの処理をウェイトをかけながら指定の周期で呼び出すことにより、CPU使用率を低減させるかどうかの設定です。<r/>
+　設定可能な値は <b>'0' (ウェイトをかけない)</b> あるいは正の整数で、このオプションを指定しないと '0' が指定されたものと見なされます。正の整数を指定した場合は Hz 単位の周期を指定することができます。<r/>
+　このオプションの影響を受けるのはトランジションや System.addContinuousHandler で登録した Continuous ハンドラです。<r/>
+　'0' にすると、トランジションを実行中などにCPUを使い切って処理を行います。<r/>
+　数値を指定すると、その周期で処理を行うようになり、余った時間はCPUを休ませることになります。これにより、他のアプリケーションへの影響や、CPU温度の上昇、コンピュータの消費電力を抑えることができます。低い数値を指定すればするほどこの効果は高まります。ただし、低い数値を指定するとトランジションなどがなめらかでなくなる可能性があります。<r/>
+　waitvsync オプションで垂直同期待ちを行うと、Continuous ハンドラが垂直同期のタイミングに合わせて駆動されるようになり、contfreq オプションの設定内容は無視されます。<r/>
+　このオプションは動的に変更することが可能ですが、変更が反映されるのは次にトランジションや Continuous ハンドラの動作がとぎれた時です。<r/>
 </dd>
 
 
 
 
-<dt>-<kw>memusage</kw> (�������g�p��)</dt>
+<dt>-<kw>memusage</kw> (メモリ使用量)</dt>
 <dd>
-�@�������g�p�ʂ̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� <b>'normal' (�ʏ�)</b> ���邢�� <b>'low' (�Ⴂ)</b> �ŁA���̃I�v�V�������w�肵�Ȃ��� 'normal' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@�u�Ⴂ�v��I������Ɓu�ʏ�v��I�������Ƃ�������������ߖ񂵂Ďg�p����悤�ɂȂ�܂��B�������u�Ⴂ�v��I������ƁA�g���g�������̗l�X�ȃL���b�V���@�\���������ꂽ��A TJS2 �̃n�b�V���\�̃T�C�Y����������邽�߁A�p�t�H�[�}���X�͒ቺ���܂��B�܂��A�u�Ⴂ�v��I������ƁA�u�O���t�B�b�N-�摜�L���b�V�������v�͋����I�Ɂu�L���b�V�����s��Ȃ��v�̐ݒ�ł���ƌ��Ȃ���܂��B
+　メモリ使用量の設定です。<r/>
+　設定可能な値は <b>'normal' (通常)</b> あるいは <b>'low' (低い)</b> で、このオプションを指定しないと 'normal' が指定されたものと見なされます。<r/>
+　「低い」を選択すると「通常」を選択したときよりもメモリを節約して使用するようになります。しかし「低い」を選択すると、吉里吉里内部の様々なキャッシュ機構が制限されたり、 TJS2 のハッシュ表のサイズが制限されるため、パフォーマンスは低下します。また、「低い」を選択すると、「グラフィック-画像キャッシュ制限」は強制的に「キャッシュを行わない」の設定であると見なされます。
 </dd>
-<dt>-<kw>timerprec</kw> (�^�C�}�̐��x)</dt>
+<dt>-<kw>timerprec</kw> (タイマの精度)</dt>
 <dd>
-�@�^�C�}�̐��x�̍����̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� <b>'normal' (�ʏ�)</b> ���邢�� <b>'higher' (��⍂��)</b> ���邢�� <b>'high' (����)</b> �ŁA���̃I�v�V�������w�肵�Ȃ��� 'normal' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@'higher' �� 'high' ���w�肷��ƑS�̓I�Ƀ^�C�} ( ���Ԃ�^�C�~���O�Ɋւ��镨�̂قƂ�ǂ��܂� ) �̐��x�������Ȃ�AKAG �ł̕����\���̂��������� MIDI �Đ��̂������������������\��������܂����A�p�t�H�[�}���X���ቺ����\��������܂��B
-</dd>
-
-<dt>-<kw>laxtimer</kw> (�^�C�}�C�x���g���e�ʐ���)</dt>
-<dd>
-�@��x�ɃV�X�e���ɒ~������^�C�}�C�x���g�̐� ( �ő唭�����e�� ) �𐧌����A�^�C�}�C�x���g�����܂肷���ď����ł��Ȃ��Ȃ�󋵂�������邩�ǂ����̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� <b>'no' (���Ȃ�)</b> ���邢�� <b>'yes' (����)</b> �ŁA���̃I�v�V�������w�肵�Ȃ��� 'no' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@�����̔��ɒx���R���s���[�^��A���ɏd�����������^�C�}�ŋ쓮����悤�ȏ�ʂȂǂł́A�^�C�}�ɂ���Ĕ��������C�x���g�ɑΉ������ꂸ�A����Ȃǂɋg���g�����������Â炭�Ȃ�ꍇ������܂��B���̃I�v�V������ 'yes' ���w�肷��ƁA�V�X�e���ɒ~������^�C�}�C�x���g�̍ő唭�����e�ʂ���� 1 ( Timer �N���X�� capacity �v���p�e�B�� 1 �̏�� ) �ɌŒ肵�܂��B����ɂ��V�X�e��������������Ȃ��悤�ȃ^�C�}�C�x���g�̔�����}���邱�Ƃ��ł��܂����A�ʏ�A�^�C�}�̐��x�␳�m���͎����܂��B<r/>
+　タイマの精度の高さの設定です。<r/>
+　設定可能な値は <b>'normal' (通常)</b> あるいは <b>'higher' (やや高い)</b> あるいは <b>'high' (高い)</b> で、このオプションを指定しないと 'normal' が指定されたものと見なされます。<r/>
+　'higher' や 'high' を指定すると全体的にタイマ ( 時間やタイミングに関する物のほとんども含む ) の精度が高くなり、KAG での文字表示のもたつき感や MIDI 再生のもたつき感が解消される可能性がありますが、パフォーマンスが低下する可能性もあります。
 </dd>
 
-<dt>-<kw>lowpri</kw> (��D��x)</dt>
+<dt>-<kw>laxtimer</kw> (タイマイベント許容量制限)</dt>
 <dd>
-�@�D��x���A�g�����W�V�������ȂǂɒႭ���邩�ǂ����̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� <b>'no' (���Ȃ�)</b> ���邢�� <b>'yes' (����)</b> �ŁA���̃I�v�V�������w�肵�Ȃ��� 'no' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@'yes' �ɂ���ƁA�g�����W�V���������s���ȂǁA�g���g���̃��C���X���b�h���A������ CPU ���g�p�����ʂɂȂ�ƁA���C���X���b�h�̎��s�D��x��������悤�ɂȂ�܂��B����ɂ��A�g�����W�V�������̉���т�A�g�����W�V�������ɑ��̃A�v���P�[�V���������삵�Â炭�Ȃ�Ȃǂ̏Ǐ󂪉��P�����ꍇ������܂��B
+　一度にシステムに蓄えられるタイマイベントの数 ( 最大発生許容量 ) を制限し、タイマイベントが溜まりすぎて処理できなくなる状況を回避するかどうかの設定です。<r/>
+　設定可能な値は <b>'no' (しない)</b> あるいは <b>'yes' (する)</b> で、このオプションを指定しないと 'no' が指定されたものと見なされます。<r/>
+　処理の非常に遅いコンピュータや、非常に重たい処理をタイマで駆動するような場面などでは、タイマによって発生したイベントに対応しきれず、操作などに吉里吉里が応答しづらくなる場合があります。このオプションで 'yes' を指定すると、システムに蓄えられるタイマイベントの最大発生許容量を常に 1 ( Timer クラスの capacity プロパティが 1 の状態 ) に固定します。これによりシステムが処理しきれないようなタイマイベントの発生を抑えることができますが、通常、タイマの精度や正確性は失われます。<r/>
 </dd>
 
-<dt>-<kw>exceptionexe</kw> (��O���N���G�f�B�^)</dt>
+<dt>-<kw>lowpri</kw> (低優先度)</dt>
 <dd>
-�@��O�������ɋN������G�f�B�^���w�肵�܂��B<r/>
+　優先度を、トランジション時などに低くするかどうかの設定です。<r/>
+　設定可能な値は <b>'no' (しない)</b> あるいは <b>'yes' (する)</b> で、このオプションを指定しないと 'no' が指定されたものと見なされます。<r/>
+　'yes' にすると、トランジションを実行中など、吉里吉里のメインスレッドが連続して CPU を使用する場面になると、メインスレッドの実行優先度を下げるようになります。これにより、トランジション中の音飛びや、トランジション中に他のアプリケーションが操作しづらくなるなどの症状が改善される場合があります。
 </dd>
 
-<dt>-<kw>exceptionarg</kw> (��O���N���G�f�B�^�I�v�V����)</dt>
+<dt>-<kw>exceptionexe</kw> (例外時起動エディタ)</dt>
 <dd>
-�@��O�������ɃG�f�B�^���N�����鎞�Ɏw�肷��I�v�V�������w�肵�܂��B<r/>
-�@�P���Ɉ������w�肷�邱�Ƃ��ł��܂����A�ʏ�͈ȉ��̓���ȕ�����𖄂ߍ���Ŏg���܂��B<r/>
+　例外発生時に起動するエディタを指定します。<r/>
+</dd>
+
+<dt>-<kw>exceptionarg</kw> (例外時起動エディタオプション)</dt>
+<dd>
+　例外発生時にエディタを起動する時に指定するオプションを指定します。<r/>
+　単純に引数を指定することもできますが、通常は以下の特殊な文字列を埋め込んで使います。<r/>
 <r/>
 <dl>
- <dt>%filepath%</dt> <dd>��O�̔��������X�N���v�g�̃t�@�C���p�X�ɒu���������܂��B</dd>
- <dt>%line%</dt> <dd>��O�̔��������s�ԍ��ɒu���������܂��B</dd>
+ <dt>%filepath%</dt> <dd>例外の発生したスクリプトのファイルパスに置き換えられます。</dd>
+ <dt>%line%</dt> <dd>例外の発生した行番号に置き換えられます。</dd>
 </dl>
 <r/>
 </dd>
@@ -153,44 +153,44 @@ Releaser �� -userconf �ł́A�g���g���̎��s�\�t�@�C����O���̐ݒ�t�@�C��������
 </para>
 
 <para>
-<ptitle>���͊֘A�̃I�v�V����</ptitle>
+<ptitle>入力関連のオプション</ptitle>
 <dl>
 
-<dt>-<kw>wheel</kw> (�}�E�X�z�C�[����]���o���@)</dt>
+<dt>-<kw>wheel</kw> (マウスホイール回転検出方法)</dt>
 <dd>
-�@�}�E�X�z�C�[���̉�]���ǂ̂悤�Ɍ��o���邩�̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� <b>'no' (�g��Ȃ�)</b> ���邢�� <b>'dinput' (DierctInput)</b> ���邢�� <b>'message' (�E�B���h�E���b�Z�[�W)</b> �ŁA���̃I�v�V�������w�肵�Ȃ��� 'dinput' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@�u�g��Ȃ��v��I������ƃ}�E�X�z�C�[���͎g�p�s�\�ɂȂ�܂��B�uDirectInput�v��I�������DirectInput���g�p����悤�ɂȂ�܂��B�u�E�B���h�E���b�Z�[�W�v��I�������DirectInput���g�p�����Ƀ}�E�X�z�C�[���̉�]�����o����悤�ɂȂ�܂��B�ݒ��ς���ƁA�}�E�X�z�C�[���֘A�̕s������P�����\��������܂��B
+　マウスホイールの回転をどのように検出するかの設定です。<r/>
+　設定可能な値は <b>'no' (使わない)</b> あるいは <b>'dinput' (DierctInput)</b> あるいは <b>'message' (ウィンドウメッセージ)</b> で、このオプションを指定しないと 'dinput' が指定されたものと見なされます。<r/>
+　「使わない」を選択するとマウスホイールは使用不可能になります。「DirectInput」を選択するとDirectInputを使用するようになります。「ウィンドウメッセージ」を選択するとDirectInputを使用せずにマウスホイールの回転を検出するようになります。設定を変えると、マウスホイール関連の不具合が改善される可能性があります。
 </dd>
 
-<dt>-<kw>joypad</kw> (�p�b�h�g�p��)</dt>
+<dt>-<kw>joypad</kw> (パッド使用可否)</dt>
 <dd>
-�Q�[���p�b�h(�W���C�X�e�B�b�N)���g�p���邩�ǂ����̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� <b>'no' (�g��Ȃ�)</b> ���邢�� <b>'dinput' (�g��)</b> �ŁA���̃I�v�V�������w�肵�Ȃ��� 'dinput' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@�u�g��Ȃ��v��I������ƃp�b�h�͎g�p�s�\�ɂȂ�܂��B�p�b�h�𐳏�Ɍ��o�ł��Ȃ��ꍇ�A���邢�̓p�b�h�𐳏�Ɏg�p�ł��Ȃ��ꍇ�Ɂu�g��Ȃ��v�̐ݒ�ɂ��Ă��������B</dd>
+ゲームパッド(ジョイスティック)を使用するかどうかの設定です。<r/>
+　設定可能な値は <b>'no' (使わない)</b> あるいは <b>'dinput' (使う)</b> で、このオプションを指定しないと 'dinput' が指定されたものと見なされます。<r/>
+　「使わない」を選択するとパッドは使用不可能になります。パッドを正常に検出できない場合、あるいはパッドを正常に使用できない場合に「使わない」の設定にしてください。</dd>
 
 
-<dt>-<kw>paddelay</kw> (�p�b�h�L�[���s�[�g�f�B���C)</dt>
+<dt>-<kw>paddelay</kw> (パッドキーリピートディレイ)</dt>
 <dd>
-�Q�[���p�b�h(�W���C�X�e�B�b�N)�̃L�[���s�[�g�܂ł̎��Ԃ��~���b�P�ʂŎw�肵�܂��B<r/>
-�@�ݒ�\�Ȓl�͐��̐����邢��-1�ŁA-1���w�肷��ƃL�[���s�[�g���s��Ȃ��Ȃ�܂��B���̃I�v�V�������w�肵�Ȃ��� 500 ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@���̃I�v�V�����͓��I�ɕύX�\�ł��B
-</dd>
-
-
-<dt>-<kw>padinterval</kw> (�p�b�h�L�[���s�[�g�Ԋu)</dt>
-<dd>
-�p�b�h(�W���C�X�e�B�b�N)�̃L�[���s�[�g�̊Ԋu���~���b�P�ʂŎw�肵�܂��B�l���������قǃ��s�[�g�������ɂȂ�܂��B<r/>
-�@�ݒ�\�Ȓl�͐��̐��ŁA���̃I�v�V�������w�肵�Ȃ��� 30 ���w�肳�ꂽ���̂ƌ��Ȃ���܂�<r/>
-�@���̃I�v�V�����͓��I�ɕύX�\�ł��B
+ゲームパッド(ジョイスティック)のキーリピートまでの時間をミリ秒単位で指定します。<r/>
+　設定可能な値は正の数あるいは-1で、-1を指定するとキーリピートを行わなくなります。このオプションを指定しないと 500 が指定されたものと見なされます。<r/>
+　このオプションは動的に変更可能です。
 </dd>
 
 
-<dt>-<kw>controlime</kw> (IME��Ԑ���)</dt>
+<dt>-<kw>padinterval</kw> (パッドキーリピート間隔)</dt>
 <dd>
-�@IME(���{��Ȃǂ̕ϊ����̓\�t�g)�̏�Ԑ���(�L�����������Ȃǂ̐���)���s�����ǂ����̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� <b>'yes' (�s��)</b> ���邢�� <b>'no' (�s��Ȃ�)</b> �ŁA���̃I�v�V�������w�肵�Ȃ��� 'yes' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@�u�s��Ȃ��v��I������ƁA�uIME��ʂ��ē��͂��s�����{��Ȃǂ̌���̓��͂��ł��Ȃ��v�Ƃ������s�������ł���\��������܂��B<r/>
+パッド(ジョイスティック)のキーリピートの間隔をミリ秒単位で指定します。値が小さいほどリピートが高速になります。<r/>
+　設定可能な値は正の数で、このオプションを指定しないと 30 が指定されたものと見なされます<r/>
+　このオプションは動的に変更可能です。
+</dd>
+
+
+<dt>-<kw>controlime</kw> (IME状態制御)</dt>
+<dd>
+　IME(日本語などの変換入力ソフト)の状態制御(有効か無効かなどの制御)を行うかどうかの設定です。<r/>
+　設定可能な値は <b>'yes' (行う)</b> あるいは <b>'no' (行わない)</b> で、このオプションを指定しないと 'yes' が指定されたものと見なされます。<r/>
+　「行わない」を選択すると、「IMEを通じて入力を行う日本語などの言語の入力ができない」といった不具合を回避できる可能性があります。<r/>
 </dd>
 
 </dl>
@@ -198,125 +198,125 @@ Releaser �� -userconf �ł́A�g���g���̎��s�\�t�@�C����O���̐ݒ�t�@�C��������
 </para>
 
 <para>
-<ptitle>�T�E���h�֘A�̃I�v�V����</ptitle>
+<ptitle>サウンド関連のオプション</ptitle>
 <dl>
-<dt>-<kw>wsdecpri</kw> (PCM �f�R�[�h�X���b�h�D�揇��)</dt>
+<dt>-<kw>wsdecpri</kw> (PCM デコードスレッド優先順位)</dt>
 <dd>
-�@PCM �̃f�R�[�h���s���X���b�h�̗D�揇�ʂł��B<r/>
-�@�ݒ�\�Ȓl�� <b>'0' (�A�C�h��(�Œ�))</b>, <b>'1' (�Ⴂ)</b>, <b>'2' (�ʏ�ȉ�)</b>, <b>'3' (�ʏ�)</b>, <b>'4' (�ʏ�ȏ�)</b>, <b>'5' (����)</b> �̂����ꂩ�ŁA���̃I�v�V�������w�肵�Ȃ��� '1' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@�D�揇�ʂ���������� PCM ( �����k wave �� OggVorbis �� ) �̍Đ����̉���т��y�������ꍇ������܂����A�g�����W�V�������Ȃ߂炩�łȂ��Ȃ�����A����ւ̉������������Ȃ�\��������܂��B<r/>
-�@���Ȃ݂ɂ����Ŏw�肷��̂͒ʏ펞�̃f�R�[�h�̗D�揇�ʂŁA�ً}�� ( �o�b�t�@�ɂ��܂��Ă���c��f�[�^���Z���Ȃ��Ă����Ƃ� ) �͎����I�ɕK�v�ȗD�揇�ʂ��m�ۂ��܂��B
+　PCM のデコードを行うスレッドの優先順位です。<r/>
+　設定可能な値は <b>'0' (アイドル(最低))</b>, <b>'1' (低い)</b>, <b>'2' (通常以下)</b>, <b>'3' (通常)</b>, <b>'4' (通常以上)</b>, <b>'5' (高い)</b> のいずれかで、このオプションを指定しないと '1' が指定されたものと見なされます。<r/>
+　優先順位を高くすると PCM ( 無圧縮 wave や OggVorbis 等 ) の再生中の音飛びが軽減される場合がありますが、トランジションがなめらかでなくなったり、操作への応答性が悪くなる可能性があります。<r/>
+　ちなみにここで指定するのは通常時のデコードの優先順位で、緊急時 ( バッファにたまっている残りデータが短くなってきたとき ) は自動的に必要な優先順位を確保します。
 </dd>
 
-<dt>-<kw>wssoft</kw> (DirectSound �\�t�g�E�F�A�~�L�V���O)</dt>
+<dt>-<kw>wssoft</kw> (DirectSound ソフトウェアミキシング)</dt>
 <dd>
-�@DirectSound�Ń\�t�g�E�F�A���g���ă~�L�V���O���s�����ǂ����̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� <b>'yes' (�\�t�g�E�F�A�~�L�V���O���s��)</b>, <b>'no' (�\�t�g�E�F�A�~�L�V���O���s��Ȃ�)</b> �̂����ꂩ�ŁA���̃I�v�V�������w�肵�Ȃ��� 'yes' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@�W���̐ݒ�ł́A�\�t�g�E�F�A�Ń~�L�V���O���s���̂ŁACPU�̕��ׂ������Ȃ�܂����A�n�[�h�E�F�A�ŗL�̕s�������ł���\���������Ȃ�܂��B���̃I�v�V������ 'no' ���w�肵�Ă�(�n�[�h�G�A�Ń~�L�V���O���s���Ă�) ��肪�Ȃ��Ȃ�΁ACPU ���ׂ�Ⴍ���邱�Ƃ��ł���ꍇ������܂��BUSB �I�[�f�B�I������ȃT�E���h�J�[�h�ł́A�~�L�V���O�͏�� CPU �ōs���ꍇ������̂ŁA���̃I�v�V������ύX���Ă��e���������ꍇ������܂��B
+　DirectSoundでソフトウェアを使ってミキシングを行うかどうかの設定です。<r/>
+　設定可能な値は <b>'yes' (ソフトウェアミキシングを行う)</b>, <b>'no' (ソフトウェアミキシングを行わない)</b> のいずれかで、このオプションを指定しないと 'yes' が指定されたものと見なされます。<r/>
+　標準の設定では、ソフトウェアでミキシングを行うので、CPUの負荷が高くなりますが、ハードウェア固有の不具合を回避できる可能性が高くなります。このオプションで 'no' を指定しても(ハードエアでミキシングを行っても) 問題がないならば、CPU 負荷を低くすることができる場合があります。USB オーディオや安価なサウンドカードでは、ミキシングは常に CPU で行う場合があるので、このオプションを変更しても影響が無い場合があります。
 </dd>
 
-<dt>-<kw>wsrecreate</kw> (DirectSound �Z�J���_���o�b�t�@�Đ���)</dt>
+<dt>-<kw>wsrecreate</kw> (DirectSound セカンダリバッファ再生成)</dt>
 <dd>
-�@DirectSound�ŃZ�J���_���o�b�t�@����ɍĐ������s�����ǂ����̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� <b>'yes' (��ɍĐ���)</b>, <b>'no' (�K�v�ɉ����čĐ���)</b> �̂����ꂩ�ŁA���̃I�v�V�������w�肵�Ȃ��� 'no' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@�g���g���ł͂�������쐬�����Z�J���_���o�b�t�@�́A�`���l������T���v�����O���g���Ȃǂ̏���������ł���΍ė��p���܂����A'yes' ���w�肷��ƍė��p�������ɏ�ɍĐ�������悤�ɂȂ�܂��B���ɂ���Ă͍Đ��J�n���̉���т≹�؂�Ȃǂ̕s���萫�����P�����\��������܂��B
+　DirectSoundでセカンダリバッファを常に再生成を行うかどうかの設定です。<r/>
+　設定可能な値は <b>'yes' (常に再生成)</b>, <b>'no' (必要に応じて再生成)</b> のいずれかで、このオプションを指定しないと 'no' が指定されたものと見なされます。<r/>
+　吉里吉里ではいったん作成したセカンダリバッファは、チャネル数やサンプリング周波数などの条件が同一であれば再利用しますが、'yes' を指定すると再利用をせずに常に再生成するようになります。環境によっては再生開始時の音飛びや音切れなどの不安定性が改善される可能性があります。
 </dd>
 
-<dt>-<kw>wsl1len</kw> (DirectSound �Z�J���_���o�b�t�@����)</dt>
+<dt>-<kw>wsl1len</kw> (DirectSound セカンダリバッファ長さ)</dt>
 <dd>
-�@DirectSound �Z�J���_���o�b�t�@�̒����̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� �����ŁA�~���b�P�ʂŎw�肵�܂��B�Œ� 250ms �K�v�ł��B���̃I�v�V�������w�肵�Ȃ��� 1000 ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@�����Ŏw�肷��͎̂��ۂ� DirectSound �̃Z�J���_���o�b�t�@�Ƃ��Ċm�ۂ����o�b�t�@�̒����ł��B<r/>
-�@��ʂɁA�����Ƃ�ƍĐ��͈��肵�܂����A������������܂��B
+　DirectSound セカンダリバッファの長さの設定です。<r/>
+　設定可能な値は 整数で、ミリ秒単位で指定します。最低 250ms 必要です。このオプションを指定しないと 1000 が指定されたものと見なされます。<r/>
+　ここで指定するのは実際に DirectSound のセカンダリバッファとして確保されるバッファの長さです。<r/>
+　一般に、長くとると再生は安定しますが、メモリを消費します。
 </dd>
 
-<dt>-<kw>wsl2len</kw> (DirectSound �Z�J���_���⏕�o�b�t�@����)</dt>
+<dt>-<kw>wsl2len</kw> (DirectSound セカンダリ補助バッファ長さ)</dt>
 <dd>
-�@DirectSound �Z�J���_���o�b�t�@�p�̂Q���o�b�t�@�̒����̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� �����ŁA�~���b�P�ʂŎw�肵�܂��B�Œ� 250ms �K�v�ł��B���̃I�v�V�������w�肵�Ȃ��� 1000 ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@�g���g���́ADirectSound �̃Z�J���_���o�b�t�@���Ƃɕ⏕�o�b�t�@���쐬���A��������f�R�[�h�����f�[�^�����̕⏕�o�b�t�@�ɒ~�ς��Ă���Z�J���_���o�b�t�@�ɓ]�����܂��B�����Ŏw�肷��o�b�t�@�̒����͂��̕⏕�o�b�t�@�̒����ł��B<r/>
-�@�ʏ�A�f�R�[�h�����ƕ⏕�o�b�t�@�ւ̒~�ς͗D��x�̒Ⴂ�X���b�h�ōs���܂����A�⏕�o�b�t�@����Z�J���_���o�b�t�@�ւ̓]���͍����D��x���������X���b�h�ōs���܂��B<r/>
-�@��ʂɁA�����Ƃ�ƍĐ��͈��肵�܂����A������������܂��B�܂��A�f�R�[�h�����ɕω���������悤�Ȑ���������ꍇ�A���ꂪ���ۂɔ��������܂ł̃f�B���C�������Ȃ�܂��B
+　DirectSound セカンダリバッファ用の２次バッファの長さの設定です。<r/>
+　設定可能な値は 整数で、ミリ秒単位で指定します。最低 250ms 必要です。このオプションを指定しないと 1000 が指定されたものと見なされます。<r/>
+　吉里吉里は、DirectSound のセカンダリバッファごとに補助バッファを作成し、いったんデコードしたデータをこの補助バッファに蓄積してからセカンダリバッファに転送します。ここで指定するバッファの長さはその補助バッファの長さです。<r/>
+　通常、デコード処理と補助バッファへの蓄積は優先度の低いスレッドで行われますが、補助バッファからセカンダリバッファへの転送は高い優先度を持ったスレッドで行われます。<r/>
+　一般に、長くとると再生は安定しますが、メモリを消費します。また、デコード処理に変化を加えるような制御をした場合、それが実際に発音されるまでのディレイが長くなります。
 </dd>
 
-<dt>-<kw>wsmute</kw> (DirectSound �~���[�g)</dt>
+<dt>-<kw>wsmute</kw> (DirectSound ミュート)</dt>
 <dd>
-�@DirectSound�ŃA�v���P�[�V��������A�N�e�B�u���邢�͍ŏ��������ۂɃ~���[�g���邩(���ʂ������邩)�̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� <b>'never' (�~���[�g���Ȃ�)</b>, <b>'minimize' (�ŏ�����)</b>, <b>'deactive' (��A�N�e�B�u��)</b> �̂����ꂩ�ŁA���̃I�v�V�������w�肵�Ȃ��� 'never' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@'never' ��I������ƃ~���[�g�͍s���܂���B'minimize' �� 'deactive' �ł́A���ꂼ��A�v���P�[�V�������ŏ��������Ƃ��A��A�N�e�B�u�ɂȂ����Ƃ��Ƀ~���[�g����܂��B<r/>
-�@�~���[�g�����̂� WaveSoundBuffer �ōĐ�����镨 ( KAG�̏ꍇ�� BGM �� 'Wave' ���g���Ă���ꍇ�ƁA���ʉ� ) �����ŁAMIDI �� CDDA �Đ��̓~���[�g����܂���B
+　DirectSoundでアプリケーションが非アクティブあるいは最小化した際にミュートするか(音量を下げるか)の設定です。<r/>
+　設定可能な値は <b>'never' (ミュートしない)</b>, <b>'minimize' (最小化時)</b>, <b>'deactive' (非アクティブ時)</b> のいずれかで、このオプションを指定しないと 'never' が指定されたものと見なされます。<r/>
+　'never' を選択するとミュートは行われません。'minimize' や 'deactive' では、それぞれアプリケーションが最小化したとき、非アクティブになったときにミュートされます。<r/>
+　ミュートされるのは WaveSoundBuffer で再生される物 ( KAGの場合は BGM に 'Wave' を使っている場合と、効果音 ) だけで、MIDI や CDDA 再生はミュートされません。
 </dd>
 
-<dt>-<kw>wsmutevol</kw> (DirectSound �~���[�g����)</dt>
+<dt>-<kw>wsmutevol</kw> (DirectSound ミュート音量)</dt>
 <dd>
-�@-wsmute (DirectSound �~���[�g) �ł̃~���[�g���̉��ʂ̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� �����ŁA% �P�ʂŎw�肵�܂��B<r/>
-�@�u0%�v���w�肷��Ɗ��S�ɖ����ƂȂ�A�u50%�v���w�肷��Ɣ����̉���(��-6dB)�ƂȂ�܂��B<r/>
-</dd>
-
-
-<dt>-<kw>wsforcecnv</kw> (DirectSound �����t�H�[�}�b�g�ϊ�)</dt>
-<dd>
-�@DirectSound�ɍĐ�������PCM�f�[�^���A�w��̌`���ɋ����I�ɕϊ����邩�ǂ����̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� <b>'none' (�ϊ����Ȃ�)</b>, <b>'i16' (16bit�����ɕϊ�)</b> , <b>'i16m' (16bit�������m�����ɕϊ�)</b> �̂����ꂩ�ŁA���̃I�v�V�������w�肵�Ȃ��� 'none' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@�ݒ��ύX����ƍĐ����̏�Q�����P����ꍇ������܂��B'i16m' ��I������� -wsexpandquad �I�v�V���� ( DirectSound ����4ch�Đ� ) �̐ݒ�͖�������܂��B
-</dd>
-
-<dt>-<kw>wsuse3d</kw> (DirectSound 3D����)</dt>
-<dd>
-�@DirectSound��3D������s�����ǂ����̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� <b>'no' (���Ȃ�)</b>, <b>'yes' (����)</b> �̂����ꂩ�ŁA���̃I�v�V�������w�肵�Ȃ��� 'no' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@'yes' ��I������ƁA�T�E���h�� 3D���䂪�L���ɂȂ�AWaveSoundBuffer.posX, WaveSoundBuffer.posY, WaveSoundBuffer.posZ �v���p�e�B���L���ɂȂ�܂� (�����̃v���p�e�B�͌��o�[�W�����ł͊��Ɏ�������Ă��܂����A�T�|�[�g�O�ł�)�B<r/>
-�@�܂��A�����̊��ł́A'yes' ��I������ƁADirectSound3D �ɂ��A�X�e���I�⃂�m�����̃T�E���h���A�T���E���h�X�s�[�J�[�Ɋg������čĐ������悤�ɂȂ�܂� (���Ƃ��΁A�t�����g�̃X�s�[�J�[�ł����Đ�����Ȃ������T�E���h���A5.1ch���̑S�ẴX�s�[�J�[�ōĐ������悤�ɂȂ�܂�)�B<r/>
-�@'yes' ��I������� -wsexpandquad �I�v�V���� ( DirectSound ����4ch�Đ� ) �̐ݒ�͖�������܂��B
+　-wsmute (DirectSound ミュート) でのミュート時の音量の設定です。<r/>
+　設定可能な値は 整数で、% 単位で指定します。<r/>
+　「0%」を指定すると完全に無音となり、「50%」を指定すると半分の音量(約-6dB)となります。<r/>
 </dd>
 
 
-
-<dt>-<kw>wsexpandquad</kw> (DirectSound ����4ch�Đ�)</dt>
+<dt>-<kw>wsforcecnv</kw> (DirectSound 強制フォーマット変換)</dt>
 <dd>
-�@DirectSound�ŃX�e���I�⃂�m�����̃T�E���h���Đ�����ꍇ�ɁA�����I�Ƀ��A�X�s�[�J�[���܂�4ch�ōĐ������邩�ǂ����̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� <b>'no' (���Ȃ�)</b>, <b>'yes' (����)</b> �̂����ꂩ�ŁA���̃I�v�V�������w�肵�Ȃ��� 'no' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@'yes'��ݒ肷��ƁA�X�e���I�⃂�m�����̃T�E���h���t�����g�X�s�[�J�[�ł����Đ�����Ȃ����ł��A�t�����g�X�s�[�J�[�ƃ��A�X�s�[�J�[�̗����ŃT�E���h���Đ������邱�Ƃ��ł��܂��B
+　DirectSoundに再生させるPCMデータを、指定の形式に強制的に変換するかどうかの設定です。<r/>
+　設定可能な値は <b>'none' (変換しない)</b>, <b>'i16' (16bit整数に変換)</b> , <b>'i16m' (16bit整数モノラルに変換)</b> のいずれかで、このオプションを指定しないと 'none' が指定されたものと見なされます。<r/>
+　設定を変更すると再生時の障害が改善する場合があります。'i16m' を選択すると -wsexpandquad オプション ( DirectSound 強制4ch再生 ) の設定は無視されます。
 </dd>
 
-<dt>-<kw>wsfreq</kw> (DirectSound �v���C�}���o�b�t�@���g��)</dt>
+<dt>-<kw>wsuse3d</kw> (DirectSound 3D制御)</dt>
 <dd>
-�@DirectSound�̃v���C�}���o�b�t�@�̍Đ����g���̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� ���̎��R���Ŏ��g���� Hz �P�ʂŕ\���A���̃I�v�V�������w�肵�Ȃ��� '44100' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@�Ƃ��� WDM �n�T�E���h�h���C�o��p����� (Windows2000, XP�ȍ~ �Ȃ�) �ł́A�ݒ��ύX���Ă��Đ���Ԃɕω����Ȃ��ꍇ������܂��B
+　DirectSoundで3D制御を行うかどうかの設定です。<r/>
+　設定可能な値は <b>'no' (しない)</b>, <b>'yes' (する)</b> のいずれかで、このオプションを指定しないと 'no' が指定されたものと見なされます。<r/>
+　'yes' を選択すると、サウンドの 3D制御が有効になり、WaveSoundBuffer.posX, WaveSoundBuffer.posY, WaveSoundBuffer.posZ プロパティが有効になります (これらのプロパティは現バージョンでは既に実装されていますが、サポート外です)。<r/>
+　また、多くの環境では、'yes' を選択すると、DirectSound3D により、ステレオやモノラルのサウンドが、サラウンドスピーカーに拡張されて再生されるようになります (たとえば、フロントのスピーカーでしか再生されなかったサウンドが、5.1ch環境の全てのスピーカーで再生されるようになります)。<r/>
+　'yes' を選択すると -wsexpandquad オプション ( DirectSound 強制4ch再生 ) の設定は無視されます。
 </dd>
 
-<dt>-<kw>wsbits</kw> (DirectSound �v���C�}���o�b�t�@�r�b�g��)</dt>
+
+
+<dt>-<kw>wsexpandquad</kw> (DirectSound 強制4ch再生)</dt>
 <dd>
-�@DirectSound�̃v���C�}���o�b�t�@�̍Đ��r�b�g���̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� <b>'i8' (8bit����)</b>, <b>'i16' (16bit����)</b>, <b>'i24' (24bit����)</b>, <b>'i32' (32bit����)</b>, <b>'f32' (32bit���������_��)</b> �ŁA���̃I�v�V�������w�肵�Ȃ��� 'i16' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@�Ƃ��� WDM �n�T�E���h�h���C�o��p����� (Windows2000, XP�ȍ~ �Ȃ�) �ł́A�ݒ��ύX���Ă��Đ���Ԃɕω����Ȃ��ꍇ������܂��B
+　DirectSoundでステレオやモノラルのサウンドを再生する場合に、強制的にリアスピーカーを含む4chで再生させるかどうかの設定です。<r/>
+　設定可能な値は <b>'no' (しない)</b>, <b>'yes' (する)</b> のいずれかで、このオプションを指定しないと 'no' が指定されたものと見なされます。<r/>
+　'yes'を設定すると、ステレオやモノラルのサウンドがフロントスピーカーでしか再生されない環境でも、フロントスピーカーとリアスピーカーの両方でサウンドを再生させることができます。
 </dd>
 
-<dt>-<kw>wscontrolpri</kw> (DirectSound �v���C�}���o�b�t�@�Đ�����)</dt>
+<dt>-<kw>wsfreq</kw> (DirectSound プライマリバッファ周波数)</dt>
 <dd>
-�@DirectSound�̃v���C�}���o�b�t�@�ɑ΂��čĐ�/��~�̐�����s�����ǂ����̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� <b>'yes' (�s��)</b>, <b>'no' (�s��Ȃ�)</b> �̂����ꂩ�ŁA���̃I�v�V�������w�肵�Ȃ��� 'yes' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@�܂�ɐݒ��ς���Ɖ���т≹�؂ꂪ���P������������悤�ł��B
+　DirectSoundのプライマリバッファの再生周波数の設定です。<r/>
+　設定可能な値は 正の自然数で周波数を Hz 単位で表し、このオプションを指定しないと '44100' が指定されたものと見なされます。<r/>
+　とくに WDM 系サウンドドライバを用いる環境 (Windows2000, XP以降 など) では、設定を変更しても再生状態に変化がない場合もあります。
 </dd>
 
-<dt>-<kw>wspritry</kw> (DirectSound �v���C�}���o�b�t�@�ݒ莎�s���x��)</dt>
+<dt>-<kw>wsbits</kw> (DirectSound プライマリバッファビット数)</dt>
 <dd>
-�@DirectSound�v���C�}���o�b�t�@�̃t�H�[�}�b�g���w�肷��ۂɂǂ�قǑ����̐ݒ���������̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� <b>'0' �` '2' (���x��0 �` ���x��2)</b>, <b>'all' (���ׂ�)</b> �̂����ꂩ�ŁA���̃I�v�V�������w�肵�Ȃ��� 'all' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@���x�� 0 ���w�肷��ƁA�X�e���I 16bit�����̃t�H�[�}�b�g�̐ݒ�����s���܂��B<r/>
-�@���x�� 1 ���w�肷��� ���x�� 0 �����s����O�ɁA�V�X�e���̃X�s�[�J�[�ݒ�ɏ]�����`�����l�����A16bit�����ł̃t�H�[�}�b�g�̐ݒ�����s���܂��B<r/>
-�@���x�� 2 ���w�肷��� ���x�� 1 �����s����O�ɁA�uDirectSound �v���C�}���o�b�t�@�r�b�g���v�Ŏw�肳�ꂽ�r�b�g���A�V�X�e���̃X�s�[�J�[�ݒ�ɏ]�����`�����l�����AWAVEFORMATEX �\���̂ɂ��t�H�[�}�b�g�̐ݒ�����s���܂��B<r/>
-�@�u���ׂāv���w�肷��� ���x�� 2 �����s����O�ɁA���x�� 2 �Ɠ��l�̐ݒ�� WAVEFORMATEXTENSIBLE �\���̂ɂ��t�H�[�}�b�g�̎w������s���܂��B
+　DirectSoundのプライマリバッファの再生ビット数の設定です。<r/>
+　設定可能な値は <b>'i8' (8bit整数)</b>, <b>'i16' (16bit整数)</b>, <b>'i24' (24bit整数)</b>, <b>'i32' (32bit整数)</b>, <b>'f32' (32bit浮動小数点数)</b> で、このオプションを指定しないと 'i16' が指定されたものと見なされます。<r/>
+　とくに WDM 系サウンドドライバを用いる環境 (Windows2000, XP以降 など) では、設定を変更しても再生状態に変化がない場合もあります。
+</dd>
+
+<dt>-<kw>wscontrolpri</kw> (DirectSound プライマリバッファ再生制御)</dt>
+<dd>
+　DirectSoundのプライマリバッファに対して再生/停止の制御を行うかどうかの設定です。<r/>
+　設定可能な値は <b>'yes' (行う)</b>, <b>'no' (行わない)</b> のいずれかで、このオプションを指定しないと 'yes' が指定されたものと見なされます。<r/>
+　まれに設定を変えると音飛びや音切れが改善される環境があるようです。
+</dd>
+
+<dt>-<kw>wspritry</kw> (DirectSound プライマリバッファ設定試行レベル)</dt>
+<dd>
+　DirectSoundプライマリバッファのフォーマットを指定する際にどれほど多くの設定を試すかの設定です。<r/>
+　設定可能な値は <b>'0' 縲鰀 '2' (レベル0 縲鰀 レベル2)</b>, <b>'all' (すべて)</b> のいずれかで、このオプションを指定しないと 'all' が指定されたものと見なされます。<r/>
+　レベル 0 を指定すると、ステレオ 16bit整数のフォーマットの設定を試行します。<r/>
+　レベル 1 を指定すると レベル 0 を試行する前に、システムのスピーカー設定に従ったチャンネル数、16bit整数でのフォーマットの設定を試行します。<r/>
+　レベル 2 を指定すると レベル 1 を試行する前に、「DirectSound プライマリバッファビット数」で指定されたビット数、システムのスピーカー設定に従ったチャンネル数、WAVEFORMATEX 構造体によるフォーマットの設定を試行します。<r/>
+　「すべて」を指定すると レベル 2 を試行する前に、レベル 2 と同様の設定で WAVEFORMATEXTENSIBLE 構造体によるフォーマットの指定を試行します。
 </dd>
 <!-- 
 <dt>-<kw>_inmm</kw> (_inmm.dll)</dt>
 <dd>
-�@irori ���� _inmm.dll ���g�p���邩�ǂ����̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� <b>'yes' (�g�p����)</b>, <b>'no' (�g�p���Ȃ�)</b> �̂����ꂩ�ŁA���̃I�v�V�������w�肵�Ȃ��� 'no' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@irori ���� _inmm.dll �͕֗��ł����A�g���g���͂��̖{�̂̍\���䂦 _inmm.dll �̃p�b�`�v���O�����ł̓p�b�`�𓖂Ă邱�Ƃ��ł��܂���B���̂��ߋg���g���{�̑��őΉ����Ă��܂��B<r/>
-�@'yes' ���w�肷��ƃp�b�`�𓖂Ă��̂Ɠ��l�̓�������鎖���ł��܂��B
+　irori 氏の _inmm.dll を使用するかどうかの設定です。<r/>
+　設定可能な値は <b>'yes' (使用する)</b>, <b>'no' (使用しない)</b> のいずれかで、このオプションを指定しないと 'no' が指定されたものと見なされます。<r/>
+　irori 氏の _inmm.dll は便利ですが、吉里吉里はその本体の構造ゆえ _inmm.dll のパッチプログラムではパッチを当てることができません。そのため吉里吉里本体側で対応しています。<r/>
+　'yes' を指定するとパッチを当てたのと同様の動作をする事ができます。
 </dd>
 -->
 
@@ -324,101 +324,101 @@ Releaser �� -userconf �ł́A�g���g���̎��s�\�t�@�C����O���̐ݒ�t�@�C��������
 </para>
 
 <para>
-<ptitle>�O���t�B�b�N�֘A�̃I�v�V����</ptitle>
+<ptitle>グラフィック関連のオプション</ptitle>
 <dl>
-<dt>-<kw>gclim</kw> (�摜�L���b�V������)</dt>
+<dt>-<kw>gclim</kw> (画像キャッシュ制限)</dt>
 <dd>
-�@�摜�L���b�V���Ɏg�p���郁�����̍ő�l�̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� <b>'auto' (����)</b> �܂��͐����̒l�ŁA�����̒l���w�肷��ꍇ�͉摜�L���b�V���Ɏg�p���郁������ MB �P�ʂŎw�肵�܂��B���̃I�v�V�������w�肵�Ȃ��� 'auto' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@�g���g���͂�������ǂݍ��񂾉摜��f�����A�N�Z�X�ł���悤�ɉ摜���L���b�V������@�\�������Ă��܂��B����Ɏg�p���郁�����̐����l���w�肵�܂��B<r/>
-�@'auto' ���w�肷��ƁA�R���s���[�^�Ɏ�������Ă��镨���������̗ʂɂ���Ď����I�ɒl�����肳��܂��B<r/>
-�@'0' ���w�肷��ƃL���b�V���͍s���܂���B<r/>
-�@�g���g�����s���ɃX���b�v���p�ɂɔ�������悤�ł���΁A���̒l���������w�肷�邩�A'0' ���w�肷��Ɖ��P�����\��������܂��B
+　画像キャッシュに使用するメモリの最大値の設定です。<r/>
+　設定可能な値は <b>'auto' (自動)</b> または整数の値で、整数の値を指定する場合は画像キャッシュに使用するメモリを MB 単位で指定します。このオプションを指定しないと 'auto' が指定されたものと見なされます。<r/>
+　吉里吉里はいったん読み込んだ画像を素早くアクセスできるように画像をキャッシュする機構を持っています。それに使用するメモリの制限値を指定します。<r/>
+　'auto' を指定すると、コンピュータに実装されている物理メモリの量によって自動的に値が決定されます。<r/>
+　'0' を指定するとキャッシュは行いません。<r/>
+　吉里吉里実行中にスワップが頻繁に発生するようであれば、この値を小さく指定するか、'0' を指定すると改善される可能性があります。
 </dd>
 
-<dt>-<kw>fsbpp</kw> (�t���X�N���[�����̃J���[���[�h)</dt>
+<dt>-<kw>fsbpp</kw> (フルスクリーン時のカラーモード)</dt>
 <dd>
-�@�t���X�N���[�����̃J���[���[�h�̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl��  <b>'nochange' (�ς��Ȃ�)</b>, <b>'16' (16bit�J���[)</b>, <b>'24' (24bit�J���[)</b>, <b>'32' (32bit�J���[)</b> �̂����ꂩ�ŁA���̃I�v�V�������w�肵�Ȃ��� 'nochange' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@'nochange' ���w�肷��ƁA��t���X�N���[�����̃J���[���[�h�Ɠ����J���[���[�h�ɂȂ�܂��B<r/>
-�@���̃I�v�V�����͓��I�ɕύX���邱�Ƃ��\�ł����A�l�����f�����͎̂���t���X�N���[���ɂ��悤�Ƃ����Ƃ��ł��B<r/>
+　フルスクリーン時のカラーモードの設定です。<r/>
+　設定可能な値は  <b>'nochange' (変えない)</b>, <b>'16' (16bitカラー)</b>, <b>'24' (24bitカラー)</b>, <b>'32' (32bitカラー)</b> のいずれかで、このオプションを指定しないと 'nochange' が指定されたものと見なされます。<r/>
+　'nochange' を指定すると、非フルスクリーン時のカラーモードと同じカラーモードになります。<r/>
+　このオプションは動的に変更することが可能ですが、値が反映されるのは次回フルスクリーンにしようとしたときです。<r/>
 </dd>
 
-<dt>-<kw>fsres</kw> (�t���X�N���[�����̉�ʉ𑜓x)</dt>
+<dt>-<kw>fsres</kw> (フルスクリーン時の画面解像度)</dt>
 <dd>
-�@�t���X�N���[�����̉�ʉ𑜓x�̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl��  <b>'auto' (����)</b>, <b>'proportional' (�c���䂪�����𑜓x)</b> , <b>'nearest' (�ł��߂��𑜓x)</b> , <b>'nochange' (�𑜓x��ς��Ȃ�)</b> �̂����ꂩ�ŁA���̃I�v�V�������w�肵�Ȃ��� 'auto' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@'auto' ��I������ƁA�ł��K���Ă����ʉ𑜓x�������I�ɑI�����Ďg�p���܂��B���̏ꍇ�́A�c���䂪�����𑜓x�̂����A�v���O�������Ŏw�肳��Ă���𑜓x�Ƀt�B�b�g����𑜓x������΂����I�����܂����A���̂悤�ȉ𑜓x���Ȃ��ꍇ�͉𑜓x��ς����ɃG���W�����Ŋg��\�������܂��B���̐ݒ�̏ꍇ�́A-fszoom (�t���X�N���[�����̃G���W���ɂ��g��\��) �I�v�V������ 'no' (���Ȃ�) ���w�肳��Ă��Ă��A��� 'outer' (���j�^���Ƀt�B�b�g������) �ł���Ƃ݂Ȃ���܂��B<r/>
-�@'proportional' ��I������ƁA��ʂ̏c���䂪��t���X�N���[�����Ɠ����𑜓x�̂����A�v���O�������Ŏw�肳��Ă���𑜓x�Ɠ�������������傫���A�����Ƃ��߂��𑜓x���I������܂��B<r/>
-�@'nearest' ��I������ƁA�v���O�������Ŏw�肳��Ă���𑜓x�Ɠ�������������傫���A�ł��߂��𑜓x���I������܂����A��t���X�N���[�����Ɠ����c����̉𑜓x���I�������ۏ؂͂���܂���B�u���E���ǃ��j�^��A��ʂ̃A�X�y�N�g���ۂ����܂܂ł̊g��\���ɑΉ����Ă���t�����j�^�Ȃǂł́A���̐ݒ肪�K���Ă���ꍇ������܂��B<r/>
-�@'nochange' ��I������ƁA��t���X�N���[�����̉𑜓x�̂܂܁A�𑜓x��ύX���Ȃ��Ȃ�܂��B<r/>
-�@���̃I�v�V�����͓��I�ɕύX���邱�Ƃ��\�ł����A�l�����f�����͎̂���t���X�N���[���ɂ��悤�Ƃ����Ƃ��ł��B<r/>
+　フルスクリーン時の画面解像度の設定です。<r/>
+　設定可能な値は  <b>'auto' (自動)</b>, <b>'proportional' (縦横比が同じ解像度)</b> , <b>'nearest' (最も近い解像度)</b> , <b>'nochange' (解像度を変えない)</b> のいずれかで、このオプションを指定しないと 'auto' が指定されたものと見なされます。<r/>
+　'auto' を選択すると、最も適している画面解像度を自動的に選択して使用します。この場合は、縦横比が同じ解像度のうち、プログラム内で指定されている解像度にフィットする解像度があればそれを選択しますが、そのような解像度がない場合は解像度を変えずにエンジン側で拡大表示をします。この設定の場合は、-fszoom (フルスクリーン時のエンジンによる拡大表示) オプションに 'no' (しない) が指定されていても、常に 'outer' (モニタ内にフィットさせる) であるとみなされます。<r/>
+　'proportional' を選択すると、画面の縦横比が非フルスクリーン時と同じ解像度のうち、プログラム内で指定されている解像度と同じかそれよりも大きく、もっとも近い解像度が選択されます。<r/>
+　'nearest' を選択すると、プログラム内で指定されている解像度と同じかそれよりも大きく、最も近い解像度が選択されますが、非フルスクリーン時と同じ縦横比の解像度が選択される保証はありません。ブラウン管モニタや、画面のアスペクト比を保ったままでの拡大表示に対応している液晶モニタなどでは、この設定が適している場合があります。<r/>
+　'nochange' を選択すると、非フルスクリーン時の解像度のまま、解像度を変更しなくなります。<r/>
+　このオプションは動的に変更することが可能ですが、値が反映されるのは次回フルスクリーンにしようとしたときです。<r/>
 </dd>
 
-<dt>-<kw>fszoom</kw> (�t���X�N���[�����̃G���W���ɂ��g��\��)</dt>
+<dt>-<kw>fszoom</kw> (フルスクリーン時のエンジンによる拡大表示)</dt>
 <dd>
-�@�t���X�N���[�����ɁA�G���W���ɂ���ʂ̊g����ǂ̂悤�ɍs�����ǂ������w�肵�܂��B<r/>
-�@�ݒ�\�Ȓl��  <b>'inner' (���j�^���Ƀt�B�b�g������)</b>, <b>'outer' (���j�^�����ς��Ɋg�傷��)</b>, <b>'no' (���Ȃ�)</b> �̂����ꂩ�ŁA���̃I�v�V�������w�肵�Ȃ��� 'inner' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@'inner' ��I������ƁA�K�v�ł���΁A�G���W���ɂ��g����s���܂��B�K�v�ȏꍇ�Ƃ́A��ʉ𑜓x���v���O�������Ŏw�肳�ꂽ�𑜓x�ƈقȂ�ꍇ�ł� (������ʉ𑜓x���v���O�������Ŏw�肳�ꂽ�𑜓x�����Ⴂ�ꍇ�͏k�������ɂȂ�܂�)�B���̍ہA�v���O�������Ŏw�肳��Ă���𑜓x�̏c������ێ�������Ԃł̊g����s���܂����A���j�^�̏c����Ƃ��̏c���䂪�قȂ�ꍇ�A�㉺�A�܂��͍��E�Ɍ��Ԃ��ł���\��������܂��B���̌��Ԃ͏�ɐ^�����ȏ�Ԃŕ\������܂��B<r/>
-�@'outer' ���w�肷��ƁA'inner' ���w�肵���Ƃ��Ɠ������A�K�v�ł���΃G���W���ɂ��g����s���܂��B�������A'inner' �ƈႢ�A���j�^�̏c����ƃv���O�������Ŏw�肳��Ă���c���䂪�قȂ�ꍇ�A�㉺�⍶�E�̌��Ԃ��ł��Ȃ��悤�ɂ߂������ς��܂Ŋg����s���܂��B���̂��߁A���Ԃ͂ł��܂��񂪁A���j�^�O�ɉ�ʂ��͂ݏo���\��������܂��B���̐ݒ�ł́A���Ƃ��� 16:10 �̃��j�^�� 16:9 �̃R���e���c��\������ۂȂǂɁA���Ԃ��������ɁA�߂������ς��܂Ŋg�傳���ĕ\�����邱�Ƃ��\�ɂȂ�܂��B������񂱂�ɂ��A���E�ɂ͂ݏo���̈悪�������܂��̂ŁA���̂悤�ȕ\����z�肵���R���e���c�𐧍삷��̂Ȃ�΁A�͂ݏo�������ɂ͏d�v�� UI �╶����\�����Ȃ��A�Ƃ������΍􂪕K�v�ɂȂ�܂��B<r/>
-�@'no' ��I������ƁA�K�v�ł����Ă��A�G���W���ɂ��g��͍s���܂���B���̏ꍇ�́A��ʉ𑜓x���v���O�������Ŏw�肳�ꂽ�𑜓x�ƈقȂ��Ă��Ă��A�G���W�����ɂ��g��͍s���܂��� (���̌��ʁA��ʒ����ɉ摜���������\�������\��������܂�)�B<r/>
-�@���j�^�̖{���̉𑜓x�ƃO���t�B�b�N�J�[�h�̏o�͂���M���̉𑜓x���قȂ�ꍇ�A�t�����j�^�Ȃǂł̓��j�^���Ŋg��\�����s���ꍇ������܂����A���j�^���Ŋg�又����������ŁA����ɃG���W�����ł��g��\�����s���Ɠ�d�Ɋg�傪�s���邱�ƂɂȂ�A�摜�������Ȃ�ꍇ������܂��̂Œ��ӂ��Ă������� (-fsres �́u�����v�I�v�V�����́A���̂悤�ȓ�d�̊g��\����h���g�ݍ��킹�������I�ɑI�����܂�)�B<r/>
-�@���̃I�v�V�����͓��I�ɕύX���邱�Ƃ��\�ł����A�l�����f�����͎̂���t���X�N���[���ɂ��悤�Ƃ����Ƃ��ł��B<r/>
+　フルスクリーン時に、エンジンによる画面の拡大をどのように行うかどうかを指定します。<r/>
+　設定可能な値は  <b>'inner' (モニタ内にフィットさせる)</b>, <b>'outer' (モニタいっぱいに拡大する)</b>, <b>'no' (しない)</b> のいずれかで、このオプションを指定しないと 'inner' が指定されたものと見なされます。<r/>
+　'inner' を選択すると、必要であれば、エンジンによる拡大を行います。必要な場合とは、画面解像度がプログラム内で指定された解像度と異なる場合です (もし画面解像度がプログラム内で指定された解像度よりも低い場合は縮小処理になります)。この際、プログラム内で指定されている解像度の縦横比を維持した状態での拡大を行いますが、モニタの縦横比とこの縦横比が異なる場合、上下、または左右に隙間ができる可能性があります。この隙間は常に真っ黒な状態で表示されます。<r/>
+　'outer' を指定すると、'inner' を指定したときと同じく、必要であればエンジンによる拡大を行います。しかし、'inner' と違い、モニタの縦横比とプログラム内で指定されている縦横比が異なる場合、上下や左右の隙間ができないようにめいいっぱいまで拡大を行います。このため、隙間はできませんが、モニタ外に画面がはみ出す可能性があります。この設定では、たとえば 16:10 のモニタに 16:9 のコンテンツを表示する際などに、隙間をださずに、めいいっぱいまで拡大させて表示することが可能になります。もちろんこれにより、左右にはみ出す領域が発生しますので、このような表示を想定したコンテンツを制作するのならば、はみ出す部分には重要な UI や文字を表示しない、といった対策が必要になります。<r/>
+　'no' を選択すると、必要であっても、エンジンによる拡大は行いません。この場合は、画面解像度がプログラム内で指定された解像度と異なっていても、エンジン側による拡大は行われません (その結果、画面中央に画像が小さく表示される可能性があります)。<r/>
+　モニタの本来の解像度とグラフィックカードの出力する信号の解像度が異なる場合、液晶モニタなどではモニタ側で拡大表示を行う場合がありますが、モニタ側で拡大処理をした上で、さらにエンジン側でも拡大表示を行うと二重に拡大が行われることになり、画像が汚くなる場合がありますので注意してください (-fsres の「自動」オプションは、このような二重の拡大表示を防ぐ組み合わせを自動的に選択します)。<r/>
+　このオプションは動的に変更することが可能ですが、値が反映されるのは次回フルスクリーンにしようとしたときです。<r/>
 </dd>
 
 
 <!-- obsoleted
-<dt>-<kw>dither</kw> (�f�B�U�����O)</dt>
+<dt>-<kw>dither</kw> (ディザリング)</dt>
 <dd>
-�@16bit�J���[���[�h�̉�ʃ��[�h���ɉ摜�̃f�B�U�����O���s�����ǂ����̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� <b>'no' (�g�p���Ȃ�)</b>, <b>'yes' (�g�p����)</b> �̂����ꂩ�ŁA���̃I�v�V�������w�肵�Ȃ��� 'no' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@�g���g���� 16bit�J���[�̉�ʃ��[�h�p�ɁA�摜���f�B�U�����O���s���Ȃ��猸�F���A�\������@�\������܂��B����ɂ��摜�̐F�ނ�͌y���ł��܂����A�`��̃p�t�H�[�}���X���ቺ����\��������܂��B
+　16bitカラーモードの画面モード時に画像のディザリングを行うかどうかの設定です。<r/>
+　設定可能な値は <b>'no' (使用しない)</b>, <b>'yes' (使用する)</b> のいずれかで、このオプションを指定しないと 'no' が指定されたものと見なされます。<r/>
+　吉里吉里は 16bitカラーの画面モード用に、画像をディザリングを行いながら減色し、表示する機能があります。これにより画像の色むらは軽減できますが、描画のパフォーマンスが低下する可能性があります。
 </dd>
 -->
 
-<dt>-<kw>gsplit</kw> (�摜���Z�̕�������)</dt>
+<dt>-<kw>gsplit</kw> (画像演算の分割処理)</dt>
 <dd>
-�@�摜���Z���ׂ����������čs�����ǂ����̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� <b>'yes' (�s��)</b>, <b>'int' (�C���^�[���[�X����)</b>, <b>'bidi' (�o��������)</b>, <b>'no' (�s��Ȃ�)</b> �̂����ꂩ�ŁA���̃I�v�V�������w�肵�Ȃ��� 'yes' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@�g���g���� CPU �̃������L���b�V����L���I�Ɏg�p���邽�߂ɁA�摜��`�悷��Ƃ��ɍׂ����̈�ɕ������Ȃ��牉�Z���s���܂��B���ɂ���Ă͂��ꂪ��ʂ̂�����ɂȂ���悤�ł��B���̂悤�Ȋ��ł� 'no' ���w�肷�邱�Ƃɂ�肿�����}���邱�Ƃ��ł���\��������܂����A�`��̃p�t�H�[�}���X���ቺ����\��������܂��B�_�u���o�b�t�@�����O��L���ɂ����ꍇ�́A�����������s��Ȃ����Ƃ̈Ӗ����������߁A�����������s���ݒ�ɂ��邱�Ƃ������߂��܂��B<r/>
-�@'int' ���w�肷��Ɖ摜�̉��Z�̒P�ʂ�������ɏ������܂����A��ʍX�V���ɎȖ͗l�������鎖������܂��B'bidi' ��I������Ɖ摜�̉��Z�̏��Ԃɂ����āA�と���A������ ���J��Ԃ��悤�ɂȂ�܂� ( 'yes' �̏ꍇ�͂˂ɏと�� )�B
+　画像演算を細かく分割して行うかどうかの設定です。<r/>
+　設定可能な値は <b>'yes' (行う)</b>, <b>'int' (インターレース分割)</b>, <b>'bidi' (双方向分割)</b>, <b>'no' (行わない)</b> のいずれかで、このオプションを指定しないと 'yes' が指定されたものと見なされます。<r/>
+　吉里吉里は CPU のメモリキャッシュを有効的に使用するために、画像を描画するときに細かい領域に分割しながら演算を行います。環境によってはこれが画面のちらつきにつながるようです。そのような環境では 'no' を指定することによりちらつきを抑えることができる可能性がありますが、描画のパフォーマンスが低下する可能性もあります。ダブルバッファリングを有効にした場合は、分割処理を行わないことの意味が薄いため、分割処理を行う設定にすることをお勧めします。<r/>
+　'int' を指定すると画像の演算の単位を一つおきに処理しますが、画面更新時に縞模様が見える事があります。'bidi' を選択すると画像の演算の順番において、上→下、下→上 を繰り返すようになります ( 'yes' の場合はつねに上→下 )。
 </dd>
 
-<dt>-<kw>smoothzoom</kw> (�g��\�����̃X���[�W���O)</dt>
+<dt>-<kw>smoothzoom</kw> (拡大表示時のスムージング)</dt>
 <dd>
-�@Window.setZoom �Ȃǂŕ\�����e�̊g��\�����s���ꍇ��A-fsres �I�v�V�����ŋg���g������ʂ̊g��(�k��)�\�����s���ꍇ�ɁA�X���[�W���O(�g�厞�̕��)���s�����ǂ����̐ݒ�ł� (Layer.affineCopy ���ł̊g��k���Ƃ͊֌W����܂��� )�B<r/>
-�@�ݒ�\�Ȓl�� <b>'no' (�s��Ȃ�)</b>, <b>'yes' (�s��)</b> �̂����ꂩ�ŁA���̃I�v�V�������w�肵�Ȃ��� 'yes' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@�X���[�W���O���s���ƁA�摜���Ȃ߂炩�ɂȂ�܂����A�኱�ڂ��������ɂȂ�܂��B�X���[�W���O���s��Ȃ��ƁA�摜�̓V���[�v�ɂȂ�܂����A�M�U�M�U���ڗ��悤�ɂȂ�܂��B<r/>
-�@���ɂ���ẮA�X���[�W���O���s��Ȃ������p�t�H�[�}���X���ቺ����\��������܂��B�܂��A�X���[�W���O�������Ȃ���������\��������܂��B<r/>
-�@�T�[�h�p�[�e�B�[���̕`��f�o�C�X ( Window.drawDevice �v���p�e�B�Őݒ肷��f�o�C�X ) �ɂ���Ă͂��̃I�v�V�����̉e�����󂯂Ȃ��������邩������܂���B<r/>
-�@���̃I�v�V�����͓��I�ɕύX���邱�Ƃ��\�ł����A�����ɒl�����f�����ۏ؂͂���܂���B<r/>
+　Window.setZoom などで表示内容の拡大表示を行う場合や、-fsres オプションで吉里吉里が画面の拡大(縮小)表示を行う場合に、スムージング(拡大時の補間)を行うかどうかの設定です (Layer.affineCopy 等での拡大縮小とは関係ありません )。<r/>
+　設定可能な値は <b>'no' (行わない)</b>, <b>'yes' (行う)</b> のいずれかで、このオプションを指定しないと 'yes' が指定されたものと見なされます。<r/>
+　スムージングを行うと、画像がなめらかになりますが、若干ぼけた感じになります。スムージングを行わないと、画像はシャープになりますが、ギザギザが目立つようになります。<r/>
+　環境によっては、スムージングを行わない方がパフォーマンスが低下する可能性があります。また、スムージングが効かない環境がある可能性があります。<r/>
+　サードパーティー製の描画デバイス ( Window.drawDevice プロパティで設定するデバイス ) によってはこのオプションの影響を受けない物もあるかもしれません。<r/>
+　このオプションは動的に変更することが可能ですが、すぐに値が反映される保証はありません。<r/>
 </dd>
 
 
-<dt>-<kw>aamethod</kw> (�A���`�G�C���A�X�����`�����)</dt>
+<dt>-<kw>aamethod</kw> (アンチエイリアス文字描画方式)</dt>
 <dd>
-�@�A���`�G�C���A�X�����`����@�̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� <b>'auto' (����)</b>, <b>'res4' (���T���v�����O4�~4)</b>,  <b>'res8' (���T���v�����O8�~8)</b>, <b>'api' (Windows API)</b> �̂����ꂩ�ŁA���̃I�v�V�������w�肵�Ȃ��� 'auto' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@'auto' �̏ꍇ�͌��o�[�W�����ł� 'api' �������I�ɑI�����܂��B<r/>
-�@'res4' �܂��� 'res8' �ł́A���{�̑傫�� (4�~4 �܂��� 8�~8) �ŕ�����`�悵�A������k�����邱�ƂŃA���`�G�C���A�X���������܂��Bres4 �̕��� res8 ���������ł����A���x�͒Ⴍ�Ȃ�܂��B<r/>
-�@'api' �ł� GetGlyphOutline API ��p���ăA���`�G�C���A�X������`�悵�܂����A���낢��ƕs�s���̑��� API �̂悤�Ŋ��ɂ���Ă͐���ɕ`��ł��Ȃ��\��������܂��B
+　アンチエイリアス文字描画方法の設定です。<r/>
+　設定可能な値は <b>'auto' (自動)</b>, <b>'res4' (リサンプリング4×4)</b>,  <b>'res8' (リサンプリング8×8)</b>, <b>'api' (Windows API)</b> のいずれかで、このオプションを指定しないと 'auto' が指定されたものと見なされます。<r/>
+　'auto' の場合は現バージョンでは 'api' を自動的に選択します。<r/>
+　'res4' または 'res8' では、数倍の大きさ (4×4 または 8×8) で文字を描画し、それを縮小することでアンチエイリアスを実現します。res4 の方が res8 よりも高速ですが、精度は低くなります。<r/>
+　'api' では GetGlyphOutline API を用いてアンチエイリアス文字を描画しますが、いろいろと不都合の多い API のようで環境によっては正常に描画できない可能性があります。
 </dd>
 
-<dt>-<kw>jpegdec</kw> (JPEG�摜�f�R�[�h���x)</dt>
+<dt>-<kw>jpegdec</kw> (JPEG画像デコード精度)</dt>
 <dd>
-�@JPEG�摜�̃f�R�[�h(�W�J)�̐��x�̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� <b>'high' (����)</b>, <b>'normal' (�W��)</b>, <b>'low' (�Ⴂ)</b> �̂����ꂩ�ŁA���̃I�v�V�������w�肵�Ȃ��� 'normal' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@'high' ���w�肷��ƃf�R�[�h�͒ᑬ�ɂȂ�܂����A�掿�͍����Ȃ�܂��B'low' ���w�肷��ƃf�R�[�h�͍����ɂȂ�܂����掿�͒Ⴍ�Ȃ�܂��B�������A�����ڂł͂قƂ�ǈႢ�͂���܂���B
+　JPEG画像のデコード(展開)の精度の設定です。<r/>
+　設定可能な値は <b>'high' (高い)</b>, <b>'normal' (標準)</b>, <b>'low' (低い)</b> のいずれかで、このオプションを指定しないと 'normal' が指定されたものと見なされます。<r/>
+　'high' を指定するとデコードは低速になりますが、画質は高くなります。'low' を指定するとデコードは高速になりますが画質は低くなります。しかし、見た目ではほとんど違いはありません。
 </dd>
 
-<dt>-<kw>drawthread</kw> (�`��X���b�h��)</dt>
+<dt>-<kw>drawthread</kw> (描画スレッド数)</dt>
 <dd>
-�@�`�揈�����ɁA�g�p����X���b�h�̐��̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl��<b>�C�ӂ̐��l</b>��������<b>'auto' (����)</b>�̂����ꂩ�ŁA���̃I�v�V�������w�肵�Ȃ��� '1'���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@'auto'���w�肷��ƁAOS�̔F������v���Z�b�T���Ɠ����̃X���b�h�������I�Ɋ��蓖�Ă��܂��B<r/>
-�@�`��X���b�h�𕡐��ݒ肷�邱�ƂŁA�}���`�R�A���ł̕`��p�t�H�[�}���X�����コ������\��������܂����A�t�Ƀp�t�H�[�}���X���ቺ����ꍇ������܂��B<r/>
-�@�`��ʐς��傫�������AAffine�n�̍����ׂȏ����A���Z�̏d�����C�����������ȂǂɓK�p���邱�ƂŁA�ǍD�Ȍ��ʂ𓾂���\��������܂��B<r/>
-�@�}���`�X���b�h���g�p����悤�ɐݒ肵�Ă��A�`�揈���̕��ׂ��y���}���`�X���b�h���̌��ʂ������Ȃ��ƃV�X�e�������f�����ꍇ�́A�}���`�X���b�h�Ŏ��s����Ȃ��ꍇ������܂��B<r/>
+　描画処理時に、使用するスレッドの数の設定です。<r/>
+　設定可能な値は<b>任意の数値</b>もしくは<b>'auto' (自動)</b>のいずれかで、このオプションを指定しないと '1'が指定されたものと見なされます。<r/>
+　'auto'を指定すると、OSの認識するプロセッサ数と同数のスレッドが自動的に割り当てられます。<r/>
+　描画スレッドを複数設定することで、マルチコア環境での描画パフォーマンスを向上させられる可能性がありますが、逆にパフォーマンスが低下する場合もあります。<r/>
+　描画面積が大きい処理、Affine系の高負荷な処理、演算の重いレイヤ合成処理などに適用することで、良好な結果を得られる可能性があります。<r/>
+　マルチスレッドを使用するように設定しても、描画処理の負荷が軽くマルチスレッド化の効果が得られないとシステムが判断した場合は、マルチスレッドで実行されない場合があります。<r/>
 </dd>
 
 </dl>
@@ -426,11 +426,11 @@ Releaser �� -userconf �ł́A�g���g���̎��s�\�t�@�C����O���̐ݒ�t�@�C��������
 
 
 <para>
-<ptitle>CPU �@�\�֘A�̃I�v�V����</ptitle>
-�@�ȉ��̃I�v�V�����͂��ׂĐݒ�\�Ȓl�� <b>'yes' (�g�p�\�ł���Ύg�p����)</b>, <b>'no' (�g�p�\�ł����Ă��g�p���Ȃ�)</b>, <b>'force' (�����I�Ɏg�p����)</b> �̂����ꂩ�ŁA�I�v�V�������w�肵�Ȃ��� 'yes' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@CPU �̔F���g���u�����N�������ꍇ�� 'no' �ɐݒ肷��Ƃ��̋@�\��p���܂���B<r/>
-�@'force' �́A���� CPU �@�\�����o���Ȃ��Ă������I�Ɏg�p����悤�ɂȂ�܂����ACPU �ɂ��̋@�\�����Ă��Ȃ��ꍇ�͂�����񐳏�ɓ��삵�܂���B<r/>
-�@�g���g���{�̂ɂ� -cpummx -cpucmov -cpusse -cpuemmx �̃I�v�V�����݂̂��e����^���܂��BOggVorbis �f�R�[�_ (wuvorbis.dll) �ɂ� -cpusse �� -cpummx �� -cpu3dn �̃I�v�V�������e����^���܂��B���̂ق���(�T�[�h�p�[�e�B�[��)�v���O�C���̒��ɂ� CPU �@�\�̐ݒ�̉e�����󂯂���̂����邩���m��܂���B<r/>
+<ptitle>CPU 機能関連のオプション</ptitle>
+　以下のオプションはすべて設定可能な値は <b>'yes' (使用可能であれば使用する)</b>, <b>'no' (使用可能であっても使用しない)</b>, <b>'force' (強制的に使用する)</b> のいずれかで、オプションを指定しないと 'yes' が指定されたものと見なされます。<r/>
+　CPU の認識トラブルが起こった場合に 'no' に設定するとその機能を用いません。<r/>
+　'force' は、その CPU 機能を検出しなくても強制的に使用するようになりますが、CPU にその機能がついていない場合はもちろん正常に動作しません。<r/>
+　吉里吉里本体には -cpummx -cpucmov -cpusse -cpuemmx のオプションのみが影響を与えます。OggVorbis デコーダ (wuvorbis.dll) には -cpusse と -cpummx と -cpu3dn のオプションが影響を与えます。そのほかの(サードパーティーの)プラグインの中にも CPU 機能の設定の影響を受けるものがあるかも知れません。<r/>
 <r/>
 <ul>
 <li>-<kw>cpummx</kw> (MMX)</li>
@@ -446,28 +446,28 @@ Releaser �� -userconf �ł́A�g���g���̎��s�\�t�@�C����O���̐ݒ�t�@�C��������
 
 
 <para>
-<ptitle>�f�o�b�O�֘A�̃I�v�V����</ptitle>
+<ptitle>デバッグ関連のオプション</ptitle>
 <dl>
 
-<dt>-<kw>debug</kw> (�f�o�b�O���[�h)</dt>
+<dt>-<kw>debug</kw> (デバッグモード)</dt>
 <dd>
-�@�g���g�����f�o�b�O���[�h <comlink href="Debug" /> �œ��삳���邩�ǂ����̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� <b>'no' (����)</b>, <b>'yes' (�L��)</b>�̂����ꂩ�ŁA���̃I�v�V�������w�肵�Ȃ��� 'no' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@�L���ɂ���ƁA�g���g���̓f�o�b�O���[�h�œ��삵�A�������̃f�o�b�O�x���@�\���L���ɂȂ�܂����A�ʏ�̃��[�h�������s���x�͒ቺ���܂��B
+　吉里吉里をデバッグモード <comlink href="Debug" /> で動作させるかどうかの設定です。<r/>
+　設定可能な値は <b>'no' (無効)</b>, <b>'yes' (有効)</b>のいずれかで、このオプションを指定しないと 'no' が指定されたものと見なされます。<r/>
+　有効にすると、吉里吉里はデバッグモードで動作し、いくつかのデバッグ支援機能が有効になりますが、通常のモードよりも実行速度は低下します。
 </dd>
 
 
-<dt>-<kw>forcelog</kw> (�t�@�C���ւ̃��O)</dt>
+<dt>-<kw>forcelog</kw> (ファイルへのログ)</dt>
 <dd>
-�@�R���\�[���̃��O���t�@�C���ɏo�͂��邩�ǂ����̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� <b>'no' (�o�͂��Ȃ�)</b>, <b>'yes' (�����̃t�@�C���ɒǉ����ďo�͂���)</b>, <b>'clear' (�����̃t�@�C�����N���A���Ă���o�͂���)</b> �̂����ꂩ�ŁA���̃I�v�V�������w�肵�Ȃ��� 'no' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B
+　コンソールのログをファイルに出力するかどうかの設定です。<r/>
+　設定可能な値は <b>'no' (出力しない)</b>, <b>'yes' (既存のファイルに追加して出力する)</b>, <b>'clear' (既存のファイルをクリアしてから出力する)</b> のいずれかで、このオプションを指定しないと 'no' が指定されたものと見なされます。
 
 </dd>
 
-<dt>-<kw>logerror</kw> (�G���[���̃t�@�C���ւ̃��O)</dt>
+<dt>-<kw>logerror</kw> (エラー時のファイルへのログ)</dt>
 <dd>
-�@�G���[���ɃR���\�[���̃��O���t�@�C���ɏo�͂��邩�ǂ����̐ݒ�ł��B<r/>
-�@�ݒ�\�Ȓl�� <b>'no' (�o�͂��Ȃ�)</b>, <b>'yes' (�����̃t�@�C���ɒǉ����ďo�͂���)</b>, <b>'clear' (�����̃t�@�C�����N���A���Ă���o�͂���)</b> �̂����ꂩ�ŁA���̃I�v�V�������w�肵�Ȃ��� 'yes' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B
+　エラー時にコンソールのログをファイルに出力するかどうかの設定です。<r/>
+　設定可能な値は <b>'no' (出力しない)</b>, <b>'yes' (既存のファイルに追加して出力する)</b>, <b>'clear' (既存のファイルをクリアしてから出力する)</b> のいずれかで、このオプションを指定しないと 'yes' が指定されたものと見なされます。
 
 </dd>
 </dl>
@@ -478,55 +478,55 @@ Releaser �� -userconf �ł́A�g���g���̎��s�\�t�@�C����O���̐ݒ�t�@�C��������
 
 
 <para>
-<ptitle>�V�X�e���݊����֘A�̃I�v�V����</ptitle>
+<ptitle>システム互換性関連のオプション</ptitle>
 
 <dl>
-<dt>-<kw>arcdelim</kw> (�A�[�J�C�u�f���~�^)</dt>
+<dt>-<kw>arcdelim</kw> (アーカイブデリミタ)</dt>
 <dd>
-�@�A�[�J�C�u�f���~�^ (�A�[�J�C�u�X�g���[�W���ƁA�A�[�J�C�u���X�g���[�W���̊Ԃ���؂镶��) ���w�肵�܂��B<r/>
-�@�ݒ�\�Ȓl�� <b>'&gt;' ('&gt;'���g��)</b>, <b>'#' ('#'���g��)</b> �̂����ꂩ�ŁA���̃I�v�V�������w�肵�Ȃ��� '&gt;' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@�A�[�J�C�u�f���~�^�́A�g���g���Q 2.19 beta 14 �ŁA�]���� '#' ���� '>' �ɕύX����܂����B<r/>
-�@2.19 beta 14 �����œ��삵�Ă����A�v���P�[�V�����͂��̕ύX�̂��ߓ��삵�Ȃ��Ȃ�\��������܂����A���̃I�v�V�����Ńf���~�^�� '#' �ɕύX���邱�Ƃœ��삳���邱�Ƃ��ł��܂��B<r/>
+　アーカイブデリミタ (アーカイブストレージ名と、アーカイブ内ストレージ名の間を区切る文字) を指定します。<r/>
+　設定可能な値は <b>'&gt;' ('&gt;'を使う)</b>, <b>'#' ('#'を使う)</b> のいずれかで、このオプションを指定しないと '&gt;' が指定されたものと見なされます。<r/>
+　アーカイブデリミタは、吉里吉里２ 2.19 beta 14 で、従来の '#' から '>' に変更されました。<r/>
+　2.19 beta 14 未満で動作していたアプリケーションはこの変更のため動作しなくなる可能性がありますが、このオプションでデリミタを '#' に変更することで動作させることができます。<r/>
 </dd>
 
 
-<dt>-<kw>evalcontext</kw> (��u'!'���Z�q�̓���)</dt>
+<dt>-<kw>evalcontext</kw> (後置'!'演算子の動作)</dt>
 <dd>
-�@TJS2�̌�u'!'���Z�q�̓�����w�肵�܂��B<r/>
-�@�ݒ�\�Ȓl�� <b>'this' (this��Ŏ���]��)</b>, <b>'global' (global��Ŏ���]��)</b> �̂����ꂩ�ŁA���̃I�v�V�������w�肵�Ȃ��� 'this' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@TJS2�̌�u'!'���Z�q�͎���global�R���e�L�X�g��Ŏ��s���Ă��܂������A2.21 beta 9 ���Athis �R���e�L�X�g��Ŏ��s����悤�ɂȂ�܂����B<r/>
-2.21 beta 9 ������z�肵�Ă���A�v���P�[�V�����ł́A���̐ݒ���uglobal��Ŏ���]���v�ɂ��Ȃ��Ɠ��삵�Ȃ��\��������܂��B
+　TJS2の後置'!'演算子の動作を指定します。<r/>
+　設定可能な値は <b>'this' (this上で式を評価)</b>, <b>'global' (global上で式を評価)</b> のいずれかで、このオプションを指定しないと 'this' が指定されたものと見なされます。<r/>
+　TJS2の後置'!'演算子は式をglobalコンテキスト上で実行していましたが、2.21 beta 9 より、this コンテキスト上で実行するようになりました。<r/>
+2.21 beta 9 未満を想定しているアプリケーションでは、この設定を「global上で式を評価」にしないと動作しない可能性があります。
 </dd>
 
 
-<dt>-<kw>holdalpha</kw> (Layer.holdAlpha �v���p�e�B�̃f�t�H���g�̒l)</dt>
+<dt>-<kw>holdalpha</kw> (Layer.holdAlpha プロパティのデフォルトの値)</dt>
 <dd>
-�@<at href="f_Layer_holdAlpha.html">Layer.holdAlpha</at> �v���p�e�B�̃f�t�H���g�l���w�肵�܂��B<r/>
-�@�ݒ�\�Ȓl�� <b>'false' (�U)</b>, <b>'true' (�^)</b> �̂����ꂩ�ŁA���̃I�v�V�������w�肵�Ȃ��� 'false' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@�g���g���Q 2.23 beta 4 �ŁA�e�퉉�Z�֐��Ɏw�肵�Ă��� hda (�A���t�@�`�����l����ی삷�邩) �I�v�V�������Ȃ��Ȃ�A����� Layer.holdAlpha �v���p�e�B������܂����B���̎��_�ł� Layer.holdAlpha �̃f�t�H���g�l�͐^�ł����BLayer.holdAlpha ���^�̏ꍇ�͉ߋ��̃A�v���P�[�V�����̓���ɉe����^���܂���B<r/>
-�@�g���g���Q 2.23 beta 5 �ŁA���̃f�t�H���g�l���U�ɂȂ�܂����B�g���g���Q 2.23 beta 5 ������z�肵�Ă���A�v���P�[�V�����𓮍삳�������ꍇ�́A���̃I�v�V�����Ɂu�^�v���w�肵�Ȃ��Ɛ���ɓ��삵�Ȃ��\��������܂��B
+　<at href="f_Layer_holdAlpha.html">Layer.holdAlpha</at> プロパティのデフォルト値を指定します。<r/>
+　設定可能な値は <b>'false' (偽)</b>, <b>'true' (真)</b> のいずれかで、このオプションを指定しないと 'false' が指定されたものと見なされます。<r/>
+　吉里吉里２ 2.23 beta 4 で、各種演算関数に指定していた hda (アルファチャンネルを保護するか) オプションがなくなり、代わりに Layer.holdAlpha プロパティが作られました。この時点では Layer.holdAlpha のデフォルト値は真でした。Layer.holdAlpha が真の場合は過去のアプリケーションの動作に影響を与えません。<r/>
+　吉里吉里２ 2.23 beta 5 で、このデフォルト値が偽になりました。吉里吉里２ 2.23 beta 5 未満を想定しているアプリケーションを動作させたい場合は、このオプションに「真」を指定しないと正常に動作しない可能性があります。
 </dd>
 
 
-<dt>-<kw>unaryaster</kw> (�O�u'*'���Z�q�̓���)</dt>
+<dt>-<kw>unaryaster</kw> (前置'*'演算子の動作)</dt>
 <dd>
-�@TJS2�̑O�u'*'���Z�q�̓�����w�肵�܂��B<r/>
-�@�ݒ�\�Ȓl�� <b>'default' (2.25�ȍ~�̓���)</b>, <b>'compat' (2.25�����̓���)</b> �̂����ꂩ�ŁA���̃I�v�V�������w�肵�Ȃ��� 'default' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@TJS2�̑O�u'*'���Z�q�́A�v���p�e�B�I�u�W�F�N�g���̂��̂��A�v���p�e�B�n���h��������Ɏ��o�����Z�q�ł������A2.25 beta 1 ���A���̋@�\�������Z�q�͑O�u��'&amp;'�ƂȂ�A�O�u'*'���Z�q�̓v���p�e�B�I�u�W�F�N�g�̃v���p�e�B�n���h���𓮍삳���邽�߂̉��Z�q�ƂȂ�܂����B2.25 beta 1 ������z�肵�Ă���A�v���P�[�V�����ł́A���̐ݒ���u2.25�����ƌ݊��v�ɂ��Ȃ��Ɛ���ɓ��삵�Ȃ��\��������܂��B
+　TJS2の前置'*'演算子の動作を指定します。<r/>
+　設定可能な値は <b>'default' (2.25以降の動作)</b>, <b>'compat' (2.25未満の動作)</b> のいずれかで、このオプションを指定しないと 'default' が指定されたものと見なされます。<r/>
+　TJS2の前置'*'演算子は、プロパティオブジェクトそのものを、プロパティハンドラを介さずに取り出す演算子でしたが、2.25 beta 1 より、この機能を持つ演算子は前置の'&amp;'となり、前置'*'演算子はプロパティオブジェクトのプロパティハンドラを動作させるための演算子となりました。2.25 beta 1 未満を想定しているアプリケーションでは、この設定を「2.25未満と互換」にしないと正常に動作しない可能性があります。
 </dd>
 
 
-<dt>-<kw>dsvolfactor</kw> (DirectSound�̃{�����[���J�[�u)</dt>
+<dt>-<kw>dsvolfactor</kw> (DirectSoundのボリュームカーブ)</dt>
 <dd>
-�@�ݒ�\�Ȓl�� <b>'3322' (2.31 2011/6/14�ȍ~�̓���)</b>, <b>'5000' (2.31 2011/6/14�����̓���)</b> �̂����ꂩ�ŁA���̃I�v�V�������w�肵�Ȃ��� '3322' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@DirectSound�̃{�����[���J�[�u�́A2.31 2011/6/14 ���A��蒼���I�ȃJ�[�u�ɂȂ�܂����B<r/>
+　設定可能な値は <b>'3322' (2.31 2011/6/14以降の動作)</b>, <b>'5000' (2.31 2011/6/14未満の動作)</b> のいずれかで、このオプションを指定しないと '3322' が指定されたものと見なされます。<r/>
+　DirectSoundのボリュームカーブは、2.31 2011/6/14 より、より直感的なカーブになりました。<r/>
 </dd>
 
 
-<dt>-<kw>readencoding</kw> (�X�N���v�g�Ǎ��ݕ����R�[�h)</dt>
+<dt>-<kw>readencoding</kw> (スクリプト読込み文字コード)</dt>
 <dd>
-�@�ݒ�\�Ȓl�� <b>'Shift_JIS' (�g���g��2�݊��̓���)</b>, <b>'UTF-8' (�g���g��Z�̓���)</b> �̂����ꂩ�ŁA���̃I�v�V�������w�肵�Ȃ��� 'UTF-8' ���w�肳�ꂽ���̂ƌ��Ȃ���܂��B<r/>
-�@�X�N���v�g��ǂݍ��ނ̂Ɏg�p���镶���R�[�h�ł��B<r/>
+　設定可能な値は <b>'Shift_JIS' (吉里吉里2互換の動作)</b>, <b>'UTF-8' (吉里吉里Zの動作)</b> のいずれかで、このオプションを指定しないと 'UTF-8' が指定されたものと見なされます。<r/>
+　スクリプトを読み込むのに使用する文字コードです。<r/>
 </dd>
 
 

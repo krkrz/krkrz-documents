@@ -1,73 +1,73 @@
-<?xml version="1.0" encoding="Shift_JIS" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <doc>
-<title>���쌠�Ȃ�</title>
+<title>著作権など</title>
 
 <para>
-<ptitle>���쌠/���C�Z���X</ptitle>
-�@SDK �t���� license.txt ���������������B<r/>
-�@�ȉ��͒��쌠�⃉�C�Z���X�Ɋւ��� FAQ ���邢�͑����̕����^��Ɏv���ł��낤���ł��B<r/>
-�@������ license.txt �ɏ�����Ă���ʂ�ł��̂ŁA�K�� license.txt �ɖڂ�ʂ��Ă��������B<r/>
-�@�����ɏ�����Ă��鎖�� license.txt �ɏ�����Ă��邱�Ƃ������H������Ă����ꍇ�Alicense.txt �ɏ�����Ă��邱�Ƃ̂ق����D�悳��܂��B<r/>
+<ptitle>著作権/ライセンス</ptitle>
+　SDK 付属の license.txt をご覧ください。<r/>
+　以下は著作権やライセンスに関する FAQ あるいは多くの方が疑問に思うであろう事です。<r/>
+　原則は license.txt に書かれている通りですので、必ず license.txt に目を通してください。<r/>
+　ここに書かれている事と license.txt に書かれていることがもし食い違っていた場合、license.txt に書かれていることのほうが優先されます。<r/>
 <r/>
 <dl>
-<dt>�g���g���̍�҂ɂ����𕥂�Ȃ��ƂȂ�Ȃ��̂ł��傤���E�E�E</dt>
+<dt>吉里吉里の作者にお金を払わないとならないのでしょうか・・・</dt>
 <dd>
-�@���̕K�v�͂���܂���B
+　その必要はありません。
 </dd>
 
-<dt>���p ( �V�F�A�E�F�A�܂� ) �ŗ��p�������̂ł����E�E�E</dt>
+<dt>商用 ( シェアウェア含む ) で利用したいのですが・・・</dt>
 <dd>
-�@���p�ł����p�ł��܂��B<r/>
-�@���p�ł��A���p�Ɋւ����C�Z���X�����͕K�v����܂���B�����ŗ��p�ł��܂��B
+　商用でも利用できます。<r/>
+　商用でも、利用に関しライセンス料等は必要ありません。無償で利用できます。
 </dd>
 
-<dt>��i���ɂ����O�����؂肵�����̂ł����E�E�E</dt>
+<dt>作品中にお名前をお借りしたいのですが・・・</dt>
 <dd>
-�@���ɋg���g�����g�p�����Ƃ������Ƃ��h�L�������g�Ȃǂɏ����K�v�͂���܂���B<r/>
-�@�������A�����Ă��������Ă����\�ł�(^^;<r/>
-�@���ɋL�ڂ̂Ȃ��ꍇ�́A-about�ŕ\������郉�C�Z���X�\�����폜���邱�Ƃ͏o���܂���B<r/>
-�@�C��BSD���C�Z���X�ɏ]�����C�Z���X�\�����h�L�������g���ɋL�ڂ����ꍇ�A-about�ŕ\������郉�C�Z���X�\���̍폜���\�ł��B
+　特に吉里吉里を使用したということをドキュメントなどに書く必要はありません。<r/>
+　もちろん、書いてくださっても結構です(^^;<r/>
+　特に記載のない場合は、-aboutで表示されるライセンス表示を削除することは出来ません。<r/>
+　修正BSDライセンスに従いライセンス表示をドキュメント等に記載した場合、-aboutで表示されるライセンス表示の削除も可能です。
 </dd>
 
-<dt>��i������������g���g���̍�҂ɒm�点�Ȃ���΂Ȃ�Ȃ��̂ł��傤���E�E�E</dt>
+<dt>作品が完成したら吉里吉里の作者に知らせなければならないのでしょうか・・・</dt>
 <dd>
-�@�g���g�����g�p�������Ƃ�ʒm����`���͂���܂���B���p�̏ꍇ�ł��ʒm�̋`���͂���܂���B<r/>
-�@�����A�ꌾ���������Ă�������Ƃ����Ɗ�т܂��A�͂��B
+　吉里吉里を使用したことを通知する義務はありません。商用の場合でも通知の義務はありません。<r/>
+　ただ、一言声をかけてくださるときっと喜びます、はい。
 </dd>
 
-<dt>�g���g���̃\�[�X�𗬗p�������̂ł����E�E�E</dt>
+<dt>吉里吉里のソースを流用したいのですが・・・</dt>
 <dd>
-�@�g���g��Z�� �C��BSD���C�Z���X�ł��B�C��BSD���C�Z���X�ɏ]���ă\�[�X�𗬗p���邱�Ƃ��ł��܂��B
+　吉里吉里Zは 修正BSDライセンスです。修正BSDライセンスに従ってソースを流用することもできます。
 </dd>
 </dl>
 </para>
 
 <para>
-<ptitle>�ӎ�</ptitle>
-�@�g���g���Q����ыg���g��Z�͑����̕��̋��͂������Đ��藧���Ă��܂��B�݂Ȃ��܂̂����ӂɊ��ӂ������܂��B<r/>
-�@���ɋg���g��/KAG�Ɋւ��Ăo�h�`���їl�ɂ͑����̏��������������܂����B���肪�Ƃ��������܂��B<r/>
+<ptitle>謝辞</ptitle>
+　吉里吉里２および吉里吉里Zは多くの方の協力があって成り立っています。みなさまのご厚意に感謝いたします。<r/>
+　特に吉里吉里/KAGに関してＰＩＡ少尉様には多くの助言をいただきました。ありがとうございます。<r/>
 <r/>
-�@�g���g��Z �̓N���E�h�t�@���f�B���O�ɂ���āA�����̕��̋��K�I�x���ɂ���ĊJ������܂����B<r/>
-�@�x�����Ă������������X(���s���h�̗�)�́A�@W.Dee, casper, �L�����MCF, Biscrat, �L, nagai, ���[, ���� ��V, �i��,�����T��, ��傤���i���͖������̐��j, AZ-UME, �� �H�l, Katsumasa Tsuneyoshi, ���r��, miahmie, �T�[�N����, �A�U�i�V, �͂�����, �I�����쏊, ����ӂ�/waffle, �����\�t�g, TYPE-MOON, �L����ЃG���c�[�ł��B<r/>
+　吉里吉里Z はクラウドファンディングによって、多くの方の金銭的支援によって開発されました。<r/>
+　支援していただいた方々(順不同敬称略)は、　W.Dee, casper, 有限会社MCF, Biscrat, 青猫, nagai, ルー, 高際 雅之, 永劫,ゆんゆん探偵, りょうご（今は無きあの星）, AZ-UME, 京 秋人, Katsumasa Tsuneyoshi, 小池潤, miahmie, サークル獏, アザナシ, はっしぃ, 棚中製作所, わっふる/waffle, ワムソフト, TYPE-MOON, 有限会社エムツーです。<r/>
 <r/>
-�@Win32Ole �v���O�C�����͂��߂Ƃ���l�X�ȃv���O�C���� Go Watanabe �����炢�������܂����B���肪�Ƃ��������܂��B<r/>
+　Win32Ole プラグインをはじめとする様々なプラグインは Go Watanabe 氏からいただきました。ありがとうございます。<r/>
 <r/>
-�@Photoshop�݊��̃u�����h�֐��Q�� Kenjo �����炢�������܂����B���肪�Ƃ��������܂��B<r/>
+　Photoshop互換のブレンド関数群は Kenjo 氏からいただきました。ありがとうございます。<r/>
 <r/>
-�@�Q�[���p�b�h�Ή��R�[�h�� Kiyobee �����璸���܂����B���肪�Ƃ��������܂��B<r/>
+　ゲームパッド対応コードは Kiyobee 氏から頂きました。ありがとうございます。<r/>
 <r/>
-�@KAGParser �N���X�̃h�L�������g�AKAG�̊g����  Kouhei Yanagita �����炢�������܂����B���肪�Ƃ��������܂��B<r />
+　KAGParser クラスのドキュメント、KAGの拡張は  Kouhei Yanagita 氏からいただきました。ありがとうございます。<r />
 <r/>
-�@�g���g���̃A�C�R���� MIK ���ɂ����̂ł��B���肪�Ƃ��������܂��B<r/>
+　吉里吉里のアイコンは MIK 氏によるものです。ありがとうございます。<r/>
 <r/>
-�@���C���ɂ�郀�[�r�[�Đ��Ȃǂ̃��[�r�[�Đ��Ɋւ���l�X�ȋ@�\�� �䌳 ���� ���ɂ��u���[�r�[�g���v����荞�܂��Ē����܂����B���肪�Ƃ��������܂��B<r/>
+　レイヤによるムービー再生などのムービー再生に関する様々な機能は 井元 武則 氏による「ムービー拡張」を取り込ませて頂きました。ありがとうございます。<r/>
 <at target="_top" href="http://www.kaede-software.com/">http://www.kaede-software.com/</at><r/>
 <r/>
-�@�u���[�̎����� yun �����璸�����R�[�h�����ɂȂ��Ă���܂��B���肪�Ƃ��������܂��B<r/>
+　ブラーの実装は yun 氏から頂いたコードが元になっております。ありがとうございます。<r/>
 <r/>
-�@mey�������Pad�֘A�̋@�\�����p�b�`�AString.reverse() �Ȃǂ̎��������������܂����B���肪�Ƃ��������܂��B<r/>
+　mey氏からはPad関連の機能強化パッチ、String.reverse() などの実装をいただきました。ありがとうございます。<r/>
 <r/>
-�@�ȉ��͋g���g�����g�p���Ă���v���O���~���O���C�u����/�x���\�t�g�E�F�A�̃��X�g�ł� (���s��, �h�̗�)�B�L�p�ȃ��C�u���������J����Ă�����X�Ɋ��ӂ������܂��B<r/>
+　以下は吉里吉里が使用しているプログラミングライブラリ/支援ソフトウェアのリストです (順不同, 敬称略)。有用なライブラリを公開されている方々に感謝いたします。<r/>
 <r/>
 <dl>
 <dt>IJG JPEG Library (Independent JPEG Group)</dt>
@@ -103,7 +103,7 @@
     <at target="_top"  href="http://upx.sourceforge.net/">http://upx.sourceforge.net/</at>
 </dd>
 
-<dt>Shell Component Library (�ɓ� ���u)</dt>
+<dt>Shell Component Library (伊藤 隆志)</dt>
 <dd>
     <at target="_top"  href="http://www.bekkoame.ne.jp/~itotaka/">http://www.bekkoame.ne.jp/~itotaka/</at>
 </dd>
@@ -158,9 +158,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </dd>
 
 
-<dt>Ogg Vorbis �������v���W�F�N�g</dt>
+<dt>Ogg Vorbis 高速化プロジェクト</dt>
 <dd>
-�g���g���Q�́Ablacksword ���ɂ�� Ogg Vorbis �������v���W�F�N�g�Ō��J����Ă���A SSE �Ή��� FFT ���Z�R�[�h�� Phase Vocoder �̓����Ŏg�p���Ă��܂��B
+吉里吉里２は、blacksword 氏による Ogg Vorbis 高速化プロジェクトで公開されている、 SSE 対応の FFT 演算コードを Phase Vocoder の内部で使用しています。
 <at target="_top" href="http://homepage3.nifty.com/blacksword/">http://homepage3.nifty.com/blacksword/</at><r/>
 </dd>
 
