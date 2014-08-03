@@ -43,6 +43,8 @@ buffer	top	f_Bitmap_buffer.html	Bitmapクラス
 bufferForWrite	top	f_Bitmap_bufferForWrite.html	Bitmapクラス
 bufferPitch	top	f_Bitmap_bufferPitch.html	Bitmapクラス
 loading	top	f_Bitmap_loading.html	Bitmapクラス
+BitmapLayerTreeOwnerクラス概要	top	f_BitmapLayerTreeOwner.html	BitmapLayerTreeOwnerクラス
+BitmapLayerTreeOwner	top	f_BitmapLayerTreeOwner_BitmapLayerTreeOwner.html	BitmapLayerTreeOwnerクラス
 Clipboardクラス概要	top	f_Clipboard.html	Clipboardクラス
 クリップボード	id21	f_Clipboard.html	Clipboardクラス
 hasFormat	top	f_Clipboard_hasFormat.html	Clipboardクラス
@@ -710,6 +712,7 @@ onDeactivate	top	f_System_onDeactivate.html	Systemクラス
 drawThreadNum	top	f_System_drawThreadNum.html	Systemクラス
 スレッド数	id407	f_System_drawThreadNum.html	System.drawThreadNum
 dtnAuto	id408	f_System_drawThreadNum.html	System.drawThreadNum
+savedGamesPath	top	f_System_savedGamesPath.html	Systemクラス
 Timerクラス概要	top	f_Timer.html	Timerクラス
 Timer	top	f_Timer_Timer.html	Timerクラス
 onTimer	top	f_Timer_onTimer.html	Timerクラス
@@ -844,6 +847,7 @@ filters	top	f_WaveSoundBuffer_filters.html	WaveSoundBufferクラス
 Window.BasicDrawDeviceクラス概要	top	f_Window.BasicDrawDevice.html	Window.BasicDrawDeviceクラス
 BasicDrawDevice	top	f_Window.BasicDrawDevice_BasicDrawDevice.html	Window.BasicDrawDeviceクラス
 recreate	top	f_Window.BasicDrawDevice_recreate.html	Window.BasicDrawDeviceクラス
+onDisplayRotate	top	f_Window.BasicDrawDevice_onDisplayRotate.html	Window.BasicDrawDeviceクラス
 interface	top	f_Window.BasicDrawDevice_interface.html	Window.BasicDrawDeviceクラス
 Windowクラス概要	top	f_Window.html	Windowクラス
 ウィンドウ	id430	f_Window.html	Windowクラス
@@ -917,6 +921,7 @@ onPopupHide	top	f_Window_onPopupHide.html	Windowクラス
 onActivate	top	f_Window_onActivate.html	Windowクラス
 onDeactivate	top	f_Window_onDeactivate.html	Windowクラス
 onHintChanged	top	f_Window_onHintChanged.html	Windowクラス
+onDisplayRotate	top	f_Window_onDisplayRotate.html	Windowクラス
 close	top	f_Window_close.html	Windowクラス
 bringToFront	top	f_Window_bringToFront.html	Windowクラス
 update	top	f_Window_update.html	Windowクラス
@@ -950,6 +955,9 @@ startY	id487	f_Window_getTouchPoint.html	Window.getTouchPoint
 x	id488	f_Window_getTouchPoint.html	Window.getTouchPoint
 y	id489	f_Window_getTouchPoint.html	Window.getTouchPoint
 ID	id490	f_Window_getTouchPoint.html	Window.getTouchPoint
+getMouseVelocity	top	f_Window_getMouseVelocity.html	Windowクラス
+getTouchVelocity	top	f_Window_getTouchVelocity.html	Windowクラス
+resetMouseVelocity	top	f_Window_resetMouseVelocity.html	Windowクラス
 visible	top	f_Window_visible.html	Windowクラス
 caption	top	f_Window_caption.html	Windowクラス
 キャプション	id491	f_Window_caption.html	Window.caption
@@ -998,3 +1006,5 @@ enableTouch	top	f_Window_enableTouch.html	Windowクラス
 タッチイベント	id505	f_Window_enableTouch.html	Window.enableTouch
 waitVSync	top	f_Window_waitVSync.html	Windowクラス
 hintDelay	top	f_Window_hintDelay.html	Windowクラス
+displayOrientation	top	f_Window_displayOrientation.html	Windowクラス
+displayRotate	top	f_Window_displayRotate.html	Windowクラス

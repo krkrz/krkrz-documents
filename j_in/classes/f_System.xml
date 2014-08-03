@@ -819,4 +819,17 @@ System.exceptionHandler = function (e)<r/>
         </desc>
 </member>
 
+<member>
+    <name>savedGamesPath</name>
+    <type>property</type>
+    <shortdesc>保存したゲームのパス(1.1.0以降)</shortdesc>
+    <access>r</access>
+    <desc>
+		　保存したゲームのパスを表します。<r/>
+		<r/>
+		これは、通常、以下の通りになります。<r/>
+		C:\Users\&lt;ユーザ名&gt;\Saved Games<r/>
+    </desc>
+</member>
+
 </doc>

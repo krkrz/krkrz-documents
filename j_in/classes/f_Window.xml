@@ -838,6 +838,62 @@
 </member>
 
 <member>
+	<name>onDisplayRotate</name>
+	<type>event</type>
+	<shortdesc>画面が回転されたとき(1.1.0以降)</shortdesc>
+	<arg>
+		<argitem>
+			<name>orientation</name>
+			<default></default>
+			<desc>
+				　画面の向き( orientation ) です。<r/>
+				　以下のいずれかの値になります。<r/>
+				　oriUnknown (取得失敗/不明), oriPortrait(縦向き), oriLandscape(横向き)<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>angle</name>
+			<default></default>
+			<desc>
+				　角度です。<r/>
+				　角度 ( angle ) は、0、90、180、270、-1 のいずれかで、取得できなかった時は-1となります。<r/>
+				　角度は、そのデバイスデフォルトからの回転角なので、縦向きのデバイスでは縦向きで0となります。<r/>
+				　通常のデバイスだと、横向きで0が多ようです。<r/>
+				　縦向きが0になるのは最近の8インチタブレットなどで、縦向きが標準の向きとなっているものです。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>bpp</name>
+			<default></default>
+			<desc>
+				　 bits per pixel です。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>width</name>
+			<default></default>
+			<desc>
+				　画面の幅です。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>height</name>
+			<default></default>
+			<desc>
+				　画面の高さです。<r/>
+			</desc>
+		</argitem>
+	</arg>
+	<result></result>
+	<desc>
+		　画面が回転されたときに呼び出されるイベント関数を表します。<r/>
+	</desc>
+	<ref>Window.displayOrientation</ref>
+	<ref>Window.displayRotate</ref>
+</member>
+
+
+<member>
 	<name>close</name>
 	<type>method</type>
 	<shortdesc>ウィンドウを閉じる</shortdesc>
@@ -1313,6 +1369,99 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 	<ref>Window.touchPointCount</ref>
 </member>
 
+<member>
+	<name>getMouseVelocity</name>
+	<type>method</type>
+	<shortdesc>マウス座標移動速度の取得(1.1.0以降)</shortdesc>
+	<arg>
+		<argitem>
+			<name>x</name>
+			<default></default>
+			<desc>
+				　X軸方向のマウス座標移動速度が返ります。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>y</name>
+			<default></default>
+			<desc>
+				　Y軸方向のマウス座標移動速度が返ります。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>speed</name>
+			<default></default>
+			<desc>
+				　マウス座標移動速度が返ります。<r/>
+			</desc>
+		</argitem>
+	</arg>
+	<result>取得が成功したか失敗したかが返ります</result>
+	<desc>
+		　現在のマウス移動速度を pixel / sec で取得します。<r/>
+		　ウィンドウ内に入った瞬間から計測開始されています。<r/>
+		　<ref>Window.resetMouseVelocity</ref> を使用して計測をリセットし、任意のタイミングか計測得できるように出来ます。<r/>
+	</desc>
+	<ref>Window.getTouchVelocity</ref>
+	<ref>Window.resetMouseVelocity</ref>
+</member>
+
+<member>
+	<name>getTouchVelocity</name>
+	<type>method</type>
+	<shortdesc>タッチ座標移動速度の取得(1.1.0以降)</shortdesc>
+	<arg>
+		<argitem>
+			<name>id</name>
+			<default></default>
+			<desc>
+				　タッチIDを指定します。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>x</name>
+			<default></default>
+			<desc>
+				　X軸方向のマウス座標移動速度が返ります。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>y</name>
+			<default></default>
+			<desc>
+				　Y軸方向のマウス座標移動速度が返ります。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>speed</name>
+			<default></default>
+			<desc>
+				　マウス座標移動速度が返ります。<r/>
+			</desc>
+		</argitem>
+	</arg>
+	<result>取得が成功したか失敗したかが返ります</result>
+	<desc>
+		　現在のタッチ移動速度を pixel / sec で取得します。<r/>
+		　押下されてから離されるまでの間計測されています。<r/>
+		　マルチタッチ対応のため ID ごとに速度計測されています。<r/>
+		　<ref>Window.onTouchUp</ref> イベントのメソッド呼び出しが終了すると計測している速度情報は消えてしまうので注意が必要です。<r/>
+	</desc>
+	<ref>Window.getMouseVelocity</ref>
+</member>
+
+<member>
+	<name>resetMouseVelocity</name>
+	<type>method</type>
+	<shortdesc>マウス座標移動速度計測のリセット(1.1.0以降)</shortdesc>
+	<arg></arg>
+	<result></result>
+	<desc>
+		　マウスの座標移動速度計測をリセットします。<r/>
+		　リセットすることで任意のタイミングから速度計測を開始することが出来ます。<r/>
+	</desc>
+	<ref>Window.getMouseVelocity</ref>
+</member>
 
 
 
@@ -1758,6 +1907,34 @@ postInputEvent('onKeyUp',   %[key: VK_UP, shift: ssShift]);<r/>
 		　-1を設定するとヒントが表示されることはありません。<r/>
 	</desc>
 	<ref>Window.onHintChanged</ref>
+</member>
+
+
+<member>
+	<name>displayOrientation</name>
+	<type>property</type>
+	<shortdesc>ディスプレイの向き(1.1.0以降)</shortdesc>
+	<access>r</access>
+	<desc>
+		　ディスプレイの向きを表します。<r/>
+		　oriUnknown (取得失敗/不明), oriPortrait(縦向き), oriLandscape(横向き)のいずれかの値です。<r/>
+	</desc>
+	<ref>Window.onDisplayRotate</ref>
+	<ref>Window.displayRotate</ref>
+</member>
+
+
+<member>
+	<name>displayRotate</name>
+	<type>property</type>
+	<shortdesc>ディスプレイの回転角度(1.1.0以降)</shortdesc>
+	<access>r</access>
+	<desc>
+		　ディスプレイの回転角度を表します。<r/>
+		　0、90、180、270、-1 のいずれかで、取得できなかった時は-1です。<r/>
+	</desc>
+	<ref>Window.onDisplayRotate</ref>
+	<ref>Window.displayOrientation</ref>
 </member>
 
 </doc>
