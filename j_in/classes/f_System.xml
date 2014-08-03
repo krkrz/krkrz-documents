@@ -449,6 +449,28 @@
 </member>
 
 <member>
+	<name>showVersion</name>
+	<type>method</type>
+	<shortdesc>aboutダイアログの表示(1.1.0以降)</shortdesc>
+	<arg></arg>
+	<result></result>
+	<desc>
+		　aboutダイアログを表示します。<r/>
+	</desc>
+</member>
+
+<member>
+	<name>dumpHeap</name>
+	<type>method</type>
+	<shortdesc>ヒープ情報ダンプ(1.1.0以降)</shortdesc>
+	<arg></arg>
+	<result></result>
+	<desc>
+		　ヒープの情報をコンソールに出力します。<r/>
+	</desc>
+</member>
+
+<member>
 	<name>versionString</name>
 	<type>property</type>
 	<shortdesc>バージョン文字列</shortdesc>

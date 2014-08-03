@@ -684,6 +684,8 @@ clDeactivate	id401	f_System_doCompact.html	System.doCompact
 clMinimize	id402	f_System_doCompact.html	System.doCompact
 clAll	id403	f_System_doCompact.html	System.doCompact
 touchImages	top	f_System_touchImages.html	Systemクラス
+showVersion	top	f_System_showVersion.html	Systemクラス
+dumpHeap	top	f_System_dumpHeap.html	Systemクラス
 versionString	top	f_System_versionString.html	Systemクラス
 versionInformation	top	f_System_versionInformation.html	Systemクラス
 eventDisabled	top	f_System_eventDisabled.html	Systemクラス
