@@ -42,6 +42,7 @@
 				　ステータス文字列を表します。<r/>
 				　以下のいずれかです。<r/>
 				<tt>"<kw>unload</kw>"   : </tt> メディアが開かれてない<r/>
+				<tt>"<kw>ready</kw>"    : </tt> メディアの準備が完了している<r/>
 				<tt>"<kw>play</kw>"     : </tt> メディアは再生中である<r/>
 				<tt>"<kw>stop</kw>"     : </tt> メディアは停止中である<r/>
 				<tt>"<kw>pause</kw>"    : </tt> メディアは一時停止中である<r/>
@@ -51,6 +52,7 @@
 	<result></result>
 	<desc>
 		このオブジェクトのステータスが変更されたときに発生します。<r/>
+		ready は、vomMFEVR モードの時のみ発生します。<r/>
 	</desc>
 </member>
 
@@ -601,7 +603,8 @@
 	<access>r/w</access>
 	<desc>
 		オーバーレイモードであるか、レイヤ描画モードであるか、ミキサーモードであるかを表します。値を設定することもできます。<r/>
-		オーバーレイモードの場合は <kw>vomOverlay</kw>、レイヤ描画モードの場合は <kw>vomLayer</kw> 、ミキサーモードの場合は <kw>vomMixer</kw> となります。<r/>
+		オーバーレイモードの場合は <kw>vomOverlay</kw>、レイヤ描画モードの場合は <kw>vomLayer</kw> 、ミキサーモードの場合は <kw>vomMixer</kw>、Media Foundation モードの場合は <kw>vomMFEVR</kw> となります。<r/>
+		vomMFEVR モードは 1.2.0 以降でのみ使用できます。<r/>
 	</desc>
 </member>
 
@@ -946,6 +949,26 @@
 	<desc>
 		ビデオの彩度を表します。<r/>
 		ミキサーモードでのみ利用可能です。<r/>
+	</desc>
+</member>
+
+<member>
+	<name>originalWidth</name>
+	<type>property</type>
+	<shortdesc>ビデオの実際の幅</shortdesc>
+	<access>r</access>
+	<desc>
+		格納されているビデオの幅です。<r/>
+	</desc>
+</member>
+
+<member>
+	<name>originalHeight</name>
+	<type>property</type>
+	<shortdesc>ビデオの実際の高さ</shortdesc>
+	<access>r</access>
+	<desc>
+		格納されているビデオの高さです。<r/>
 	</desc>
 </member>
 
