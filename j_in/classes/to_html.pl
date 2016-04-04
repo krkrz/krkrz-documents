@@ -80,6 +80,7 @@ sub get_title
 			return "";
 		}
 	}
+	binmode(LFH, ":utf8");
 	my @all = <LFH>;
 	my $all = join('', @all);
 	close LFH;
@@ -773,6 +774,7 @@ sub process
 	$outfile = $of;
 	$a_target = 'main';
 	open FH , $fn;
+	binmode(FH, ":utf8");
 	my @content_all = <FH>;
 	my $content = join('', 	@content_all);
 	close FH;

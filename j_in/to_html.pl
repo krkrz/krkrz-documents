@@ -103,6 +103,7 @@ sub get_title
 			return "";
 		}
 	}
+	binmode(LFH, ":utf8");
 	my @all = <LFH>;
 	my $all = join('', @all);
 	close LFH;
@@ -404,6 +405,7 @@ sub process
 	$outfile = $of;
 	$a_target = 'main';
 	open FH , $fn;
+	binmode(FH, ":utf8");
 	my @content_all = <FH>;
 	my $content = join('', 	@content_all);
 	close FH;
@@ -416,10 +418,11 @@ sub process
 	$content =~ s/\\/---yen---/g;
 	$content =~ s/\~/---tilde---/g;
 	#$content = Jcode->new($content, "euc")->sjis;
-	$content =~ s/Shift_JIS/x-sjis-unicode/;
+	#$content =~ s/Shift_JIS/x-sjis-unicode/;
 	my $doc = $parser->parse($content);
 
 	open OH, ">$of";
+	binmode(OH, ":utf8");
 	&rr($doc);
 }
 
@@ -436,6 +439,7 @@ foreach my $each (@list)
 
 if(open FH, "keys.txt")
 {
+	binmode(FH, ":utf8");
 	my @addt = <FH>;
 	close FH;
 	foreach my $each ( @addt)
@@ -450,6 +454,7 @@ sub writekeywords
 	my $i;
 
 	open OH, ">keywords.html";
+	binmode(OH, ":utf8");
 
 	print OH <<EOF;
 <?xml version="1.0" encoding="UTF-8"?>
@@ -519,6 +524,7 @@ EOF
 	@keywords = sort @keywords;
 
 	open OH, ">keywords_p.html";
+	binmode(OH, ":utf8");
 
 
 	print OH <<EOF;

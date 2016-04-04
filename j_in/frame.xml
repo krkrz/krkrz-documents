@@ -41,6 +41,7 @@
 <at href="f_Layer.html">Layer クラス</at><r/>
 <at href="f_Font.html">Font クラス</at><r/>
 <at href="f_Bitmap.html">Bitmap クラス</at><r/>
+<at href="f_BitmapLayerTreeOwner.html">BitmapLayerTreeOwner クラス</at><r/>
 <at href="f_ImageFunction.html">ImageFunction クラス</at><r/>
 <at href="f_Clipboard.html">Clipboard クラス</at><r/>
 <at href="f_WaveSoundBuffer.html">WaveSoundBuffer クラス</at><r/>
