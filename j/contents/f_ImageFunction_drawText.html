@@ -50,7 +50,7 @@
 <td>				　描画する文字の色を 0xRRGGBB 形式で指定します。<br />
 			</td></tr>
 <tr><td valign="top"><span class="argname">opa</span></td>
-<td>				　描画する文字の不透明度 ( -255 縲鰀 0 縲鰀 255 ) を指定します。<br />
+<td>				　描画する文字の不透明度 ( -255 ～ 0 ～ 255 ) を指定します。<br />
 				　負の数の指定は face が dfAlpha の場合のみに有効で、
 				この場合は文字の形に不透明度が取り除かれる事になります ( 値が小さいほど
 				効果が大きくなります )。<br />
@@ -61,9 +61,9 @@
 			</td></tr>
 <tr><td valign="top"><span class="argname">face</span></td>
 <td>				　描画方式を指定します。<br />
-				<span class="script"><a class="targanchor" name="id139" id="id139">dfAlpha</a></span> が指定された場合は画像はアルファチャンネルつき画像と見なされ、描画されます。<br />
-				<span class="script"><a class="targanchor" name="id140" id="id140">dfAddAlpha</a></span> が指定された場合は画像は加算アルファチャンネルつき画像として見なされ、描画されます。<br />
-				<span class="script"><a class="targanchor" name="id141" id="id141">dfOpaque</a></span> が指定された場合は画像はすべて完全不透明であると見なされ、描画されます。<br />
+				<span class="script"><a class="targanchor" name="id155" id="id155">dfAlpha</a></span> が指定された場合は画像はアルファチャンネルつき画像と見なされ、描画されます。<br />
+				<span class="script"><a class="targanchor" name="id156" id="id156">dfAddAlpha</a></span> が指定された場合は画像は加算アルファチャンネルつき画像として見なされ、描画されます。<br />
+				<span class="script"><a class="targanchor" name="id157" id="id157">dfOpaque</a></span> が指定された場合は画像はすべて完全不透明であると見なされ、描画されます。<br />
 			</td></tr>
 <tr><td valign="top"><span class="argname">shadowlevel</span></td>
 <td>				　影の不透明度を指定します。shadowwidth 引数の値によって適切な値は変動します。<br />

@@ -1170,9 +1170,9 @@
 			</desc>
 		</argitem>
 	</arg>
-	<result>マスク画像の値 ( 0 縲鰀 255 )</result>
+	<result>マスク画像の値 ( 0 ～ 255 )</result>
 	<desc>
-		　レイヤマスク画像 ( 不透明度を保持している画像 ) の任意の位置の値 ( 0 縲鰀 255 ) を取得します。<r/>
+		　レイヤマスク画像 ( 不透明度を保持している画像 ) の任意の位置の値 ( 0 ～ 255 ) を取得します。<r/>
 		　画像座標として無効な ( 範囲外の ) 位置を指定すると例外が発生します。<r/>
 	</desc>
 </member>
@@ -1200,13 +1200,13 @@
 			<name>value</name>
 			<default></default>
 			<desc>
-				　設定する値 ( 0 縲鰀 255 ) を指定します。<r/>
+				　設定する値 ( 0 ～ 255 ) を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		　レイヤマスク画像 ( 不透明度を保持している画像 ) の任意の位置の値 ( 0 縲鰀 255 ) を設定します。<r/>
+		　レイヤマスク画像 ( 不透明度を保持している画像 ) の任意の位置の値 ( 0 ～ 255 ) を設定します。<r/>
 		　画像座標として無効な ( 範囲外の ) 位置を指定すると例外が発生します。<r/>
 	</desc>
 </member>
@@ -1231,9 +1231,9 @@
 			</desc>
 		</argitem>
 	</arg>
-	<result>領域画像の値 ( 0 縲鰀 255 )</result>
+	<result>領域画像の値 ( 0 ～ 255 )</result>
 	<desc>
-		　レイヤ領域画像の任意の位置の値 ( 0 縲鰀 255 ) を取得します。<r/>
+		　レイヤ領域画像の任意の位置の値 ( 0 ～ 255 ) を取得します。<r/>
 		　画像座標として無効な ( 範囲外の ) 位置を指定すると例外が発生します。<r/>
 	</desc>
 </member>
@@ -1261,13 +1261,13 @@
 			<name>value</name>
 			<default></default>
 			<desc>
-				　設定する値 ( 0 縲鰀 255 ) を指定します。<r/>
+				　設定する値 ( 0 ～ 255 ) を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
 	<result></result>
 	<desc>
-		　レイヤ領域画像の任意の位置の値 ( 0 縲鰀 255 ) を設定します。<r/>
+		　レイヤ領域画像の任意の位置の値 ( 0 ～ 255 ) を設定します。<r/>
 		　画像座標として無効な ( 範囲外の ) 位置を指定すると例外が発生します。<r/>
 	</desc>
 </member>
@@ -1650,8 +1650,8 @@
 				<tt><kw>dfAlpha</kw> (または<kw>dfBoth</kw>)  </tt> : 0xAARRGGBB 形式で不透明度と色を指定してください。メインとマスクの両方が塗りつぶされます。<r/>
 				<tt><kw>dfAddAlpha</kw>              </tt> : 0xAARRGGBB 形式で不透明度と色を指定してください。メインとマスクの両方が塗りつぶされます。<r/>
 				<tt><kw>dfOpaque</kw> (または<kw>dfMain</kw>) </tt> : 0xRRGGBB 形式で色を指定してください。<ref>Layer.holdAlpha</ref> プロパティが真の時は、メインのみが塗りつぶされ、マスクはそのままになります。偽の時は dfAlpha や dfAddAlpha の時と同じく、0xAARRGGBB 形式での不透明度と色の指定を受け付け、メインとマスクの両方が塗りつぶされます。<r/>
-				<tt><kw>dfMask</kw>                  </tt> : マスク(不透明度)の値 ( 0 縲鰀 255 ) を指定してください。マスクのみが塗りつぶされ、メインはそのままになります。<r/>
-				<tt><kw>dfProvince</kw>              </tt> : 領域の値 ( 0 縲鰀 255 ) を指定してください。領域のみが塗りつぶされます。<r/>
+				<tt><kw>dfMask</kw>                  </tt> : マスク(不透明度)の値 ( 0 ～ 255 ) を指定してください。マスクのみが塗りつぶされ、メインはそのままになります。<r/>
+				<tt><kw>dfProvince</kw>              </tt> : 領域の値 ( 0 ～ 255 ) を指定してください。領域のみが塗りつぶされます。<r/>
 			</desc>
 		</argitem>
 	</arg>
@@ -1703,8 +1703,8 @@
 				<tt><kw>dfAlpha</kw> (または<kw>dfBoth</kw>)   </tt> : 0xRRGGBB 形式で色を指定してください<r/>
 				<tt><kw>dfAddAlpha</kw>                   </tt> : 0xRRGGBB 形式で色を指定してください<r/>
 				<tt><kw>dfOpaque</kw> (または<kw>dfMain</kw>)  </tt> : 0xRRGGBB 形式で色を指定してください<r/>
-				<tt><kw>dfMask</kw>                       </tt> : マスク(不透明度)の値 ( 0 縲鰀 255 ) を指定してください<r/>
-				<tt><kw>dfProvince</kw>                   </tt> : 領域の値 ( 0 縲鰀 255 ) を指定してください<r/>
+				<tt><kw>dfMask</kw>                       </tt> : マスク(不透明度)の値 ( 0 ～ 255 ) を指定してください<r/>
+				<tt><kw>dfProvince</kw>                   </tt> : 領域の値 ( 0 ～ 255 ) を指定してください<r/>
 				　dfOpaque を指定した場合は、マスク情報は無視されます(マスク情報が保持されるか破壊されるかは <ref>Layer.holdAlpha</ref> プロパティによります)。また、dfMask を指定した場合は、色の情報はそのままになります。<r/>
 				　dfAlpha の場合でかつ opa が負の場合はこの引数は無視されます。<r/>
 			</desc>
@@ -1713,7 +1713,7 @@
 			<name>opa</name>
 			<default>255</default>
 			<desc>
-				　塗りつぶす不透明度 ( -255 縲鰀 0 縲鰀 255 ) を指定します。<r/>
+				　塗りつぶす不透明度 ( -255 ～ 0 ～ 255 ) を指定します。<r/>
 				　この引数は、<ref>Layer.face</ref> プロパティの値が dfMask や
 				dfProvince の場合は無視されます ( 常に完全不透明 )。<r/>
 				　負の数の指定は <ref>Layer.face</ref> が dfAlpha の場合のみに有効で、
@@ -1766,7 +1766,7 @@
 			<name>opa</name>
 			<default>255</default>
 			<desc>
-				　描画する文字の不透明度 ( -255 縲鰀 0 縲鰀 255 ) を指定します。<r/>
+				　描画する文字の不透明度 ( -255 ～ 0 ～ 255 ) を指定します。<r/>
 				　負の数の指定は <ref>Layer.face</ref> が dfAlpha の場合のみに有効で、
 				この場合は文字の形に不透明度が取り除かれる事になります ( 値が小さいほど
 				効果が大きくなります )。<r/>
@@ -1864,7 +1864,7 @@
 			<name>opa</name>
 			<default>255</default>
 			<desc>
-				　描画する文字の不透明度 ( -255 縲鰀 0 縲鰀 255 ) を指定します。<r/>
+				　描画する文字の不透明度 ( -255 ～ 0 ～ 255 ) を指定します。<r/>
 				　負の数の指定は face が dfAlpha の場合のみに有効で、
 				この場合は文字の形に不透明度が取り除かれる事になります ( 値が小さいほど
 				効果が大きくなります )。<r/>
@@ -2153,7 +2153,7 @@
 			<name>opa</name>
 			<default>255</default>
 			<desc>
-				　演算の強度 ( 0 縲鰀 255 ) を指定します。<r/>
+				　演算の強度 ( 0 ～ 255 ) を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
@@ -2241,17 +2241,47 @@
 			<default>stNearest</default>
 			<desc>
 				　拡大縮小のタイプを指定します。<r/>
-				<tt><kw>stNearest</kw>    </tt> : 最近傍点法が用いられます<r/>
-				<tt><kw>stFastLinear</kw> </tt> : 低精度の線形補間が用いられます(一部実装)<r/>
-				<tt><kw>stLinear</kw>     </tt> : 線形補間が用いられます(一部実装)<r/>
-				<tt><kw>stCubic</kw>      </tt> : ３次元補間が用いられます(一部実装)<r/>
+				<tt><kw>stNearest</kw>          </tt> : 最近傍点法が用いられます<r/>
+				<tt><kw>stFastLinear</kw>       </tt> : 低精度の線形補間が用いられます(一部実装)<r/>
+				<tt><kw>stSemiFastLinear</kw>   </tt> : 固定小数線形補間が用いられます(1.3以降)<r/>
+				<tt><kw>stLinear</kw>           </tt> : 線形補間が用いられます(1.3以降実装変更)<r/>
+				<tt><kw>stFastCubic</kw>        </tt> : 固定小数３次元補間が用いられます(1.3以降)<r/>
+				<tt><kw>stCubic</kw>            </tt> : ３次元補間が用いられます(1.3以降実装変更)<r/>
+				<tt><kw>stFastLanczos2</kw>     </tt> : 固定小数Lanczos補間の範囲4x4が用いられます(1.3以降)<r/>
+				<tt><kw>stLanczos2</kw>         </tt> : Lanczos補間の範囲4x4が用いられます(1.3以降)<r/>
+				<tt><kw>stFastLanczos3</kw>     </tt> : 固定小数Lanczos補間の範囲6x6が用いられます(1.3以降)<r/>
+				<tt><kw>stLanczos3</kw>         </tt> : Lanczos補間の範囲6x6が用いられます(1.3以降)<r/>
+				<tt><kw>stFastSpline16</kw>     </tt> : 固定小数スプライン補間4x4が用いられます(1.3以降)<r/>
+				<tt><kw>stSpline16</kw>         </tt> : スプライン補間4x4が用いられます(1.3以降)<r/>
+				<tt><kw>stFastSpline36</kw>     </tt> : 固定小数スプライン補間6x6が用いられます(1.3以降)<r/>
+				<tt><kw>stSpline36</kw>         </tt> : スプライン補間6x6が用いられます(1.3以降)<r/>
+				<tt><kw>stFastAreaAvg</kw>      </tt> : 固定小数面積平均縮小が用いられます。拡大は出来ません(1.3以降)<r/>
+				<tt><kw>stAreaAvg</kw>          </tt> : 面積平均縮小が用いられます。拡大は出来ません(1.3以降)<r/>
+				<tt><kw>stFastGaussian</kw>     </tt> : 固定小数ガウス補間4x4が用いられます(1.3以降)<r/>
+				<tt><kw>stGaussian</kw>         </tt> : ガウス補間4x4が用いられます(1.3以降)<r/>
+				<tt><kw>stFastBlackmanSinc</kw> </tt> : 固定小数Blackman-Sinc補間8x8が用いられます(1.3以降)<r/>
+				<tt><kw>stBlackmanSinc</kw>     </tt> : Blackman-Sinc補間8x8が用いられます(1.3以降)<r/>
 				　速度は stNearest > stFastLinear > stLinear > stCubic の順に高速ですが、画質は速度が
 				速ければ速いタイプほど低画質になります。<r/>
-				　stFastLinear や stLinear, stCubic に対しては、stRefNoClip をビット論理和で追加指定
-				することができ、この場合は、コピーするビットマップの領域外を参照して色を合成することを
-				許可します。これを指定しない場合は、転送元ビットマップの周囲に余裕があったとしても、
-				転送元ビットマップの範囲外を参照することはありません(範囲外の色はもっとも近い位置にある
-				範囲内のピクセルの色と見なされます)。<r/>
+				stCubic 以降の補間方法は十分高画質で好みの差とも言えます。<r/>
+				ただし、ガウス補間についてはぼやけたような画質になります。<r/>
+				stFastLinear と他の線形補間(stSemiFastLinear と stLinear)の差は縮小時に大きく出ます。<r/>
+				stFastLinear は、常に周囲4画素を参照するのに対して、stSemiFastLinear、stLinear は、縮小時は
+				等倍時の影響範囲が4画素となるような範囲、つまりより広い範囲の画素を参照し補間するためより高画質です
+				(アルゴリズム的には本来の線形補間です)。<r/>
+				　stFastLinear に対しては、stRefNoClip をビット論理和で追加指定することができ、この場合は、
+				　コピーするビットマップの領域外を参照して色を合成することを許可します。これを指定しない場合は、
+				　転送元ビットマップの周囲に余裕があったとしても、転送元ビットマップの範囲外を参照することは
+				　ありません(範囲外の色はもっとも近い位置にある範囲内のピクセルの色と見なされます)。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>option</name>
+			<default>-1.0</default>
+			<desc>
+				　1.3以降で追加されました。<r/>
+				　３次元補間時のシャープネスです。他の補間方法では現在のところ意味を持ちません。<r/>
+				　シャープネスの値をプラス方向に大きくするとぼやけていき、マイナス方向に大きくしていくとシャープになっていきます。<r/>
 			</desc>
 		</argitem>
 	</arg>
@@ -2344,29 +2374,29 @@
 			<desc>
 				　演算のモードを指定します。<r/>
 				<tt><kw>omAuto</kw></tt> が指定された場合は演算元レイヤの<ref>Layer.type</ref>プロパティに従って演算の種類が自動的に決定されます。<r/>
-				<tt><kw>omPsNormal</kw></tt> が指定された場合はPhotoshop互換のアルファ合成が行われます(現バージョンでは未実装です)。<r/>
-				<tt><kw>omPsAdditive</kw></tt> が指定された場合はPhotoshop互換の覆い焼き(リニア)合成が行われます(現バージョンでは未実装です)。<r/>
-				<tt><kw>omPsSubtractive</kw></tt> が指定された場合はPhotoshop互換の焼き込み(リニア)合成が行われます(現バージョンでは未実装です)。<r/>
-				<tt><kw>omPsMultiplicative</kw></tt> が指定された場合はPhotoshop互換の乗算合成が行われます(現バージョンでは未実装です)。<r/>
-				<tt><kw>omPsScreen</kw></tt> が指定された場合はPhotoshop互換のスクリーン合成が行われます(現バージョンでは未実装です)。<r/>
-				<tt><kw>omPsOverlay</kw></tt> が指定された場合はPhotoshop互換のオーバーレイ合成が行われます(現バージョンでは未実装です)。<r/>
-				<tt><kw>omPsHardLight</kw></tt> が指定された場合はPhotoshop互換のハードライト合成が行われます(現バージョンでは未実装です)。<r/>
-				<tt><kw>omPsSoftLight</kw></tt> が指定された場合はPhotoshop互換のソフトライト合成が行われます(現バージョンでは未実装です)。<r/>
-				<tt><kw>omPsColorDodge</kw></tt> が指定された場合はPhotoshop互換の覆い焼きカラー合成が行われます(現バージョンでは未実装です)。<r/>
-				<tt><kw>omPsColorDodge5</kw></tt> が指定された場合はPhotoshopのバージョン5.x 以下と互換の覆い焼きカラー合成が行われます(現バージョンでは未実装です)。<r/>
-				<tt><kw>omPsColorBurn</kw></tt> が指定された場合はPhotoshop互換の焼き込みカラー合成が行われます(現バージョンでは未実装です)。<r/>
-				<tt><kw>omPsLighten</kw></tt> が指定された場合はPhotoshop互換の比較(明)合成が行われます(現バージョンでは未実装です)。<r/>
-				<tt><kw>omPsDarken</kw></tt> が指定された場合はPhotoshop互換の比較(暗)合成が行われます(現バージョンでは未実装です)。<r/>
-				<tt><kw>omPsDifference</kw></tt> が指定された場合はPhotoshop互換の差の絶対値合成が行われます(現バージョンでは未実装です)。<r/>
-				<tt><kw>omPsDifference5</kw></tt> が指定された場合はPhotoshopのバージョン 5.x 以下と互換の差の絶対値合成が行われます(現バージョンでは未実装です)。<r/>
-				<tt><kw>omPsExclusion</kw></tt> が指定された場合はPhotoshop互換の除外合成が行われます(現バージョンでは未実装です)。<r/>
-				<tt><kw>omAdditive</kw></tt> が指定された場合は加算合成が行われます(現バージョンでは未実装です)。<r/>
-				<tt><kw>omSubtractive</kw></tt> が指定された場合は減算合成が行われます(現バージョンでは未実装です)。<r/>
-				<tt><kw>omMultiplicative</kw></tt> が指定された場合は乗算合成が行われます(現バージョンでは未実装です)。<r/>
-				<tt><kw>omDodge</kw></tt> が指定された場合は覆い焼き合成が行われます(現バージョンでは未実装です)。<r/>
-				<tt><kw>omDarken</kw></tt> が指定された場合は比較(暗)合成が行われます(現バージョンでは未実装です)。<r/>
-				<tt><kw>omLighten</kw></tt> が指定された場合は比較(明)合成が行われます(現バージョンでは未実装です)。<r/>
-				<tt><kw>omScreen</kw></tt> が指定された場合はスクリーン乗算合成が行われます(現バージョンでは未実装です)。<r/>
+				<tt><kw>omPsNormal</kw></tt> が指定された場合はPhotoshop互換のアルファ合成が行われます(1.3以降ではstNearestとstFastLinear以外で実装)。<r/>
+				<tt><kw>omPsAdditive</kw></tt> が指定された場合はPhotoshop互換の覆い焼き(リニア)合成が行われます(1.3以降ではstNearestとstFastLinear以外で実装)。<r/>
+				<tt><kw>omPsSubtractive</kw></tt> が指定された場合はPhotoshop互換の焼き込み(リニア)合成が行われます(1.3以降ではstNearestとstFastLinear以外で実装)。<r/>
+				<tt><kw>omPsMultiplicative</kw></tt> が指定された場合はPhotoshop互換の乗算合成が行われます(1.3以降ではstNearestとstFastLinear以外で実装)。<r/>
+				<tt><kw>omPsScreen</kw></tt> が指定された場合はPhotoshop互換のスクリーン合成が行われます(1.3以降ではstNearestとstFastLinear以外で実装)。<r/>
+				<tt><kw>omPsOverlay</kw></tt> が指定された場合はPhotoshop互換のオーバーレイ合成が行われます(1.3以降ではstNearestとstFastLinear以外で実装)。<r/>
+				<tt><kw>omPsHardLight</kw></tt> が指定された場合はPhotoshop互換のハードライト合成が行われます(1.3以降ではstNearestとstFastLinear以外で実装)。<r/>
+				<tt><kw>omPsSoftLight</kw></tt> が指定された場合はPhotoshop互換のソフトライト合成が行われます(1.3以降ではstNearestとstFastLinear以外で実装)。<r/>
+				<tt><kw>omPsColorDodge</kw></tt> が指定された場合はPhotoshop互換の覆い焼きカラー合成が行われます(1.3以降ではstNearestとstFastLinear以外で実装)。<r/>
+				<tt><kw>omPsColorDodge5</kw></tt> が指定された場合はPhotoshopのバージョン5.x 以下と互換の覆い焼きカラー合成が行われます(1.3以降ではstNearestとstFastLinear以外で実装)。<r/>
+				<tt><kw>omPsColorBurn</kw></tt> が指定された場合はPhotoshop互換の焼き込みカラー合成が行われます(1.3以降ではstNearestとstFastLinear以外で実装)。<r/>
+				<tt><kw>omPsLighten</kw></tt> が指定された場合はPhotoshop互換の比較(明)合成が行われます(1.3以降ではstNearestとstFastLinear以外で実装)。<r/>
+				<tt><kw>omPsDarken</kw></tt> が指定された場合はPhotoshop互換の比較(暗)合成が行われます(1.3以降ではstNearestとstFastLinear以外で実装)。<r/>
+				<tt><kw>omPsDifference</kw></tt> が指定された場合はPhotoshop互換の差の絶対値合成が行われます(1.3以降ではstNearestとstFastLinear以外で実装)。<r/>
+				<tt><kw>omPsDifference5</kw></tt> が指定された場合はPhotoshopのバージョン 5.x 以下と互換の差の絶対値合成が行われます(1.3以降ではstNearestとstFastLinear以外で実装)。<r/>
+				<tt><kw>omPsExclusion</kw></tt> が指定された場合はPhotoshop互換の除外合成が行われます(1.3以降ではstNearestとstFastLinear以外で実装)。<r/>
+				<tt><kw>omAdditive</kw></tt> が指定された場合は加算合成が行われます(1.3以降ではstNearestとstFastLinear以外で実装)。<r/>
+				<tt><kw>omSubtractive</kw></tt> が指定された場合は減算合成が行われます(1.3以降ではstNearestとstFastLinear以外で実装)。<r/>
+				<tt><kw>omMultiplicative</kw></tt> が指定された場合は乗算合成が行われます(1.3以降ではstNearestとstFastLinear以外で実装)。<r/>
+				<tt><kw>omDodge</kw></tt> が指定された場合は覆い焼き合成が行われます(1.3以降ではstNearestとstFastLinear以外で実装)。<r/>
+				<tt><kw>omDarken</kw></tt> が指定された場合は比較(暗)合成が行われます(1.3以降ではstNearestとstFastLinear以外で実装)。<r/>
+				<tt><kw>omLighten</kw></tt> が指定された場合は比較(明)合成が行われます(1.3以降ではstNearestとstFastLinear以外で実装)。<r/>
+				<tt><kw>omScreen</kw></tt> が指定された場合はスクリーン乗算合成が行われます(1.3以降ではstNearestとstFastLinear以外で実装)。<r/>
 				<tt><kw>omAlpha</kw></tt> が指定された場合はアルファ合成が行われます。<r/>
 				<tt><kw>omAddAlpha</kw></tt> が指定された場合は加算アルファ合成が行われます。この場合は、転送先の <ref>Layer.face</ref> プロパティが dfOpaque かつ <ref>Layer.holdAlpha</ref> プロパティが偽のとき、type 引数に stFastLinear を指定することにより線形補間が可能です。<r/>
 				<tt><kw>omOpaque</kw></tt> が指定された場合は src のアルファ情報は無視され、src は常に完全不透明であると見なされます。この場合は、転送先の <ref>Layer.face</ref> プロパティが dfOpaque かつ <ref>Layer.holdAlpha</ref> プロパティが偽のとき、type 引数に stFastLinear を指定することにより線形補間が可能です。<r/>
@@ -2376,7 +2406,7 @@
 			<name>opa</name>
 			<default>255</default>
 			<desc>
-				　演算の強度 ( 0 縲鰀 255 ) を指定します。<r/>
+				　演算の強度 ( 0 ～ 255 ) を指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
@@ -2384,17 +2414,47 @@
 			<default>stNearest</default>
 			<desc>
 				　拡大縮小のタイプを指定します。<r/>
-				<tt><kw>stNearest</kw>    </tt> : 最近傍点法が用いられます<r/>
-				<tt><kw>stFastLinear</kw> </tt> : 低精度の線形補間が用いられます(一部実装)<r/>
-				<tt><kw>stLinear</kw>     </tt> : 線形補間が用いられます(未実装)<r/>
-				<tt><kw>stCubic</kw>      </tt> : ３次元補間が用いられます(未実装)<r/>
+				<tt><kw>stNearest</kw>          </tt> : 最近傍点法が用いられます<r/>
+				<tt><kw>stFastLinear</kw>       </tt> : 低精度の線形補間が用いられます(一部実装)<r/>
+				<tt><kw>stSemiFastLinear</kw>   </tt> : 固定小数線形補間が用いられます(1.3以降)<r/>
+				<tt><kw>stLinear</kw>           </tt> : 線形補間が用いられます(1.3以降実装変更)<r/>
+				<tt><kw>stFastCubic</kw>        </tt> : 固定小数３次元補間が用いられます(1.3以降)<r/>
+				<tt><kw>stCubic</kw>            </tt> : ３次元補間が用いられます(1.3以降実装変更)<r/>
+				<tt><kw>stFastLanczos2</kw>     </tt> : 固定小数Lanczos補間の範囲4x4が用いられます(1.3以降)<r/>
+				<tt><kw>stLanczos2</kw>         </tt> : Lanczos補間の範囲4x4が用いられます(1.3以降)<r/>
+				<tt><kw>stFastLanczos3</kw>     </tt> : 固定小数Lanczos補間の範囲6x6が用いられます(1.3以降)<r/>
+				<tt><kw>stLanczos3</kw>         </tt> : Lanczos補間の範囲6x6が用いられます(1.3以降)<r/>
+				<tt><kw>stFastSpline16</kw>     </tt> : 固定小数スプライン補間4x4が用いられます(1.3以降)<r/>
+				<tt><kw>stSpline16</kw>         </tt> : スプライン補間4x4が用いられます(1.3以降)<r/>
+				<tt><kw>stFastSpline36</kw>     </tt> : 固定小数スプライン補間6x6が用いられます(1.3以降)<r/>
+				<tt><kw>stSpline36</kw>         </tt> : スプライン補間6x6が用いられます(1.3以降)<r/>
+				<tt><kw>stFastAreaAvg</kw>      </tt> : 固定小数面積平均縮小が用いられます。拡大は出来ません(1.3以降)<r/>
+				<tt><kw>stAreaAvg</kw>          </tt> : 面積平均縮小が用いられます。拡大は出来ません(1.3以降)<r/>
+				<tt><kw>stFastGaussian</kw>     </tt> : 固定小数ガウス補間4x4が用いられます(1.3以降)<r/>
+				<tt><kw>stGaussian</kw>         </tt> : ガウス補間4x4が用いられます(1.3以降)<r/>
+				<tt><kw>stFastBlackmanSinc</kw> </tt> : 固定小数Blackman-Sinc補間8x8が用いられます(1.3以降)<r/>
+				<tt><kw>stBlackmanSinc</kw>     </tt> : Blackman-Sinc補間8x8が用いられます(1.3以降)<r/>
 				　速度は stNearest > stFastLinear > stLinear > stCubic の順に高速ですが、画質は速度が
 				速ければ速いタイプほど低画質になります。<r/>
-				　stFastLinear や stLinear, stCubic に対しては、stRefNoClip をビット論理和で追加指定
-				することができ、この場合は、コピーするビットマップの領域外を参照して色を合成することを
-				許可します。これを指定しない場合は、転送元ビットマップの周囲に余裕があったとしても、
-				転送元ビットマップの範囲外を参照することはありません(範囲外の色はもっとも近い位置にある
-				範囲内のピクセルの色と見なされます)。<r/>
+				stCubic 以降の補間方法は十分高画質で好みの差とも言えます。<r/>
+				ただし、ガウス補間についてはぼやけたような画質になります。<r/>
+				stFastLinear と他の線形補間(stSemiFastLinear と stLinear)の差は縮小時に大きく出ます。<r/>
+				stFastLinear は、常に周囲4画素を参照するのに対して、stSemiFastLinear、stLinear は、縮小時は
+				等倍時の影響範囲が4画素となるような範囲、つまりより広い範囲の画素を参照し補間するためより高画質です
+				(アルゴリズム的には本来の線形補間です)。<r/>
+				　stFastLinear に対しては、stRefNoClip をビット論理和で追加指定することができ、この場合は、
+				　コピーするビットマップの領域外を参照して色を合成することを許可します。これを指定しない場合は、
+				　転送元ビットマップの周囲に余裕があったとしても、転送元ビットマップの範囲外を参照することは
+				　ありません(範囲外の色はもっとも近い位置にある範囲内のピクセルの色と見なされます)。<r/>
+			</desc>
+		</argitem>
+		<argitem>
+			<name>option</name>
+			<default>-1.0</default>
+			<desc>
+				　1.3以降で追加されました。<r/>
+				　３次元補間時のシャープネスです。他の補間方法では現在のところ意味を持ちません。<r/>
+				　シャープネスの値をプラス方向に大きくするとぼやけていき、マイナス方向に大きくしていくとシャープになっていきます。<r/>
 			</desc>
 		</argitem>
 	</arg>
@@ -2454,7 +2514,7 @@
 			<name>affine</name>
 			<default></default>
 			<desc>
-				　続く６つの引数 (A 縲鰀 F パラメータ)をどのように扱うかを指定します。<r/>
+				　続く６つの引数 (A ～ F パラメータ)をどのように扱うかを指定します。<r/>
 				　真を指定すると、６つのパラメータはそれぞれ以下のように解釈されます。<r/>
 				<tt>A   : 2Dアフィン変換行列の a</tt><r/>
 				<tt>B   : 2Dアフィン変換行列の b</tt><r/>
@@ -2616,7 +2676,7 @@
 			<name>affine</name>
 			<default></default>
 			<desc>
-				　続く６つの引数 (A 縲鰀 F パラメータ)をどのように扱うかを指定します。<r/>
+				　続く６つの引数 (A ～ F パラメータ)をどのように扱うかを指定します。<r/>
 				　真を指定すると、６つのパラメータはそれぞれ以下のように解釈されます。<r/>
 				<tt>A   : 2Dアフィン変換行列の a</tt><r/>
 				<tt>B   : 2Dアフィン変換行列の b</tt><r/>
@@ -2722,7 +2782,7 @@
 			<name>opa</name>
 			<default>255</default>
 			<desc>
-				　重ね合わせの不透明度 ( 0 縲鰀 255 ) を指定します。<r/>
+				　重ね合わせの不透明度 ( 0 ～ 255 ) を指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
@@ -2777,7 +2837,7 @@
 	<result></result>
 	<desc>
 		　ブラー(ぼかし)をかけます。アルゴリズムは「矩形ブラー」(box blur)です。<r/>
-		　矩形ブラーは、xblurとyblurの２つのパラメータによって表現される「範囲」中のピクセルの輝度の平均値をとる物です。たとえば xblur=10 yblur=2 の場合は、対象のピクセルを中心に、横方向は -10縲鰀10、縦方向は -2縲鰀2 の矩形範囲のピクセルの輝度の平均をとり、それが最終的なそのピクセルの輝度となります。<r/>
+		　矩形ブラーは、xblurとyblurの２つのパラメータによって表現される「範囲」中のピクセルの輝度の平均値をとる物です。たとえば xblur=10 yblur=2 の場合は、対象のピクセルを中心に、横方向は -10～10、縦方向は -2～2 の矩形範囲のピクセルの輝度の平均をとり、それが最終的なそのピクセルの輝度となります。<r/>
 		　範囲の面積は (xblur×2+1) × (yblur×2+1) で計算することができます。現バージョンではこの面積が 256 未満 の場合は、面積が256以上の場合よりも高速なアルゴリズムが採用されます。<r/>
 		　<ref>Layer.face</ref> プロパティが dfAlpha の場合は、アルファ合成用の特別なアルゴリズムを使用しますので、少々遅くなります。dfAddAlpha や他の描画方式の場合は、より高速なアルゴリズムとなります。<r/>
 	</desc>
@@ -2794,63 +2854,63 @@
 			<name>rgamma</name>
 			<default>1.0</default>
 			<desc>
-				　赤成分のガンマ値 ( 0.0 縲鰀 1.0 縲鰀 9.0 ) を指定します。<r/>
+				　赤成分のガンマ値 ( 0.0 ～ 1.0 ～ 9.0 ) を指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>rfloor</name>
 			<default>0</default>
 			<desc>
-				　赤成分の出力最低値 ( 0 縲鰀 255 ) を指定します。<r/>
+				　赤成分の出力最低値 ( 0 ～ 255 ) を指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>rceil</name>
 			<default>255</default>
 			<desc>
-				　赤成分の出力最大値 ( 0 縲鰀 255 ) を指定します。<r/>
+				　赤成分の出力最大値 ( 0 ～ 255 ) を指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>ggamma</name>
 			<default>1.0</default>
 			<desc>
-				　緑成分のガンマ値 ( 0.0 縲鰀 1.0 縲鰀 9.0 ) を指定します。<r/>
+				　緑成分のガンマ値 ( 0.0 ～ 1.0 ～ 9.0 ) を指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>gfloor</name>
 			<default>0</default>
 			<desc>
-				　緑成分の出力最低値 ( 0 縲鰀 255 ) を指定します。<r/>
+				　緑成分の出力最低値 ( 0 ～ 255 ) を指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>gceil</name>
 			<default>255</default>
 			<desc>
-				　緑成分の出力最大値 ( 0 縲鰀 255 ) を指定します。<r/>
+				　緑成分の出力最大値 ( 0 ～ 255 ) を指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>bgamma</name>
 			<default>1.0</default>
 			<desc>
-				　青成分のガンマ値 ( 0.0 縲鰀 1.0 縲鰀 9.0 ) を指定します。<r/>
+				　青成分のガンマ値 ( 0.0 ～ 1.0 ～ 9.0 ) を指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>bfloor</name>
 			<default>0</default>
 			<desc>
-				　青成分の出力最低値 ( 0 縲鰀 255 ) を指定します。<r/>
+				　青成分の出力最低値 ( 0 ～ 255 ) を指定します。<r/>
 			</desc>
 		</argitem>
 		<argitem>
 			<name>bceil</name>
 			<default>255</default>
 			<desc>
-				　青成分の出力最大値 ( 0 縲鰀 255 ) を指定します。<r/>
+				　青成分の出力最大値 ( 0 ～ 255 ) を指定します。<r/>
 			</desc>
 		</argitem>
 	</arg>
@@ -3499,7 +3559,7 @@
 	<access>r/w</access>
 	<desc>
 		　レイヤの不透明度を表します。値を設定することができます。<r/>
-		　値は 0 縲鰀 255 の整数で、値が大きいほど不透明な表示になります。<r/>
+		　値は 0 ～ 255 の整数で、値が大きいほど不透明な表示になります。<r/>
 	</desc>
 </member>
 

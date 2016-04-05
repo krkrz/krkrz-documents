@@ -48,7 +48,7 @@
 <td>				　コピーする矩形の縦幅を ( コピー元レイヤの画像位置における ) ピクセル単位で指定します。<br />
 			</td></tr>
 <tr><td valign="top"><span class="argname">affine</span></td>
-<td>				　続く６つの引数 (A 縲鰀 F パラメータ)をどのように扱うかを指定します。<br />
+<td>				　続く６つの引数 (A ～ F パラメータ)をどのように扱うかを指定します。<br />
 				　真を指定すると、６つのパラメータはそれぞれ以下のように解釈されます。<br />
 				<span class="script">A   : 2Dアフィン変換行列の a</span><br />
 				<span class="script">B   : 2Dアフィン変換行列の b</span><br />
@@ -93,10 +93,10 @@
 			</td></tr>
 <tr><td valign="top"><span class="argname">type</span></td>
 <td>				　アフィン変換のタイプを指定します。<br />
-				<span class="script"><a class="targanchor" name="id278" id="id278">stNearest</a>    </span> : 最近傍点法が用いられます<br />
-				<span class="script"><a class="targanchor" name="id279" id="id279">stFastLinear</a> </span> : 低精度の線形補間が用いられます(一部実装)<br />
-				<span class="script"><a class="targanchor" name="id280" id="id280">stLinear</a>     </span> : 線形補間が用いられます(未実装)<br />
-				<span class="script"><a class="targanchor" name="id281" id="id281">stCubic</a>      </span> : ３次元補間が用いられます(未実装)<br />
+				<span class="script"><a class="targanchor" name="id326" id="id326">stNearest</a>    </span> : 最近傍点法が用いられます<br />
+				<span class="script"><a class="targanchor" name="id327" id="id327">stFastLinear</a> </span> : 低精度の線形補間が用いられます(一部実装)<br />
+				<span class="script"><a class="targanchor" name="id328" id="id328">stLinear</a>     </span> : 線形補間が用いられます(未実装)<br />
+				<span class="script"><a class="targanchor" name="id329" id="id329">stCubic</a>      </span> : ３次元補間が用いられます(未実装)<br />
 				　stFastLinear や stLinear, stCubic に対しては、stRefNoClip をビット論理和で追加指定
 				することができ、この場合は、コピーするビットマップの領域外を参照して色を合成することを
 				許可します。これを指定しない場合は、転送元ビットマップの周囲に余裕があったとしても、

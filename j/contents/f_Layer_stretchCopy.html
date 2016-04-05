@@ -26,7 +26,7 @@
 </dd>
 <dt>構文</dt>
 <dd>
-<span class="funcdecl">stretchCopy(<span class="arg">dleft</span>, <span class="arg">dtop</span>, <span class="arg">dwidth</span>, <span class="arg">dheight</span>, <span class="arg">src</span>, <span class="arg">sleft</span>, <span class="arg">stop</span>, <span class="arg">swidth</span>, <span class="arg">sheight</span>, <span class="arg">type</span><span class="defarg">=<span class="defargval">stNearest</span></span>)</span><br />
+<span class="funcdecl">stretchCopy(<span class="arg">dleft</span>, <span class="arg">dtop</span>, <span class="arg">dwidth</span>, <span class="arg">dheight</span>, <span class="arg">src</span>, <span class="arg">sleft</span>, <span class="arg">stop</span>, <span class="arg">swidth</span>, <span class="arg">sheight</span>, <span class="arg">type</span><span class="defarg">=<span class="defargval">stNearest</span></span>, <span class="arg">option</span><span class="defarg">=<span class="defargval">-1.0</span></span>)</span><br />
 </dd>
 <dt>引数</dt>
 <dd>
@@ -61,17 +61,43 @@
 			</td></tr>
 <tr><td valign="top"><span class="argname">type</span></td>
 <td>				　拡大縮小のタイプを指定します。<br />
-				<span class="script"><a class="targanchor" name="id243" id="id243">stNearest</a>    </span> : 最近傍点法が用いられます<br />
-				<span class="script"><a class="targanchor" name="id244" id="id244">stFastLinear</a> </span> : 低精度の線形補間が用いられます(一部実装)<br />
-				<span class="script"><a class="targanchor" name="id245" id="id245">stLinear</a>     </span> : 線形補間が用いられます(一部実装)<br />
-				<span class="script"><a class="targanchor" name="id246" id="id246">stCubic</a>      </span> : ３次元補間が用いられます(一部実装)<br />
+				<span class="script"><a class="targanchor" name="id259" id="id259">stNearest</a>          </span> : 最近傍点法が用いられます<br />
+				<span class="script"><a class="targanchor" name="id260" id="id260">stFastLinear</a>       </span> : 低精度の線形補間が用いられます(一部実装)<br />
+				<span class="script"><a class="targanchor" name="id261" id="id261">stSemiFastLinear</a>   </span> : 固定小数線形補間が用いられます(1.3以降)<br />
+				<span class="script"><a class="targanchor" name="id262" id="id262">stLinear</a>           </span> : 線形補間が用いられます(1.3以降実装変更)<br />
+				<span class="script"><a class="targanchor" name="id263" id="id263">stFastCubic</a>        </span> : 固定小数３次元補間が用いられます(1.3以降)<br />
+				<span class="script"><a class="targanchor" name="id264" id="id264">stCubic</a>            </span> : ３次元補間が用いられます(1.3以降実装変更)<br />
+				<span class="script"><a class="targanchor" name="id265" id="id265">stFastLanczos2</a>     </span> : 固定小数Lanczos補間の範囲4x4が用いられます(1.3以降)<br />
+				<span class="script"><a class="targanchor" name="id266" id="id266">stLanczos2</a>         </span> : Lanczos補間の範囲4x4が用いられます(1.3以降)<br />
+				<span class="script"><a class="targanchor" name="id267" id="id267">stFastLanczos3</a>     </span> : 固定小数Lanczos補間の範囲6x6が用いられます(1.3以降)<br />
+				<span class="script"><a class="targanchor" name="id268" id="id268">stLanczos3</a>         </span> : Lanczos補間の範囲6x6が用いられます(1.3以降)<br />
+				<span class="script"><a class="targanchor" name="id269" id="id269">stFastSpline16</a>     </span> : 固定小数スプライン補間4x4が用いられます(1.3以降)<br />
+				<span class="script"><a class="targanchor" name="id270" id="id270">stSpline16</a>         </span> : スプライン補間4x4が用いられます(1.3以降)<br />
+				<span class="script"><a class="targanchor" name="id271" id="id271">stFastSpline36</a>     </span> : 固定小数スプライン補間6x6が用いられます(1.3以降)<br />
+				<span class="script"><a class="targanchor" name="id272" id="id272">stSpline36</a>         </span> : スプライン補間6x6が用いられます(1.3以降)<br />
+				<span class="script"><a class="targanchor" name="id273" id="id273">stFastAreaAvg</a>      </span> : 固定小数面積平均縮小が用いられます。拡大は出来ません(1.3以降)<br />
+				<span class="script"><a class="targanchor" name="id274" id="id274">stAreaAvg</a>          </span> : 面積平均縮小が用いられます。拡大は出来ません(1.3以降)<br />
+				<span class="script"><a class="targanchor" name="id275" id="id275">stFastGaussian</a>     </span> : 固定小数ガウス補間4x4が用いられます(1.3以降)<br />
+				<span class="script"><a class="targanchor" name="id276" id="id276">stGaussian</a>         </span> : ガウス補間4x4が用いられます(1.3以降)<br />
+				<span class="script"><a class="targanchor" name="id277" id="id277">stFastBlackmanSinc</a> </span> : 固定小数Blackman-Sinc補間8x8が用いられます(1.3以降)<br />
+				<span class="script"><a class="targanchor" name="id278" id="id278">stBlackmanSinc</a>     </span> : Blackman-Sinc補間8x8が用いられます(1.3以降)<br />
 				　速度は stNearest &gt; stFastLinear &gt; stLinear &gt; stCubic の順に高速ですが、画質は速度が
 				速ければ速いタイプほど低画質になります。<br />
-				　stFastLinear や stLinear, stCubic に対しては、stRefNoClip をビット論理和で追加指定
-				することができ、この場合は、コピーするビットマップの領域外を参照して色を合成することを
-				許可します。これを指定しない場合は、転送元ビットマップの周囲に余裕があったとしても、
-				転送元ビットマップの範囲外を参照することはありません(範囲外の色はもっとも近い位置にある
-				範囲内のピクセルの色と見なされます)。<br />
+				stCubic 以降の補間方法は十分高画質で好みの差とも言えます。<br />
+				ただし、ガウス補間についてはぼやけたような画質になります。<br />
+				stFastLinear と他の線形補間(stSemiFastLinear と stLinear)の差は縮小時に大きく出ます。<br />
+				stFastLinear は、常に周囲4画素を参照するのに対して、stSemiFastLinear、stLinear は、縮小時は
+				等倍時の影響範囲が4画素となるような範囲、つまりより広い範囲の画素を参照し補間するためより高画質です
+				(アルゴリズム的には本来の線形補間です)。<br />
+				　stFastLinear に対しては、stRefNoClip をビット論理和で追加指定することができ、この場合は、
+				　コピーするビットマップの領域外を参照して色を合成することを許可します。これを指定しない場合は、
+				　転送元ビットマップの周囲に余裕があったとしても、転送元ビットマップの範囲外を参照することは
+				　ありません(範囲外の色はもっとも近い位置にある範囲内のピクセルの色と見なされます)。<br />
+			</td></tr>
+<tr><td valign="top"><span class="argname">option</span></td>
+<td>				　1.3以降で追加されました。<br />
+				　３次元補間時のシャープネスです。他の補間方法では現在のところ意味を持ちません。<br />
+				　シャープネスの値をプラス方向に大きくするとぼやけていき、マイナス方向に大きくしていくとシャープになっていきます。<br />
 			</td></tr>
 </table>
 </dd>

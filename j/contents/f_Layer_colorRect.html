@@ -46,16 +46,16 @@
 <tr><td valign="top"><span class="argname">value</span></td>
 <td>				　塗りつぶす色や値を指定します。<br />
 				　この値は、<a class="jump" href="f_Layer_face.html">Layer.face</a> プロパティの値によって意味が変わります。<br />
-				<span class="script"><a class="targanchor" name="id204" id="id204">dfAlpha</a> (または<a class="targanchor" name="id205" id="id205">dfBoth</a>)   </span> : 0xRRGGBB 形式で色を指定してください<br />
-				<span class="script"><a class="targanchor" name="id206" id="id206">dfAddAlpha</a>                   </span> : 0xRRGGBB 形式で色を指定してください<br />
-				<span class="script"><a class="targanchor" name="id207" id="id207">dfOpaque</a> (または<a class="targanchor" name="id208" id="id208">dfMain</a>)  </span> : 0xRRGGBB 形式で色を指定してください<br />
-				<span class="script"><a class="targanchor" name="id209" id="id209">dfMask</a>                       </span> : マスク(不透明度)の値 ( 0 縲鰀 255 ) を指定してください<br />
-				<span class="script"><a class="targanchor" name="id210" id="id210">dfProvince</a>                   </span> : 領域の値 ( 0 縲鰀 255 ) を指定してください<br />
+				<span class="script"><a class="targanchor" name="id220" id="id220">dfAlpha</a> (または<a class="targanchor" name="id221" id="id221">dfBoth</a>)   </span> : 0xRRGGBB 形式で色を指定してください<br />
+				<span class="script"><a class="targanchor" name="id222" id="id222">dfAddAlpha</a>                   </span> : 0xRRGGBB 形式で色を指定してください<br />
+				<span class="script"><a class="targanchor" name="id223" id="id223">dfOpaque</a> (または<a class="targanchor" name="id224" id="id224">dfMain</a>)  </span> : 0xRRGGBB 形式で色を指定してください<br />
+				<span class="script"><a class="targanchor" name="id225" id="id225">dfMask</a>                       </span> : マスク(不透明度)の値 ( 0 ～ 255 ) を指定してください<br />
+				<span class="script"><a class="targanchor" name="id226" id="id226">dfProvince</a>                   </span> : 領域の値 ( 0 ～ 255 ) を指定してください<br />
 				　dfOpaque を指定した場合は、マスク情報は無視されます(マスク情報が保持されるか破壊されるかは <a class="jump" href="f_Layer_holdAlpha.html">Layer.holdAlpha</a> プロパティによります)。また、dfMask を指定した場合は、色の情報はそのままになります。<br />
 				　dfAlpha の場合でかつ opa が負の場合はこの引数は無視されます。<br />
 			</td></tr>
 <tr><td valign="top"><span class="argname">opa</span></td>
-<td>				　塗りつぶす不透明度 ( -255 縲鰀 0 縲鰀 255 ) を指定します。<br />
+<td>				　塗りつぶす不透明度 ( -255 ～ 0 ～ 255 ) を指定します。<br />
 				　この引数は、<a class="jump" href="f_Layer_face.html">Layer.face</a> プロパティの値が dfMask や
 				dfProvince の場合は無視されます ( 常に完全不透明 )。<br />
 				　負の数の指定は <a class="jump" href="f_Layer_face.html">Layer.face</a> が dfAlpha の場合のみに有効で、

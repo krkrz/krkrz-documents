@@ -381,6 +381,7 @@ sub member
 	$curplace = $curtitle . '.' . $name;
 
 	open OH, ">$outfile";
+	binmode(OH, ":utf8");
 
 	&write_html_header($name . ' - ' . getdata($node, 'shortdesc'), $orgfile, "f_${curtitle}.html", "${curtitle}クラス");
 
@@ -578,6 +579,7 @@ sub document
 	;# create class summary
 
 	open OH, ">$outfile";
+	binmode(OH, ":utf8");
 
 	&write_html_header($curtitle, $orgfile, '', '');
 
@@ -801,6 +803,7 @@ foreach my $each (@list)
 }
 
 open OH, ">keys.txt";
+binmode(FH, ":utf8");
 print OH join("\n", @keywords);
 print OH "\n";
 
