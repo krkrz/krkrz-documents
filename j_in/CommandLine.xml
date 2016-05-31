@@ -455,6 +455,15 @@ Releaser や -userconf では、吉里吉里の実行可能ファイルや外部
 <li>-<kw>cpue3dn</kw> (Enhanced 3DNow!)</li>
 <li>-<kw>cpuemmx</kw> (EMMX (MMX2))</li>
 <li>-<kw>cpusse2</kw> (SSE2)</li>
+<li>-<kw>cpusse3</kw> (SSE3)</li>
+<li>-<kw>cpussse3</kw> (SSSE3)</li>
+<li>-<kw>cpusse41</kw> (SSE4.1)</li>
+<li>-<kw>cpusse42</kw> (SSE4.2)</li>
+<li>-<kw>cpusse4a</kw> (SSE4a)</li>
+<li>-<kw>cpuavx</kw> (AVX)</li>
+<li>-<kw>cpuavx2</kw> (AVX2)</li>
+<li>-<kw>cpufma3</kw> (FMA3)</li>
+<li>-<kw>cpuaes</kw> (AES)</li>
 </ul>
 </para>
 
@@ -542,6 +551,13 @@ Releaser や -userconf では、吉里吉里の実行可能ファイルや外部
 <dd>
 　設定可能な値は <b>'Shift_JIS' (吉里吉里2互換の動作)</b>, <b>'UTF-8' (吉里吉里Zの動作)</b> のいずれかで、このオプションを指定しないと 'UTF-8' が指定されたものと見なされます。<r/>
 　スクリプトを読み込むのに使用する文字コードです。<r/>
+</dd>
+
+
+<dt>-<kw>ignoretouch</kw> (タッチイベントの無効化 1.3.0以降)</dt>
+<dd>
+　設定可能な値は <b>'false' (偽)</b>, <b>'true' (真)</b> のいずれかで、このオプションを指定しないと 'false' が指定されたものと見なされます。<r/>
+　'true'を指定するとタッチイベントを無効化して、代わりにマウスイベントを発生させます。<r/>
 </dd>
 
 

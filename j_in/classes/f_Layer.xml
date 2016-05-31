@@ -1996,6 +1996,27 @@
 </member>
 
 <member>
+	<name>copy9Patch</name>
+	<type>method</type>
+	<shortdesc>9 path を利用した画像コピー(1.3.0以降)</shortdesc>
+	<arg>
+		<argitem>
+			<name>src</name>
+			<default></default>
+			<desc>
+				　コピー元のレイヤオブジェクトを指定します。<r/>
+				　Bitmapクラスのオブジェクトも指定可能です。<r/>
+			</desc>
+		</argitem>
+	</arg>
+	<result>マージン情報</result>
+	<desc>
+		　9 path ( slice ) を利用した画像コピーを行います。<r/>
+		　返されるマージン情報はRectクラスのオブジェクトです。<r/>
+	</desc>
+</member>
+
+<member>
 	<name>piledCopy</name>
 	<type>method</type>
 	<shortdesc>レイヤを重ね合わせた画像をコピー</shortdesc>

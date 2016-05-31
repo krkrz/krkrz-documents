@@ -310,22 +310,22 @@ Releaser や -userconf では、吉里吉里の実行可能ファイルや外部
 　'force' は、その CPU 機能を検出しなくても強制的に使用するようになりますが、CPU にその機能がついていない場合はもちろん正常に動作しません。<br />
 　吉里吉里本体には -cpummx -cpucmov -cpusse -cpuemmx のオプションのみが影響を与えます。OggVorbis デコーダ (wuvorbis.dll) には -cpusse と -cpummx と -cpu3dn のオプションが影響を与えます。そのほかの(サードパーティーの)プラグインの中にも CPU 機能の設定の影響を受けるものがあるかも知れません。<br />
 <br />
-<ul><li>-<a id="id53" name="id53" class="targanchor"><dfn>cpummx</dfn></a> (MMX)</li><li>-<a id="id54" name="id54" class="targanchor"><dfn>cpu3dn</dfn></a> (3DNow!)</li><li>-<a id="id55" name="id55" class="targanchor"><dfn>cpusse</dfn></a> (SSE)</li><li>-<a id="id56" name="id56" class="targanchor"><dfn>cpucmov</dfn></a> (CMOVcc)</li><li>-<a id="id57" name="id57" class="targanchor"><dfn>cpue3dn</dfn></a> (Enhanced 3DNow!)</li><li>-<a id="id58" name="id58" class="targanchor"><dfn>cpuemmx</dfn></a> (EMMX (MMX2))</li><li>-<a id="id59" name="id59" class="targanchor"><dfn>cpusse2</dfn></a> (SSE2)</li></ul></div></div>
+<ul><li>-<a id="id53" name="id53" class="targanchor"><dfn>cpummx</dfn></a> (MMX)</li><li>-<a id="id54" name="id54" class="targanchor"><dfn>cpu3dn</dfn></a> (3DNow!)</li><li>-<a id="id55" name="id55" class="targanchor"><dfn>cpusse</dfn></a> (SSE)</li><li>-<a id="id56" name="id56" class="targanchor"><dfn>cpucmov</dfn></a> (CMOVcc)</li><li>-<a id="id57" name="id57" class="targanchor"><dfn>cpue3dn</dfn></a> (Enhanced 3DNow!)</li><li>-<a id="id58" name="id58" class="targanchor"><dfn>cpuemmx</dfn></a> (EMMX (MMX2))</li><li>-<a id="id59" name="id59" class="targanchor"><dfn>cpusse2</dfn></a> (SSE2)</li><li>-<a id="id60" name="id60" class="targanchor"><dfn>cpusse3</dfn></a> (SSE3)</li><li>-<a id="id61" name="id61" class="targanchor"><dfn>cpussse3</dfn></a> (SSSE3)</li><li>-<a id="id62" name="id62" class="targanchor"><dfn>cpusse41</dfn></a> (SSE4.1)</li><li>-<a id="id63" name="id63" class="targanchor"><dfn>cpusse42</dfn></a> (SSE4.2)</li><li>-<a id="id64" name="id64" class="targanchor"><dfn>cpusse4a</dfn></a> (SSE4a)</li><li>-<a id="id65" name="id65" class="targanchor"><dfn>cpuavx</dfn></a> (AVX)</li><li>-<a id="id66" name="id66" class="targanchor"><dfn>cpuavx2</dfn></a> (AVX2)</li><li>-<a id="id67" name="id67" class="targanchor"><dfn>cpufma3</dfn></a> (FMA3)</li><li>-<a id="id68" name="id68" class="targanchor"><dfn>cpuaes</dfn></a> (AES)</li></ul></div></div>
 
 
-<h1><a id="id60" name="id60">デバッグ関連のオプション</a>
+<h1><a id="id69" name="id69">デバッグ関連のオプション</a>
 </h1><div class="para"><div>
 <dl>
-<dt>-<a id="id61" name="id61" class="targanchor"><dfn>debug</dfn></a> (デバッグモード)</dt>
+<dt>-<a id="id70" name="id70" class="targanchor"><dfn>debug</dfn></a> (デバッグモード)</dt>
 <dd>　吉里吉里をデバッグモード <span class="comlink"> ( → <a target="main" class="jump" href="Debug.html">デバッグ</a> ) </span> で動作させるかどうかの設定です。<br />
 　設定可能な値は <em>'no' (無効)</em>, <em>'yes' (有効)</em>のいずれかで、このオプションを指定しないと 'no' が指定されたものと見なされます。<br />
 　有効にすると、吉里吉里はデバッグモードで動作し、いくつかのデバッグ支援機能が有効になりますが、通常のモードよりも実行速度は低下します。</dd>
 
-<dt>-<a id="id62" name="id62" class="targanchor"><dfn>forcelog</dfn></a> (ファイルへのログ)</dt>
+<dt>-<a id="id71" name="id71" class="targanchor"><dfn>forcelog</dfn></a> (ファイルへのログ)</dt>
 <dd>　コンソールのログをファイルに出力するかどうかの設定です。<br />
 　設定可能な値は <em>'no' (出力しない)</em>, <em>'yes' (既存のファイルに追加して出力する)</em>, <em>'clear' (既存のファイルをクリアしてから出力する)</em> のいずれかで、このオプションを指定しないと 'no' が指定されたものと見なされます。
 </dd>
-<dt>-<a id="id63" name="id63" class="targanchor"><dfn>logerror</dfn></a> (エラー時のファイルへのログ)</dt>
+<dt>-<a id="id72" name="id72" class="targanchor"><dfn>logerror</dfn></a> (エラー時のファイルへのログ)</dt>
 <dd>　エラー時にコンソールのログをファイルに出力するかどうかの設定です。<br />
 　設定可能な値は <em>'no' (出力しない)</em>, <em>'yes' (既存のファイルに追加して出力する)</em>, <em>'clear' (既存のファイルをクリアしてから出力する)</em> のいずれかで、このオプションを指定しないと 'yes' が指定されたものと見なされます。
 </dd></dl></div></div>
@@ -333,41 +333,46 @@ Releaser や -userconf では、吉里吉里の実行可能ファイルや外部
 
 
 
-<h1><a id="id64" name="id64">システム互換性関連のオプション</a>
+<h1><a id="id73" name="id73">システム互換性関連のオプション</a>
 </h1><div class="para"><div>
 <dl>
-<dt>-<a id="id65" name="id65" class="targanchor"><dfn>arcdelim</dfn></a> (アーカイブデリミタ)</dt>
+<dt>-<a id="id74" name="id74" class="targanchor"><dfn>arcdelim</dfn></a> (アーカイブデリミタ)</dt>
 <dd>　アーカイブデリミタ (アーカイブストレージ名と、アーカイブ内ストレージ名の間を区切る文字) を指定します。<br />
 　設定可能な値は <em>'&gt;' ('&gt;'を使う)</em>, <em>'#' ('#'を使う)</em> のいずれかで、このオプションを指定しないと '&gt;' が指定されたものと見なされます。<br />
 　アーカイブデリミタは、吉里吉里２ 2.19 beta 14 で、従来の '#' から '&gt;' に変更されました。<br />
 　2.19 beta 14 未満で動作していたアプリケーションはこの変更のため動作しなくなる可能性がありますが、このオプションでデリミタを '#' に変更することで動作させることができます。<br />
 </dd>
 
-<dt>-<a id="id66" name="id66" class="targanchor"><dfn>evalcontext</dfn></a> (後置'!'演算子の動作)</dt>
+<dt>-<a id="id75" name="id75" class="targanchor"><dfn>evalcontext</dfn></a> (後置'!'演算子の動作)</dt>
 <dd>　TJS2の後置'!'演算子の動作を指定します。<br />
 　設定可能な値は <em>'this' (this上で式を評価)</em>, <em>'global' (global上で式を評価)</em> のいずれかで、このオプションを指定しないと 'this' が指定されたものと見なされます。<br />
 　TJS2の後置'!'演算子は式をglobalコンテキスト上で実行していましたが、2.21 beta 9 より、this コンテキスト上で実行するようになりました。<br />
 2.21 beta 9 未満を想定しているアプリケーションでは、この設定を「global上で式を評価」にしないと動作しない可能性があります。</dd>
 
-<dt>-<a id="id67" name="id67" class="targanchor"><dfn>holdalpha</dfn></a> (Layer.holdAlpha プロパティのデフォルトの値)</dt>
+<dt>-<a id="id76" name="id76" class="targanchor"><dfn>holdalpha</dfn></a> (Layer.holdAlpha プロパティのデフォルトの値)</dt>
 <dd>　<a target="main" class="jump" href="f_Layer_holdAlpha.html">Layer.holdAlpha</a> プロパティのデフォルト値を指定します。<br />
 　設定可能な値は <em>'false' (偽)</em>, <em>'true' (真)</em> のいずれかで、このオプションを指定しないと 'false' が指定されたものと見なされます。<br />
 　吉里吉里２ 2.23 beta 4 で、各種演算関数に指定していた hda (アルファチャンネルを保護するか) オプションがなくなり、代わりに Layer.holdAlpha プロパティが作られました。この時点では Layer.holdAlpha のデフォルト値は真でした。Layer.holdAlpha が真の場合は過去のアプリケーションの動作に影響を与えません。<br />
 　吉里吉里２ 2.23 beta 5 で、このデフォルト値が偽になりました。吉里吉里２ 2.23 beta 5 未満を想定しているアプリケーションを動作させたい場合は、このオプションに「真」を指定しないと正常に動作しない可能性があります。</dd>
 
-<dt>-<a id="id68" name="id68" class="targanchor"><dfn>unaryaster</dfn></a> (前置'*'演算子の動作)</dt>
+<dt>-<a id="id77" name="id77" class="targanchor"><dfn>unaryaster</dfn></a> (前置'*'演算子の動作)</dt>
 <dd>　TJS2の前置'*'演算子の動作を指定します。<br />
 　設定可能な値は <em>'default' (2.25以降の動作)</em>, <em>'compat' (2.25未満の動作)</em> のいずれかで、このオプションを指定しないと 'default' が指定されたものと見なされます。<br />
 　TJS2の前置'*'演算子は、プロパティオブジェクトそのものを、プロパティハンドラを介さずに取り出す演算子でしたが、2.25 beta 1 より、この機能を持つ演算子は前置の'&amp;'となり、前置'*'演算子はプロパティオブジェクトのプロパティハンドラを動作させるための演算子となりました。2.25 beta 1 未満を想定しているアプリケーションでは、この設定を「2.25未満と互換」にしないと正常に動作しない可能性があります。</dd>
 
-<dt>-<a id="id69" name="id69" class="targanchor"><dfn>wsvolfactor</dfn></a> (DirectSoundのボリュームカーブ)</dt>
+<dt>-<a id="id78" name="id78" class="targanchor"><dfn>wsvolfactor</dfn></a> (DirectSoundのボリュームカーブ)</dt>
 <dd>　設定可能な値は <em>'3322' (2.31 2011/6/14以降の動作)</em>, <em>'5000' (2.31 2011/6/14未満の動作)</em> のいずれかで、このオプションを指定しないと '3322' が指定されたものと見なされます。<br />
 　DirectSoundのボリュームカーブは、2.31 2011/6/14 より、より直感的なカーブになりました。<br />
 </dd>
 
-<dt>-<a id="id70" name="id70" class="targanchor"><dfn>readencoding</dfn></a> (スクリプト読込み文字コード)</dt>
+<dt>-<a id="id79" name="id79" class="targanchor"><dfn>readencoding</dfn></a> (スクリプト読込み文字コード)</dt>
 <dd>　設定可能な値は <em>'Shift_JIS' (吉里吉里2互換の動作)</em>, <em>'UTF-8' (吉里吉里Zの動作)</em> のいずれかで、このオプションを指定しないと 'UTF-8' が指定されたものと見なされます。<br />
 　スクリプトを読み込むのに使用する文字コードです。<br />
+</dd>
+
+<dt>-<a id="id80" name="id80" class="targanchor"><dfn>ignoretouch</dfn></a> (タッチイベントの無効化 1.3.0以降)</dt>
+<dd>　設定可能な値は <em>'false' (偽)</em>, <em>'true' (真)</em> のいずれかで、このオプションを指定しないと 'false' が指定されたものと見なされます。<br />
+　'true'を指定するとタッチイベントを無効化して、代わりにマウスイベントを発生させます。<br />
 </dd>
 
 

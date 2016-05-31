@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doc>
+<title>BitmapLayerTreeOwner</title>
+<desc>
+　BitmapLayerTreeOwner クラスは、レイヤーツリーを保持し、描画結果を Bitmap クラスで取得できるクラスです。(1.1.0以降)<r/>
+Layer クラスのコンストラクタの第一引数に window の代わりに渡すことで、それら Layer の描画結果を Bitmap クラスとして画像で取得できます。<r/>
+</desc>
+
+<member>
+	<name>BitmapLayerTreeOwner</name>
+	<type>constructor</type>
+	<shortdesc>BitmapLayerTreeOwner オブジェクトの構築</shortdesc>
+	<arg></arg>
+	<result></result>
+	<desc>
+		　BitmapLayerTreeOwner クラスのオブジェクトを構築します。<r/>
+	</desc>
+</member>
+
+</doc>

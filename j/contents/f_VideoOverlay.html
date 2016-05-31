@@ -15,10 +15,11 @@
 </head>
 <body>
 <h1><a name="top" id="top">VideoOverlay</a></h1><div class="para"><div>
-　VideoOverlay クラスは、MPEG I や WMV などを表示するため表示領域を作成するクラスです。吉里吉里のレイヤに表示を行うこともできます。<br />
-　WMV/MPEG I を再生するときは、吉里吉里実行可能ファイルと同じ場所に、krmovie.dll が必要になります。<br />
+　VideoOverlay クラスは、MPEG I や WMV、H.264、theora などを表示するため表示領域を作成するクラスです。吉里吉里のレイヤに表示を行うこともできます。<br />
+　1.3.0以前は WMV/MPEG I を再生するときは、吉里吉里実行可能ファイルと同じ場所に、krmovie.dll が必要になります。<br />
+　1.3.0以降は krmovie.dll が本体に統合されたため、別途添付する必要はなくなりました。theora を再生するには krdstheora.dll が必要になります。<br />
 <br />
-　レイヤでの再生を除き、WMV/MPEG I のオーバーレイによる再生では、VideoOverlay クラスの表示領域は、すべてのレイヤよりも手前に表示され、透過することはできません。<br />
+　レイヤでの再生を除き、オーバーレイによる再生では、VideoOverlay クラスの表示領域は、すべてのレイヤよりも手前に表示され、透過することはできません。<br />
 　レイヤでの再生は、オーバーレイでの再生に比べ、再生時のプロセッサの負荷は高くなる傾向にあります。<br />
 </div></div>
 <h1>メンバ</h1><div class="para"><div>

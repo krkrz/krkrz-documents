@@ -12,7 +12,7 @@
 <para>
 <ptitle>フォルダ</ptitle>
 <dl>
-  <dt><kw>plugin</kw></dt>
+  <dt><kw>plugin</kw> と <kw>plugin64</kw></dt>
   <dd>吉里吉里がプラグインを探すフォルダです。吉里吉里は、吉里吉里の実行可能ファイルがあるフォルダにこのフォルダがあると、その中に配置されているプラグインを参照します。→ <link href="Plugins"/></dd>
 
   <dt><kw>data</kw> と <kw>content-data</kw></dt>
@@ -81,13 +81,13 @@
   <dt>*.<kw>tft</kw></dt>
   <dd>レンダリング済みフォントデータ作成ツールが出力する、レンダリング済みフォントデータです。→ <link href="FontMaker"/></dd>
 
-  <dt>*.png *.jpeg *.jpg *.tlg *.bmp</dt>
+  <dt>*.png *.jpeg *.jpg *.tlg *.bmp *.jxr</dt>
   <dd>画像ファイルです。→ <link href="GraphicSystem"/></dd>
 
-  <dt>*.wav *.tcw *.ogg</dt>
+  <dt>*.wav *.tcw *.ogg *.opus</dt>
   <dd>音声ファイルです。→ <link href="SoundSystem"/></dd>
 
-  <dt>*.wmv *.mpg</dt>
+  <dt>*.wmv *.mpg *.mp4 *.ogv</dt>
   <dd>動画ファイルです。→ <at href="f_VideoOverlay.html">VideoOverlayクラス</at></dd>
 
   <dt>*.ks</dt>

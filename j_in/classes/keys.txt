@@ -37,6 +37,8 @@ clPalIdx	id18	f_Bitmap_load.html	Bitmap.load
 clAdapt	id19	f_Bitmap_load.html	Bitmap.load
 clAlphaMat	id20	f_Bitmap_load.html	Bitmap.load
 loadAsync	top	f_Bitmap_loadAsync.html	Bitmapクラス
+loadHeader	top	f_Bitmap_loadHeader.html	Bitmapクラス
+getSaveOption	top	f_Bitmap_getSaveOption.html	Bitmapクラス
 width	top	f_Bitmap_width.html	Bitmapクラス
 height	top	f_Bitmap_height.html	Bitmapクラス
 buffer	top	f_Bitmap_buffer.html	Bitmapクラス
@@ -362,6 +364,7 @@ dfAddAlpha	id228	f_Layer_copyRect.html	Layer.copyRect
 dfOpaque	id229	f_Layer_copyRect.html	Layer.copyRect
 dfMask	id230	f_Layer_copyRect.html	Layer.copyRect
 dfProvince	id231	f_Layer_copyRect.html	Layer.copyRect
+copy9Patch	top	f_Layer_copy9Patch.html	Layerクラス
 piledCopy	top	f_Layer_piledCopy.html	Layerクラス
 operateRect	top	f_Layer_operateRect.html	Layerクラス
 omAuto	id232	f_Layer_operateRect.html	Layer.operateRect

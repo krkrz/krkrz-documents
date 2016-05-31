@@ -413,8 +413,9 @@
 			<name>meta</name>
 			<default>null</default>
 			<desc>
-				　保存するタグ情報を辞書形式で指定します。<r/>
-				　タグ情報が保存されるのは TLG 形式で保存した場合のみです。<r/>
+				　TLG 形式の場合、保存するタグ情報を辞書形式で指定します。<r/>
+				　その他の形式の場合は追加オプションを指定します(1.3.0以降)。<r/>
+				　指定可能なオプションはgetSaveOptionで取得可能です。<r/>
 			</desc>
 		</argitem>
 		
@@ -423,6 +424,7 @@
 	<desc>
 		　name で指定したストレージ (ファイル) に、type で指定した画像形式でファイルを保存します。<r/>
 	</desc>
+	<ref>Bitmap.getSaveOption</ref>
 </member>
 
 <member>
@@ -495,6 +497,51 @@
 	<ref>Bitmap.loading</ref>
 	<ref>Layer.copyFromBitmapToMainImage</ref>
 </member>
+
+<member>
+	<name>loadHeader</name>
+	<type>method</type>
+	<shortdesc>画像情報の読み込み(1.3.0以降)</shortdesc>
+	<arg>
+		<argitem>
+			<name>image</name>
+			<default></default>
+			<desc>
+				　読み込む画像ストレージを指定します。<r/>
+				　ここで指定するファイル名は拡張子を含んだものになることに注意してください。<r/>
+				　拡張子がないとファイルが見つからずエラーとなります。<r/>
+			</desc>
+		</argitem>
+	</arg>
+	<result>情報の辞書配列</result>
+	<desc>
+		　画像情報のみを読み込みます。<r/>
+		　画像の読み込みは行われないため、情報のみを得たい時は高速に読み込めます。<r/>
+		　返される辞書のwidth, heightは必須で、その他の情報は画像形式に依存します。<r/>
+	</desc>
+</member>
+
+<member>
+	<name>getSaveOption</name>
+	<type>method</type>
+	<shortdesc>画像保存追加情報取得(1.3.0以降)</shortdesc>
+	<arg>
+		<argitem>
+			<name>type</name>
+			<default></default>
+			<desc>
+				　画像形式を指定します。<r/>
+				　指定方法はsaveメソッドと同じ形式です。<r/>
+			</desc>
+		</argitem>
+	</arg>
+	<result>追加情報の辞書配列</result>
+	<desc>
+		　画像保存時に指定可能な追加情報を取得します。<r/>
+	</desc>
+	<ref>Bitmap.save</ref>
+</member>
+
 
 <member>
 	<name>width</name>
