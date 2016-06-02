@@ -766,6 +766,8 @@ drawThreadNum	top	f_System_drawThreadNum.html	Systemクラス
 スレッド数	id455	f_System_drawThreadNum.html	System.drawThreadNum
 dtnAuto	id456	f_System_drawThreadNum.html	System.drawThreadNum
 savedGamesPath	top	f_System_savedGamesPath.html	Systemクラス
+exeBits	top	f_System_exeBits.html	Systemクラス
+osBits	top	f_System_osBits.html	Systemクラス
 Timerクラス概要	top	f_Timer.html	Timerクラス
 Timer	top	f_Timer_Timer.html	Timerクラス
 onTimer	top	f_Timer_onTimer.html	Timerクラス
