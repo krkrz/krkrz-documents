@@ -237,8 +237,8 @@ ltTransparent でも同じ意味になりますが、2.23 beta 2 未満におけ
 <r/>
 式 : <i>result</i> = blend(<i>dest</i>, softlight(<i>dest</i>, <i>src</i>), <i>α</i>)<r/>
 ここで softlight(<i>a</i>, <i>b</i>) = <r/>
-　<i>a</i><sup>(0.5 ÷ <i>b</i>)</sup>  (<i>b</i> &lt; 0.5 のとき)<r/>
-　<i>a</i><sup>((1.0 - <i>b</i>) ÷ 2)</sup>  (それ以外のとき)<r/>
+　<i>a</i><sup>(0.5 ÷ <i>b</i>)</sup>  (<i>b</i> &gt; 0.5 のとき)<r/>
+　<i>a</i><sup>((1.0 - <i>b</i>) × 2)</sup>  (それ以外のとき)<r/>
 </dd>
 
 

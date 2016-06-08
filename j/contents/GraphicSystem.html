@@ -176,8 +176,8 @@ ltTransparent でも同じ意味になりますが、2.23 beta 2 未満におけ
 <br />
 式 : <span class="i">result</span> = blend(<span class="i">dest</span>, softlight(<span class="i">dest</span>, <span class="i">src</span>), <span class="i">α</span>)<br />
 ここで softlight(<span class="i">a</span>, <span class="i">b</span>) = <br />
-　<span class="i">a</span><sup>(0.5 ÷ <span class="i">b</span>)</sup>  (<span class="i">b</span> &lt; 0.5 のとき)<br />
-　<span class="i">a</span><sup>((1.0 - <span class="i">b</span>) ÷ 2)</sup>  (それ以外のとき)<br />
+　<span class="i">a</span><sup>(0.5 ÷ <span class="i">b</span>)</sup>  (<span class="i">b</span> &gt; 0.5 のとき)<br />
+　<span class="i">a</span><sup>((1.0 - <span class="i">b</span>) × 2)</sup>  (それ以外のとき)<br />
 </dd>
 
 <dt><a id="id165" name="id165" class="targanchor"><dfn>ltPsColorDodge</dfn></a></dt>
